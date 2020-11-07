@@ -126,13 +126,17 @@ view: \begin{itemize}
 \section{Results}
 \label{sec:res}
 
-% En este capítulo se comentarán las pruebas realizadas junto al análisis de los
-% resultados obtenidos.
+% Something should be said about the experimental setup.
 
-% Las métricas utilizadas para llevar el control del algoritmo y que además
-% sirven para comparar unas ejecuciones con otras son: el porcentaje de error al
-% predecir, la puntuación de el conjunto de neuronas por capa y la métrica F2
-% score.
+% Also about the progression of the experiments: first a single layer,
+% then more layers.
+
+In these results, we will try to use the same metrics as the ones
+proposed in GProp \cite{g-prop}. We are going to use Equation
+\ref{eq:hidden-score} as fitness score, where $nhl$ is the number of
+hidden layers and $nu_{i}$ the number of neurons in layer $i$; what we
+will try is to minimize the number of layers, and then of neurons in
+every layer.
 
 % El porcentaje de error (en Inglés \emph{accuracy error}) viene dado por el
 % número de ejemplos bien clasificados dividido entre el número de ejemplos
@@ -147,16 +151,10 @@ view: \begin{itemize}
 % busca primero minimizar el número de capas y después el número de neuronas de
 % cada capa.
 
-% \begin{figure}
-%     \centering
-%     \caption{
-%         Ecuación para obtener la puntuación del tamaño de las capas ocultas.
-%     }
-%     \label{eq:hidden-score}
-%     \begin{equation}
-%         score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl
-%     \end{equation}
-% \end{figure}
+\begin{equation}
+  score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl
+\end{equation}
+
 
 % La métrica F2 score es una definida como la media armónica ponderada entre
 % precisión (\emph{precision})\footnote{Fracción de instancias que son de la
