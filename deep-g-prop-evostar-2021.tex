@@ -74,8 +74,51 @@ ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\
 \section{State of the Art}
 \label{soa}
 
-% This contains a very good review. https://www.sciencedirect.com/science/article/pii/S0925231200003027?casa_token=LZtZakZguVsAAAAA:iQNvGVO5fAQO6ED-pnBhQ5Ab-ZuYP7tIdFcpBurr9hdCzNnQAKwwKUoaY6_fEbiQx5fPiktf
+% This contains a very good
+% review. https://www.sciencedirect.com/science/article/pii/S0925231200003027?casa_token=LZtZakZguVsAAAAA:iQNvGVO5fAQO6ED-pnBhQ5Ab-ZuYP7tIdFcpBurr9hdCzNnQAKwwKUoaY6_fEbiQx5fPiktf
+Searching the parameter space of neural networks, including deep
+learning algorithms, has been a problem that has been traditionally
+approached in a number of ways. {\em Incremental algorithms}, in
+general, will depart from a specific architecture, number of layers
+and elements in every layer, and offer a series of heuristic
+procedures to add/eliminate layers and/or hidden-layer neurons in
+those layers. This was, for a certain amount of time, the preferred
+way of doing this kind of thing, according to classical reviews such
+as the one by Alpaydim \cite{Alpaydim}. However, simultaneously a
+series of evolutionary heuristics were starting to be applied for the
+same purpose, as revealed by Balakrishnan and Honavar's review
+\cite{balakrishnan95:EDNA}. This taxonomy classifies evolutionary
+design of the architecture of neural nets along three different axes
+(plus one for application domain): genotype representation, network
+topology, and a third axes that includes basically everything else,
+``variables of evolution''.
 
+A more precise classification of evolved neural architectures would include, from our point of
+view: \begin{itemize}
+  \item Fixed or variable architecture. Irrespective of the kind of
+    data structured used to represent it, what is relevant is if that
+    representation allows for a variation of the architectural
+    parameters, that is, adding or eliminating new nodes, layers, or
+    in general nodes and edges in a graph representation of the
+    architecture.
+  \item Articulation of the neural learning method. There is a whole
+    range of possibilities, from letting the evolutionary process set
+    all weights and other parameters, to using learning process just
+    to find the success rate, with additional possibilities like
+    evaluating success {\em before applying learning} (to take
+    advantage of the Baldwin effect \cite{castillo-2006}) to applying
+    a few cycles of learning that will become part of the codified
+    solution.
+  \item How lack of determination of the fitness is taken into account
+    in evolution. Either from the fact that an stochastic algorithm is
+    used to train the neural net before evaluating fitness, or the
+    fact that the data set might not be totally fixed but subject to
+    randomness, the fitness of a neural net cannot be pinned down to a
+    single, crisp, number. This randomness in the fitness can be taken
+    into account during the selection phase
+    \cite{DBLP:conf/ijcci/MereloLFGCCRMG15}, or not.
+
+  \end{itemize}
 
 \section{Proposed Method}
 \label{method}
@@ -93,6 +136,6 @@ supported by the so and so.
 
 
 \bibliographystyle{splncs04}
-\bibliography{geneura,deep-g-prop} 
+\bibliography{geneura,deep-g-prop,gprop,gpropnpl} 
 
 \end{document}

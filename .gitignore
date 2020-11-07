@@ -133,3 +133,9 @@ auto/
 
 # IDEs
 .vscode
+
+*.aux
+*.bbl
+*.blg
+*.out
+*.pdf
