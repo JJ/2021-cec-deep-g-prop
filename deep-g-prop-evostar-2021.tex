@@ -123,6 +123,442 @@ view: \begin{itemize}
 \section{Proposed Method}
 \label{method}
 
+\section{Results}
+\label{sec:res}
+
+% En este capítulo se comentarán las pruebas realizadas junto al análisis de los
+% resultados obtenidos.
+
+% Las métricas utilizadas para llevar el control del algoritmo y que además
+% sirven para comparar unas ejecuciones con otras son: el porcentaje de error al
+% predecir, la puntuación de el conjunto de neuronas por capa y la métrica F2
+% score.
+
+% El porcentaje de error (en Inglés \emph{accuracy error}) viene dado por el
+% número de ejemplos bien clasificados dividido entre el número de ejemplos
+% totales. Es la medida principal utilizada en GProp\cite{g-prop} para la
+% comparación con otros algoritmos, intentando minimizar ésta. Tanto en la
+% publicación como en este trabajo también se busca minimizar el número de
+% neuronas del perceptrón multicapa para así obtener una solución más sencilla y
+% óptima. Dado que no solo se realizan pruebas con una sola capa oculta, la
+% puntuación de las neuronas viene dada por la expresión de la
+% \autoref{eq:hidden-score}, siendo $nhl$ el número de capas ocultas que tiene el
+% modelo y $nu_{i}$ el número de neuronas de la capa $i$. Con esta operación se
+% busca primero minimizar el número de capas y después el número de neuronas de
+% cada capa.
+
+% \begin{figure}
+%     \centering
+%     \caption{
+%         Ecuación para obtener la puntuación del tamaño de las capas ocultas.
+%     }
+%     \label{eq:hidden-score}
+%     \begin{equation}
+%         score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl
+%     \end{equation}
+% \end{figure}
+
+% La métrica F2 score es una definida como la media armónica ponderada entre
+% precisión (\emph{precision})\footnote{Fracción de instancias que son de la
+% clase relevante. Esto es: el número de ejemplos que pertenecen a la clase
+% relevante dividido por el número total de ejemplos que se han predicho.} y
+% sensibilidad (\emph{recall})\footnote{Fracción de instancias de la clase
+% relevante que se han clasificado bien.}. Por un lado, si los datos están
+% desbalanceados la precisión puede salir alta pero la sensibilidad saldrá baja.
+% Usando cómo parámetro de ponderación el número dos, le damos más importancia a
+% la sensibilidad, para evitar lo antes comentado.
+
+% En cuanto al entrenamiento y propagación hacia atrás de los modelos se han
+% utilizado los siguientes parámetros:
+
+% \begin{itemize}
+
+%     \item Función de activación: método aplicado a la sumatoria de los valores
+%     de activación de la capa anterior por sus pesos mas un sesgo. La salida de
+%     esta función define la activación de la neurona actual. Para este parámetro
+%     se ha utilizado la función de activación ReLU (\emph{rectified linear
+%     unit}) que cumple la siguiente función dado un valor $x$ la activación de
+%     la neurona viene dada por $max(x, 0)$. Para la capa de salida, sin embargo,
+%     se ha utilizado la función Softmax que configura las neuronas de salida de
+%     manera que todas las activaciones suman 1 y se sitúen en el rango
+%     $[0.0, 1.0]$.
+
+%     \item Optimizador: algoritmo utilizado para entrenar la red neuronal con la
+%     propagación hacia atrás buscando la minimización de la función de pérdida.
+%     Como optimizador se ha utilizado SGD, gradiente descendiente estocástico
+%     del Inglés, que utilizando pequeños grupos de datos (\emph{batches})
+%     calcula las modificaciones necesarias en el conjunto de pesos y sesgos
+%     global obteniendo finalmente el gradiente que se aplicará a éstos para así
+%     mejorar las capacidades de clasificación del modelo con respecto a los
+%     datos de entrenamiento.
+
+%     \item Función de pérdida: también conocida como función de costo o función
+%     objetivo es la cuál se quiere minimizar, es decir, obtener una mejor
+%     predictibilidad de los datos por parte del modelo. Se ha elegido como
+%     función de pérdida la entropía cruzada entre clases partiendo de la función
+%     de activación de la última capa (softmax).
+
+% \end{itemize}
+
+% Siempre que se refiera a un número de capas concreto se estará hablando de las
+% capas ocultas, dado que la tanto la capa de entrada como la de salida son
+% necesarias y de estructura fija.
+
+% Para las pruebas se han utilizado tanto algunos conjuntos de datos de
+% Proben1\cite{Proben1}\footnote{Base de datos dedicada a comparar redes
+% neuronales} como otros conjuntos de datos conocidos (por ejemplo,
+% \emph{Spambase} encontrados en la web de UCI\cite{uci}) para poder comparar
+% los resultados obtenidos con GProp ya mencionado en la
+% introducción\autoref{chap:introduction}.
+
+% Los datos mostrados en la mayoría de las tablas constituyen la media de cinco
+% ejecuciones realizadas con semillas distintas. Se han utilizado las semillas:
+% \code{2017725297}, \code{3842001146}, \code{788305541}, \code{1367677890} y
+% \code{3074644809}. Éstas han sido obtenidas aleatoriamente haciendo uso de la
+% función \code{getrandbits} del módulo \code{random} de Python.
+
+% \begin{minted}[]{python}
+% from random import getrandbits
+% for _ in range(5):
+%     print(getrandbits(32))
+% \end{minted}
+
+% %
+% % no structure modification
+% %
+
+% \section{Evolución de población sin modificación de estructura}
+
+% En esta sección se han realizado pruebas con distintas estructuras fijas. En
+% concreto se va a comparar la diferencia entre evolucionar modelos con y sin
+% modificar los pesos contenidos en las capas ocultas. Se han elegido los valores
+% de número de neuronas y número de capas manualmente.
+
+% Comprobando las dos primeras tablas podemos observar datos muy similares para
+% el porcentaje de error obtenido en el problema \emph{cancer1}\cite{uci}. Obteniendo
+% mejor resultado el algoritmo sin modificar las capas internas
+% (\autoref{tab:fixed-7-1-const-can1}) con un $2.86\%$ de error frente al
+% $3.09\%$ (en \autoref{tab:fixed-7-1-noconst-can1}) de la población con capas
+% internas modificadas podemos suponer que dada la pequeña cantidad de individuos
+% y generaciones con las que se ha ejecutado el algoritmo, no da pie a mejorar el
+% resultado demasiado. A parte vemos en la \autoref{tab:fixed-7-1-inicial-can1}
+% que de base, la distribución uniforme utilizada para generar los genes de los
+% individuos llega a dar resultados muy buenos. Otra razón de esta discrepancia,
+% simple pero importante, es cómo se ordenan los datos dentro de un mismo
+% problema. Entonces, se han realizado pruebas con poblaciones e individuos más
+% grandes para poder ver que efectivamente se mejora el resultado si se mutan las
+% capas ocultas. También se prueba con otra partición del mismo problema para ver
+% cómo efectivamente ahí si mejora.
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Resultados de test del mejor individuo final tras 10 generaciones con
+%         20 individuos iniciales y 7 neuronas por individuo haciendo operaciones
+%         sobre las capas internas para el problema \emph{cancer1}.
+%     }
+%     \label{tab:fixed-7-1-noconst-can1}
+%     \begin{tabular}{rlll}
+%         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+%         \hline
+%         \textbf{Mean}      & $3.09\ \pm\ 0.58$      & $6.80\ \pm\ 0.40$       & $0.94739\ \pm\ 0.01944$ \\
+%         \textbf{Max}       & $4.00$                 & $7.00$                  & $0.97473$               \\
+%         \textbf{Min}       & $2.29$                 & $6.00$                  & $0.91912$               \\
+%     \end{tabular}
+% \end{table}
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Resultados de test del mejor individuo final tras 10 generaciones con
+%         20 individuos iniciales y 7 neuronas por individuo sin hacer
+%         operaciones sobre las capas internas para el problema \emph{cancer1}.
+%     }
+%     \label{tab:fixed-7-1-const-can1}
+%     \begin{tabular}{rlll}
+%         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+%         \hline
+%         \textbf{Mean}      & $2.86\ \pm\ 0.63$      & $6.80\ \pm\ 0.40$       & $0.95103\ \pm\ 0.02021$ \\
+%         \textbf{Max}       & $3.43$                 & $7.00$                  & $0.98921$               \\
+%         \textbf{Min}       & $1.71$                 & $6.00$                  & $0.93407$               \\
+%     \end{tabular}
+% \end{table}
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Resultados de test del mejor individuo inicial en una población de 20
+%         individuos con 7 neuronas en 1 capa oculta cada uno para el problema
+%         \emph{cancer1}.
+%     }
+%     \label{tab:fixed-7-1-inicial-can1}
+%     \begin{tabular}{rlll}
+%         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+%         \hline
+%         \textbf{Mean}      & $3.20\ \pm\ 0.46$      & $6.80\ \pm\ 0.40$       & $0.94226\ \pm\ 0.01156$ \\
+%         \textbf{Max}       & $3.43$                 & $7.00$                  & $0.96364$               \\
+%         \textbf{Min}       & $2.29$                 & $6.00$                  & $0.93407$               \\
+%     \end{tabular}
+% \end{table}
+
+% En este experimento se ha ejecutado dos veces el algoritmo: una sin modificar
+% los pesos ni cruzar las neuronas de las capas internas y otra al revés. Ahora
+% sí observamos en la \autoref{tab:fixed-8-2-comp-can1} comprobamos una mejora
+% considerable tanto en los valores de test y validación para el porcentaje de
+% error.
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Resultados de validación y test del mejor individuo inicial en una
+%         población de 50 individuos con 8 neuronas en cada una de las 2 capas
+%         ocultas durante 20 generaciones para el problema \emph{cancer1}.
+%     }
+%     \label{tab:fixed-8-2-comp-can1}
+%     \begin{tabular}{rllll}
+%         \textbf{Hidden l.} & \textbf{Partition}  & \textbf{Accuracy error \%} & \textbf{Neuron/Layer score} & \textbf{F2 score} \\
+%         \hline
+%         \textbf{Constant}  & \textbf{Validation} & $0.57$                 &        $32$             &      $0.98765$ \\
+%                        & \textbf{Test}       & $2.86$                 &        $32$             &      $0.96014$ \\
+%         \textbf{Mutables}  & \textbf{Validation} & $0.00$                 &        $32$             &      $1.00000$ \\
+%                        & \textbf{Test}       & $2.29$                 &        $32$             &      $0.98566$ \\
+%     \end{tabular}
+% \end{table}
+
+% Por el contrario, si comparamos el primer ejemplo con los datos obtenidos para
+% el problema \emph{cancer2}, parece que sí que mejora el algoritmo al no mantener
+% constantes los pesos de la capa oculta (véanse las tablas
+% \ref{tab:fixed-7-1-noconst-can2} y \ref{tab:fixed-7-1-const-can2}).
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Resultados de test del mejor individuo final tras 10 generaciones con
+%         20 individuos iniciales y 7 neuronas por individuo haciendo operaciones
+%         sobre las capas internas para el problema \emph{cancer2}.
+%     }
+%     \label{tab:fixed-7-1-noconst-can2}
+%     \begin{tabular}{rlll}
+%         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+%         \hline
+%         \textbf{Mean}      & $1.94\ \pm\ 0.28$ & $6.80\ \pm\ 0.40$  & $0.98258\ \pm\ 0.00272$ \\
+%         \textbf{Max}       & $2.29$            & $7.00$             & $0.98432$               \\
+%         \textbf{Min}       & $1.71$            & $6.00$             & $0.97731$               \\
+%     \end{tabular}
+% \end{table}
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Resultados de test del mejor individuo final tras 10 generaciones con
+%         20 individuos iniciales y 7 neuronas por individuo sin hacer
+%         operaciones sobre las capas internas para el problema \emph{cancer2}.
+%     }
+%     \label{tab:fixed-7-1-const-can2}
+%     \begin{tabular}{rlll}
+%         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+%         \hline
+%         \textbf{Mean}      & $2.29\ \pm\ 0.36$ & $6.80\ \pm\ 0.40$  & $0.97943\ \pm\ 0.00339$ \\
+%         \textbf{Max}       & $2.86$            & $7.00$             & $0.98432$               \\
+%         \textbf{Min}       & $1.71$            & $6.00$             & $0.97561$               \\
+%     \end{tabular}
+% \end{table}
+
+% Se puede sacar en claro que generalmente al realizar pequeñas modificaciones en
+% los modelos de perceptrones multicapa se obtienen mejores resultados que si no
+% se hace. En las siguientes secciones se explorarán nuevas mutaciones más
+% complejas ya modificando la estructura del perceptrón multicapa de generación
+% en generación.
+
+% \section{Evolución de población con modificación de número de neuronas:
+% reproducción de resultados}
+
+% En esta sección se compararán los anteriores resultados con similares obtenidos
+% cambiando el número de neuronas de cada individuo a medida que avanzan las
+% generaciones.
+
+% En la \autoref{tab:gprop-deepgprop-cancer} podemos observar los resultados
+% obtenidos tanto por \emph{G-Prop} como \emph{DeepGProp} para la siguiente
+% configuración: población de 20 individuos, máximo de 10 generaciones, tamaño
+% inicial de neuronas entre 2 y 20 y probabilidad de cruce de $0.5$. En general
+% se ve mejor rendimiento para el algoritmo \emph{G-Prop} con un número de
+% neuronas menor en todos los casos y mejores resultados de precisión en las
+% particiones 1 y 2. Aun así, los datos son bastante similares y vemos una clara
+% mejora por parte de \emph{DeepGProp} en la segunda partición. Se intuye que
+% \emph{G-Prop} sortea mejor los mínimos locales que \emph{DeepGProp}.
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Comparación de los resultados obtenidos en los problemas de \emph{cancer}
+%         por DeepGProp y GProp.
+%     }
+%     \label{tab:gprop-deepgprop-cancer}
+%     \begin{tabular}{rllll}
+%         \textbf{Partition} & \textbf{Algorithm} & \textbf{Accuracy error \%} & \textbf{\# neurons}      & \textbf{F2 score}           \\
+%         \hline
+%         \textbf{Cancer1}   & G-Prop         & $1.0\ \pm\ 0.5$        & $3.2\ \pm\ 0.8$     & $--$                    \\
+%                        & DeepGProp      & $2.52\ \pm\ 0.28$      & $13.60\ \pm\ 6.02$  & $0.96668\ \pm\ 0.00670$ \\
+%         \textbf{Cancer2}   & G-Prop         & $4.4\ \pm\ 0.4$        & $6.7\ \pm\ 2.3$     & $--$                    \\
+%                        & DeepGProp      & $2.29\ \pm\ 0.00$      & $10.20\ \pm\ 4.58$  & $0.97943\ \pm\ 0.00260$ \\
+%         \textbf{Cancer2}   & G-Prop         & $3.0\ \pm\ 0.7$        & $4.3\ \pm\ 1.7$     & $--$                    \\
+%                        & DeepGProp      & $4.46\ \pm\ 0.43$      & $21.60\ \pm\ 17.83$ & $0.95952\ \pm\ 0.00285$ \\
+%     \end{tabular}
+% \end{table}
+
+% Continuando con el problema \emph{DNA Helicases}\cite{dna-heliases}, igual que
+% en los resultados anteriores, se ha obtenido la media de 5 ejecuciones con
+% distintas semillas (ver inicio del \autoref{chap:analysis}). Observando los
+% resultados de la \autoref{tab:gprop-deepgprop-miniheli} vemos una gran
+% diferencia en todos los campos. La precisión alcanzada por \emph{DeepGProp} es
+% inmensamente inferior a la que consigue \emph{G-Prop} ejecutando con el mismo
+% máximo de generaciones. De forma similar, aunque se han aumentado las
+% generaciones para la segunda prueba de 10 a 50, no cambia demasiado el
+% resultado, quedando igualmente muy por encima de \emph{G-Prop}. Aunque en
+% problemas con número de entradas pequeño parece que se desenvuelven de forma
+% similar, al aumentar las características del problema se diferencian mucho el
+% uno del otro.
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Comparación de los resultados obtenidos en los problemas de
+%         \emph{Helicases} por DeepGProp y GProp.
+%     }
+%     \label{tab:gprop-deepgprop-miniheli}
+%     \begin{tabular}{rllll}
+%         \textbf{DNA Helicases} &    & \textbf{Accuracy error \%} & \textbf{\# neurons}     & \textbf{F2 score}\\
+%         \hline
+%         \textbf{G-Prop}    & 10 gen & $6\ \pm\ 3$            & $7.3\ \pm\ 3.9$     & $--$                    \\
+%         \textbf{DeepGProp} & 10 gen & $25.67\ \pm\ 5.23$     & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
+%                        & 50 gen & $21.00\ \pm\ 5.01$     & $15.00\ \pm\ 4.38$  & $0.72556\ \pm\ 0.06024$ \\
+%     \end{tabular}
+% \end{table}
+
+% Aparte se aprecia claramente la diferencia entre los datos de validación
+% (\autoref{tab:deepgprop-miniheli-validation}) y los de test comentados
+% anteriormente. Está ocurriendo un sobre ajuste a los datos de validación muy
+% grande de media. En el caso anterior del conjunto de \emph{cancer} no existe
+% tal diferencia entre validación y test como existe para el programa \emph{DNA
+% Helicases}. Se probará en la siguiente sección que con número variable de capas
+% debería mejorar el resultado.
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Resultados de validación del mejor individuo final tras 10 y 50
+%         generaciones respectivamente.
+%     }
+%     \label{tab:deepgprop-miniheli-validation}
+%     \begin{tabular}{rlll}
+%         \textbf{\# generations} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+%         \hline
+%         \textbf{10}             & $11.19\ \pm\ 1.36$ & $11.80\ \pm\ 6.01$ & $0.88280\ \pm\ 0.03664$ \\
+%         \textbf{50}             & $2.71\ \pm\ 2.30$ & $15.00\ \pm\ 4.38$ & $0.98952\ \pm\ 0.00887$ \\
+%     \end{tabular}
+% \end{table}
+
+% \section{Evolución de población con modificación de número de neuronas y capas}
+
+% Siguiendo con los resultados obtenidos en la sección anterior, aquí se suma un
+% nuevo operador que permite añadir o quitar capas en la última posición de las
+% capas ocultas del modelo. Siendo cierto que se ve una mejora a los datos
+% obtenidos en ejecuciones con una sola capa oculta, no se llega a alcanzar en
+% ningún caso los resultados aportados por \emph{G-Prop}.
+
+% Por ejemplo, viendo el problema de \emph{DNA Helicases}, en la
+% \autoref{tab:gprop-deepgprop-miniheli-multihidden} (teniendo en cuenta que
+% la puntuación de las capas ocultas se calcula como visto en
+% \autoref{eq:hidden-score}) vemos una mejora ligera del resultado tras 50
+% generaciones. Aún así, sigue siendo mejor de lejos \emph{G-Prop}.
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Comparación de los resultados obtenidos en los problemas de
+%         \emph{Helicases} por DeepGProp y GProp.
+%     }
+%     \label{tab:gprop-deepgprop-miniheli-multihidden}
+%     \begin{tabular}{rllll}
+%         \textbf{Algorithm} &  & \textbf{Acc error \%} & \textbf{\# neurons/hidden layers}     & \textbf{F2 score}\\
+%         \textbf{(\# layers)}& &                       & \textbf{score}                        &                   \\
+%         \hline
+%         \textbf{G-Prop (1)}       & 10 gen & $6\ \pm\ 3$        & $7.3\ \pm\ 3.9$     & $--$                    \\
+%         \textbf{DeepGProp (1)}     & 10 gen & $25.67\ \pm\ 5.23$ & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
+%                                    & 50 gen & $21.00\ \pm\ 5.01$ & $15.00\ \pm\ 4.38$  & $0.72556\ \pm\ 0.06024$ \\
+%         \textbf{DeepGProp (>1)}    & 50 gen & $18.67\ \pm\ 2.45$ & $23.80\ \pm\ 24.25$ & $0.82569\ \pm\ 0.04718$ \\
+%     \end{tabular}
+% \end{table}
+
+% Podemos recalcar que añadiéndole la posibilidad de utilizar número variable de
+% capas ocultas, el algoritmo \emph{DeepGProp} generaliza mejor para el problema
+% \emph{DNA Helicases}. Esto es observable en la tabla con los resultados de
+% validación de esta última ejecución
+% (\autoref{tab:gprop-deepgprop-miniheli-multihidden-validation}) dado que la
+% diferencia entre porcentaje de error en el test y en la validación es más
+% pequeña. También al ser superior el porcentaje conseguido en la validación para
+% 50 generaciones notamos un menor sobre ajuste a los datos de validación.
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Resultados de validación del mejor individuo final tras 50
+%         generaciones.
+%     }
+%     \label{tab:gprop-deepgprop-miniheli-multihidden-validation}
+%     \begin{tabular}{rlll}
+%         \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+%         \hline
+%         $8.13\ \pm\ 3.62$ & $23.80\ \pm\ 24.25$ & $0.88853\ \pm\ 0.06346$ \\
+%     \end{tabular}
+% \end{table}
+
+% Tratando algún problema más complejo como \emph{spambase} se obtienen
+% resultados malos (véase las tablas \ref{tab:spambase-onelayer} y
+% \ref{tab:spambase-onelayer}). Tras lanzar multiples ejecuciones a partir de
+% soluciones obtenidas por DeepGProp, parece que siempre se alcanza un mínimo
+% local cuando la pérdida llega a $\approx\ 0.6$. Entonces el mejor resultado que
+% obtiene es alrededor de $35\%$ de error. Para la primera tabla, los resultados
+% se han obtenido lanzando el algoritmo con número de neuronas variable entre 2 y
+% 20 y una capa oculta. La segunda prueba se ha realizado con número de capas
+% ocultas variable y una población inicial con el rango $[2,50]$ de neuronas para
+% cada capa oculta obtenida también aleatoriamente. Sería interesante realizar
+% pruebas con el algoritmo G-prop con este tipo de problemas para compararlos.
+
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Comparación de los resultados obtenidos en el problema de
+%         \emph{spambase} para las tres particiones. Algoritmo ejecutado con 1
+%         capa fija.
+%     }
+%     \label{tab:spambase-onelayer}
+%     \begin{tabular}{rllll}
+%         \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+%         \hline
+%         \textbf{Spambase1}   & $36.80\ \pm\ 0.98$ & $10.80\ \pm\ 3.76$ & $0.03004\ \pm\ 0.04402$ \\
+%         \textbf{Spambase2}   & $38.30\ \pm\ 0.88$ & $12.60\ \pm\ 2.87$ & $0.04019\ \pm\ 0.04078$ \\
+%         \textbf{Spambase2}   & $37.64\ \pm\ 1.64$ & $16.40\ \pm\ 1.85$ & $0.05150\ \pm\ 0.06956$ \\
+%     \end{tabular}
+% \end{table}
+
+% \begin{table}
+%     \centering
+%     \caption{
+%         Comparación de los resultados obtenidos en el problema de
+%         \emph{spambase} para las tres particiones. Algoritmo ejecutado con
+%         múltiples capas variables.
+%     }
+%     \label{tab:spambase-onelayer}
+%     \begin{tabular}{rllll}
+%         \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+%         \hline
+%         \textbf{Spambase1}   & $41.46\ \pm\ 10.75$ & $17.80\ \pm\ 6.71$ & $0.30304\ \pm\ 0.37119$ \\
+%         \textbf{Spambase2}   & $35.13\ \pm\ 4.94$ & $29.40\ \pm\ 20.16$ & $0.28133\ \pm\ 0.34343$ \\
+%         \textbf{Spambase2}   & $40.07\ \pm\ 12.26$ & $31.00\ \pm\ 14.48$ & $0.32100\ \pm\ 0.39295$ \\
+%     \end{tabular}
+% \end{table}
 
 
 \section*{Acknowledgments}
