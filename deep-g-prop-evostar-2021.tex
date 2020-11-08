@@ -128,11 +128,36 @@ view: \begin{itemize}
 
 % Something should be said about the experimental setup.
 
+All the results found in this sections related with DeepGProp
+\cite{deep-g-prop} where obtained in a laptop with the specs shown in the
+\autoref{tab:setup}. The OS installed in the laptop is GNU/Linux, using the
+distribution ArchLinux (kernel version \texttt{5.9.2-arch1-1}).
+
+\begin{table}[]
+  \centering
+  \caption{DeepGProp results laptop specs.}
+  \label{tab:setup}
+  \begin{tabular}{|l|l|}
+  \hline
+    Spec & Value                                             \\ \hline
+    CPU  & Intel(R) Core(TM) i7-3612QM CPU 2.10GHz (8 cores) \\ \hline
+    MEM  & 6GB (2+4) DDR3                                    \\ \hline
+  \end{tabular}
+\end{table}
+
 % Also about the progression of the experiments: first a single layer,
 % then more layers.
 
+We followed a progression path of increasing complexity in terms of models
+execution. First we trained a clasic multilayer perceptron with a fixed number
+of layers and neurons per layer, modifying the hidden layer weights and biases
+for some of them. The second step was to replicate the method used in GProp
+\cite{g-prop}: models with one hidden layer and a random variable number of
+neurons for it. For the last case, we evolved the models changing the number of
+hidden layers and neurons per layer.
+
 In these results, we will try to use the same metrics as the ones
-proposed in GProp \cite{g-prop}. We are going to use Equation
+proposed in GProp. We are going to use Equation
 \ref{eq:hidden-score} as fitness score, where $nhl$ is the number of
 hidden layers and $nu_{i}$ the number of neurons in layer $i$; what we
 will try is to minimize the number of layers, and then of neurons in
