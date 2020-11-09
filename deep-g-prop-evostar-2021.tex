@@ -176,6 +176,22 @@ every layer.
 % busca primero minimizar el número de capas y después el número de neuronas de
 % cada capa.
 
+% Notas de la traducción:
+% Para los lectores de estos papers la formula de la exactitud de un clasificador es conocida.
+% Cambié lo de sencillo y óptimo por conceptos más utilizados en el área. - M
+
+We compare against other classification algorithms using accuracy as a
+performance metric, as was used in the GProp paper \cite{g-prop}. We hope to
+increase the generalization of the model and avoid overfitting by reducing the
+network's complexity, we try to accomplish this by reducing the
+overall number of neurons in the MLP; this was also the intention of the GProp
+authors. Because we test with one or more hidden layers, we obtain the network's
+score using the expression \autoref{eq:hidden-score}, where $nhl$ is the model's
+number of hidden layers and $nu_{i}$ is the number of neurons in layer {i}. With
+this expression, we aim to minimize the number of layers first, and then the number of
+neurons per layer.
+
+
 \begin{equation}
   score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl
 \end{equation}

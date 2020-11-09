@@ -140,3 +140,7 @@ auto/
 *.out
 *.pdf
 *latexindent*
+
+# LaTeX
+*.fdb_latexmk
+*.fls
