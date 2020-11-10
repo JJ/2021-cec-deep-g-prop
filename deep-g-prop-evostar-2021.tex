@@ -432,39 +432,50 @@ generations for the \emph{cancer1} dataset.}
 % constantes los pesos de la capa oculta (véanse las tablas
 % \ref{tab:fixed-7-1-noconst-can2} y \ref{tab:fixed-7-1-const-can2}).
 
-% \begin{table}
-%     \centering
-%     \caption{
+On the other hand, if we compare the first instance with the results for the
+\emph{cancer2} dataset, it seems that the algorithm's accuracy improves while
+not keeping the weights in the hidden layer fixed. See Tables
+\ref{tab:fixed-7-1-noconst-can2} and \ref{tab:fixed-7-1-const-can2}).
+
+ \begin{table}
+     \centering
+     \caption{
 %         Resultados de test del mejor individuo final tras 10 generaciones con
 %         20 individuos iniciales y 7 neuronas por individuo haciendo operaciones
 %         sobre las capas internas para el problema \emph{cancer2}.
-%     }
-%     \label{tab:fixed-7-1-noconst-can2}
-%     \begin{tabular}{rlll}
-%         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-%         \hline
-%         \textbf{Mean}      & $1.94\ \pm\ 0.28$ & $6.80\ \pm\ 0.40$  & $0.98258\ \pm\ 0.00272$ \\
-%         \textbf{Max}       & $2.29$            & $7.00$             & $0.98432$               \\
-%         \textbf{Min}       & $1.71$            & $6.00$             & $0.97731$               \\
-%     \end{tabular}
-% \end{table}
+Test results for the best individual after ten generations with twenty initial
+individuals and seven neurons per individual. In this case, the algorithm
+operates over the hidden layers for the \emph{cancer2} dataset.
+     }
+     \label{tab:fixed-7-1-noconst-can2}
+     \begin{tabular}{rlll}
+         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+         \hline
+         \textbf{Mean}      & $1.94\ \pm\ 0.28$ & $6.80\ \pm\ 0.40$  & $0.98258\ \pm\ 0.00272$ \\
+         \textbf{Max}       & $2.29$            & $7.00$             & $0.98432$               \\
+         \textbf{Min}       & $1.71$            & $6.00$             & $0.97731$               \\
+     \end{tabular}
+ \end{table}
 
-% \begin{table}
-%     \centering
-%     \caption{
+ \begin{table}
+     \centering
+     \caption{
 %         Resultados de test del mejor individuo final tras 10 generaciones con
 %         20 individuos iniciales y 7 neuronas por individuo sin hacer
 %         operaciones sobre las capas internas para el problema \emph{cancer2}.
-%     }
-%     \label{tab:fixed-7-1-const-can2}
-%     \begin{tabular}{rlll}
-%         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-%         \hline
-%         \textbf{Mean}      & $2.29\ \pm\ 0.36$ & $6.80\ \pm\ 0.40$  & $0.97943\ \pm\ 0.00339$ \\
-%         \textbf{Max}       & $2.86$            & $7.00$             & $0.98432$               \\
-%         \textbf{Min}       & $1.71$            & $6.00$             & $0.97561$               \\
-%     \end{tabular}
-% \end{table}
+Test results for the \emph{cancer2} dataset, with the best individual after ten
+generations with twenty initial individuals and seven neurons per individual. In
+this case, the algorithm did not change the hidden layers.
+     }
+     \label{tab:fixed-7-1-const-can2}
+     \begin{tabular}{rlll}
+         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+         \hline
+         \textbf{Mean}      & $2.29\ \pm\ 0.36$ & $6.80\ \pm\ 0.40$  & $0.97943\ \pm\ 0.00339$ \\
+         \textbf{Max}       & $2.86$            & $7.00$             & $0.98432$               \\
+         \textbf{Min}       & $1.71$            & $6.00$             & $0.97561$               \\
+     \end{tabular}
+ \end{table}
 
 % Se puede sacar en claro que generalmente al realizar pequeñas modificaciones en
 % los modelos de perceptrones multicapa se obtienen mejores resultados que si no
