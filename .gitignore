@@ -144,3 +144,4 @@ auto/
 # LaTeX
 *.fdb_latexmk
 *.fls
+*.synctex.gz

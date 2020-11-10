@@ -259,9 +259,11 @@ To compare our results against the GProp algorithm we mentioned earlier in
 section \autoref{chap:introduction}, we selected the Proben1 \cite{Proben1}
 dataset and other classification datasets found in the UCI \cite{uci}
 repository. Results shown are the mean of five runs with different random
-generator seeds ( \code{2017725297}, \code{3842001146}, \code{788305541},
-\code{1367677890}, and \code{3074644809}. We obtained these seeds using the
-\code{getrandbits} function from the \code{random} module found in Python's
+generator seeds ( 
+%  \code{2017725297}, \code{3842001146}, \code{788305541},
+%\code{1367677890}, and \code{3074644809}. We obtained these seeds using the
+%\code{getrandbits} function from the \code{random} 
+module found in Python's
 standard library.
 
 % Siempre que se refiera a un número de capas concreto se estará hablando de las
@@ -336,72 +338,63 @@ with larger populations and individuals to see if results are effectively
 improved when hidden layers are mutated. We also tested with another partition
 of the same dataset to further prove this intuition.
 
-% \begin{table}
-%     \centering
-%     \caption{
+ \begin{table}
+     \centering
+     \caption{
 %         Resultados de test del mejor individuo final tras 10 generaciones con
 %         20 individuos iniciales y 7 neuronas por individuo haciendo operaciones
 %         sobre las capas internas para el problema \emph{cancer1}.
-
 These results were obtained by the best individual after ten generations, 
 with an initial population of twenty individuals and initially seven neurons each. 
-The evolution optimized the hidden layers of networks classifying the \emph{cancer1} dataset. 
+The evolution optimized the hidden layers of networks classifying the \emph{cancer1} dataset.}
+     \label{tab:fixed-7-1-noconst-can1}
+     \begin{tabular}{rlll}
+         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+         \hline
+        \textbf{Mean}      & $3.09\ \pm\ 0.58$      & $6.80\ \pm\ 0.40$       & $0.94739\ \pm\ 0.01944$ \\
+         \textbf{Max}       & $4.00$                 & $7.00$                  & $0.97473$               \\
+         \textbf{Min}       & $2.29$                 & $6.00$                  & $0.91912$               \\
+     \end{tabular}
+ \end{table}
 
-%     }
-%     \label{tab:fixed-7-1-noconst-can1}
-%     \begin{tabular}{rlll}
-%         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-%         \hline
-%         \textbf{Mean}      & $3.09\ \pm\ 0.58$      & $6.80\ \pm\ 0.40$       & $0.94739\ \pm\ 0.01944$ \\
-%         \textbf{Max}       & $4.00$                 & $7.00$                  & $0.97473$               \\
-%         \textbf{Min}       & $2.29$                 & $6.00$                  & $0.91912$               \\
-%     \end{tabular}
-% \end{table}
-
-% \begin{table}
-%     \centering
-%     \caption{
+ \begin{table}
+     \centering
+     \caption{
 %         Resultados de test del mejor individuo final tras 10 generaciones con
 %         20 individuos iniciales y 7 neuronas por individuo sin hacer
 %         operaciones sobre las capas internas para el problema \emph{cancer1}.
-
 These results were obtained by the best individual after ten generations, with
 an initial population of twenty individuals and initially seven neurons each.
 This evolution did not optimize the hidden layers, again for networks
-classifying the \emph{cancer1} dataset.
+classifying the \emph{cancer1} dataset.}
+     \label{tab:fixed-7-1-const-can1}
+     \begin{tabular}{rlll}
+        \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+         \hline
+         \textbf{Mean}      & $2.86\ \pm\ 0.63$      & $6.80\ \pm\ 0.40$       & $0.95103\ \pm\ 0.02021$ \\
+         \textbf{Max}       & $3.43$                 & $7.00$                  & $0.98921$               \\
+         \textbf{Min}       & $1.71$                 & $6.00$                  & $0.93407$               \\
+     \end{tabular}
+ \end{table}
 
-%     }
-%     \label{tab:fixed-7-1-const-can1}
-%     \begin{tabular}{rlll}
-%         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-%         \hline
-%         \textbf{Mean}      & $2.86\ \pm\ 0.63$      & $6.80\ \pm\ 0.40$       & $0.95103\ \pm\ 0.02021$ \\
-%         \textbf{Max}       & $3.43$                 & $7.00$                  & $0.98921$               \\
-%         \textbf{Min}       & $1.71$                 & $6.00$                  & $0.93407$               \\
-%     \end{tabular}
-% \end{table}
-
-% \begin{table}
-%     \centering
-%     \caption{
+ \begin{table}
+     \centering
+     \caption{
 %         Resultados de test del mejor individuo inicial en una población de 20
 %         individuos con 7 neuronas en 1 capa oculta cada uno para el problema
 %         \emph{cancer1}.
-
 These results were obtained by the best individual after ten generations, with
 an initial population of twenty individuals and initially seven neurons each, fixed to 
-only one hidden layer. For networks classifying the \emph{cancer1} dataset.
-
-%     }
-%     \label{tab:fixed-7-1-inicial-can1}
-%     \begin{tabular}{rlll}
-%         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-%         \hline
-%         \textbf{Mean}      & $3.20\ \pm\ 0.46$      & $6.80\ \pm\ 0.40$       & $0.94226\ \pm\ 0.01156$ \\
-%         \textbf{Max}       & $3.43$                 & $7.00$                  & $0.96364$               \\
-%         \textbf{Min}       & $2.29$                 & $6.00$                  & $0.93407$               \\
-%     \end{tabular}
-% \end{table}
+only one hidden layer. For networks classifying the \emph{cancer1} dataset.}
+     \label{tab:fixed-7-1-inicial-can1}
+     \begin{tabular}{rlll}
+         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+         \hline
+         \textbf{Mean}      & $3.20\ \pm\ 0.46$      & $6.80\ \pm\ 0.40$       & $0.94226\ \pm\ 0.01156$ \\
+         \textbf{Max}       & $3.43$                 & $7.00$                  & $0.96364$               \\
+         \textbf{Min}       & $2.29$                 & $6.00$                  & $0.93407$               \\
+     \end{tabular}
+ \end{table}
 
 % En este experimento se ha ejecutado dos veces el algoritmo: una sin modificar
 % los pesos ni cruzar las neuronas de las capas internas y otra al revés. Ahora
@@ -409,23 +402,30 @@ only one hidden layer. For networks classifying the \emph{cancer1} dataset.
 % considerable tanto en los valores de test y validación para el porcentaje de
 % error.
 
-% \begin{table}
-%     \centering
-%     \caption{
+In this experiment, we execute the algorithm two times: one without modifying
+the weights nor crossing neurons in hidden layers, and the other with
+modifications. Now, if we observe Table~\autoref{tab:fixed-8-2-comp-can1}, we
+notice a considerable improvement in accuracy for both training and validation.
+
+\begin{table}
+    \centering
+    \caption{
 %         Resultados de validación y test del mejor individuo inicial en una
 %         población de 50 individuos con 8 neuronas en cada una de las 2 capas
 %         ocultas durante 20 generaciones para el problema \emph{cancer1}.
-%     }
-%     \label{tab:fixed-8-2-comp-can1}
-%     \begin{tabular}{rllll}
-%         \textbf{Hidden l.} & \textbf{Partition}  & \textbf{Accuracy error \%} & \textbf{Neuron/Layer score} & \textbf{F2 score} \\
-%         \hline
-%         \textbf{Constant}  & \textbf{Validation} & $0.57$                 &        $32$             &      $0.98765$ \\
-%                        & \textbf{Test}       & $2.86$                 &        $32$             &      $0.96014$ \\
-%         \textbf{Mutables}  & \textbf{Validation} & $0.00$                 &        $32$             &      $1.00000$ \\
-%                        & \textbf{Test}       & $2.29$                 &        $32$             &      $0.98566$ \\
-%     \end{tabular}
-% \end{table}
+Validation and test results for the best individual from a population of 50,
+configured with eight neurons in each of the two hidden layers, through 20
+generations for the \emph{cancer1} dataset.}
+     \label{tab:fixed-8-2-comp-can1}
+     \begin{tabular}{rllll}
+         \textbf{Hidden l.} & \textbf{Partition}  & \textbf{Accuracy error \%} & \textbf{Neuron/Layer score} & \textbf{F2 score} \\
+         \hline
+         \textbf{Constant}  & \textbf{Validation} & $0.57$                 &        $32$             &      $0.98765$ \\
+                        & \textbf{Test}       & $2.86$                 &        $32$             &      $0.96014$ \\
+         \textbf{Mutables}  & \textbf{Validation} & $0.00$                 &        $32$             &      $1.00000$ \\
+                        & \textbf{Test}       & $2.29$                 &        $32$             &      $0.98566$ \\
+     \end{tabular}
+ \end{table}
 
 % Por el contrario, si comparamos el primer ejemplo con los datos obtenidos para
 % el problema \emph{cancer2}, parece que sí que mejora el algoritmo al no mantener
