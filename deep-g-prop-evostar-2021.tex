@@ -207,6 +207,19 @@ neurons per layer.
 % Usando cómo parámetro de ponderación el número dos, le damos más importancia a
 % la sensibilidad, para evitar lo antes comentado.
 
+
+We selected the following parameters for the network:
+
+\begin{itemize}
+\item Activation function: We selected a (\emph{rectified linear unit}) ReLU 
+      activation function for hidden layers and Softmax for the output layer.
+\item Optimization algorithm: We used the Stochastic Gradient Descend 
+      (SGD) backpropagation algorithm.
+      % ¿Cúal fue el learning rate?
+\item Loss function: We selected the cross-entropy loss function.
+\end{itemize}
+
+
 % En cuanto al entrenamiento y propagación hacia atrás de los modelos se han
 % utilizado los siguientes parámetros:
 
@@ -238,6 +251,18 @@ neurons per layer.
 %     de activación de la última capa (softmax).
 
 % \end{itemize}
+
+
+When referring to a certain number of layers, we will be talking about hidden
+layers because the input and output layers are fixed depending on the problem.
+To compare our results against the GProp algorithm we mentioned earlier in
+section \autoref{chap:introduction}, we selected the Proben1 \cite{Proben1}
+dataset and other classification datasets found in the UCI \cite{uci}
+repository. Results shown are the mean of five runs with different random
+generator seeds ( \code{2017725297}, \code{3842001146}, \code{788305541},
+\code{1367677890}, and \code{3074644809}. We obtained these seeds using the
+\code{getrandbits} function from the \code{random} module found in Python's
+standard library.
 
 % Siempre que se refiera a un número de capas concreto se estará hablando de las
 % capas ocultas, dado que la tanto la capa de entrada como la de salida son
@@ -284,10 +309,32 @@ neurons per layer.
 % que de base, la distribución uniforme utilizada para generar los genes de los
 % individuos llega a dar resultados muy buenos. Otra razón de esta discrepancia,
 % simple pero importante, es cómo se ordenan los datos dentro de un mismo
-% problema. Entonces, se han realizado pruebas con poblaciones e individuos más
+% problema.  % Se refiere a los individuos en la población o en la tabla?? - M
+% Entonces, se han realizado pruebas con poblaciones e individuos más
 % grandes para poder ver que efectivamente se mejora el resultado si se mutan las
 % capas ocultas. También se prueba con otra partición del mismo problema para ver
 % cómo efectivamente ahí si mejora.
+
+\subsection{Evolution of Neworks with a Fixed Architecture} 
+
+In this section, we compare the evolution of networks with and without weight
+evolution. For this, we present the results of comparing the evolution networks
+with fixed architectures, in which we manually chose the number of layers and
+neurons in them.  
+
+In the first two tables, we can see very similar results regarding accuracy for
+the \emph{cancer1} dataset \cite{uci}, with the network with fixed hidden layers
+(\autoref{tab:fixed-7-1-const-can1}) obtaining the best result with an accuracy
+of $2.86\%$ against the $3.09\%$ (in \autoref{tab:fixed-7-1-noconst-can1}) from
+the population with modified hidden layers. We can suppose that this result is
+because of a low number of generations and having a small population. Moreover,
+we can see in Table \autoref{tab:fixed-7-1-inicial-can1} that the uniform
+distribution used to generate the population produces good results from the
+beginning. Another reason for this discrepancy, which is basic but important, is
+how the algorithm sorts the data within a problem. Because of that, we tested
+with larger populations and individuals to see if results are effectively
+improved when hidden layers are mutated. We also tested with another partition
+of the same dataset to further prove this intuition.
 
 % \begin{table}
 %     \centering
@@ -295,6 +342,11 @@ neurons per layer.
 %         Resultados de test del mejor individuo final tras 10 generaciones con
 %         20 individuos iniciales y 7 neuronas por individuo haciendo operaciones
 %         sobre las capas internas para el problema \emph{cancer1}.
+
+These results were obtained by the best individual after ten generations, 
+with an initial population of twenty individuals and initially seven neurons each. 
+The evolution optimized the hidden layers of networks classifying the \emph{cancer1} dataset. 
+
 %     }
 %     \label{tab:fixed-7-1-noconst-can1}
 %     \begin{tabular}{rlll}
@@ -312,6 +364,12 @@ neurons per layer.
 %         Resultados de test del mejor individuo final tras 10 generaciones con
 %         20 individuos iniciales y 7 neuronas por individuo sin hacer
 %         operaciones sobre las capas internas para el problema \emph{cancer1}.
+
+These results were obtained by the best individual after ten generations, with
+an initial population of twenty individuals and initially seven neurons each.
+This evolution did not optimize the hidden layers, again for networks
+classifying the \emph{cancer1} dataset.
+
 %     }
 %     \label{tab:fixed-7-1-const-can1}
 %     \begin{tabular}{rlll}
@@ -329,6 +387,11 @@ neurons per layer.
 %         Resultados de test del mejor individuo inicial en una población de 20
 %         individuos con 7 neuronas en 1 capa oculta cada uno para el problema
 %         \emph{cancer1}.
+
+These results were obtained by the best individual after ten generations, with
+an initial population of twenty individuals and initially seven neurons each, fixed to 
+only one hidden layer. For networks classifying the \emph{cancer1} dataset.
+
 %     }
 %     \label{tab:fixed-7-1-inicial-can1}
 %     \begin{tabular}{rlll}
