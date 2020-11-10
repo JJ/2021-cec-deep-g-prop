@@ -91,7 +91,7 @@ def individual_evaluator(
         model.layers[layer_index].set_weights([layer.weights, layer.bias])
 
     model.compile(
-        optimizer=SGD(),
+        optimizer=SGD(learning_rate=0.01),
         loss=CategoricalCrossentropy()
         if multi_class
         else BinaryCrossentropy(),
