@@ -29,8 +29,16 @@ vayan a utilizar. Para más información sobre [pip] y [venv] consultar el
 
 ### Creación de un entorno virtual
 
-Para crear un entorno virtual, podemos usar el módulo que viene incorporado
-con la instalación de Python desde la versión `3.3`:
+First, you need to install a version of python that's been compiled
+with `-fPIC`. `pyenv` versions by default are not, so you will need to
+issue something like this:
+
+```shell
+env PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.7.9
+```
+
+We can then use a core module to create the virtual environment, it's been
+working since version 3.3
 
 ```shell
 python3.7 -m venv .venv
