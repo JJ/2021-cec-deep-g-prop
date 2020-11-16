@@ -118,10 +118,41 @@ view: \begin{itemize}
     into account during the selection phase
     \cite{DBLP:conf/ijcci/MereloLFGCCRMG15}, or not.
 
-  \end{itemize}
+\end{itemize}
 
 \section{Proposed Method}
 \label{method}
+
+The general algorithm will proceed like this:
+
+\begin{algorithm}
+  \caption{Genetic Algorithm loop}\label{alg:ga}
+  \begin{algorithmic}[1]
+    \State \textit{evaluate initial populatialgoritmoon}
+    \While{\textit{max fit is less than ideal and there are generations left}}
+    \If{\textit{max fit hasn't improved in some generations}}
+    \State \textit{Stop algorithm}
+    \EndIf
+    \State \textit{select the offspring from the best population individuals}
+    \State \textit{apply crossover to the offspring}
+    \State \textit{apply mutations to the offspring}
+    \State \textit{replace the worst population individuals with the modified offspring}
+    \EndWhile
+  \end{algorithmic}
+\end{algorithm}
+
+This is a canonical evolutionary algorith. The key of the algorithm is
+in the different parts used, that extend and enhance those used by the
+original G-Prop. \begin{itemize}
+  \item The {\em crossover} function will swap the ``neurons'' (hidden
+    layer neurons plus connections) together with connections. Main
+    difference with respect to original G-Prop is that, in this case,
+    there can be several hidden layers, so the connections might be
+    either to input or output or to another layers. % What happens if
+                                % the two neural nets have different
+                                % number of layers? - JJ
+  \item 
+
 
 \section{Results}
 \label{sec:res}
@@ -670,16 +701,16 @@ this case, the algorithm did not change the hidden layers.
 %         \textbf{Spambase2}   & $35.13\ \pm\ 4.94$ & $29.40\ \pm\ 20.16$ & $0.28133\ \pm\ 0.34343$ \\
 %         \textbf{Spambase2}   & $40.07\ \pm\ 12.26$ & $31.00\ \pm\ 14.48$ & $0.32100\ \pm\ 0.39295$ \\
 %     \end{tabular}
-% \end{table}
+%   \end{table}
+
+
+\section{Conclusions and future work}
 
 
 \section*{Acknowledgments}
 
 The work is
 supported by the so and so.
-
-
-
 
 
 
