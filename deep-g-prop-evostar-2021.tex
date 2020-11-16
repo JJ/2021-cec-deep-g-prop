@@ -373,9 +373,16 @@ standard library.
 In this section, we compare the evolution of networks with and without weight
 evolution. For this, we present the results of comparing the evolution networks
 with fixed architectures, in which we manually chose the number of layers and
-neurons in them.  
+neurons in them. In this case, what we try to establish is a new
+baseline for results, while also trying to reproduce the originally
+published results. Since more than a dozen years have passed, we were
+also interested in finding out the speed with which the whole
+operation could be performed, despite being Python a priori a slower
+language than C++, which was the original language.
 
-In the first two tables, we can see very similar results regarding accuracy for
+In the first two tables, we can see very similar results % similar to
+                                % what? - JJ
+regarding accuracy for
 the \emph{cancer1} dataset \cite{uci}, with the network with fixed hidden layers
 (\autoref{tab:fixed-7-1-const-can1}) obtaining the best result with an accuracy
 of $2.86\%$ against the $3.09\%$ (in \autoref{tab:fixed-7-1-noconst-can1}) from
@@ -415,7 +422,10 @@ The evolution optimized the hidden layers of networks classifying the \emph{canc
 %         20 individuos iniciales y 7 neuronas por individuo sin hacer
 %         operaciones sobre las capas internas para el problema \emph{cancer1}.
 These results were obtained by the best individual after ten generations, with
-an initial population of twenty individuals and initially seven neurons each.
+an initial population of twenty individuals and initially seven
+neurons each. % These parameters need to be justified. 20 individuals
+              % do not look like a lot. Is there a way to run the
+              % experiments again? - JJ
 This evolution did not optimize the hidden layers, again for networks
 classifying the \emph{cancer1} dataset.}
      \label{tab:fixed-7-1-const-can1}
