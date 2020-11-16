@@ -151,7 +151,17 @@ original G-Prop. \begin{itemize}
     either to input or output or to another layers. % What happens if
                                 % the two neural nets have different
                                 % number of layers? - JJ
-  \item 
+  \item There are several kinds of {\em mutation} operators: (initial) weights,
+    biases, as well as changing the number of neurons and/or
+    layers. The neuron will be added last in the layer, and it will be
+    eliminated in the same way. Since the actual position of the
+    neurons is arbitrary, it does not really matter where the neuron
+    is added or eliminated. The layer add/eliminate mutator is the
+    main difference with respect to G-Prop, which used only one
+    layer. In this case, only the last layer can be eliminated. When a
+    layer is eliminated, the weights from the previous layer to tne
+    next layer are generated randomly.
+    % Please check this too
 
 
 \section{Results}
