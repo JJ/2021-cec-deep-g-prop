@@ -88,9 +88,18 @@ previous instance in accuracy, with very competitive running times.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Using artificial neural networks (ANN) requires establishing the structure in layers and connections between them, the parameters (such as initial weights) and a set of learning constants. 
+Using artificial neural networks (ANN) requires establishing the
+structure in layers and connections between them, the parameters (such
+as initial weights) and a set of learning constants. This is still
+true for deep learning architectures \cite{goodfellow,nielsen}, where
+a design parameter is added: the number of layers in the architecture,
+every one with its own set of parameters, like the number of neurons
+in every layer.
 
-Evolutionary neural networks are an efficient way of searching for the architecture and the weights of the ANN.
+Evolutionary neural networks are an efficient way of searching for the
+architecture and the weights of the ANN, and this was proved
+repeatedly for {\em shallow} architectures (with a single hidden
+layer) since late in the previous century \cite{CastilloNPL,stanley2002evolving}
 
 This paper continues the research on evolutionary optimisation of MLP (\emph{G-Prop} method) presented in \cite{castilloNC,CastilloNPL}. 
 This method leverages the capabilities of two classes of algorithms: the ability of EA to find a solution close to the global optimum, and the ability of the back-propagation algorithm (BP) to tune a solution and reach the nearest local minimum by means of local search from the solution found by the EA.
