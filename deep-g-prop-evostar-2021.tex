@@ -99,10 +99,36 @@ in every layer.
 Evolutionary neural networks are an efficient way of searching for the
 architecture and the weights of the ANN, and this was proved
 repeatedly for {\em shallow} architectures (with a single hidden
-layer) since late in the previous century \cite{CastilloNPL,stanley2002evolving}
+layer) since late in the previous century
+\cite{CastilloNPL,stanley2002evolving}. However, in most cases design
+of the structure and conectivities of the different layers, as
+indicated by \cite{miikkulainen2019evolving}, is still mostly done by
+hand. This is mainly due to the above mentioned fact that search
+spaces are huge, so using rules of thumb (such as the ones mentioned
+in \cite{qolomany2017parameters} of using certain formulas to set the
+number of layers) to decide on those parameters
+are a way of fixing part of the search space, letting the deep
+learning algorithm themselves figure out the weights, whose
+optimization, in these cases, is able to cover big spans of the search
+space.
 
-This paper continues the research on evolutionary optimisation of MLP (\emph{G-Prop} method) presented in \cite{castilloNC,CastilloNPL}. 
-This method leverages the capabilities of two classes of algorithms: the ability of EA to find a solution close to the global optimum, and the ability of the back-propagation algorithm (BP) to tune a solution and reach the nearest local minimum by means of local search from the solution found by the EA.
+We can also, however, fix a part of the architecture, choosing a
+multilayer perceptron trained with backpropagation, whose initial
+weights as well as biases evolve using an evoltuionary algorithm. This
+algorithm was called (\emph{G-Prop} (as in Genetic Back-Propatagion)
+and was originally presented in \cite{castilloNC,CastilloNPL}. This
+method leverages the capabilities of two classes of algorithms: the
+ability of EA to find a solution close to the global optimum, and the
+ability of the back-propagation algorithm (BP) to tune a solution and
+reach the nearest local minimum by means of local search from the
+solution found by the EA.
+
+This initial G-Prop algorithm was limited, first, by the fact that
+most of it had to be programmed from scratch, since there were few (if
+any) off-the-shelf software that could do this kind of task; it
+additionally, available computational capability limited the size of
+the search space; this was limited further by limiting evolution to
+single-layer multilayer perceptrons.
 
 The aim of this paper is to present an algorithm that searches over the initial weights, number of hidden layers and hidden layer sizes of a MLP, based on a EA and QP.
 
