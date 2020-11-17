@@ -81,7 +81,12 @@ Evolutionary neural networks are an efficient way of searching for the architect
 This paper continues the research on evolutionary optimisation of MLP (\emph{G-Prop} method) presented in \cite{castilloNC,CastilloNPL}. 
 This method leverages the capabilities of two classes of algorithms: the ability of EA to find a solution close to the global optimum, and the ability of the back-propagation algorithm (BP) to tune a solution and reach the nearest local minimum by means of local search from the solution found by the EA.
 
-The remainder is structured as follows: 
+The aim of this paper is to present an algorithm that searches over the initial weights, number of hidden layers and hidden layer sizes of a MLP, based on a EA and QP.
+
+The remainder of this paper is structured as follows: 
+section \ref{sec:soa} makes a short overview of the methods to design ANN.
+In section \ref{method} it is fully described the proposed model.
+Section \ref{sec:res} describes the results obtained, followed by a brief conclusion in Section \ref{sec:conclus}.
 
 
 \section{State of the Art}
@@ -753,6 +758,8 @@ this case, the algorithm did not change the hidden layers.
 
 
 \section{Conclusions and future work}
+\label{sec:conclus}
+
 
 
 \section*{Acknowledgments}
