@@ -41,13 +41,16 @@ We can then use a core module to create the virtual environment, it's been
 working since version 3.3
 
 ```shell
-python3.7 -m venv .venv
+python -m venv .venv
 ```
 
-Así habríamos creado un entorno virtual en el directorio `.venv`. Una vez
-instalado el entorno virtual, deberemos activarlo. Para ello hay que ejecutar
-uno de los siguientes comandos dependiendo del interprete de órdenes que se
-use (tabla obtenida de la documentación oficial de [venv]):
+> Please make sure when you do this that all `__pycache__` directories
+have been deleted; otherwise, it might fail in some unexpected place.
+
+This will create a virtual environment in the `.venv` directory. Once
+that's been done, we need to activate it; use one of the following
+commands (depending on the interpreter) (obtained from the official
+[venv] documentation):
 
 | Platform |      Shell      | Command to activate virtual environment |
 | :------: | --------------: | --------------------------------------- |
@@ -58,7 +61,11 @@ use (tabla obtenida de la documentación oficial de [venv]):
 | Windows  |         cmd.exe | `C:\> <venv>\Scripts\activate.bat`      |
 |          |      PowerShell | `PS C:\> <venv>\Scripts\Activate.ps1`   |
 
-Tabla 1.1: *Activación de entorno virtual.*
+Table 1.1: *Activating the virtual environment.*
+
+> You won't need to create the virtual environment in the case you're
+> using global installation of modules via version managers such as
+> `pyenv`.
 
 ### Instalación de la interfáz de línea de comandos
 
