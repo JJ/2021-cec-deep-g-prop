@@ -1,8 +1,9 @@
 \documentclass[runningheads]{llncs}
 %
-\usepackage{graphicx}
+\usepackage{graphics, graphicx, float}
 \usepackage{algpseudocode,algorithm}
 \usepackage{hyperref}
+\def\algorithmautorefname{Algorithm}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{xstring}
@@ -197,7 +198,7 @@ view: \begin{itemize}
 \section{Proposed Method}
 \label{method}
 
-The general algorithm will proceed like this:
+The general algorithm will proceed like the \autoref{alg:ga} shows.
 
 \begin{algorithm}
   \caption{Genetic Algorithm loop}\label{alg:ga}
@@ -246,10 +247,22 @@ original G-Prop. \begin{itemize}
 We need the fitness function to exert parsimony pressure, which is why
 we take into account not only the testing values reached after
 training, but also the overal size of the network. This will follow
-the formula:
+the Equation \ref{eq:hidden-score}:
 
-% I can't really figure out the formula.
+\begin{figure}
+    \centering
+    \caption{
+        DeepGProp NN model score equation.
+    }
+    \label{eq:hidden-score}
+    \begin{equation}
+        score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl
+    \end{equation}
+\end{figure}
 
+Being $nhl$ the number of hidden layers and $nu_{i}$ the number
+of neurons for the layer $i$. So in summary, the score will be the
+global number of neurons multiplied by the number of hidden layers.
 
 The whole code for this has been released under a free license in
 GitHub. % Add URL later.
