@@ -395,68 +395,15 @@ We selected the following parameters for the network:
 \item Loss function: We selected the cross-entropy loss function.
 \end{itemize}
 
-
-% En cuanto al entrenamiento y propagación hacia atrás de los modelos se han
-% utilizado los siguientes parámetros:
-
-% \begin{itemize}
-
-%     \item Función de activación: método aplicado a la sumatoria de los valores
-%     de activación de la capa anterior por sus pesos mas un sesgo. La salida de
-%     esta función define la activación de la neurona actual. Para este parámetro
-%     se ha utilizado la función de activación ReLU (\emph{rectified linear
-%     unit}) que cumple la siguiente función dado un valor $x$ la activación de
-%     la neurona viene dada por $max(x, 0)$. Para la capa de salida, sin embargo,
-%     se ha utilizado la función Softmax que configura las neuronas de salida de
-%     manera que todas las activaciones suman 1 y se sitúen en el rango
-%     $[0.0, 1.0]$.
-
-%     \item Optimizador: algoritmo utilizado para entrenar la red neuronal con la
-%     propagación hacia atrás buscando la minimización de la función de pérdida.
-%     Como optimizador se ha utilizado SGD, gradiente descendiente estocástico
-%     del Inglés, que utilizando pequeños grupos de datos (\emph{batches})
-%     calcula las modificaciones necesarias en el conjunto de pesos y sesgos
-%     global obteniendo finalmente el gradiente que se aplicará a éstos para así
-%     mejorar las capacidades de clasificación del modelo con respecto a los
-%     datos de entrenamiento.
-
-%     \item Función de pérdida: también conocida como función de costo o función
-%     objetivo es la cuál se quiere minimizar, es decir, obtener una mejor
-%     predictibilidad de los datos por parte del modelo. Se ha elegido como
-%     función de pérdida la entropía cruzada entre clases partiendo de la función
-%     de activación de la última capa (softmax).
-
-% \end{itemize}
-
-
 When referring to a certain number of layers, we will be talking about hidden
 layers because the input and output layers are fixed depending on the problem.
-To compare our results against the GProp algorithm we selected the Proben1 \cite{Proben1}
-dataset and other classification datasets found in the UCI \cite{uci}
-repository. Results shown are the mean of five runs with different random
-generator seeds ( 
-%  \code{2017725297}, \code{3842001146}, \code{788305541},
-%\code{1367677890}, and \code{3074644809}. We obtained these seeds using the
-%\code{getrandbits} function from the \code{random} 
-module found in Python's
-standard library.
-
-% Siempre que se refiera a un número de capas concreto se estará hablando de las
-% capas ocultas, dado que la tanto la capa de entrada como la de salida son
-% necesarias y de estructura fija.
-
-% Para las pruebas se han utilizado tanto algunos conjuntos de datos de
-% Proben1\cite{Proben1}\footnote{Base de datos dedicada a comparar redes
-% neuronales} como otros conjuntos de datos conocidos (por ejemplo,
-% \emph{Spambase} encontrados en la web de UCI\cite{uci}) para poder comparar
-% los resultados obtenidos con GProp ya mencionado en la
-% introducción\autoref{chap:introduction}.
-
-% Los datos mostrados en la mayoría de las tablas constituyen la media de cinco
-% ejecuciones realizadas con semillas distintas. Se han utilizado las semillas:
-% \code{2017725297}, \code{3842001146}, \code{788305541}, \code{1367677890} y
-% \code{3074644809}. Éstas han sido obtenidas aleatoriamente haciendo uso de la
-% función \code{getrandbits} del módulo \code{random} de Python.
+To compare our results against the GProp algorithm we selected the Proben1
+\cite{Proben1} dataset and other classification datasets found in the UCI
+\cite{uci} repository. Results shown are the mean of five runs with different
+random generator seeds (\texttt{2017725297}, \texttt{3842001146},
+\texttt{788305541}, \texttt{1367677890}, and \texttt{3074644809}). We obtained
+these seeds using the \texttt{getrandbits} function from the \texttt{random}
+module found in Python's standard library.
 
 % \begin{minted}[]{python}
 % from random import getrandbits
