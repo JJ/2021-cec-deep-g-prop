@@ -79,7 +79,9 @@ as a baseline, we have rewritten the method using off-the-shelf tools
 and libraries; modern testing and deployment tools have been also
 employed. On top of that algorithm, we have added a ``deep'' component
 by being able not only to evolve the number of neurons, but also the
-number of layers in the neural net. In this paper we show how this has
+number of layers in the neural net, as well as changing the training
+algorithm to one that is more suited to perceptrons with several
+layers. In this paper we show how this has
 been achieved using the new Deep-G-Prop framework, which we present
 here for the first time, and how this new framewok is able to beat the
 previous instance in accuracy, with very competitive running times.
@@ -132,11 +134,25 @@ the search space; this was limited further by limiting evolution to
 single-layer multilayer perceptrons. The aim of this paper is to
 present an algorithm that searches over the initial weights, number of
 hidden layers and hidden layer sizes of a MLP, based on a EA and
-QuickPropagation, a version of BackPropagation. % Is this true? What
-                                % version of backpropagation are you
-                                % using? - JJ
+Stochastic Gradient Descent (SGD) \cite{bottou2012stochastic}. This
+algorithm has been used for training deep neural nets and other kind
+of machine learning algorithms
+\cite{bottou2012stochastic,bottou2010large}, justifying our
+denomination of Deep-G-Prop for this specific method. This does not
+imply that we are actually doing deep machine learning at large; but
+we are using (potentially) deep neural nets (with more than one
+layer), and a training method that is suitable for deep neural nets,
+leaving the possibility of using deep neural nets open for the future.
 
-The remainder of this paper is structured as follows: 
+In this paper what we will do is to first bring the implementation of
+the G-Prop concept to current tools and languages, choosing the best
+suited for the purpose. Then we will try and reproduce the results
+obtained in those classical papers with the basic configuration, to
+later try and go beyond the state of the art established there with
+new experiments that will widen the search space by using perceptrons
+with several layers.
+
+The remainder of this paper is structured as follows:
 section \ref{soa} makes a short overview of the methods to design ANN.
 In section \ref{method} it is fully described the proposed model.
 Section \ref{sec:res} describes the results obtained, 
