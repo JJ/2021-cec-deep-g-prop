@@ -327,17 +327,13 @@ distribution ArchLinux (kernel version \texttt{5.9.2-arch1-1}).
   \end{tabular}
 \end{table}
 
-% Also about the progression of the experiments: first a single layer,
-% then more layers.
-
 We followed a progression path of increasing complexity in terms of models
 execution. First we trained a clasic multilayer perceptron with a fixed number
 of layers and neurons per layer, modifying the hidden layer weights and biases
 for some of them. The second step was to replicate the method used in GProp
-\cite{castilloNC,CastilloNPL}: % [pedro]  it makes no sense including that citation that takes you to the paper in the journal web page. Instead, we should cite   \cite{castilloNC,CastilloNPL}
-models with one hidden layer and a random variable number of
-neurons for it. For the last case, we evolved the models changing the number of
-hidden layers and neurons per layer.
+\cite{castilloNC,CastilloNPL}: models with one hidden layer and a random
+variable number of neurons for it. For the last case, we evolved the models
+changing the number of hidden layers and neurons per layer.
 
 In these results, we will try to use the same metrics as the ones
 proposed in GProp. We are going to use Equation
@@ -405,12 +401,6 @@ random generator seeds (\texttt{2017725297}, \texttt{3842001146},
 these seeds using the \texttt{getrandbits} function from the \texttt{random}
 module found in Python's standard library.
 
-% \begin{minted}[]{python}
-% from random import getrandbits
-% for _ in range(5):
-%     print(getrandbits(32))
-% \end{minted}
-
 % %
 % % no structure modification
 % %
@@ -451,9 +441,8 @@ also interested in finding out the speed with which the whole
 operation could be performed, despite being Python a priori a slower
 language than C++, which was the original language.
 
-In the first two tables, we can see very similar results % similar to
-                                % what? - JJ
-regarding accuracy for
+In the first two tables, we can see very similar results between the GProp and
+DeepGProp algorithms regarding accuracy for
 the \emph{cancer1} dataset \cite{uci}, with the network with fixed hidden layers
 (\autoref{tab:fixed-7-1-const-can1}) obtaining the best result with an accuracy
 of $2.86\%$ against the $3.09\%$ (in \autoref{tab:fixed-7-1-noconst-can1}) from
@@ -467,9 +456,9 @@ with larger populations and individuals to see if results are effectively
 improved when hidden layers are mutated. We also tested with another partition
 of the same dataset to further prove this intuition.
 
-% You need to say how many runs were made to reach these values. Was
-% it a single run? If so, we need to make more runs and compute
-% averages over them - JJ
+As we commented at the end of this section introduction, every result shown
+here, is the mean of 5 executions.
+
  \begin{table}
      \centering
      \caption{
@@ -617,6 +606,11 @@ this case, the algorithm did not change the hidden layers.
 % se hace. En las siguientes secciones se explorarán nuevas mutaciones más
 % complejas ya modificando la estructura del perceptrón multicapa de generación
 % en generación.
+It has become clear that generally you will obtain better results when applying
+small modifications to the multilayer perceptrons models than if we don't
+change anything. In the following sections we will explore new and more complex
+mutations modifying the structure of the multilayer perceptron from generation
+to generation.
 
 % \section{Evolución de población con modificación de número de neuronas:
 % reproducción de resultados}
