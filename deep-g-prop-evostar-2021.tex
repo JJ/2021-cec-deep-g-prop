@@ -194,7 +194,7 @@ view: \begin{itemize}
     all weights and other parameters, to using learning process just
     to find the success rate, with additional possibilities like
     evaluating success {\em before applying learning} (to take
-    advantage of the Baldwin effect \cite{castillo-2006}) to applying
+    advantage of the Baldwin effect \cite{baldwin-AEB02}) to applying
     a few cycles of learning that will become part of the codified
     solution.
   \item How lack of determination of the fitness is taken into account
@@ -334,7 +334,7 @@ We followed a progression path of increasing complexity in terms of models
 execution. First we trained a clasic multilayer perceptron with a fixed number
 of layers and neurons per layer, modifying the hidden layer weights and biases
 for some of them. The second step was to replicate the method used in GProp
-\cite{g-prop}: % [pedro]  it makes no sense including that citation that takes you to the paper in the journal web page. Instead, we should cite   \cite{castilloNC,CastilloNPL}
+\cite{castilloNC,CastilloNPL}: % [pedro]  it makes no sense including that citation that takes you to the paper in the journal web page. Instead, we should cite   \cite{castilloNC,CastilloNPL}
 models with one hidden layer and a random variable number of
 neurons for it. For the last case, we evolved the models changing the number of
 hidden layers and neurons per layer.
@@ -364,7 +364,7 @@ every layer.
 % Cambié lo de sencillo y óptimo por conceptos más utilizados en el área. - M
 
 We compare against other classification algorithms using accuracy as a
-performance metric, as was used in the GProp paper \cite{g-prop}. We hope to
+performance metric, as was used in the GProp paper \cite{castilloNC,CastilloNPL}. We hope to
 increase the generalization of the model and avoid overfitting by reducing the
 network's complexity, we try to accomplish this by reducing the
 overall number of neurons in the MLP; this was also the intention of the GProp
