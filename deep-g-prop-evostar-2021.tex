@@ -332,16 +332,10 @@ increase the generalization of the model and avoid overfitting by reducing the
 network's complexity, we try to accomplish this by reducing the
 overall number of neurons in the MLP; this was also the intention of the GProp
 authors. Because we test with one or more hidden layers, we obtain the network's
-score using the expression \autoref{eq:hidden-score}, where $nhl$ is the model's
+score using the expression \ref{eq:hidden-score}, where $nhl$ is the model's
 number of hidden layers and $nu_{i}$ is the number of neurons in layer {i}. With
 this expression, we aim to minimize the number of layers first, and then the number of
 neurons per layer.
-
-
-\begin{equation}
-  score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl
-\end{equation}
-
 
 % La métrica F2 score es una definida como la media armónica ponderada entre
 % precisión (\emph{precision})\footnote{Fracción de instancias que son de la
