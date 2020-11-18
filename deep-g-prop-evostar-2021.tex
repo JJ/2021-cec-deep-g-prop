@@ -228,15 +228,19 @@ original G-Prop. \begin{itemize}
 
   \item There are several kinds of {\em mutation} operators: (initial) weights,
     biases, as well as changing the number of neurons and/or
-    layers. The neuron will be added last in the layer, and it will be
-    eliminated in the same way. Since the actual position of the
+    layers. The neuron will be added last in the randomly selected layer,
+    and it will be eliminated in the same way. Since the actual position of the
     neurons is arbitrary, it does not really matter where the neuron
     is added or eliminated. The layer add/eliminate mutator is the
     main difference with respect to G-Prop, which used only one
-    layer. In this case, only the last layer can be eliminated. When a
-    layer is eliminated, the weights from the previous layer to tne
-    next layer are generated randomly.
-    % Please check this too
+    layer. In this case, only the last hidden layer can be eliminated. When a
+    layer is eliminated, the weights from the previous layer to the eliminated
+    one are kept, adding randomly generated weights and biases if the output
+    layer (newly connected with this previous layer) have more ``neurons'' than
+    the recently deleted layer. When adding a new hidden layer, the connections
+    between the last hidden layer and the output layer are recicled, and the
+    connections between the newly created layer and the output layer are
+    calculated randomly (running simmilar fix as when we delete the layer).
 \end{itemize}
 
 We need the fitness function to exert parsimony pressure, which is why
