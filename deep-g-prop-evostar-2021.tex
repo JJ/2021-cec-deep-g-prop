@@ -211,7 +211,23 @@ The variation of architecture has lately evolved towards (almost)
 unsconstrained evolution using NEAT, as shown in the recent review by
 Miikkulainet et al. \cite{miikkulainen2019evolving}. Since this blows
 up the search space, this needs computational resources that are
-really off the reach of most labs or individuals.
+really off the reach of most labs or individuals. The rest usually
+still use a fixed model for the network architecture, for instance SVM
+or MLPs, and even, in some cases, fixed number of layers and weights
+\cite{ecer2020training}; however, recent papers like the one by
+Tajmiri et al. \cite{TAJMIRI2020108997} already use a representation
+that is able to accomodate a maximum number of layers, as well as the
+number of neurons in every layer. However, this encoding of
+architecture does not have any place for initial weights, which in the
+case of G-Prop, were proved to be essential for a good performance,
+including the emergence of a Baldwin effect \cite{castillo-2006}
+during its evolution.
+
+In this paper we will extend the principles of variation of MLP
+architecture through the use of genetic operators as well as
+codification of initial weights to a modern, standard based
+implementation, that will also be released as free software. We show
+how this new Deep-G-Prop method works next.
 
 \end{itemize}
 
@@ -224,7 +240,7 @@ The general algorithm will proceed like the \autoref{alg:ga} shows.
 \begin{algorithm}
   \caption{Genetic Algorithm loop}\label{alg:ga}
   \begin{algorithmic}[1]
-    \State \textit{evaluate initial populatialgoritmoon}
+    \State \textit{evaluate initial population}
     \While{\textit{max fit is less than ideal and there are generations left}}
     \If{\textit{max fit hasn't improved in some generations}}
     \State \textit{Stop algorithm}
