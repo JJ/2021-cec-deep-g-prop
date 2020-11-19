@@ -39,7 +39,7 @@
 
 \begin{document}
 %
-\title{}
+\title{Evolving multi-layered perceptrons using free software}
 %
 %\titlerunning{Abbreviated paper title}
 % If the paper title is too long for the running head, you can set
@@ -736,20 +736,29 @@ performance for GProp.
 % Helicases}. Se probará en la siguiente sección que con número variable de capas
 % debería mejorar el resultado.
 
-% \begin{table}
-%     \centering
-%     \caption{
-%         Resultados de validación del mejor individuo final tras 10 y 50
-%         generaciones respectivamente.
-%     }
-%     \label{tab:deepgprop-miniheli-validation}
-%     \begin{tabular}{rlll}
-%         \textbf{\# generations} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-%         \hline
-%         \textbf{10}             & $11.19\ \pm\ 1.36$ & $11.80\ \pm\ 6.01$ & $0.88280\ \pm\ 0.03664$ \\
-%         \textbf{50}             & $2.71\ \pm\ 2.30$ & $15.00\ \pm\ 4.38$ & $0.98952\ \pm\ 0.00887$ \\
-%     \end{tabular}
-% \end{table}
+On the other hand, we can appreciate the difference between the validation
+(autoref{tab:deepgprop-miniheli-validation}) and test data refered previously.
+An overfitting to the validation data is ocurring for sure. In the
+\emph{cancer} problem before, there was not that big difference than the one we
+go here, in with the \emph{DNA Helicases} dataset. We will try in the next
+section a variable number of layers, which should increase the accuracy.
+
+\begin{table}
+    \centering
+    \caption{
+%        Resultados de validación del mejor individuo final tras 10 y 50
+%        generaciones respectivamente.
+        Best individual validation results after 10 and 50 generations
+        respectively.
+    }
+    \label{tab:deepgprop-miniheli-validation}
+    \begin{tabular}{rlll}
+        \textbf{\# generations} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+        \hline
+        \textbf{10}             & $11.19\ \pm\ 1.36$ & $11.80\ \pm\ 6.01$ & $0.88280\ \pm\ 0.03664$ \\
+        \textbf{50}             & $2.71\ \pm\ 2.30$ & $15.00\ \pm\ 4.38$ & $0.98952\ \pm\ 0.00887$ \\
+    \end{tabular}
+\end{table}
 
 % \section{Evolución de población con modificación de número de neuronas y capas}
 
