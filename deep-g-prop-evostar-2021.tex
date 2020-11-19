@@ -772,29 +772,42 @@ section a variable number of layers, which should increase the accuracy.
 % obtenidos en ejecuciones con una sola capa oculta, no se llega a alcanzar en
 % ningún caso los resultados aportados por \emph{G-Prop}.
 
+In this section, we add a new operator which allow the addition or removal of
+hidden layers from the model. We can appreciate an improvement from the
+previous tests, but it doesn't reach the GProp results which only uses one
+hidden layer.
+
 % Por ejemplo, viendo el problema de \emph{DNA Helicases}, en la
 % \autoref{tab:gprop-deepgprop-miniheli-multihidden} (teniendo en cuenta que
 % la puntuación de las capas ocultas se calcula como visto en
 % \autoref{eq:hidden-score}) vemos una mejora ligera del resultado tras 50
 % generaciones. Aún así, sigue siendo mejor de lejos \emph{G-Prop}.
 
-% \begin{table}
-%     \centering
-%     \caption{
+For example, if we run the problem of \emph{DNA Helicases} with this last
+operation in use, we will get slightly better accuracy than when using only one
+hidden layer on DeepGProp, but the GProp result will be much better still. (see
+\autoref{tab:gprop-deepgprop-miniheli-multihidden}). 
+
+\begin{table}
+    \centering
+    \caption{
 %         Comparación de los resultados obtenidos en los problemas de
 %         \emph{Helicases} por DeepGProp y GProp.
-%     }
-%     \label{tab:gprop-deepgprop-miniheli-multihidden}
-%     \begin{tabular}{rllll}
-%         \textbf{Algorithm} &  & \textbf{Acc error \%} & \textbf{\# neurons/hidden layers}     & \textbf{F2 score}\\
-%         \textbf{(\# layers)}& &                       & \textbf{score}                        &                   \\
-%         \hline
-%         \textbf{G-Prop (1)}       & 10 gen & $6\ \pm\ 3$        & $7.3\ \pm\ 3.9$     & $--$                    \\
-%         \textbf{DeepGProp (1)}     & 10 gen & $25.67\ \pm\ 5.23$ & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
-%                                    & 50 gen & $21.00\ \pm\ 5.01$ & $15.00\ \pm\ 4.38$  & $0.72556\ \pm\ 0.06024$ \\
-%         \textbf{DeepGProp (>1)}    & 50 gen & $18.67\ \pm\ 2.45$ & $23.80\ \pm\ 24.25$ & $0.82569\ \pm\ 0.04718$ \\
-%     \end{tabular}
-% \end{table}
+        Comparison between GProp and different variations of the algorithm: 10
+        generations with only one layer, 50 generation with that one layer, or
+        50 generations with variable number of layers.
+    }
+    \label{tab:gprop-deepgprop-miniheli-multihidden}
+    \begin{tabular}{rllll}
+        \textbf{Algorithm} &  & \textbf{Acc error \%} & \textbf{\# neurons/h.}     & \textbf{F2 score}\\
+        \textbf{(\# layers)}& &                       & \textbf{layers score}          &                   \\
+        \hline
+        \textbf{G-Prop (1)}       & 10 gen & $6\ \pm\ 3$        & $7.3\ \pm\ 3.9$     & $--$                    \\
+        \textbf{DeepGProp (1)}    & 10 gen & $25.67\ \pm\ 5.23$ & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
+                                  & 50 gen & $21.00\ \pm\ 5.01$ & $15.00\ \pm\ 4.38$  & $0.72556\ \pm\ 0.06024$ \\
+        \textbf{DeepGProp ($>$1)} & 50 gen & $18.67\ \pm\ 2.45$ & $23.80\ \pm\ 24.25$ & $0.82569\ \pm\ 0.04718$ \\
+    \end{tabular}
+\end{table}
 
 % Podemos recalcar que añadiéndole la posibilidad de utilizar número variable de
 % capas ocultas, el algoritmo \emph{DeepGProp} generaliza mejor para el problema
@@ -805,19 +818,28 @@ section a variable number of layers, which should increase the accuracy.
 % pequeña. También al ser superior el porcentaje conseguido en la validación para
 % 50 generaciones notamos un menor sobre ajuste a los datos de validación.
 
-% \begin{table}
-%     \centering
-%     \caption{
-%         Resultados de validación del mejor individuo final tras 50
-%         generaciones.
-%     }
-%     \label{tab:gprop-deepgprop-miniheli-multihidden-validation}
-%     \begin{tabular}{rlll}
-%         \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-%         \hline
-%         $8.13\ \pm\ 3.62$ & $23.80\ \pm\ 24.25$ & $0.88853\ \pm\ 0.06346$ \\
-%     \end{tabular}
-% \end{table}
+We can highlight that adding the posibility of using a variable number of
+hidden layers, the DeepGProp algorithm can generalize better the problem
+\emph{DNA Helicases}. This can be seen in the
+\autoref{tab:gprop-deepgprop-miniheli-multihidden-validation} because the error
+percentage difference between the validation and test is smaller. Also we can
+remark the lower overfitting when using more number of generations (50).
+
+\begin{table}
+    \centering
+    \caption{
+%        Resultados de validación del mejor individuo final tras 50
+%        generaciones.
+        Validation results of the best individual after 50 generations for the
+        \emph{DNA Helicases} problem.
+    }
+    \label{tab:gprop-deepgprop-miniheli-multihidden-validation}
+    \begin{tabular}{rlll}
+        \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+        \hline
+        $8.13\ \pm\ 3.62$ & $23.80\ \pm\ 24.25$ & $0.88853\ \pm\ 0.06346$ \\
+    \end{tabular}
+\end{table}
 
 % Tratando algún problema más complejo como \emph{spambase} se obtienen
 % resultados malos (véase las tablas \ref{tab:spambase-onelayer} y
@@ -831,40 +853,53 @@ section a variable number of layers, which should increase the accuracy.
 % cada capa oculta obtenida también aleatoriamente. Sería interesante realizar
 % pruebas con el algoritmo G-prop con este tipo de problemas para compararlos.
 
+When running DeepGProp in a complex problem like \emph{spambase} we obtain
+worse results (see \autoref{tab:spambase-onelayer} and
+\autoref{tab:spambase-onelayer}). After running multiple executions with the
+DeepGProp algorithm, it seems the optimizer finds a local minimun when the
+loose function reaches $\approx0.6$. Then the best result obtained is arround
+$36\%$ of error. For the first table, the results where obtained using a
+variable number of neurons between 2 and 20 and only one hidden layer. The
+second table results where run using a variable number of hidden layers and
+from 2 to 50 neurons per layer (choosed randomly).
 
-% \begin{table}
-%     \centering
-%     \caption{
-%         Comparación de los resultados obtenidos en el problema de
-%         \emph{spambase} para las tres particiones. Algoritmo ejecutado con 1
-%         capa fija.
-%     }
-%     \label{tab:spambase-onelayer}
-%     \begin{tabular}{rllll}
-%         \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-%         \hline
-%         \textbf{Spambase1}   & $36.80\ \pm\ 0.98$ & $10.80\ \pm\ 3.76$ & $0.03004\ \pm\ 0.04402$ \\
-%         \textbf{Spambase2}   & $38.30\ \pm\ 0.88$ & $12.60\ \pm\ 2.87$ & $0.04019\ \pm\ 0.04078$ \\
-%         \textbf{Spambase2}   & $37.64\ \pm\ 1.64$ & $16.40\ \pm\ 1.85$ & $0.05150\ \pm\ 0.06956$ \\
-%     \end{tabular}
-% \end{table}
+\begin{table}
+    \centering
+    \caption{
+%        Comparación de los resultados obtenidos en el problema de
+%        \emph{spambase} para las tres particiones. Algoritmo ejecutado con 1
+%        capa fija.
+        Comparison between the results obtained for the three partitions of the
+        \emph{spambase} problem using a fixed layer.
+    }
+    \label{tab:spambase-onelayer}
+    \begin{tabular}{rllll}
+        \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+        \hline
+        \textbf{Spambase1}   & $36.80\ \pm\ 0.98$ & $10.80\ \pm\ 3.76$ & $0.03004\ \pm\ 0.04402$ \\
+        \textbf{Spambase2}   & $38.30\ \pm\ 0.88$ & $12.60\ \pm\ 2.87$ & $0.04019\ \pm\ 0.04078$ \\
+        \textbf{Spambase2}   & $37.64\ \pm\ 1.64$ & $16.40\ \pm\ 1.85$ & $0.05150\ \pm\ 0.06956$ \\
+    \end{tabular}
+\end{table}
 
-% \begin{table}
-%     \centering
-%     \caption{
-%         Comparación de los resultados obtenidos en el problema de
-%         \emph{spambase} para las tres particiones. Algoritmo ejecutado con
-%         múltiples capas variables.
-%     }
-%     \label{tab:spambase-onelayer}
-%     \begin{tabular}{rllll}
-%         \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-%         \hline
-%         \textbf{Spambase1}   & $41.46\ \pm\ 10.75$ & $17.80\ \pm\ 6.71$ & $0.30304\ \pm\ 0.37119$ \\
-%         \textbf{Spambase2}   & $35.13\ \pm\ 4.94$ & $29.40\ \pm\ 20.16$ & $0.28133\ \pm\ 0.34343$ \\
-%         \textbf{Spambase2}   & $40.07\ \pm\ 12.26$ & $31.00\ \pm\ 14.48$ & $0.32100\ \pm\ 0.39295$ \\
-%     \end{tabular}
-%   \end{table}
+\begin{table}
+    \centering
+    \caption{
+%        Comparación de los resultados obtenidos en el problema de
+%        \emph{spambase} para las tres particiones. Algoritmo ejecutado con
+%        múltiples capas variables.
+        Comparison of the results obtained for the \emph{smapbase} partitions
+        using multiple variable hidden layers.
+    }
+    \label{tab:spambase-onelayer}
+    \begin{tabular}{rllll}
+        \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+        \hline
+        \textbf{Spambase1}   & $41.46\ \pm\ 10.75$ & $17.80\ \pm\ 6.71$ & $0.30304\ \pm\ 0.37119$ \\
+        \textbf{Spambase2}   & $35.13\ \pm\ 4.94$ & $29.40\ \pm\ 20.16$ & $0.28133\ \pm\ 0.34343$ \\
+        \textbf{Spambase2}   & $40.07\ \pm\ 12.26$ & $31.00\ \pm\ 14.48$ & $0.32100\ \pm\ 0.39295$ \\
+    \end{tabular}
+\end{table}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
