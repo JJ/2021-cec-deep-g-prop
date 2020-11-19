@@ -208,7 +208,9 @@ view: \begin{itemize}
     advantage of the Baldwin effect \cite{baldwin-AEB02}) to applying
     a few cycles of learning that will become part of the codified
     solution.
-  \item How lack of determination of the fitness is taken into account
+  \item How the lack of determination of the fitness is taken into account 
+    % I think some adjective is missing for the kind of determination 
+    % The lack of a "crisp"|"optimum"|"hard"|"definite"  determination? - M
     in evolution. Either from the fact that an stochastic algorithm is
     used to train the neural net before evaluating fitness, or the
     fact that the data set might not be totally fixed but subject to
@@ -216,7 +218,8 @@ view: \begin{itemize}
     single, crisp, number. This randomness in the fitness can be taken
     into account during the selection phase
     \cite{DBLP:conf/ijcci/MereloLFGCCRMG15}, or not.
-
+    
+    % There is also the problem of overfitting - M
 
 The variation of architecture has lately evolved towards (almost)
 unsconstrained evolution using NEAT, as shown in the recent review by
@@ -234,7 +237,7 @@ case of G-Prop, were proved to be essential for a good performance,
 including the emergence of a Baldwin effect \cite{castillo-2006}
 during its evolution.
 
-In this paper we will extend the principles of variation of MLP
+In this paper we will extend the principles of variation of a MLP
 architecture through the use of genetic operators as well as
 codification of initial weights to a modern, standard based
 implementation, that will also be released as free software. We show
@@ -246,7 +249,7 @@ how this new Deep-G-Prop method works next.
 \section{Proposed Method}
 \label{method}
 
-The general algorithm will proceed like the \autoref{alg:ga} shows.
+The general the algorithm will proceed like the \autoref{alg:ga} shows.
 
 \begin{algorithm}
   \caption{Genetic Algorithm loop}\label{alg:ga}
@@ -268,18 +271,24 @@ This is a canonical evolutionary algorithm. The key of the algorithm is
 in the different parts used, that extend and enhance those used by the
 original G-Prop. \begin{itemize}
 
+    % I think the representation or gene structure is missing, 
+    % It is a vector? what values (domain) can have?
+    % How the vector becomes a ANN? 
+
   \item The {\em crossover} function will swap the ``neurons'' together with
     their connections. Main difference with respect to original G-Prop is that,
     in this case, there can be several hidden layers, so the connections might
     be either to output or to another layers. The crossover only ocurrs when
     the two models selected for it have the same structure (same number of
-    layers ans neurons per layers).
+    layers and neurons per layers).
+
+    % Similar to NEAT in the "speciation" sense? - M 
 
   \item There are several kinds of {\em mutation} operators: (initial) weights,
     biases, as well as changing the number of neurons and/or
-    layers. The neuron will be added last in the randomly selected layer,
+    layers. The neuron will be added last in the randomly selected layer, % number of neurons? -M
     and it will be eliminated in the same way. Since the actual position of the
-    neurons is arbitrary, it does not really matter where the neuron
+    neurons is arbitrary, it does not really matter where the neuron % Maybe add: because it is a fully connected network -M
     is added or eliminated. The layer add/eliminate mutator is the
     main difference with respect to G-Prop, which used only one
     layer. In this case, only the last hidden layer can be eliminated. When a
@@ -287,15 +296,20 @@ original G-Prop. \begin{itemize}
     one are kept, adding randomly generated weights and biases if the output
     layer (newly connected with this previous layer) have more ``neurons'' than
     the recently deleted layer. When adding a new hidden layer, the connections
-    between the last hidden layer and the output layer are recicled, and the
+    between the last hidden layer and the output layer are recycled, and the
     connections between the newly created layer and the output layer are
-    calculated randomly (running simmilar fix as when we delete the layer).
+    calculated randomly (running similar fix as when we delete the layer).
+
+    % What is the activation function for the hidden layers? Is this fixed? - M
 \end{itemize}
 
 We need the fitness function to exert parsimony pressure, which is why
 we take into account not only the testing values reached after
 training, but also the overal size of the network. This will follow
 the Equation \ref{eq:hidden-score}:
+ % This is important because is related to many principles of ML
+ % General is usually better, I think this needs to be highlighted more - M
+
 
 \begin{figure}
     \centering
@@ -314,6 +328,9 @@ global number of neurons multiplied by the number of hidden layers.
 
 The whole code for this has been released under a free license in
 GitHub. % Add URL later.
+
+% In the abstract the bringing to modern languages and tools is highlighted
+% Here could be a good place to present and justify these implementation details - M
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
