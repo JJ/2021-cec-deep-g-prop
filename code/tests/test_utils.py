@@ -5,8 +5,8 @@ from unittest import mock
 
 import numpy as np
 
-from settings import PROBEN1_DIR_PATH
 from src import utils
+from src.settings import PROBEN1_DIR_PATH
 
 
 class Proben1Tests(unittest.TestCase):

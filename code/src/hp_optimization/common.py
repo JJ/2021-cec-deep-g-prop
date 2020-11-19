@@ -19,7 +19,7 @@ from sklearn.model_selection import (
 )
 from sklearn.neural_network import MLPClassifier
 
-from src.common import SEED
+from src.settings import SEED
 
 # Set global path variables
 HP_OPTIMIZATION_DIR = Path(__file__).parent

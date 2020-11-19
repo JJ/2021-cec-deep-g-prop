@@ -11,7 +11,7 @@ from logging import (
 )
 from pathlib import Path
 
-from settings import LOGS_DIR_PATH
+from src.settings import LOGS_DIR_PATH
 
 
 class DGPLogger(Logger):

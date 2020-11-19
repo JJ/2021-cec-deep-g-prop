@@ -23,7 +23,9 @@ setuptools.setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=["src"],
+    packages=["src", "src.ga_optimizer"],
+    include_package_data=True,
+    package_data={"datasets": ["src/datasets/proben1/*"]}
     entry_points={"console_scripts": ["dgp=src.deep_g_prop:cli"]},
     python_requires=">=3.6",
     install_requires=REQUIREMENTS,

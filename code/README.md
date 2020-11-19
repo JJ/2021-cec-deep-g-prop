@@ -1,33 +1,31 @@
-# Trabajo de Fin de Grado: *DeepGProp*
+# Final Degree Project: *DeepGProp*
 
-> Optimización de Redes Neuronales con Algoritmos Genéticos
+> Neural Networks optimization with Genetic Algorithms
 
-- **Autor(a): Luis Liñán Villafranca**
-- **Tutor(a)(es): Juan Julián Merelo Guervós**
+- **Author: Luis Liñán Villafranca**
+- **Mentor: Juan Julián Merelo Guervós**
 
-## Índice
+## Index
 
-- [Índice](#índice)
-- [Instalación](#instalación)
-  - [Creación de un entorno virtual](#creación-de-un-entorno-virtual)
-  - [Instalación de la interfáz de línea de comandos](#instalación-de-la-interfáz-de-línea-de-comandos)
-  - [Instalación de módulos extras](#instalación-de-módulos-extras)
-- [Ejecución de test y otras utilidades](#ejecución-de-test-y-otras-utilidades)
+- [Installation](#installation)
+  - [Virtual environment creation](#virtual-environment-creation)
+  - [Installing the DeepGProp CLI](#installing-the-deepgprop-cli)
+  - [Extra modules](#extra-modules)
+- [Tests and formatting](#tests-and-formatting)
 - [Frameworks](#frameworks)
 - [Utilidades](#utilidades)
 - [Licencia](#licencia)
 
 ---
 
-## Instalación
+## Installation
 
-Como primer requisito, se debe de tener [Python 3.7][python-downloads-url] y
-[pip] instalados en el sistema. Es muy recomendable crear un
-entorno virtual para aislar correctamente las versiones de los paquetes que se
-vayan a utilizar. Para más información sobre [pip] y [venv] consultar el
-[tutorial oficial][python-venv-pip-guide-url].
+The first prerequisite is to have [Python 3.7][python-downloads-url] and [pip]
+installed on the system. It is recommended to create a virtual environment to
+isolate the used package versions. For more information about [pip] and [venv]
+check the [official tutorial][python-venv-pip-guide-url].
 
-### Creación de un entorno virtual
+### Virtual environment creation
 
 First, you need to install a version of python that's been compiled
 with `-fPIC`. `pyenv` versions by default are not, so you will need to
@@ -67,84 +65,74 @@ Table 1.1: *Activating the virtual environment.*
 > using global installation of modules via version managers such as
 > `pyenv`.
 
-### Instalación de la interfáz de línea de comandos
+### Installing the DeepGProp CLI
 
-Para ejecutar DeepGProp, primero hay que instalar su interfáz de línea de
-comandos. Para ello, tras crear el entorno virtual, ejecutaremos:
+To run DeepGProp first we need to install it's cli. For that, run the following
+command:
 
 ```shell
 pip install .
 ```
 
-Si se quiere instalar en modo edición (para que los cambios realizados en el
-código tengan efecto en la interfáz) será necesario añadir el indicador `-e`:
+On the other hand, if we want the code to be updated as we change it, we will need to install
+DeepGProp in editable mode. To do this, we need to add the option
+`-e/--editable` to the installation command
 
 ```shell
 pip install -e .
 ```
 
-Tras la instalación tendremos disponible el comando `dgp`. Puedes ejecutar lo
-siguiente para obtener las opciones existentes:
+After installing it, we will be able to use it through the command `dgp`. You
+can run `dgp --help` to list the available options.
 
-```shell
-dgp --help
-```
-
-### Instalación de módulos extras
+### Extra modules
 
 He dividido los paquetes utilizados en el proyecto en distintos grupos para
 evitar instalar librerías no deseadas si vamos a realizar tareas concretas
 (como construir la documentación o ejecutar cierto módulo):
 
-| Propósito                          | Ruta del archivo                     | Descripción                                                                                                             |
-|------------------------------------|--------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| Producción                         | [`requirements/prod.txt`]            | Paquetes necesarios para ejecutar código asociado directamente a *DeepGProp*. El apartado anterior realiza esta acción. |
-| Test                               | [`requirements/tests.txt`]           | Paquetes para ejecutar los tests. Si se usa [Nox], no será necesario instalar estos paquetes a mano.                    |
-| Comparativa de Optimizadores       | [`requirements/hp_optimization.txt`] | Paquetes usados en la comparativa de optimizadores de hiper-parámetros.                                                 |
-| Comparativa de Frameworks para MLP | [`requirements/mlp_frameworks.txt`]  | Paquetes usados en la comparativa de frameworks para redes neuronales.                                                  |
+|          Purpose          |              File path               |                                      Description                                      |
+| ------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------- |
+| Production                | [`requirements/prod.txt`]            | Necessary packages to run *DeepGProp*. The previous subsection already install this.  |
+| Test                      | [`requirements/tests.txt`]           | Necessary packages for tests. [Nox] installs them automaticly when running the tests. |
+| Optimizers comparison     | [`requirements/hp_optimization.txt`] | Packages used for the hyper-parametter optimizers comparison.                         |
+| MLP Frameworks comparison | [`requirements/mlp_frameworks.txt`]  | Packages used for the neural net frameworks comparison.                               |
 
-Para instalar cualquiera de los grupos de paquetes hay que ejecutar:
-
-```shell
-pip install -r <nombre archivo>
-```
-
-pudiendo sustituirse `<nombre archivo>` cualquiera de los anteriores. Si se
-quisiera instalar los paquetes sin usar un entorno virtual (no recomendado)
-se puede ejecutar el siguiente comando:
+To install any of this packages you can run:
 
 ```shell
-python3.7 -m pip install --user -r <nombre archivo>
+pip install -r <file path>
 ```
 
-Es el mismo comando pero precedido por `python3.7 -m` para evitar problemas
-si tenemos otras versiones de Python instaladas en el sistema.
+If you are not using any virtual environment, ensure you install this packages
+in the required Python version.
 
-## Ejecución de test y otras utilidades
+## Tests and formatting
 
-> **Nota:** Si se ha optado por usar un entorno virtual, debe ser activado
-> usando uno de los comandos mostrados en la tabla de la sección de
-> instalación antes de ejecutar cualquiera de los siguientes comandos.
-
-Primero instalamos la herramienta [Nox]:
+> **Note:** To be able to run the DeepGProp tests, you will need to install it
+> in editable mode. checkout in
+> [Installing the DeepGProp CLI](#installing-the-deepgprop-cli) section how to
+> do it.
+> 
+First, we need to install the [Nox] tool:
 
 ```shell
 pip install -U nox
 ```
 
-Para ejecutar los test:
+To run all the tests:
 
 ```shell
 nox -k test
 ```
 
-Para pasar los distintos linters al código:
+To run the linters:
 
 ```shell
 nox -k lint
 ```
 
-Para mostrar todas las opciones disponibles:
+You can check all the possible sessions with the following command:
 
 ```shell
 nox -l
@@ -152,29 +140,26 @@ nox -l
 
 ## Frameworks
 
-- [Keras] - librería para la creación y ejecución de redes neuronales.
+- [Keras] - base library to create and run the neural networks.
 
-- [DEAP] - librería de construcción de algoritmos evolutivos. Se utilizará ésta
-  para optimizar los parámetros de las redes neuronales.
-
-En el capítulo 3 "El estado del arte" se podrá encontrar una comparativa
-detallada con otras bibliotecas similares y el por qué de la elección de éstas.
+- [DEAP] - genetic algorithms library used to optimize the models hyper
+  parametters.
 
 ## Utilidades
 
-- Automatización:
+- Automation:
 
-  - [Nox] - herramienta de automatización para ejecutar procesos como la
-    construcción de la documentación o el lanzamiento de tests.
+  - [Nox] - automation tool to run different tasks as the tests or the code
+    formatting check.
 
 - Tests:
 
-  - [pytest] - librería de Python para la ejecución de test que se usarán en la
-    integración continua.
+  - [pytest] - Python test framework to run the tests.
 
 ## Licencia
 
-El código original se puede encontrar en el repositorio de [DeepGProp].
+The original code can be found in the [DeepGProp] repo.
+
 <!-- Archivos -->
 [`requirements/prod.txt`]: ./requirements/prod.txt
 [`requirements.txt`]: ./requirements.txt

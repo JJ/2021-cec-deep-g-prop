@@ -7,7 +7,7 @@ import pandas as pd
 
 from sklearn.utils import shuffle
 
-from src.common import SEED
+from src.settings import SEED
 
 
 @click.command()

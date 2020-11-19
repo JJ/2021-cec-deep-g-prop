@@ -17,8 +17,8 @@ from sklearn.metrics import (
 from sklearn.model_selection import KFold
 from tabulate import tabulate
 
-from src.common import SEED
 from src.dgp_logger import DGPLOGGER
+from src.settings import SEED
 
 # Set global path variables
 CURRENT_FILE_PATH = Path(__file__).resolve()

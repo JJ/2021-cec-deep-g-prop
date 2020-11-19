@@ -3,10 +3,10 @@ from typing import Tuple
 
 import click
 
-from src.common import SEED
 from src.dgp_logger import DGPLOGGER
 from src.ga_optimizer import genetic_algorithm
 from src.proben import Proben1Partition
+from src.settings import SEED
 from src.utils import (
     DatasetNotFoundError,
     print_data_summary,

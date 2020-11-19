@@ -6,11 +6,8 @@ from pathlib import Path
 from shutil import rmtree
 from typing import Callable, Dict, Iterator, List
 
-import nox
-
+from nox import options, sessions
 from nox.sessions import Session
-
-from settings import REQUIREMENTS_DIR_PATH, ROOT
 
 # Configure nox
 nox.options.sessions = ["test", "lint"]
@@ -18,6 +15,8 @@ nox.options.reuse_existing_virtualenvs = True
 nox.options.default_venv_backend = "venv"
 
 # Globals
+ROOT = Path(__file___).parent.resolve(strict=True)
+REQUIREMENTS_DIR_PATH = (ROOT / "requirements").resolve(strict=True)
 form_requirements = ["-r", str(REQUIREMENTS_DIR_PATH / "format.txt")]
 test_requirements = ["-r", str(REQUIREMENTS_DIR_PATH / "tests.txt")]
 prod_requirements = ["-r", str(REQUIREMENTS_DIR_PATH / "prod.txt")]

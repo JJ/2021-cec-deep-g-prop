@@ -8,8 +8,8 @@ import pandas as pd
 
 from tabulate import tabulate
 
-from settings import PROBEN1_DIR_PATH
 from src.proben import Proben1Partition, Proben1Split
+from src.settings import PROBEN1_DIR_PATH
 
 
 class DatasetNotFoundError(FileNotFoundError):

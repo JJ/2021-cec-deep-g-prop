@@ -6,8 +6,8 @@ from unittest import mock
 
 from click.testing import CliRunner
 
-from settings import PROBEN1_DIR_PATH
 from src.dataset_to_proben1 import cli
+from src.settings import PROBEN1_DIR_PATH
 
 
 class TestDatasetToProben1(unittest.TestCase):
