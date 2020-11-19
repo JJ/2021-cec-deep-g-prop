@@ -615,9 +615,15 @@ to generation.
 % \section{Evolución de población con modificación de número de neuronas:
 % reproducción de resultados}
 
+\subsection{Evolution of Neworks with a Mutable Architecture: neuron number modifications}
+
 % En esta sección se compararán los anteriores resultados con similares obtenidos
 % cambiando el número de neuronas de cada individuo a medida que avanzan las
 % generaciones.
+
+In this section the previous results will be compared with similar ones
+obtained from changing the number of neurons for each individual in each
+generation.
 
 % En la \autoref{tab:gprop-deepgprop-cancer} podemos observar los resultados
 % obtenidos tanto por \emph{G-Prop} como \emph{DeepGProp} para la siguiente
@@ -629,24 +635,30 @@ to generation.
 % mejora por parte de \emph{DeepGProp} en la segunda partición. Se intuye que
 % \emph{G-Prop} sortea mejor los mínimos locales que \emph{DeepGProp}.
 
-% \begin{table}
-%     \centering
-%     \caption{
+In the \autoref{tab:gprop-deepgprop-cancer} we can see the results obtained by
+GProp and DeepGProp using the following configuration: initial popuoation of
+$20$ individuals, a masimun of $10$ generations, random initial neuron number
+between $2$ and $20$ and the crossover probability of $0.5$.
+
+\begin{table}
+    \centering
+    \caption{
 %         Comparación de los resultados obtenidos en los problemas de \emph{cancer}
 %         por DeepGProp y GProp.
-%     }
-%     \label{tab:gprop-deepgprop-cancer}
-%     \begin{tabular}{rllll}
-%         \textbf{Partition} & \textbf{Algorithm} & \textbf{Accuracy error \%} & \textbf{\# neurons}      & \textbf{F2 score}           \\
-%         \hline
-%         \textbf{Cancer1}   & G-Prop         & $1.0\ \pm\ 0.5$        & $3.2\ \pm\ 0.8$     & $--$                    \\
-%                        & DeepGProp      & $2.52\ \pm\ 0.28$      & $13.60\ \pm\ 6.02$  & $0.96668\ \pm\ 0.00670$ \\
-%         \textbf{Cancer2}   & G-Prop         & $4.4\ \pm\ 0.4$        & $6.7\ \pm\ 2.3$     & $--$                    \\
-%                        & DeepGProp      & $2.29\ \pm\ 0.00$      & $10.20\ \pm\ 4.58$  & $0.97943\ \pm\ 0.00260$ \\
-%         \textbf{Cancer2}   & G-Prop         & $3.0\ \pm\ 0.7$        & $4.3\ \pm\ 1.7$     & $--$                    \\
-%                        & DeepGProp      & $4.46\ \pm\ 0.43$      & $21.60\ \pm\ 17.83$ & $0.95952\ \pm\ 0.00285$ \\
-%     \end{tabular}
-% \end{table}
+        Results comparison between DeepGProp and GProp in the three partitions of \emph{Cancer}
+    }
+    \label{tab:gprop-deepgprop-cancer}
+    \begin{tabular}{rllll}
+        \textbf{Partition} & \textbf{Algorithm} & \textbf{Accuracy error \%} & \textbf{\# neurons}      & \textbf{F2 score}           \\
+        \hline
+        \textbf{Cancer1}   & G-Prop         & $1.0\ \pm\ 0.5$        & $3.2\ \pm\ 0.8$     & $--$                    \\
+                       & DeepGProp      & $2.52\ \pm\ 0.28$      & $13.60\ \pm\ 6.02$  & $0.96668\ \pm\ 0.00670$ \\
+        \textbf{Cancer2}   & G-Prop         & $4.4\ \pm\ 0.4$        & $6.7\ \pm\ 2.3$     & $--$                    \\
+                       & DeepGProp      & $2.29\ \pm\ 0.00$      & $10.20\ \pm\ 4.58$  & $0.97943\ \pm\ 0.00260$ \\
+        \textbf{Cancer2}   & G-Prop         & $3.0\ \pm\ 0.7$        & $4.3\ \pm\ 1.7$     & $--$                    \\
+                       & DeepGProp      & $4.46\ \pm\ 0.43$      & $21.60\ \pm\ 17.83$ & $0.95952\ \pm\ 0.00285$ \\
+    \end{tabular}
+\end{table}
 
 % Continuando con el problema \emph{DNA Helicases}\cite{dna-heliases}, igual que
 % en los resultados anteriores, se ha obtenido la media de 5 ejecuciones con
@@ -661,21 +673,32 @@ to generation.
 % similar, al aumentar las características del problema se diferencian mucho el
 % uno del otro.
 
-% \begin{table}
-%     \centering
-%     \caption{
+Continuing with the \emph{DNA Helicases} \cite{dna-helicases} problem, in the
+same vein as the previous experiments, we run each execution 5 times, showing
+the final mean for each value. Looking at the results of the
+\autoref{tab:gprop-deepgprop-miniheli} we can see a big difference in all the
+relevant columns. The achieved precision of DeepGProp is lower than the one
+obtained by GProp ran for the same ammount of generations. Not much better
+results are reached when increasing the number of generations from 10 to 50 for
+DeepGProp. When increasing significatnly the problem size, we find a better
+performance for GProp.
+
+\begin{table}
+    \centering
+    \caption{
 %         Comparación de los resultados obtenidos en los problemas de
 %         \emph{Helicases} por DeepGProp y GProp.
-%     }
-%     \label{tab:gprop-deepgprop-miniheli}
-%     \begin{tabular}{rllll}
-%         \textbf{DNA Helicases} &    & \textbf{Accuracy error \%} & \textbf{\# neurons}     & \textbf{F2 score}\\
-%         \hline
-%         \textbf{G-Prop}    & 10 gen & $6\ \pm\ 3$            & $7.3\ \pm\ 3.9$     & $--$                    \\
-%         \textbf{DeepGProp} & 10 gen & $25.67\ \pm\ 5.23$     & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
-%                        & 50 gen & $21.00\ \pm\ 5.01$     & $15.00\ \pm\ 4.38$  & $0.72556\ \pm\ 0.06024$ \\
-%     \end{tabular}
-% \end{table}
+        Results comparison between DeepGProp and GProp for the problem \emph{Helicases}
+    }
+    \label{tab:gprop-deepgprop-miniheli}
+    \begin{tabular}{rllll}
+        \textbf{DNA Helicases} &    & \textbf{Accuracy error \%} & \textbf{\# neurons}     & \textbf{F2 score}\\
+        \hline
+        \textbf{G-Prop}    & 10 gen & $6\ \pm\ 3$            & $7.3\ \pm\ 3.9$     & $--$                    \\
+        \textbf{DeepGProp} & 10 gen & $25.67\ \pm\ 5.23$     & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
+                       & 50 gen & $21.00\ \pm\ 5.01$     & $15.00\ \pm\ 4.38$  & $0.72556\ \pm\ 0.06024$ \\
+    \end{tabular}
+\end{table}
 
 % Aparte se aprecia claramente la diferencia entre los datos de validación
 % (\autoref{tab:deepgprop-miniheli-validation}) y los de test comentados
@@ -701,6 +724,8 @@ to generation.
 % \end{table}
 
 % \section{Evolución de población con modificación de número de neuronas y capas}
+
+\subsection{Evolution of Neworks with a Mutable Architecture: neuron and layer number modifications}
 
 % Siguiendo con los resultados obtenidos en la sección anterior, aquí se suma un
 % nuevo operador que permite añadir o quitar capas en la última posición de las
