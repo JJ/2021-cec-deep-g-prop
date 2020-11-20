@@ -495,10 +495,11 @@ beginning. Another reason for this discrepancy, which is basic but important, is
 how the algorithm sorts the data within a problem. Because of that, we tested
 with larger populations and individuals to see if results are effectively
 improved when hidden layers are mutated. We also tested with another partition
-of the same dataset to further prove this intuition.
+of the same dataset to further prove this intuition. % And represented
+                                % results where? - JJ
 
 As we commented at the end of this section introduction, every result shown
-here, is the mean of 5 executions.
+here, is the mean of 5 executions. % This is not too much... - JJ
 
  \begin{table}
      \centering
@@ -513,7 +514,7 @@ The evolution optimized the hidden layers of networks classifying the \emph{canc
      \begin{tabular}{rlll}
          \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
          \hline
-        \textbf{Mean}      & $3.09\ \pm\ 0.58$      & $6.80\ \pm\ 0.40$       & $0.94739\ \pm\ 0.01944$ \\
+         \textbf{Mean}      & $3.09\ \pm\ 0.58$      & $6.80\ \pm\ 0.40$       & $0.94739\ \pm\ 0.01944$ \\
          \textbf{Max}       & $4.00$                 & $7.00$                  & $0.97473$               \\
          \textbf{Min}       & $2.29$                 & $6.00$                  & $0.91912$               \\
      \end{tabular}
@@ -569,8 +570,10 @@ only one hidden layer. For networks classifying the \emph{cancer1} dataset.}
 
 In this experiment, we execute the algorithm two times: one without modifying
 the weights nor crossing neurons in hidden layers, and the other with
-modifications. Now, if we observe Table~\autoref{tab:fixed-8-2-comp-can1}, we
-notice a considerable improvement in accuracy for both training and validation.
+modifications. % You need to use some tag or label for them - JJ
+Now, if we observe Table~\autoref{tab:fixed-8-2-comp-can1}, we
+notice a considerable improvement in accuracy for both training and
+validation. % We can't say much about statistical significance - JJ
 
 \begin{table}
     \centering
@@ -678,8 +681,10 @@ generation.
 
 In the \autoref{tab:gprop-deepgprop-cancer} we can see the results obtained by
 GProp and DeepGProp using the following configuration: initial popuoation of
-$20$ individuals, a masimun of $10$ generations, random initial neuron number
+$20$ individuals, a maximun of $10$ generations, random initial neuron number
 between $2$ and $20$ and the crossover probability of $0.5$.
+
+% What's the average number of layers? - JJ
 
 \begin{table}
     \centering
@@ -724,6 +729,8 @@ results are reached when increasing the number of generations from 10 to 50 for
 DeepGProp. When increasing significatnly the problem size, we find a better
 performance for GProp.
 
+% What's the number of evaluations? The most important thing is not
+% the number of generations, if the population is different - JJ
 \begin{table}
     \centering
     \caption{
@@ -750,11 +757,12 @@ performance for GProp.
 % debería mejorar el resultado.
 
 On the other hand, we can appreciate the difference between the validation
-(autoref{tab:deepgprop-miniheli-validation}) and test data refered previously.
+\autoref{tab:deepgprop-miniheli-validation}) and test data refered previously.
 An overfitting to the validation data is ocurring for sure. In the
 \emph{cancer} problem before, there was not that big difference than the one we
 go here, in with the \emph{DNA Helicases} dataset. We will try in the next
-section a variable number of layers, which should increase the accuracy.
+section a variable number of layers, which should increase the
+accuracy. % And also generalization? - JJ
 
 \begin{table}
     \centering
@@ -784,7 +792,8 @@ section a variable number of layers, which should increase the accuracy.
 % ningún caso los resultados aportados por \emph{G-Prop}.
 
 In this section, we add a new operator which allow the addition or removal of
-hidden layers from the model. We can appreciate an improvement from the
+hidden layers from the model. We can appreciate % Where? - JJ
+an improvement from the
 previous tests, but it doesn't reach the GProp results which only uses one
 hidden layer.
 
@@ -797,7 +806,8 @@ hidden layer.
 For example, if we run the problem of \emph{DNA Helicases} with this last
 operation in use, we will get slightly better accuracy than when using only one
 hidden layer on DeepGProp, but the GProp result will be much better still. (see
-\autoref{tab:gprop-deepgprop-miniheli-multihidden}). 
+\autoref{tab:gprop-deepgprop-miniheli-multihidden}). % Why? Can we
+                                % make it better? - JJ
 
 \begin{table}
     \centering
@@ -868,11 +878,11 @@ When running DeepGProp in a complex problem like \emph{spambase} we obtain
 worse results (see \autoref{tab:spambase-onelayer} and
 \autoref{tab:spambase-onelayer}). After running multiple executions with the
 DeepGProp algorithm, it seems the optimizer finds a local minimun when the
-loose function reaches $\approx0.6$. Then the best result obtained is arround
+loss function reaches $\approx0.6$. Then the best result obtained is arround
 $36\%$ of error. For the first table, the results where obtained using a
 variable number of neurons between 2 and 20 and only one hidden layer. The
 second table results where run using a variable number of hidden layers and
-from 2 to 50 neurons per layer (choosed randomly).
+from 2 to 50 neurons per layer (chosen randomly).
 
 \begin{table}
     \centering
@@ -881,10 +891,11 @@ from 2 to 50 neurons per layer (choosed randomly).
 %        \emph{spambase} para las tres particiones. Algoritmo ejecutado con 1
 %        capa fija.
         Comparison between the results obtained for the three partitions of the
-        \emph{spambase} problem using a fixed layer.
+        \emph{spambase} problem using a fixed layer. % Fixed layer
+                                % size? - JJ
     }
     \label{tab:spambase-onelayer}
-    \begin{tabular}{rllll}
+    \begin{tabular}{r|l|l|l|l}
         \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
         \hline
         \textbf{Spambase1}   & $36.80\ \pm\ 0.98$ & $10.80\ \pm\ 3.76$ & $0.03004\ \pm\ 0.04402$ \\
@@ -899,11 +910,11 @@ from 2 to 50 neurons per layer (choosed randomly).
 %        Comparación de los resultados obtenidos en el problema de
 %        \emph{spambase} para las tres particiones. Algoritmo ejecutado con
 %        múltiples capas variables.
-        Comparison of the results obtained for the \emph{smapbase} partitions
+        Comparison of the results obtained for the \emph{spambase} partitions
         using multiple variable hidden layers.
     }
     \label{tab:spambase-onelayer}
-    \begin{tabular}{rllll}
+    \begin{tabular}{r|l|l|l|l}
         \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
         \hline
         \textbf{Spambase1}   & $41.46\ \pm\ 10.75$ & $17.80\ \pm\ 6.71$ & $0.30304\ \pm\ 0.37119$ \\
@@ -917,12 +928,22 @@ from 2 to 50 neurons per layer (choosed randomly).
 \section{Conclusions and future work}
 \label{sec:conclus}
 
-In this paper a first approach to perform deep neural networks evolution (evolution of MLPs with several layers) has been proposed. 
-In our approach, the architecture (i.e. the initial weights, number of hidden layers and hidden layer sizes) of multilayer perceptrons with multiple layers is automatically designed using an EA, taking advantage of the EA to find a solution close to the global optimum and the ability of the training algorithm to tune the solution and reach the nearest local minimum.
+In this paper a first approach to perform deep neural networks
+evolution (evolution of MLPs with several layers) has been proposed.
 
-Results of the evolution of networks with two layers have been reported, thus demonstrating that the method can be applied to the evolution of networks with a high number of layers.
+In our approach, the architecture (i.e. the initial weights, number of
+hidden layers and hidden layer sizes) of multilayer perceptrons with
+multiple layers is automatically designed using an EA, taking
+advantage of the EA to find a solution close to the global optimum and
+the ability of the training algorithm to tune the solution and reach
+the nearest local minimum. 
 
-As future works, we propose using deep neural nets with any number of layers to solve complex problems.
+Results of the evolution of networks with two layers have been
+reported, thus demonstrating that the method can be applied to the
+evolution of networks with a high number of layers.
+
+As future works, we propose using deep neural nets with any number of
+layers to solve complex problems. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
