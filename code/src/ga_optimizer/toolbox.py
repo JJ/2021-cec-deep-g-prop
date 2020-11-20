@@ -378,7 +378,8 @@ def configure_toolbox(
     # --------------------------------
     DGPLOGGER.debug("-- Register necessary functions and elements")
     DGPLOGGER.debug("Register the fitness measure...")
-    creator.create("FitnessMulti", base.Fitness, weights=(-1.0, -0.5, 0.5))
+#    creator.create("FitnessMulti", base.Fitness, weights=(-1.0, -0.5, 0.5))
+    creator.create("FitnessMulti", base.Fitness, weights=(-1.0, 0, 0))
 
     DGPLOGGER.debug("Register the individual...")
     creator.create("Individual", MLPIndividual, fitness=creator.FitnessMulti)
