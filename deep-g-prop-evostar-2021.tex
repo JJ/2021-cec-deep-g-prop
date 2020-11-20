@@ -305,7 +305,9 @@ original G-Prop. \begin{itemize}
     connections between the newly created layer and the output layer are
     calculated randomly (running similar fix as when we delete the layer).
 
-    % What is the activation function for the hidden layers? Is this fixed? - M
+    % What is the activation function for the hidden layers? Is this
+    % fixed? - M
+    % It's answered below - JJ
 \end{itemize}
 
 We need the fitness function to exert parsimony pressure, which is why
@@ -420,10 +422,14 @@ We selected the following parameters for the network:
 
 \begin{itemize}
 \item Activation function: We selected a (\emph{rectified linear unit}) ReLU 
-      activation function for hidden layers and Softmax for the output layer.
+      activation function for hidden layers and Softmax for the output
+      layer. % WE need to justify that. - JJ
 \item Optimization algorithm: We used the Stochastic Gradient Descend 
-      (SGD) backpropagation algorithm with a learning rate value of \texttt{0.01}.
-\item Loss function: We selected the cross-entropy loss function.
+      (SGD) backpropagation algorithm with a learning rate value of
+      \texttt{0.01}.
+      % We have probably said that before, but we need to refer back
+      % to where, and also justify - JJ
+\item Loss function: We selected the cross-entropy loss function. % Again, justify choice, and also compare it with G-Prop - JJ
 \end{itemize}
 
 When referring to a certain number of layers, we will be talking about hidden
