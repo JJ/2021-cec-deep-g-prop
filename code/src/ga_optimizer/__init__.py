@@ -91,7 +91,7 @@ def genetic_algorithm(
     DGPLOGGER.debug(f"    -- Evaluated {len(population)} individuals")
 
     current_generation = 0
-    current_gen_best_fit = min([ind.fitness for ind in population]) # max fitness is the _worst_ fitness - JJ
+    current_gen_best_fit = max([ind.fitness for ind in population])
     previous_best_fit = None
 
     try:
