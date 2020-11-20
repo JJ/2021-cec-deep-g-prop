@@ -236,7 +236,7 @@ def cli(
     DGPLOGGER.info(f"-- Maximun number of generations: {max_gen}")
     DGPLOGGER.info(f"-- Neurons per hidden layer range: {neurons_range}")
     DGPLOGGER.info(f"-- Hidden layers number range: {layers_range}")
-    DGPLOGGER.info(f"-- Cossover probability: {cx_prob}")
+    DGPLOGGER.info(f"-- Crossover probability: {cx_prob}")
     DGPLOGGER.info(f"-- Bias gene mutation probability: {mut_bias}")
     DGPLOGGER.info(f"-- Weights gene mutation probability: {mut_weights}")
     DGPLOGGER.info(f"-- Neuron mutation probability: {mut_neurons}")
