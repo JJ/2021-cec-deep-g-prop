@@ -137,16 +137,17 @@ This initial G-Prop algorithm was limited, first, by the fact that
 most of it had to be programmed from scratch, since there were few (if
 any) off-the-shelf software that could do this kind of task; 
 additionally, available computational capability limited the size of
-the search space; this was limited further by limiting evolution to
-single-layer multilayer perceptrons. The aim of this paper is to
-present an algorithm that searches over the initial weights, number of
+the search space; 
+this was further limited by the evolution of single-layer multilayer perceptrons. 
+
+The aim of this paper is to present an algorithm that searches over the initial weights, number of
 hidden layers and hidden layer sizes of a MLP, based on a EA and
 Stochastic Gradient Descent (SGD) \cite{bottou2012stochastic}. This
 algorithm has been used for training deep neural nets and other kind
 of machine learning algorithms
 \cite{bottou2012stochastic,bottou2010large}, justifying our
-denomination of Deep-G-Prop for this specific method. This does not
-imply that we are actually doing deep machine learning at large; but
+denomination of Deep-G-Prop for this specific method. 
+This does not imply that we are actually doing deep machine learning at large; but
 we are using (potentially) deep neural nets (with more than one
 layer), and a training method that is suitable for deep neural nets,
 leaving the possibility of using deep neural nets open for the future.
@@ -154,6 +155,10 @@ leaving the possibility of using deep neural nets open for the future.
 % linear models, SVM and many other ML algorithms.  
 % But, having the possibility of searching for a number of layers, an the 
 % type of layer it is. Also the activation function of said layers? 
+
+%% [pedro] Instead of the last sentence ("This does....the future.") I'd say something like:
+%%    " This paper presents a first approach to perform deep neural networks evolution (evolution of MLPs with several layers), providing results of the evolution of networks with two layers, and demonstrating that the method can be applied to the evolution of networks with a high number of layers.  ""
+
 
 In this paper what we will do is to first bring the implementation of
 the G-Prop concept to current tools and languages, choosing the best
