@@ -91,7 +91,7 @@ def genetic_algorithm(
     DGPLOGGER.debug(f"    -- Evaluated {len(population)} individuals")
 
     current_generation = 0
-    current_gen_best_fit = max([ind.fitness for ind in population])
+    current_gen_best_fit = min([ind.fitness for ind in population]) # max fitness is the _worst_ fitness - JJ
     previous_best_fit = None
 
     try:
@@ -125,6 +125,7 @@ def genetic_algorithm(
             best_population_individuals = tools.selBest(
                 population, int(len(population) / 2)
             )
+            # Again here, how are they selected? If it's error, they are going to be the worst - JJ
             # Clone the selected individuals
             offspring = list(map(toolbox.clone, best_population_individuals))
 
