@@ -66,7 +66,7 @@ ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\
 \begin{abstract}
 
 In order to solve classification problems using artificial neural
-networks (ANN), the optimization of the network architecture is 
+networks (ANN), the optimization of the network architecture is
 of great importance. Evolutionary neural networks provide an
 alternative for this task of designing the neural network, i.e. choosing the
 number of layers, number of neurons per layer and the weights of the
@@ -86,12 +86,12 @@ been achieved using the new DeepGProp framework, which we present
 here for the first time, and how this new framework is able to beat the
 previous instance in accuracy, with very competitive running times.
 
-% A multi-layer perceptron is not considered "Deep", this usually  
+% A multi-layer perceptron is not considered "Deep", this usually
 % means other types of layers like convolutional, filters, etc. that
 % are added before the MLP. - M
 % But the method could be used for other types of layers, maybe this
 % could be mentioned - M
-% Deep is related to representational learning.   
+% Deep is related to representational learning.
 
 \end{abstract}
 
@@ -135,10 +135,10 @@ solution found by the EA.
 
 This initial G-Prop algorithm was limited, first, by the fact that
 most of it had to be programmed from scratch, since there were few (if
-any) off-the-shelf software that could do this kind of task; 
+any) off-the-shelf software that could do this kind of task;
 additionally, available computational capability limited the size of
-the search space; 
-this was further limited by the evolution of single-layer multilayer perceptrons. 
+the search space;
+this was further limited by the evolution of single-layer multilayer perceptrons.
 
 The aim of this paper is to present an algorithm that searches over the initial weights, number of
 hidden layers and hidden layer sizes of a MLP, based on a EA and
@@ -146,15 +146,15 @@ Stochastic Gradient Descent (SGD) \cite{bottou2012stochastic}. This
 algorithm has been used for training deep neural nets and other kind
 of machine learning algorithms
 \cite{bottou2012stochastic,bottou2010large}, justifying our
-denomination of DeepGProp for this specific method. 
+denomination of DeepGProp for this specific method.
 This does not imply that we are actually doing deep machine learning at large; but
 we are using (potentially) deep neural nets (with more than one
 layer), and a training method that is suitable for deep neural nets,
 leaving the possibility of using deep neural nets open for the future.
 % Using SGD is not equal to Deep, as we are saying it is also used in
-% linear models, SVM and many other ML algorithms.  
-% But, having the possibility of searching for a number of layers, an the 
-% type of layer it is. Also the activation function of said layers? 
+% linear models, SVM and many other ML algorithms.
+% But, having the possibility of searching for a number of layers, an the
+% type of layer it is. Also the activation function of said layers?
 
 %% [pedro] Instead of the last sentence ("This does....the future.") I'd say something like:
 %%    " This paper presents a first approach to perform deep neural networks evolution (evolution of MLPs with several layers), providing results of the evolution of networks with two layers, and demonstrating that the method can be applied to the evolution of networks with a high number of layers.  "
@@ -213,8 +213,8 @@ view: \begin{itemize}
     advantage of the Baldwin effect \cite{castillo-2006}) to applying
     a few cycles of learning that will become part of the codified
     solution.
-  \item How the lack of determination of the fitness is taken into account 
-    % I think some adjective is missing for the kind of determination 
+  \item How the lack of determination of the fitness is taken into account
+    % I think some adjective is missing for the kind of determination
     % The lack of a "crisp"|"optimum"|"hard"|"definite"  determination? - M
     in evolution. Either from the fact that an stochastic algorithm is
     used to train the neural net before evaluating fitness, or the
@@ -223,7 +223,7 @@ view: \begin{itemize}
     single, crisp, number. This randomness in the fitness can be taken
     into account during the selection phase
     \cite{DBLP:conf/ijcci/MereloLFGCCRMG15}, or not.
-    
+
     % There is also the problem of overfitting - M
 
 The variation of architecture has lately evolved towards (almost)
@@ -304,7 +304,7 @@ original G-Prop.
     the two models selected for it have the same structure (same number of
     layers and neurons per layers).
 
-    % Similar to NEAT in the "speciation" sense? - M 
+    % Similar to NEAT in the "speciation" sense? - M
 
   \item There are several kinds of {\em mutation} operators: (initial) weights,
     biases, as well as changing the number of neurons and/or
@@ -378,9 +378,9 @@ frameworks currently in the state-of-art on their respective area.
 
 % Something should be said about the experimental setup.
 
-All the results found in this sections related with DeepGProp 
+All the results found in this sections related with DeepGProp
 % This is the first time the name DeepGProp appears, is better if this is presented in the
-% proposed method section - M 
+% proposed method section - M
 \cite{deep-g-prop:anon} were obtained in a laptop with the specs shown in the
 \autoref{tab:setup}. The OS installed in the laptop is GNU/Linux, using the
 distribution ArchLinux (kernel version \texttt{5.9.2-arch1-1}).
@@ -557,8 +557,8 @@ here, is the mean of 5 executions. % This is not too much... - JJ
 %         Resultados de test del mejor individuo final tras 10 generaciones con
 %         20 individuos iniciales y 7 neuronas por individuo haciendo operaciones
 %         sobre las capas internas para el problema \emph{cancer1}.
-These results were obtained by the best individual after ten generations, 
-with an initial population of twenty individuals and initially seven neurons each. 
+These results were obtained by the best individual after ten generations,
+with an initial population of twenty individuals and initially seven neurons each.
 The evolution optimized the hidden layers of networks classifying the \emph{cancer1} dataset.}
      \label{tab:fixed-7-1-noconst-can1}
      \begin{tabular}{rlll}
@@ -600,7 +600,7 @@ classifying the \emph{cancer1} dataset.}
 %         individuos con 7 neuronas en 1 capa oculta cada uno para el problema
 %         \emph{cancer1}.
 These results were obtained by the best individual after ten generations, with
-an initial population of twenty individuals and initially seven neurons each, fixed to 
+an initial population of twenty individuals and initially seven neurons each, fixed to
 only one hidden layer. For networks classifying the \emph{cancer1} dataset.}
      \label{tab:fixed-7-1-inicial-can1}
      \begin{tabular}{rlll}
@@ -986,14 +986,14 @@ hidden layers and hidden layer sizes) of multilayer perceptrons with
 multiple layers is automatically designed using an EA, taking
 advantage of the EA to find a solution close to the global optimum and
 the ability of the training algorithm to tune the solution and reach
-the nearest local minimum. 
+the nearest local minimum.
 
 Results of the evolution of networks with two layers have been
 reported, thus demonstrating that the method can be applied to the
 evolution of networks with a high number of layers.
 
 As future works, we propose using deep neural nets with any number of
-layers to solve complex problems. 
+layers to solve complex problems.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1005,6 +1005,6 @@ supported by the so and so.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{splncs04}
-\bibliography{geneura,deep-g-prop,gprop,gpropnpl} 
+\bibliography{geneura,deep-g-prop,gprop,gpropnpl}
 
 \end{document}
