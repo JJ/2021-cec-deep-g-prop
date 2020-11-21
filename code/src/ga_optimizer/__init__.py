@@ -164,7 +164,8 @@ def genetic_algorithm(
             # from the previous population best individual plus the mutated
             # ones
             population = best_population_individuals + offspring
-            current_gen_best_fit = tools.selBest(population, 1)[0].fitness
+            best_final_individual = tools.selBest(population, 1)[0]
+            current_gen_best_fit = best_final_individual.fitness
 
             finished_generation_summary(
                 current_generation, population, current_gen_best_fit.values
@@ -181,7 +182,7 @@ def genetic_algorithm(
     test_individual(
         best_initial_individual, dataset, "Best initial individual"
     )
-    best_final_individual = tools.selBest(population, 1)[0]
+#    best_final_individual = tools.selBest(population, 1)[0]
     test_individual(best_final_individual, dataset, "Best final individual")
 
     return best_initial_individual, best_final_individual

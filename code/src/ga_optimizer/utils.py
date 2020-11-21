@@ -231,7 +231,7 @@ def test_individual(
     DGPLOGGER.info(f"{text} weights")
     DGPLOGGER.info(str(individual))
     DGPLOGGER.info(
-        "Predicting the validation and test data with the best individual."
+        f"Predicting the validation and test data with the {text}."
     )
     val_scores = individual_evaluator(
         individual, dataset.trn, dataset.val, multi_class=dataset.nout > 2,
