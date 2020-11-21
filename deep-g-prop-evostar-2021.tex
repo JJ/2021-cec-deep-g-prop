@@ -454,15 +454,32 @@ neurons per layer.
 We selected the following parameters for the network:
 
 \begin{itemize}
-\item Activation function: We selected a (\emph{rectified linear unit}) ReLU 
-      activation function for hidden layers and Softmax for the output
-      layer. % WE need to justify that. - JJ
-\item Optimization algorithm: We used the Stochastic Gradient Descend 
-      (SGD) backpropagation algorithm with a learning rate value of
-      \texttt{0.01}.
-      % We have probably said that before, but we need to refer back
-      % to where, and also justify - JJ
-\item Loss function: We selected the cross-entropy loss function. % Again, justify choice, and also compare it with G-Prop - JJ
+
+\item Activation function: We selected a (\emph{rectified linear unit}) ReLU
+  activation function for hidden layers to ensure the correct performance of
+  the Stochastic Gradient Descent algorithm used to optimize the netowrk,
+  making sure the neuron output values are all greater than zero.  On the other
+  hand, fot he last layer (the output layer) we used the Softmax function to
+  allow an easy clasificacion of the results normalizing the classes
+  probability between 0 and 1, having the sum of all the values equal to 1. %
+  WE need to justify that. - JJ
+
+\item Optimization algorithm: We used the Stochastic Gradient Descend
+  (SGD) combined with backpropagation wich allow a quick but solid computation
+  of the loss function for all the data split in batches. This allow the
+  posibility of easy paralelization of the data, which as not used in thid
+  paper. As the learning rate \texttt{0.01} was chosen as a default suggested
+  value.
+  % We have probably said that before, but we need to refer back to where, and
+  % also justify - JJ
+
+\item Loss function: We selected the cross-entropy loss function to fit the
+  chosen optimization algorithm (since its output is suitable for SGD) and
+  because it provide a fast and great generalization method. As opposed to
+  G-Prop
+  % Maybe @pacastillo can tell me which method was used for G-Prop. MSE? - Luis
+  % Again, justify choice, and also compare it with G-Prop - JJ
+
 \end{itemize}
 
 When referring to a certain number of layers, we will be talking about hidden
@@ -933,7 +950,7 @@ from 2 to 50 neurons per layer (chosen randomly).
         \hline
         \textbf{Spambase1}   & $36.80\ \pm\ 0.98$ & $10.80\ \pm\ 3.76$ & $0.03004\ \pm\ 0.04402$ \\
         \textbf{Spambase2}   & $38.30\ \pm\ 0.88$ & $12.60\ \pm\ 2.87$ & $0.04019\ \pm\ 0.04078$ \\
-        \textbf{Spambase2}   & $37.64\ \pm\ 1.64$ & $16.40\ \pm\ 1.85$ & $0.05150\ \pm\ 0.06956$ \\
+        \textbf{Spambase3}   & $37.64\ \pm\ 1.64$ & $16.40\ \pm\ 1.85$ & $0.05150\ \pm\ 0.06956$ \\
     \end{tabular}
 \end{table}
 
@@ -952,7 +969,7 @@ from 2 to 50 neurons per layer (chosen randomly).
         \hline
         \textbf{Spambase1}   & $41.46\ \pm\ 10.75$ & $17.80\ \pm\ 6.71$ & $0.30304\ \pm\ 0.37119$ \\
         \textbf{Spambase2}   & $35.13\ \pm\ 4.94$ & $29.40\ \pm\ 20.16$ & $0.28133\ \pm\ 0.34343$ \\
-        \textbf{Spambase2}   & $40.07\ \pm\ 12.26$ & $31.00\ \pm\ 14.48$ & $0.32100\ \pm\ 0.39295$ \\
+        \textbf{Spambase3}   & $40.07\ \pm\ 12.26$ & $31.00\ \pm\ 14.48$ & $0.32100\ \pm\ 0.39295$ \\
     \end{tabular}
 \end{table}
 
