@@ -2,6 +2,7 @@
 from os import environ
 from pathlib import Path
 from sys import exit as sysexit
+import random
 
 # Define basic paths for global use
 try:
