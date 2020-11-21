@@ -156,14 +156,16 @@ def genetic_algorithm(
             DGPLOGGER.debug(
                 f"    -- Evaluating {len(invalid_ind)} individuals."
             )
-            evaluate_population(invalid_ind, toolbox.evaluate)
-            DGPLOGGER.info(f"    -- Evaluated {len(invalid_ind)} individuals.")
+#            evaluate_population(invalid_ind, toolbox.evaluate)
+#            DGPLOGGER.info(f"    -- Evaluated {len(invalid_ind)} individuals.")
 
             # Replace the worst individuals from the previous population with
             # the mutated ones. In other words, create the new offspring
             # from the previous population best individual plus the mutated
             # ones
             population = best_population_individuals + offspring
+            evaluate_population(population, toolbox.evaluate)
+            DGPLOGGER.info(f"    -- Evaluated {len(invalid_ind)} individuals.")
             best_final_individual = tools.selBest(population, 1)[0]
             current_gen_best_fit = best_final_individual.fitness
 
@@ -184,6 +186,7 @@ def genetic_algorithm(
     )
 #    best_final_individual = tools.selBest(population, 1)[0]
     for i in range(15):
+        print(f"-------------------------- Test #{i} --------------------------")
         test_individual(best_final_individual, dataset, "Best final individual")
 
     return best_initial_individual, best_final_individual
