@@ -181,8 +181,8 @@ followed by a brief conclusion in Section \ref{sec:conclus}.
 % This contains a very good
 % review. https://www.sciencedirect.com/science/article/pii/S0925231200003027?casa_token=LZtZakZguVsAAAAA:iQNvGVO5fAQO6ED-pnBhQ5Ab-ZuYP7tIdFcpBurr9hdCzNnQAKwwKUoaY6_fEbiQx5fPiktf
 Searching the parameter space of neural networks, including deep
-learning algorithms, has been a problem that has been traditionally
-approached in a number of ways. {\em Incremental algorithms}, in
+learning algorithms, has been a problem traditionally approached
+in a number of ways. {\em Incremental algorithms}, in
 general, will depart from a specific architecture, number of layers
 and elements in every layer, and offer a series of heuristic
 procedures to add/eliminate layers and/or hidden-layer neurons in
@@ -274,11 +274,28 @@ The general the algorithm will proceed like the \autoref{alg:ga} shows.
 
 This is a canonical evolutionary algorithm. The key of the algorithm is
 in the different parts used, that extend and enhance those used by the
-original G-Prop. \begin{itemize}
+original G-Prop.
 
-    % I think the representation or gene structure is missing, 
-    % It is a vector? what values (domain) can have?
-    % How the vector becomes a ANN? 
+\begin{itemize}
+
+  \item An individual is coded as a list of \emph{Layers}. Each layer is
+    composed by a matrix of weights and a list of bias. One column of the
+    weights matrix represents all the connections from the previous layer to the
+    nth neuron.
+
+    From this configuration, when the moment of evaluation comes, we create a
+    \emph{Sequential} \cite{keras-sequential}  Keras \cite{keras-nn} model and
+    append each \emph{Layer} as a \emph{Dense} \cite{keras-dense} Keras layer.
+
+  \item There are three stop conditions that will finish the execution of the
+    genetic algorithm: if we reach the maximun number of generations, if after
+    10 generations there was no improvement in the best solution and if we find
+    the ideal solution ($0\%$ error, 1 on the hidden-score and 1 on the F2
+    score).
+
+  \item For each generation we clone the best half individuals of the current
+    population and perform all the operations to them. After that, the worst
+    half is replaced by this muted group.
 
   \item The {\em crossover} function will swap the ``neurons'' together with
     their connections. Main difference with respect to original G-Prop is that,
@@ -291,10 +308,10 @@ original G-Prop. \begin{itemize}
 
   \item There are several kinds of {\em mutation} operators: (initial) weights,
     biases, as well as changing the number of neurons and/or
-    layers. The neuron will be added last in the randomly selected layer, % number of neurons? -M
-    and it will be eliminated in the same way. Since the actual position of the
-    neurons is arbitrary, it does not really matter where the neuron % Maybe add: because it is a fully connected network -M
-    is added or eliminated. The layer add/eliminate mutator is the
+    layers. For the neuron mutator, one neuron will be added last in the
+    randomly selected layer, and it will be eliminated in the same way. Since
+    we use fully connected neural networks, it does not really matter where the
+    neuron is added or eliminated. The layer add/eliminate mutator is the
     main difference with respect to G-Prop, which used only one
     layer. In this case, only the last hidden layer can be eliminated. When a
     layer is eliminated, the weights from the previous layer to the eliminated
@@ -311,10 +328,19 @@ original G-Prop. \begin{itemize}
 \end{itemize}
 
 We need the fitness function to exert parsimony pressure, which is why
-we take into account not only the testing values reached after
-training, but also the overal size of the network. This will follow
-the Equation \ref{eq:hidden-score}:
- % This is important because is related to many principles of ML
+we take into account not only the accuracy score reached after
+training, but also the overal size of the network (Equation
+\ref{eq:hidden-score}) and the F2 score metric (explained in the
+\autoref{sec:res}). At the end, the fitnes value is a compound of
+three elements: accuracy, hidden-score and F2 score. As the DEAP framework
+\cite{deap-ga} where used as a base to create the genetic algorithm, also we
+took advantage of it fitness class \cite{deap-fitness} to rank the indivuduals
+of a population. It performs a lexicographical comparison of the three values,
+so we chose the order previously mentioned to approach as much as possible to
+the fitness function used by G-Prop.
+% Question for @jj related with #28. Do we need the hole expression? I don't
+% really know how to create an expression for the fitnes score since it is a
+% tuple - Luis This is important because is related to many principles of ML
  % General is usually better, I think this needs to be highlighted more - M
 
 
@@ -336,6 +362,13 @@ global number of neurons multiplied by the number of hidden layers.
 The whole code for this has been released under a free license in
 GitHub. % Add URL later.
 
+DeepGProp has been implemented using Python programming language. There are
+many reasons to use this language, but two of the most significant reasons are
+the extense documentation, use and community it has, and the vast amount of
+ML ready frameworks that are developed for it. Keras and DEAP are two impresive
+frameworks currently in the state-of-art on their respective area.
+% Do we want to talk about technical implementation details as suggested in
+% #10? Explaining all the code and that stuff - Luis
 % In the abstract the bringing to modern languages and tools is highlighted
 % Here could be a good place to present and justify these implementation details - M
 
