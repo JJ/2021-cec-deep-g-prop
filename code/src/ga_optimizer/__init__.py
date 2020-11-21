@@ -183,6 +183,7 @@ def genetic_algorithm(
         best_initial_individual, dataset, "Best initial individual"
     )
 #    best_final_individual = tools.selBest(population, 1)[0]
-    test_individual(best_final_individual, dataset, "Best final individual")
+    for i in range(15):
+        test_individual(best_final_individual, dataset, "Best final individual")
 
     return best_initial_individual, best_final_individual
