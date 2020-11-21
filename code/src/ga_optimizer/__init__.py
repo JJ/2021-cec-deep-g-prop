@@ -165,7 +165,7 @@ def genetic_algorithm(
             # ones
             population = best_population_individuals + offspring
             evaluate_population(population, toolbox.evaluate)
-            DGPLOGGER.info(f"    -- Evaluated {len(invalid_ind)} individuals.")
+            DGPLOGGER.info(f"    -- Evaluated {len(population)} individuals.")
             best_final_individual = tools.selBest(population, 1)[0]
             current_gen_best_fit = best_final_individual.fitness
 
