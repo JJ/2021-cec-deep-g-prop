@@ -1015,7 +1015,14 @@ simply use a more powerful machine to run the experiments, and devote
 a bigger evaluation budget. That will, at least, check that whatever
 result is obtained is not the effect of the limitations of the
 algorithm itself, but a consequence of the low evaluation budget
-(which, BTW, was all that was available with the original G-Prop)
+(which, BTW, was all that was available with the original G-Prop). We
+need, for starters, to increase the population size so that there's
+actually a chance to carry out crossover between selected members of
+the population and, thus, actual exploitation of the best
+results. Population will be 64 for the helicases problem, 32 for the
+other problems, spambase and cancer. We will use the same number for
+the number of generations, 64 for helicases, and 32 for spambase and
+cancer (any partition).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}
