@@ -82,7 +82,7 @@ by being able not only to evolve the number of neurons, but also the
 number of layers in the neural net, as well as changing the training
 algorithm to one that is more suited to perceptrons with several
 layers. In this paper we show how this has
-been achieved using the new DeepGProp framework, which we present
+been achieved using the new {\sf EvoMLP} framework, which we present
 here for the first time, and how this new framework is able to beat the
 previous instance in accuracy, with very competitive running times.
 
@@ -146,7 +146,7 @@ Stochastic Gradient Descent (SGD) \cite{bottou2012stochastic}. This
 algorithm has been used for training deep neural nets and other kind
 of machine learning algorithms
 \cite{bottou2012stochastic,bottou2010large}, justifying our
-denomination of DeepGProp for this specific method.
+denomination of {\sf EvoMLP} for this specific method.
 This does not imply that we are actually doing deep machine learning at large; but
 we are using (potentially) deep neural nets (with more than one
 layer), and a training method that is suitable for deep neural nets,
@@ -246,7 +246,7 @@ In this paper we will extend the principles of variation of a MLP
 architecture through the use of genetic operators as well as
 codification of initial weights to a modern, standard based
 implementation, that will also be released as free software. We show
-how this new DeepGProp method works next.
+how this new {\sf EvoMLP} method works next.
 
 \end{itemize}
 
@@ -347,7 +347,7 @@ the fitness function used by G-Prop.
 \begin{figure}
     \centering
     \caption{
-        DeepGProp NN model score equation.
+        {\sf EvoMLP} NN model score equation.
     }
     \label{eq:hidden-score}
     \begin{equation}
@@ -362,7 +362,7 @@ global number of neurons multiplied by the number of hidden layers.
 The whole code for this has been released under a free license in
 GitHub. % Add URL later.
 
-DeepGProp has been implemented using Python programming language. There are
+{\sf EvoMLP} has been implemented using Python programming language. There are
 many reasons to use this language, but two of the most significant reasons are
 the extensive documentation, use and community it has, and the vast amount of
 ML ready frameworks that are developed for it. Keras and DEAP are two impressive
@@ -378,8 +378,8 @@ frameworks currently in the state-of-art on their respective area.
 
 % Something should be said about the experimental setup.
 
-All the results found in this sections related with DeepGProp
-% This is the first time the name DeepGProp appears, is better if this is presented in the
+All the results found in this sections related with {\sf EvoMLP}
+% This is the first time the name {\sf EvoMLP} appears, is better if this is presented in the
 % proposed method section - M
 \cite{deep-g-prop:anon} were obtained in a laptop with the specs shown in the
 \autoref{tab:setup}. The OS installed in the laptop is GNU/Linux, using the
@@ -387,7 +387,7 @@ distribution ArchLinux (kernel version \texttt{5.9.2-arch1-1}).
 
 \begin{table}[]
   \centering
-  \caption{DeepGProp results laptop specs.}
+  \caption{{\sf EvoMLP} results laptop specs.}
   \label{tab:setup}
   \begin{tabular}{|l|l|}
   \hline
@@ -533,7 +533,7 @@ operation could be performed, despite being Python a priori a slower
 language than C++, which was the original language.
 
 In the first two tables, we can see very similar results between the GProp and
-DeepGProp algorithms regarding accuracy for
+{\sf EvoMLP} algorithms regarding accuracy for
 the \emph{cancer1} dataset \cite{uci}, with the network with fixed hidden layers
 (\autoref{tab:fixed-7-1-const-can1}) obtaining the best result with an accuracy
 of $2.86\%$ against the $3.09\%$ (in \autoref{tab:fixed-7-1-noconst-can1}) from
@@ -720,17 +720,17 @@ obtained from changing the number of neurons for each individual in each
 generation.
 
 % En la \autoref{tab:gprop-deepgprop-cancer} podemos observar los resultados
-% obtenidos tanto por \emph{G-Prop} como \emph{DeepGProp} para la siguiente
+% obtenidos tanto por \emph{G-Prop} como \emph{{\sf EvoMLP}} para la siguiente
 % configuración: población de 20 individuos, máximo de 10 generaciones, tamaño
 % inicial de neuronas entre 2 y 20 y probabilidad de cruce de $0.5$. En general
 % se ve mejor rendimiento para el algoritmo \emph{G-Prop} con un número de
 % neuronas menor en todos los casos y mejores resultados de precisión en las
 % particiones 1 y 2. Aun así, los datos son bastante similares y vemos una clara
-% mejora por parte de \emph{DeepGProp} en la segunda partición. Se intuye que
-% \emph{G-Prop} sortea mejor los mínimos locales que \emph{DeepGProp}.
+% mejora por parte de \emph{{\sf EvoMLP}} en la segunda partición. Se intuye que
+% \emph{G-Prop} sortea mejor los mínimos locales que \emph{{\sf EvoMLP}}.
 
 In the \autoref{tab:gprop-deepgprop-cancer} we can see the results obtained by
-GProp and DeepGProp using the following configuration: initial population of
+GProp and {\sf EvoMLP} using the following configuration: initial population of
 $20$ individuals, a maximum of $10$ generations, random initial neuron number
 between $2$ and $20$ and the crossover probability of $0.5$.
 
@@ -740,19 +740,19 @@ between $2$ and $20$ and the crossover probability of $0.5$.
     \centering
     \caption{
 %         Comparación de los resultados obtenidos en los problemas de \emph{cancer}
-%         por DeepGProp y GProp.
-        Results comparison between DeepGProp and GProp in the three partitions of \emph{Cancer}
+%         por {\sf EvoMLP} y GProp.
+        Results comparison between {\sf EvoMLP} and GProp in the three partitions of \emph{Cancer}
     }
     \label{tab:gprop-deepgprop-cancer}
     \begin{tabular}{rllll}
         \textbf{Partition} & \textbf{Algorithm} & \textbf{Accuracy error \%} & \textbf{\# neurons}      & \textbf{F2 score}           \\
         \hline
         \textbf{Cancer1}   & G-Prop         & $1.0\ \pm\ 0.5$        & $3.2\ \pm\ 0.8$     & $--$                    \\
-                       & DeepGProp      & $2.52\ \pm\ 0.28$      & $13.60\ \pm\ 6.02$  & $0.96668\ \pm\ 0.00670$ \\
+                       & {\sf EvoMLP}      & $2.52\ \pm\ 0.28$      & $13.60\ \pm\ 6.02$  & $0.96668\ \pm\ 0.00670$ \\
         \textbf{Cancer2}   & G-Prop         & $4.4\ \pm\ 0.4$        & $6.7\ \pm\ 2.3$     & $--$                    \\
-                       & DeepGProp      & $2.29\ \pm\ 0.00$      & $10.20\ \pm\ 4.58$  & $0.97943\ \pm\ 0.00260$ \\
+                       & {\sf EvoMLP}      & $2.29\ \pm\ 0.00$      & $10.20\ \pm\ 4.58$  & $0.97943\ \pm\ 0.00260$ \\
         \textbf{Cancer2}   & G-Prop         & $3.0\ \pm\ 0.7$        & $4.3\ \pm\ 1.7$     & $--$                    \\
-                       & DeepGProp      & $4.46\ \pm\ 0.43$      & $21.60\ \pm\ 17.83$ & $0.95952\ \pm\ 0.00285$ \\
+                       & {\sf EvoMLP}      & $4.46\ \pm\ 0.43$      & $21.60\ \pm\ 17.83$ & $0.95952\ \pm\ 0.00285$ \\
     \end{tabular}
 \end{table}
 
@@ -760,7 +760,7 @@ between $2$ and $20$ and the crossover probability of $0.5$.
 % en los resultados anteriores, se ha obtenido la media de 5 ejecuciones con
 % distintas semillas (ver inicio del \autoref{chap:analysis}). Observando los
 % resultados de la \autoref{tab:gprop-deepgprop-miniheli} vemos una gran
-% diferencia en todos los campos. La precisión alcanzada por \emph{DeepGProp} es
+% diferencia en todos los campos. La precisión alcanzada por \emph{{\sf EvoMLP}} es
 % inmensamente inferior a la que consigue \emph{G-Prop} ejecutando con el mismo
 % máximo de generaciones. De forma similar, aunque se han aumentado las
 % generaciones para la segunda prueba de 10 a 50, no cambia demasiado el
@@ -773,10 +773,10 @@ Continuing with the \emph{DNA Helicases} \cite{dna-helicases} problem, in the
 same vein as the previous experiments, we run each execution 5 times, showing
 the final mean for each value. Looking at the results of the
 \autoref{tab:gprop-deepgprop-miniheli} we can see a big difference in all the
-relevant columns. The achieved precision of DeepGProp is lower than the one
+relevant columns. The achieved precision of {\sf EvoMLP} is lower than the one
 obtained by GProp ran for the same amount of generations. Not much better
 results are reached when increasing the number of generations from 10 to 50 for
-DeepGProp. When increasing significantly the problem size, we find a better
+{\sf EvoMLP}. When increasing significantly the problem size, we find a better
 performance for GProp.
 
 % What's the number of evaluations? The most important thing is not
@@ -785,15 +785,15 @@ performance for GProp.
     \centering
     \caption{
 %         Comparación de los resultados obtenidos en los problemas de
-%         \emph{Helicases} por DeepGProp y GProp.
-        Results comparison between DeepGProp and GProp for the problem \emph{Helicases}
+%         \emph{Helicases} por {\sf EvoMLP} y GProp.
+        Results comparison between {\sf EvoMLP} and GProp for the problem \emph{Helicases}
     }
     \label{tab:gprop-deepgprop-miniheli}
     \begin{tabular}{rllll}
         \textbf{DNA Helicases} &    & \textbf{Accuracy error \%} & \textbf{\# neurons}     & \textbf{F2 score}\\
         \hline
         \textbf{G-Prop}    & 10 gen & $6\ \pm\ 3$            & $7.3\ \pm\ 3.9$     & $--$                    \\
-        \textbf{DeepGProp} & 10 gen & $25.67\ \pm\ 5.23$     & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
+        \textbf{{\sf EvoMLP}} & 10 gen & $25.67\ \pm\ 5.23$     & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
                        & 50 gen & $21.00\ \pm\ 5.01$     & $15.00\ \pm\ 4.38$  & $0.72556\ \pm\ 0.06024$ \\
     \end{tabular}
 \end{table}
@@ -855,7 +855,7 @@ hidden layer.
 
 For example, if we run the problem of \emph{DNA Helicases} with this last
 operation in use, we will get slightly better accuracy than when using only one
-hidden layer on DeepGProp, but the GProp result will be much better still. (see
+hidden layer on {\sf EvoMLP}, but the GProp result will be much better still. (see
 \autoref{tab:gprop-deepgprop-miniheli-multihidden}). % Why? Can we
                                 % make it better? - JJ
 
@@ -863,7 +863,7 @@ hidden layer on DeepGProp, but the GProp result will be much better still. (see
     \centering
     \caption{
 %         Comparación de los resultados obtenidos en los problemas de
-%         \emph{Helicases} por DeepGProp y GProp.
+%         \emph{Helicases} por {\sf EvoMLP} y GProp.
         Comparison between GProp and different variations of the algorithm: 10
         generations with only one layer, 50 generation with that one layer, or
         50 generations with variable number of layers.
@@ -874,14 +874,14 @@ hidden layer on DeepGProp, but the GProp result will be much better still. (see
         \textbf{(\# layers)}& &                       & \textbf{layers score}          &                   \\
         \hline
         \textbf{G-Prop (1)}       & 10 gen & $6\ \pm\ 3$        & $7.3\ \pm\ 3.9$     & $--$                    \\
-        \textbf{DeepGProp (1)}    & 10 gen & $25.67\ \pm\ 5.23$ & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
+        \textbf{{\sf EvoMLP} (1)}    & 10 gen & $25.67\ \pm\ 5.23$ & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
                                   & 50 gen & $21.00\ \pm\ 5.01$ & $15.00\ \pm\ 4.38$  & $0.72556\ \pm\ 0.06024$ \\
-        \textbf{DeepGProp ($>$1)} & 50 gen & $18.67\ \pm\ 2.45$ & $23.80\ \pm\ 24.25$ & $0.82569\ \pm\ 0.04718$ \\
+        \textbf{{\sf EvoMLP} ($>$1)} & 50 gen & $18.67\ \pm\ 2.45$ & $23.80\ \pm\ 24.25$ & $0.82569\ \pm\ 0.04718$ \\
     \end{tabular}
 \end{table}
 
 % Podemos recalcar que añadiéndole la posibilidad de utilizar número variable de
-% capas ocultas, el algoritmo \emph{DeepGProp} generaliza mejor para el problema
+% capas ocultas, el algoritmo \emph{{\sf EvoMLP}} generaliza mejor para el problema
 % \emph{DNA Helicases}. Esto es observable en la tabla con los resultados de
 % validación de esta última ejecución
 % (\autoref{tab:gprop-deepgprop-miniheli-multihidden-validation}) dado que la
@@ -890,7 +890,7 @@ hidden layer on DeepGProp, but the GProp result will be much better still. (see
 % 50 generaciones notamos un menor sobre ajuste a los datos de validación.
 
 We can highlight that adding the possibility of using a variable number of
-hidden layers, the DeepGProp algorithm can generalize better the problem
+hidden layers, the {\sf EvoMLP} algorithm can generalize better the problem
 \emph{DNA Helicases}. This can be seen in the
 \autoref{tab:gprop-deepgprop-miniheli-multihidden-validation} because the error
 percentage difference between the validation and test is smaller. Also we can
@@ -915,7 +915,7 @@ remark the lower overfitting when using more number of generations (50).
 % Tratando algún problema más complejo como \emph{spambase} se obtienen
 % resultados malos (véase las tablas \ref{tab:spambase-onelayer} y
 % \ref{tab:spambase-onelayer}). Tras lanzar multiples ejecuciones a partir de
-% soluciones obtenidas por DeepGProp, parece que siempre se alcanza un mínimo
+% soluciones obtenidas por {\sf EvoMLP}, parece que siempre se alcanza un mínimo
 % local cuando la pérdida llega a $\approx\ 0.6$. Entonces el mejor resultado que
 % obtiene es alrededor de $35\%$ de error. Para la primera tabla, los resultados
 % se han obtenido lanzando el algoritmo con número de neuronas variable entre 2 y
@@ -924,10 +924,10 @@ remark the lower overfitting when using more number of generations (50).
 % cada capa oculta obtenida también aleatoriamente. Sería interesante realizar
 % pruebas con el algoritmo G-prop con este tipo de problemas para compararlos.
 
-When running DeepGProp in a complex problem like \emph{spambase} we obtain
+When running {\sf EvoMLP} in a complex problem like \emph{spambase} we obtain
 worse results (see \autoref{tab:spambase-onelayer} and
 \autoref{tab:spambase-onelayer}). After running multiple executions with the
-DeepGProp algorithm, it seems the optimizer finds a local minimum when the
+{\sf EvoMLP} algorithm, it seems the optimizer finds a local minimum when the
 loss function reaches $\approx0.6$. Then the best result obtained is around
 $36\%$ of error. For the first table, the results where obtained using a
 variable number of neurons between 2 and 20 and only one hidden layer. The
