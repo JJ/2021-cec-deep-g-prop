@@ -1,0 +1,4 @@
+2020-11-22  jmerelo  <jmerelo@princess-carolyn>
+
+	* run-experiment.sh: Changes default population to 64.
+
