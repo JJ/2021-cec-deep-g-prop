@@ -124,7 +124,7 @@ space.
 
 We can also, however, fix a part of the architecture, choosing a
 multilayer perceptron trained with backpropagation, whose initial
-weights as well as biases evolve using an evoltuionary algorithm. This
+weights as well as biases evolve using an evolutionary algorithm. This
 algorithm was called \emph{G-Prop} (as in \emph{Genetic Back-Propagation})
 and was originally presented in \cite{castilloNC,CastilloNPL}. This
 method leverages the capabilities of two classes of algorithms: the
@@ -227,7 +227,7 @@ view: \begin{itemize}
     % There is also the problem of overfitting - M
 
 The variation of architecture has lately evolved towards (almost)
-unsconstrained evolution using NEAT, as shown in the recent review by
+unconstrained evolution using NEAT, as shown in the recent review by
 Miikkulainet et al. \cite{miikkulainen2019evolving}. Since this blows
 up the search space, this needs computational resources that are
 really off the reach of most labs or individuals. The rest usually
@@ -235,7 +235,7 @@ still use a fixed model for the network architecture, for instance SVM
 or MLPs, and even, in some cases, fixed number of layers and weights
 \cite{ecer2020training}; however, recent papers like the one by
 Tajmiri et al. \cite{TAJMIRI2020108997} already use a representation
-that is able to accomodate a maximum number of layers, as well as the
+that is able to accommodate a maximum number of layers, as well as the
 number of neurons in every layer. However, this encoding of
 architecture does not have any place for initial weights, which in the
 case of G-Prop, were proved to be essential for a good performance,
@@ -288,7 +288,7 @@ original G-Prop.
     append each \emph{Layer} as a \emph{Dense} \cite{keras-dense} Keras layer.
 
   \item There are three stop conditions that will finish the execution of the
-    genetic algorithm: if we reach the maximun number of generations, if after
+    genetic algorithm: if we reach the maximum number of generations, if after
     10 generations there was no improvement in the best solution and if we find
     the ideal solution ($0\%$ error, 1 on the hidden-score and 1 on the F2
     score).
@@ -300,7 +300,7 @@ original G-Prop.
   \item The {\em crossover} function will swap the ``neurons'' together with
     their connections. Main difference with respect to original G-Prop is that,
     in this case, there can be several hidden layers, so the connections might
-    be either to output or to another layers. The crossover only ocurrs when
+    be either to output or to another layers. The crossover only occurs when
     the two models selected for it have the same structure (same number of
     layers and neurons per layers).
 
@@ -329,12 +329,12 @@ original G-Prop.
 
 We need the fitness function to exert parsimony pressure, which is why
 we take into account not only the accuracy score reached after
-training, but also the overal size of the network (Equation
+training, but also the overall size of the network (Equation
 \ref{eq:hidden-score}) and the F2 score metric (explained in the
-\autoref{sec:res}). At the end, the fitnes value is a compound of
+\autoref{sec:res}). At the end, the fitness value is a compound of
 three elements: accuracy, hidden-score and F2 score. As the DEAP framework
 \cite{deap-ga} where used as a base to create the genetic algorithm, also we
-took advantage of it fitness class \cite{deap-fitness} to rank the indivuduals
+took advantage of it fitness class \cite{deap-fitness} to rank the individuals
 of a population. It performs a lexicographical comparison of the three values,
 so we chose the order previously mentioned to approach as much as possible to
 the fitness function used by G-Prop.
@@ -364,8 +364,8 @@ GitHub. % Add URL later.
 
 DeepGProp has been implemented using Python programming language. There are
 many reasons to use this language, but two of the most significant reasons are
-the extense documentation, use and community it has, and the vast amount of
-ML ready frameworks that are developed for it. Keras and DEAP are two impresive
+the extensive documentation, use and community it has, and the vast amount of
+ML ready frameworks that are developed for it. Keras and DEAP are two impressive
 frameworks currently in the state-of-art on their respective area.
 % Do we want to talk about technical implementation details as suggested in
 % #10? Explaining all the code and that stuff - Luis
@@ -398,7 +398,7 @@ distribution ArchLinux (kernel version \texttt{5.9.2-arch1-1}).
 \end{table}
 
 We followed a progression path of increasing complexity in terms of models
-execution. First we trained a clasic multilayer perceptron with a fixed number
+execution. First we trained a classic multilayer perceptron with a fixed number
 of layers and neurons per layer, modifying the hidden layer weights and biases
 for some of them. The second step was to replicate the method used in GProp
 \cite{castilloNC,CastilloNPL}: models with one hidden layer and a random
@@ -457,17 +457,17 @@ We selected the following parameters for the network:
 
 \item Activation function: We selected a (\emph{rectified linear unit}) ReLU
   activation function for hidden layers to ensure the correct performance of
-  the Stochastic Gradient Descent algorithm used to optimize the netowrk,
+  the Stochastic Gradient Descent algorithm used to optimize the network,
   making sure the neuron output values are all greater than zero.  On the other
-  hand, fot he last layer (the output layer) we used the Softmax function to
-  allow an easy clasificacion of the results normalizing the classes
+  hand, for he last layer (the output layer) we used the Softmax function to
+  allow an easy classification of the results normalizing the classes
   probability between 0 and 1, having the sum of all the values equal to 1. %
   WE need to justify that. - JJ
 
 \item Optimization algorithm: We used the Stochastic Gradient Descend
-  (SGD) combined with backpropagation wich allow a quick but solid computation
+  (SGD) combined with backpropagation which allow a quick but solid computation
   of the loss function for all the data split in batches. This allow the
-  posibility of easy paralelization of the data, which as not used in thid
+  possibility of easy parallelization of the data, which as not used in this
   paper. As the learning rate \texttt{0.01} was chosen as a default suggested
   value.
   % We have probably said that before, but we need to refer back to where, and
@@ -520,7 +520,7 @@ module found in Python's standard library.
 % capas ocultas. También se prueba con otra partición del mismo problema para ver
 % cómo efectivamente ahí si mejora.
 
-\subsection{Evolution of Neworks with a Fixed Architecture}
+\subsection{Evolution of Networks with a Fixed Architecture}
 
 In this section, we compare the evolution of networks with and without weight
 evolution. For this, we present the results of comparing the evolution networks
@@ -709,7 +709,7 @@ to generation.
 % \section{Evolución de población con modificación de número de neuronas:
 % reproducción de resultados}
 
-\subsection{Evolution of Neworks with a Mutable Architecture: neuron number modifications}
+\subsection{Evolution of Networks with a Mutable Architecture: neuron number modifications}
 
 % En esta sección se compararán los anteriores resultados con similares obtenidos
 % cambiando el número de neuronas de cada individuo a medida que avanzan las
@@ -730,8 +730,8 @@ generation.
 % \emph{G-Prop} sortea mejor los mínimos locales que \emph{DeepGProp}.
 
 In the \autoref{tab:gprop-deepgprop-cancer} we can see the results obtained by
-GProp and DeepGProp using the following configuration: initial popuoation of
-$20$ individuals, a maximun of $10$ generations, random initial neuron number
+GProp and DeepGProp using the following configuration: initial population of
+$20$ individuals, a maximum of $10$ generations, random initial neuron number
 between $2$ and $20$ and the crossover probability of $0.5$.
 
 % What's the average number of layers? - JJ
@@ -774,9 +774,9 @@ same vein as the previous experiments, we run each execution 5 times, showing
 the final mean for each value. Looking at the results of the
 \autoref{tab:gprop-deepgprop-miniheli} we can see a big difference in all the
 relevant columns. The achieved precision of DeepGProp is lower than the one
-obtained by GProp ran for the same ammount of generations. Not much better
+obtained by GProp ran for the same amount of generations. Not much better
 results are reached when increasing the number of generations from 10 to 50 for
-DeepGProp. When increasing significatnly the problem size, we find a better
+DeepGProp. When increasing significantly the problem size, we find a better
 performance for GProp.
 
 % What's the number of evaluations? The most important thing is not
@@ -807,8 +807,8 @@ performance for GProp.
 % debería mejorar el resultado.
 
 On the other hand, we can appreciate the difference between the validation
-\autoref{tab:deepgprop-miniheli-validation}) and test data refered previously.
-An overfitting to the validation data is ocurring for sure. In the
+\autoref{tab:deepgprop-miniheli-validation}) and test data referred previously.
+An overfitting to the validation data is occurring for sure. In the
 \emph{cancer} problem before, there was not that big difference than the one we
 go here, in with the \emph{DNA Helicases} dataset. We will try in the next
 section a variable number of layers, which should increase the
@@ -833,7 +833,7 @@ accuracy. % And also generalization? - JJ
 
 % \section{Evolución de población con modificación de número de neuronas y capas}
 
-\subsection{Evolution of Neworks with a Mutable Architecture: neuron and layer number modifications}
+\subsection{Evolution of Networks with a Mutable Architecture: neuron and layer number modifications}
 
 % Siguiendo con los resultados obtenidos en la sección anterior, aquí se suma un
 % nuevo operador que permite añadir o quitar capas en la última posición de las
@@ -889,7 +889,7 @@ hidden layer on DeepGProp, but the GProp result will be much better still. (see
 % pequeña. También al ser superior el porcentaje conseguido en la validación para
 % 50 generaciones notamos un menor sobre ajuste a los datos de validación.
 
-We can highlight that adding the posibility of using a variable number of
+We can highlight that adding the possibility of using a variable number of
 hidden layers, the DeepGProp algorithm can generalize better the problem
 \emph{DNA Helicases}. This can be seen in the
 \autoref{tab:gprop-deepgprop-miniheli-multihidden-validation} because the error
@@ -927,8 +927,8 @@ remark the lower overfitting when using more number of generations (50).
 When running DeepGProp in a complex problem like \emph{spambase} we obtain
 worse results (see \autoref{tab:spambase-onelayer} and
 \autoref{tab:spambase-onelayer}). After running multiple executions with the
-DeepGProp algorithm, it seems the optimizer finds a local minimun when the
-loss function reaches $\approx0.6$. Then the best result obtained is arround
+DeepGProp algorithm, it seems the optimizer finds a local minimum when the
+loss function reaches $\approx0.6$. Then the best result obtained is around
 $36\%$ of error. For the first table, the results where obtained using a
 variable number of neurons between 2 and 20 and only one hidden layer. The
 second table results where run using a variable number of hidden layers and
