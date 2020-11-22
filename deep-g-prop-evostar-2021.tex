@@ -978,6 +978,44 @@ from 2 to 50 neurons per layer (chosen randomly).
     \end{tabular}
 \end{table}
 
+We can draw some conclusions with these experiments. The first is
+that, in general, and despite no fine-tuning of evolutionary algorithm
+parameters or others such as the learning constant, the results are
+quite competitive with the state of the art. Second is that we would
+actually need to fine-tune the parameters when we use several layers,
+because in general the results are {\em worse} than with a single
+layer. This might be due to the weight of the number of neurons, which
+is clearly greater in this case, on the fitness, which might prevent
+MLPs with a high accuracy (but with also a high number of neurons) to
+be selected for reproduction.
+
+The low-budget evaluation, including the fact that the population size
+we have used is relatively small, has an unintended consequence,
+combined with the fact that there is no crossover among individuals
+with different number of layers: the main driver of evolution is
+mutation, and thus the exploration regime dominates over exploitation;
+most generations there are very few, or even none, crossovers between
+different members of the population to spawn new members.
+
+Additionally, there's another problem. Training a neural net is an
+uncertain affair, meaning that from the same initial weights, two
+trainings in a row will bring different results. There's, apparently,
+a noisy lunch \cite{DBLP:conf/ijcci/MereloLFGCCRMG15}, implying
+that the fitness of a data structure from which a neural net is
+trained is actually a statistical variable that follows a distribution
+that is skewed. This fact was not taken into account either in G-Prop
+(which actually saved the trained results not in the chromosome, but
+for comparison later) or in our new EvoMLP version. We will take that
+into account for a new version of the algorithm.
+
+\subsection{Optimizing under uncertainty}
+
+We need to address two of the challenges indicated above. We will
+simply use a more powerful machine to run the experiments, and devote
+a bigger evaluation budget. That will, at least, check that whatever
+result is obtained is not the effect of the limitations of the
+algorithm itself, but a consequence of the low evaluation budget
+(which, BTW, was all that was available with the original G-Prop)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}
