@@ -186,7 +186,7 @@ def genetic_algorithm(
     )
 #    best_final_individual = tools.selBest(population, 1)[0]
     for i in range(15):
-        print(f"-------------------------- Test #{i} --------------------------")
+        DGPLOGGER.info(f"-------------------------- Test #{i} --------------------------")
         test_individual(best_final_individual, dataset, "Best final individual")
 
     return best_initial_individual, best_final_individual
