@@ -77,7 +77,7 @@ initial weights and the number of layers of a multilayer perceptron for
 different kind of tasks. Using the general concept of this algorithm
 as a baseline, we have rewritten the method using off-the-shelf tools
 and libraries; modern testing and deployment tools have been also
-employed. On top of that algorithm, we have added a ``deep'' component
+employed. On top of that algorithm, we have added a  component
 by being able not only to evolve the number of neurons, but also the
 number of layers in the neural net, as well as changing the training
 algorithm to one that is more suited to perceptrons with several
@@ -92,6 +92,7 @@ previous instance in accuracy, with very competitive running times.
 % But the method could be used for other types of layers, maybe this
 % could be mentioned - M
 % Deep is related to representational learning.
+% OK, changing this in issue #29
 
 \end{abstract}
 
@@ -101,7 +102,7 @@ previous instance in accuracy, with very competitive running times.
 Using artificial neural networks (ANN) requires establishing the
 structure in layers and connections between them, the parameters (such
 as initial weights) and a set of learning constants. This is still
-true for deep learning architectures \cite{goodfellow,nielsen}, where
+true for neural and deep learning architectures \cite{goodfellow,nielsen}, where
 a design parameter is added: the number of layers in the architecture,
 every one with its own set of parameters, like the number of neurons
 in every layer.
@@ -145,20 +146,16 @@ hidden layers and hidden layer sizes of a MLP, based on a EA and
 Stochastic Gradient Descent (SGD) \cite{bottou2012stochastic}. This
 algorithm has been used for training deep neural nets and other kind
 of machine learning algorithms
-\cite{bottou2012stochastic,bottou2010large}, justifying our
+\cite{bottou2012stochastic,bottou2010large}; however, in this case
+there all intermediate (or hidden) layers have the same structure,
+which is the structure of a multi layer perceptron, justifying our
 denomination of {\sf EvoMLP} for this specific method.
-This does not imply that we are actually doing deep machine learning at large; but
-we are using (potentially) deep neural nets (with more than one
-layer), and a training method that is suitable for deep neural nets,
-leaving the possibility of using deep neural nets open for the future.
-% Using SGD is not equal to Deep, as we are saying it is also used in
-% linear models, SVM and many other ML algorithms.
-% But, having the possibility of searching for a number of layers, an the
-% type of layer it is. Also the activation function of said layers?
-
-%% [pedro] Instead of the last sentence ("This does....the future.") I'd say something like:
-%%    " This paper presents a first approach to perform deep neural networks evolution (evolution of MLPs with several layers), providing results of the evolution of networks with two layers, and demonstrating that the method can be applied to the evolution of networks with a high number of layers.  "
-
+The use of this kind of {\em training} method does not imply that we
+are actually doing deep machine learning at large; however, this (and
+other possible methods included in the machine learning framework we
+are using) are suitable for deep neural nets,
+leaving the possibility of using deep neural nets or any other
+deep learning methods open for the future.
 
 In this paper what we will do is to first bring the implementation of
 the G-Prop concept to current tools and languages, choosing the best
@@ -978,8 +975,9 @@ from 2 to 50 neurons per layer (chosen randomly).
 \section{Conclusions and future work}
 \label{sec:conclus}
 
-In this paper a first approach to perform deep neural networks
-evolution (evolution of MLPs with several layers) has been proposed.
+In this paper a first approach to perform evolution of MLPs with
+several layers has been proposed, along with the first results reached
+with it.
 
 In our approach, the architecture (i.e. the initial weights, number of
 hidden layers and hidden layer sizes) of multilayer perceptrons with
@@ -1000,7 +998,8 @@ layers to solve complex problems.
 \section*{Acknowledgments}
 
 The work is
-supported by the so and so.
+supported by the so and so \\
+taking these many lines.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
