@@ -1022,7 +1022,39 @@ the population and, thus, actual exploitation of the best
 results. Population will be 64 for the helicases problem, 32 for the
 other problems, spambase and cancer. We will use the same number for
 the number of generations, 64 for helicases, and 32 for spambase and
-cancer (any partition). 
+cancer (any partition).
+
+The second modification was related to the possible weight the MLP
+size would have on the evolution. Although this was still considered,
+its weight was reduced from half that of the fitness to 1\%; the
+effect being that unless validation error was exactly the same, it
+would not really have an effect on the ranking of the solution.
+
+The final change is actually more relevant, and is probably the one
+with the biggest influence. Since in order to compute fitness the
+stored MLP has to be trained and validated, every one will be
+re-evaluated every generation, while before the single (and with a
+certain degree of randomness) value obtained in a generation was the
+one used for that particular data structure. Also, instead of testing
+the best individual in the last generation once, it is trained and
+tested 15 times. The results relow are the average over those 15
+times. Please note that, since the accuracy after training is
+stochastic, picking {\em the best} individual is actually equivalent
+to picking an almost random individual in the last generation, which
+is why we re-evaluate this individual 15 times to obtain an average.
+
+\begin{table}[]
+  \centering
+  \caption{{\sf EvoMLP} results for the second round of experiments;
+    comparison with G-Prop}
+  \label{tab:setup}
+  \begin{tabular}{|l|c|c|c|c|c|}
+    Dataset & G-Prop & \multicolumn{3}{|c|}{EvoMLP} & Best Test \\ \hline
+            &        & Test & Validation & Generations & \\ hline
+    {\tt helicases} & 6 $\pm$ 3 & 19 $\pm$ 6 & 2 $\pm$ 4 & 61 $\pm$ 5 & 8.33 \\ hline
+    {\tt cancer1} & $1.0\ \pm\ 0.5$ & 0.49 $\pm$ 0.29 & 2.3 $\pm$ 0.4 & 25 $\pm$ 8 & 1.71 \\ hline
+  \hline
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}
