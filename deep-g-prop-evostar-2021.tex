@@ -84,7 +84,10 @@ algorithm to one that is more suited to perceptrons with several
 layers. In this paper we show how this has
 been achieved using the new {\sf EvoMLP} framework, which we present
 here for the first time, and how this new framework is able to beat the
-previous instance in accuracy, with very competitive running times.
+previous instance in accuracy, with very competitive running times. We
+will also give initial solutions to the challenges this kind of
+problems present, namely, evaluating the performance of solutions in
+the presence of uncertainty.
 
 % A multi-layer perceptron is not considered "Deep", this usually
 % means other types of layers like convolutional, filters, etc. that
@@ -99,16 +102,20 @@ previous instance in accuracy, with very competitive running times.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Using artificial neural networks (ANN) requires establishing the
-structure in layers and connections between them, the parameters (such
-as initial weights) and a set of learning constants. This is still
-true for neural and deep learning architectures \cite{goodfellow,nielsen}, where
-a design parameter is added: the number of layers in the architecture,
-every one with its own set of parameters, like the number of neurons
-in every layer.
+Applying artificial neural networks (ANN) to the solution of
+classification problems requires establishing their structure in
+layers and connections between them, the initial parameters (such as
+initial weights) and a set of learning constants. This is true for
+neural as well as deep learning architectures
+\cite{goodfellow,nielsen}, where a design parameter is added: the
+number of layers in the architecture as well as its type, every one
+with its own set of parameters, like the number of neurons in every
+layer.
 
-Evolutionary neural networks are an efficient way of searching for the
-architecture and the weights of the ANN, and this was proved
+Using an optimization algorithm to solve at least part of the problem
+is an usual approach to this challenge. Evolutionary neural networks are an efficient way of searching for the
+architecture, weights, and other ANN parameters (such as learning
+constants). This has been proved
 repeatedly for {\em shallow} architectures (with a single hidden
 layer) since late in the previous century
 \cite{CastilloNPL,stanley2002evolving}. However, in most cases design
