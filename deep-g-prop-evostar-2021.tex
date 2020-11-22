@@ -931,7 +931,7 @@ remark the lower overfitting when using more number of generations (50).
 
 When running {\sf EvoMLP} in a complex problem like \emph{spambase} we obtain
 worse results (see \autoref{tab:spambase-onelayer} and
-\autoref{tab:spambase-onelayer}). After running multiple executions with the
+\autoref{tab:spambase-2layer}). After running multiple executions with the
 {\sf EvoMLP} algorithm, it seems the optimizer finds a local minimum when the
 loss function reaches $\approx0.6$. Then the best result obtained is around
 $36\%$ of error. For the first table, the results where obtained using a
@@ -968,7 +968,7 @@ from 2 to 50 neurons per layer (chosen randomly).
         Comparison of the results obtained for the \emph{spambase} partitions
         using multiple variable hidden layers.
     }
-    \label{tab:spambase-onelayer}
+    \label{tab:spambase-2layer}
     \begin{tabular}{r|l|l|l|l}
         \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
         \hline
