@@ -1067,18 +1067,33 @@ stochastic, picking {\em the best} individual is actually equivalent
 to picking an almost random individual in the last generation, which
 is why we re-evaluate this individual 15 times to obtain an average.
 
-\begin{table}[]
+\begin{table}[h!tbp]
   \centering
   \caption{{\sf EvoMLP} results for the second round of experiments;
     comparison with G-Prop}
   \label{tab:setup}
   \begin{tabular}{|l|c|c|c|c|c|}
-    Dataset & G-Prop & \multicolumn{3}{|c|}{EvoMLP} & Best Test \\ \hline
-            &        & Test & Validation & Generations & \\ hline
-    {\tt helicases} & 6 $\pm$ 3 & 19 $\pm$ 6 & 2 $\pm$ 4 & 61 $\pm$ 5 & 8.33 \\ hline
-    {\tt cancer1} & $1.0\ \pm\ 0.5$ & 0.49 $\pm$ 0.29 & 2.3 $\pm$ 0.4 & 25 $\pm$ 8 & 1.71 \\ hline
-  \hline
+    \hline
+    Dataset &        & \multicolumn{3}{|c|}{EvoMLP} & \\
+            & G-Prop & Test & Validation & Generations & Best Test\\ \hline
+    {\tt helicases} & 6 $\pm$ 3 & 19 $\pm$ 6 & 2 $\pm$ 4 & 61 $\pm$ 5 & 8.33 \\ \hline
+    {\tt cancer1} & $1.0\ \pm\ 0.5$  & 2.3 $\pm$ 0.4 & 0.49 $\pm$ 0.29 & 25 $\pm$ 8 & 1.71 \\ \hline
+    {\tt cancer2} & $4.4\ \pm\ 0.4$  & 2.07 $\pm$ 0.36 & 2.66 $\pm$ 0.46 & 29.2 $\pm$ 4.7 & 1.71 \\ \hline
+    {\tt cancer3} & $3.0\ \pm\ 0.7$  & 3.88 $\pm$ 0.61 & 1.98 $\pm$ 0.43 & 30 $\pm$ 4 & 2.86 \\ \hline
+  \end{tabular}
+\end{table}
 
+\begin{table}[h!tbp]
+  \centering
+  \caption{{\sf EvoMLP} results for the second round of experiments;
+    comparison with the previous round}
+  \label{tab:setup}
+  \begin{tabular}{|l|c|c|c|c|c|}
+    \hline
+    Dataset &        & \multicolumn{3}{|c|}{EvoMLP} & \\
+            & EvoMLP Exp 1 & Test & Validation & Generations & Best Test\\ \hline
+  \end{tabular}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}
