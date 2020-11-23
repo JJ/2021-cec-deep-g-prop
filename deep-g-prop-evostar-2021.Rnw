@@ -270,26 +270,25 @@ how this new {\sf EvoMLP} method works next.
 \section{Proposed Method}
 \label{method}
 
-The general the algorithm will proceed like the \autoref{alg:ga} shows.
+%The general the algorithm will proceed like the \autoref{alg:ga} shows.
 
-\begin{algorithm}
-  \caption{Genetic Algorithm loop}\label{alg:ga}
-  \begin{algorithmic}[1]
-    \State \textit{evaluate initial population}
-    \While{\textit{max fit is less than ideal and there are generations left}}
-    \If{\textit{max fit hasn't improved in some generations}}
-    \State \textit{Stop algorithm}
-    \EndIf
-    \State \textit{select the offspring from the best population individuals}
-    \State \textit{apply crossover to the offspring}
-    \State \textit{apply mutations to the offspring}
-    \State \textit{replace the worst population individuals with the modified offspring}
-    \EndWhile
-  \end{algorithmic}
-\end{algorithm}
+% \begin{algorithm}
+%   \caption{Genetic Algorithm loop}\label{alg:ga}
+%   \begin{algorithmic}[1]
+%     \State \textit{evaluate initial population}
+%     \While{\textit{max fit is less than ideal and there are generations left}}
+%     \If{\textit{max fit hasn't improved in some generations}}
+%     \State \textit{Stop algorithm}
+%     \EndIf
+%     \State \textit{select the offspring from the best population individuals}
+%     \State \textit{apply crossover to the offspring}
+%     \State \textit{apply mutations to the offspring}
+%     \State \textit{replace the worst population individuals with the modified offspring}
+%     \EndWhile
+%   \end{algorithmic}
+% \end{algorithm}
 
-This is a canonical evolutionary algorithm. The key of the algorithm is
-in the different parts used, that extend and enhance those used by the
+In this work we will use a canonical evolutionary algorithm, as implemented by DEAP. The key of the adaptation of the algorithm for the neuroevolution task we are doing here is in the different parts used, that extend and enhance those used by the
 original G-Prop. % Briefly comment on these enhancements, where are they? - M 
                  % (Update) This is done in some places but maybe you should do another pass to see if there are more 
                  % enhancements - M 
