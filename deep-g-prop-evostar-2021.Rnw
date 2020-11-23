@@ -390,7 +390,7 @@ global number of neurons multiplied by the number of hidden layers.
 The whole code for this has been released under a free license in
 GitHub. % Add URL later.
 
-{\sf EvoMLP} has been implemented using Python programming language. Tests with pypy, an accelerated, just-in-time version of the regular interpreter were tested, but although it is supposed to accelerate most numerical workloads, it actually was almost twice as slow as the one using the regular interpreter. There are
+{\sf EvoMLP} has been implemented using the Python programming language. Tests with pypy, an accelerated, just-in-time version of the regular interpreter were tested, but although it is supposed to accelerate most numerical workloads, it actually was almost twice as slow as the one using the regular interpreter. There are
 many reasons to use this language, but two of the most significant reasons are
 the extensive documentation, use and community it has, and the vast amount of
 ML ready frameworks that are developed for it. Keras and DEAP are two impressive
@@ -669,7 +669,7 @@ not keeping the weights in the hidden layer fixed. See Tables
 %         sobre las capas internas para el problema \emph{cancer2}.
 Test results for the best individual after ten generations with twenty initial
 individuals and seven neurons per individual. In this case, the algorithm
-operates over the hidden layers for the \emph{cancer2} dataset.
+changing the hidden layers for the \emph{cancer2} dataset (top) or leaving them unchanged (bottom).
      }
      \label{tab:fixed-7-1-noconst-can2}
      \begin{tabular}{rlll}
@@ -679,18 +679,7 @@ operates over the hidden layers for the \emph{cancer2} dataset.
          \textbf{Max}       & $2.29$            & $7.00$             & $0.98432$               \\
          \textbf{Min}       & $1.71$            & $6.00$             & $0.97731$               \\
      \end{tabular}
- \end{table}
-
- \begin{table}
-     \centering
-     \caption{
-%         Resultados de test del mejor individuo final tras 10 generaciones con
-%         20 individuos iniciales y 7 neuronas por individuo sin hacer
-%         operaciones sobre las capas internas para el problema \emph{cancer2}.
-Test results for the \emph{cancer2} dataset, with the best individual after ten
-generations with twenty initial individuals and seven neurons per individual. In
-this case, the algorithm did not change the hidden layers.
-     }
+ %
      \label{tab:fixed-7-1-const-can2}
      \begin{tabular}{rlll}
          \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
@@ -801,6 +790,8 @@ performance for GProp.
         \textbf{G-Prop}    & 10 gen & $6\ \pm\ 3$            & $7.3\ \pm\ 3.9$     & $--$                    \\
         \textbf{{\sf EvoMLP}} & 10 gen & $25.67\ \pm\ 5.23$     & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
                        & 50 gen & $21.00\ \pm\ 5.01$     & $15.00\ \pm\ 4.38$  & $0.72556\ \pm\ 0.06024$ \\
+        (Validation) & 10 gen             & $11.19\ \pm\ 1.36$ & $11.80\ \pm\ 6.01$ & $0.88280\ \pm\ 0.03664$ \\
+                     & 50 gen             & $2.71\ \pm\ 2.30$ & $15.00\ \pm\ 4.38$ & $0.98952\ \pm\ 0.00887$ \\
     \end{tabular}
 \end{table}
 
@@ -813,29 +804,29 @@ performance for GProp.
 % debería mejorar el resultado.
 
 On the other hand, we can appreciate the difference between the validation
-\autoref{tab:deepgprop-miniheli-validation}) and test data referred previously.
+(bottom rows) and test data referred previously.
 An overfitting to the validation data is occurring for sure. In the
-\emph{cancer} problem before, there was not that big difference than the one we
+\emph{cancer} problem before, there was not that big a difference than the one we
 go here, in with the \emph{DNA Helicases} dataset. We will try in the next
 section a variable number of layers, which should increase the
 accuracy. % And also generalization? - JJ
 
-\begin{table}
-    \centering
-    \caption{
-%        Resultados de validación del mejor individuo final tras 10 y 50
-%        generaciones respectivamente.
-        Best individual validation results after 10 and 50 generations
-        respectively.
-    }
-    \label{tab:deepgprop-miniheli-validation}
-    \begin{tabular}{rlll}
-        \textbf{\# generations} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-        \hline
-        \textbf{10}             & $11.19\ \pm\ 1.36$ & $11.80\ \pm\ 6.01$ & $0.88280\ \pm\ 0.03664$ \\
-        \textbf{50}             & $2.71\ \pm\ 2.30$ & $15.00\ \pm\ 4.38$ & $0.98952\ \pm\ 0.00887$ \\
-    \end{tabular}
-\end{table}
+% \begin{table}
+%     \centering
+%     \caption{
+% %        Resultados de validación del mejor individuo final tras 10 y 50
+% %        generaciones respectivamente.
+%         Best individual validation results after 10 and 50 generations
+%         respectively.
+%     }
+%     \label{tab:deepgprop-miniheli-validation}
+%     \begin{tabular}{rlll}
+%         \textbf{\# generations} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+%         \hline
+%         \textbf{10}             & $11.19\ \pm\ 1.36$ & $11.80\ \pm\ 6.01$ & $0.88280\ \pm\ 0.03664$ \\
+%         \textbf{50}             & $2.71\ \pm\ 2.30$ & $15.00\ \pm\ 4.38$ & $0.98952\ \pm\ 0.00887$ \\
+%     \end{tabular}
+% \end{table}
 
 % \section{Evolución de población con modificación de número de neuronas y capas}
 
@@ -883,6 +874,7 @@ hidden layer on {\sf EvoMLP}, but the GProp result will be much better still. (s
         \textbf{{\sf EvoMLP} (1)}    & 10 gen & $25.67\ \pm\ 5.23$ & $11.80\ \pm\ 6.01$  & $0.70976\ \pm\ 0.07727$ \\
                                   & 50 gen & $21.00\ \pm\ 5.01$ & $15.00\ \pm\ 4.38$  & $0.72556\ \pm\ 0.06024$ \\
         \textbf{{\sf EvoMLP} ($>$1)} & 50 gen & $18.67\ \pm\ 2.45$ & $23.80\ \pm\ 24.25$ & $0.82569\ \pm\ 0.04718$ \\
+        (Validation) & 50 gen &  $8.13\ \pm\ 3.62$ & $23.80\ \pm\ 24.25$ & $0.88853\ \pm\ 0.06346$ \\
     \end{tabular}
 \end{table}
 
@@ -897,26 +889,26 @@ hidden layer on {\sf EvoMLP}, but the GProp result will be much better still. (s
 
 We can highlight that adding the possibility of using a variable number of
 hidden layers, the {\sf EvoMLP} algorithm can generalize better the problem
-\emph{DNA Helicases}. This can be seen in the
-\autoref{tab:gprop-deepgprop-miniheli-multihidden-validation} because the error
+\emph{DNA Helicases}. This can be seen in the bottom row
+because the error
 percentage difference between the validation and test is smaller. Also we can
 remark the lower overfitting when using more number of generations (50).
 
-\begin{table}
-    \centering
-    \caption{
-%        Resultados de validación del mejor individuo final tras 50
-%        generaciones.
-        Validation results of the best individual after 50 generations for the
-        \emph{DNA Helicases} problem.
-    }
-    \label{tab:gprop-deepgprop-miniheli-multihidden-validation}
-    \begin{tabular}{rlll}
-        \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-        \hline
-        $8.13\ \pm\ 3.62$ & $23.80\ \pm\ 24.25$ & $0.88853\ \pm\ 0.06346$ \\
-    \end{tabular}
-\end{table}
+% \begin{table}
+%     \centering
+%     \caption{
+% %        Resultados de validación del mejor individuo final tras 50
+% %        generaciones.
+%         Validation results of the best individual after 50 generations for the
+%         \emph{DNA Helicases} problem.
+%     }
+%     \label{tab:gprop-deepgprop-miniheli-multihidden-validation}
+%     \begin{tabular}{rlll}
+%         \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+%         \hline
+%         $8.13\ \pm\ 3.62$ & $23.80\ \pm\ 24.25$ & $0.88853\ \pm\ 0.06346$ \\
+%     \end{tabular}
+% \end{table}
 
 % Tratando algún problema más complejo como \emph{spambase} se obtienen
 % resultados malos (véase las tablas \ref{tab:spambase-onelayer} y
