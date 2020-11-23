@@ -1093,22 +1093,22 @@ In this paper a first approach to perform evolution of MLPs with
 several layers has been proposed, along with the first results reached
 with it. Our point of departure was a neuroevolutionary algorithm called G-Prop, which was first re-implemented using modern tools, and then enhanced with the possibility of evolving perceptrons with more than one hidden layer and a re-sampling procedure that improved the robustness of evolution; we have called this new approach EvoMLP. Additionally, we have also proposed a new way of evaluating neuro-evolutionary algorithms by re-training weights obtained and reporting the average results.
 
+In this paper, we have proved how using a simple re-evaluation strategy fixes the gap observed initially between the observed validation error and the test error. Both will have a random component, but re-evaluation induces the selection of those individuals that consistently return better results, as opposed with the initial version of EvoMLP, which possibly could select an individual on the basis of a single, lucky evaluation. Re-evaluation or re-sampling is a well-known strategy to deal with uncertain optimization problems, and we have applied it here successfully.
+
 The experiments have proved that EvoMLP is able to robustly obtain good results using a limited budget, and in a reasonable amount of time. The architecture (i.e. the initial weights, number of
 hidden layers and hidden layer sizes) of multi-layer perceptrons with
 multiple layers is automatically designed using an EA, leveraging it to find a solution close to the global optimum and
 the ability of the training algorithm to tune the solution and reach
 the nearest local minimum. This new solution is able to consistently find the architecture and initial weights of multilayer perceptrons that have an excellent accuracy on a wide variety of problem sizes and difficulties, from the arguably easier {\tt cancer} to the more difficult {\tt spambase}. However, evaluation budget is an issue and population size as well as number of generations needs to be investigated further, over all taking into account that every evaluation can take a few seconds.
 
-As future works, we propose using deep neural nets with any number of
-layers to solve complex problems.
+The framework we have used for EvoMLP has been developed and tested using best practices and can be easily evolved into new programs that allow scientists to explore different possibilities. Within the strict framework of multilayer perceptrons, we need to pay attention to evaluation budgets as indicated in the previous paragraph, but we can also open up the range of evolvable parameters to include different training algorithms, as well as the optimization of their specific parameters, such as learning constants. An extension to other kind of more open, deep learning, architectures, would also be interesting, following the same principles of simple variation of the number (and possibly type) of layers as well as its size. Finally, a profiling of the whole application looking for speed ups without resorting to hardware accelerations is also in the roadmap.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
 
 The work is
-supported by the so and so \\
-taking these many lines.
+supported by the so and so.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
