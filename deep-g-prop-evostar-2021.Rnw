@@ -456,8 +456,9 @@ proposed in G-Prop, minimizing error while also trying to minimize the size as c
 % Para los lectores de estos papers la formula de la exactitud de un clasificador es conocida.
 % Cambié lo de sencillo y óptimo por conceptos más utilizados en el área. - M
 
-We compare against other classification algorithms using accuracy as a
-performance metric, % This needs to be explained further, 
+
+We compare against other classification algorithms using the mean accuracy (percentaje
+of correctly predicted examples) as a performance metric after a few runs, % This needs to be explained further, 
 % accuracy using k-fold cross-validation? leave-one-out? 
 % accuracy of one run, or median of a few runs - M
 as was used in the G-Prop paper \cite{castilloNC,CastilloNPL}. We hope to
@@ -467,6 +468,12 @@ overall number of neurons in the MLP; this was also the intention of the G-Prop
 authors. We also compute a layer score with the formula shown above. With
 this expression, we aim to minimize the number of layers first, and then the number of
 neurons per layer.
+
+We also included the F2 score as an extra metric to have a way of
+distinguishing two very similar indiviudals. This metric has the ability to
+detect a bad performance on inbalanced datasets (for example, the \emph{breast
+cancer database datasets}), giving more importance to the false negatives
+predictions.
 
 % La métrica F2 score es una definida como la media armónica ponderada entre
 % precisión (\emph{precision})\footnote{Fracción de instancias que son de la
