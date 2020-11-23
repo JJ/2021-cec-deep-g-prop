@@ -296,19 +296,18 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
 \begin{itemize}
 
   \item An individual is coded as a list of \emph{Layers}. Each layer is
-    composed by a matrix of weights and a list of bias. % A tuple or dictionary? - M
-    One column of the weight matrix represents all the connections from the previous layer to the
-    nth neuron.
+    composed by a matrix of weights and a list of bias (both Numpy
+    \cite{py-numpy} ndarrays) joined toguether with it's configuration (a
+    Python dictionary) in a Python class. One column of the weight matrix
+    represents all the connections from the previous layer to the nth neuron.
+    All the weights and bias are randomly initialized wiht a uniform
+    distribution between -1.0 and 1.0. A random proportion of all this genes
+    and biases are muted for all the indiivduals each generation.
 
     From this configuration, when the moment of evaluation comes, we create a
     \emph{Sequential} \cite{keras-sequential}  Keras \cite{keras-nn} model and
     append each \emph{Layer} as a \emph{Dense} \cite{keras-dense} Keras layer.
 
-    % Are these weights initially random? Are they later tuned with back-propagation?
-    % If random, are they gaussian or uniform?
-    % Is the matrix a Tensor or Numpy array?
-    % Are they floats? between 0 an 1?  - M
-        
   \item There are three stop conditions that will finish the execution of the
     genetic algorithm: if we reach the maximum number of generations, if after
     10 generations there was no improvement in the best solution and if we find
@@ -318,10 +317,11 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
     % experiments to 10 - M
 
   \item For each generation we clone the best half individuals of the current
-    population and perform all the operations to them. % evolutionary operations? 
-    % Is there a probability of performing a certain operation (i.e. mutation)? Here it seem as if this is not the case - M
-    After that, the worst
-    half is replaced by this muted group.
+    population and perform all the evolutionary operations to them. Each
+    operation has it own probability to occur chosen when running DeepGProp
+    CLI. For the weights/bias mutation, a percentage of each (selected too with
+    the CLI parametters) are muted randomly. After that, the worst half is
+    replaced by this muted group.
 
   \item The {\em crossover} function will swap the ``neurons'' together with
     their connections. Main difference with respect to original G-Prop is that,
