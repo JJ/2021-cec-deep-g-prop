@@ -318,7 +318,7 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
 
   \item For each generation we clone the best half individuals of the current
     population and perform all the evolutionary operations to them. Each
-    operation has it own probability to occur chosen when running DeepGProp
+    operation has it own probability to occur chosen when running EvoMLP
     CLI. For the weights/bias mutation, a percentage of each (selected too with
     the CLI parametters) are muted randomly. After that, the worst half is
     replaced by this muted group.
