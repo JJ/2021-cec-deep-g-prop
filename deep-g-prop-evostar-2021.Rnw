@@ -45,7 +45,7 @@ plotting <- read.csv("data/helicases.csv")
 %
 \title{EvoMLP: Evolving the architecture of multi-layer perceptrons using free software}
 %
-%\titlerunning{Abbreviated paper title}
+\titlerunning{EvoMLP: evolving multi-layer perceptrons}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
@@ -1052,12 +1052,22 @@ other problems, spambase and cancer. We will use the same number for
 the number of generations, 64 for helicases, and 32 for spambase and
 cancer (any partition).
 
+
+\begin{figure}[h!tb]
+  \centering
+<<helicases, cache=FALSE,echo=FALSE,message=FALSE,warning=FALSE>>=
+ggplot(plotting, aes(x=Experiment,y=Test,group=Experiment))+geom_boxplot()+theme_tufte()
+@
+\caption{Example of distribution of test accuracy for the fifteen helicases experiments; accuracy is represented in the $x$ axis, while the $x$ axis corresponds to the experiment number.}
+  \label{fig:heli}
+ \end{figure} 
+ %
 The second modification was related to the possible weight the MLP
 size would have on the evolution. Although this was still considered,
 its weight was reduced from half that of the fitness to 1\%; the
 effect being that unless validation error was exactly the same, it
 would not really have an effect on the ranking of the solution.
-
+ 
 The final change is actually more relevant, and is probably the one
 with the biggest influence. Since in order to compute fitness the
 stored MLP has to be trained and validated, every one will be
@@ -1069,7 +1079,7 @@ tested 15 times. The results relow are the average over those 15
 times. Please note that, since the accuracy after training is
 stochastic, picking {\em the best} individual is actually equivalent
 to picking an almost random individual in the last generation, which
-is why we re-evaluate this individual 15 times to obtain an average.
+is why we re-evaluate this individual 15 times to obtain an average.  The best way to represent every solution is by a boxplot, such as the one shown in \autoref{fig:heli}, which represents a boxplot of the test error values for the {\em best} individual in the last generation for every one of the experiments training EvoMLP on the DNA helicases test set. Even if in most cases the values are centered around a central one, there are some cases in which the range of possible values that it can obtain in a single evaluation can vary wildly, which explains why in the previous experiments sometimes the test and validation values obtained by the best individual were much worse than the ones reported during evolution. The situation in the rest of the sets is similar, although of course the range of variation may well vary.
 
 \begin{table}[h!tbp]
   \centering
