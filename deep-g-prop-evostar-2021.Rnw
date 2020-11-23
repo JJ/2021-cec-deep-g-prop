@@ -390,7 +390,7 @@ global number of neurons multiplied by the number of hidden layers.
 The whole code for this has been released under a free license in
 GitHub. % Add URL later.
 
-{\sf EvoMLP} has been implemented using Python programming language. There are
+{\sf EvoMLP} has been implemented using Python programming language. Tests with pypy, an accelerated, just-in-time version of the regular interpreter were tested, but although it is supposed to accelerate most numerical workloads, it actually was almost twice as slow as the one using the regular interpreter. There are
 many reasons to use this language, but two of the most significant reasons are
 the extensive documentation, use and community it has, and the vast amount of
 ML ready frameworks that are developed for it. Keras and DEAP are two impressive
@@ -1091,7 +1091,7 @@ It should be noted that the evaluation budget for EvoMLP is five times as high a
 %
 We also run the experiments for the {\tt spambase} dataset, and the different partitions, mainly for the sake of comparison with the previous version of our own algorithm; this is shown in \autoref{tab:new:spambase}. The {\em EvoMLP Exp 1} column shows the results reported in \autoref{tab:spambase-2layer}, where EvoMLP used the same configuration with a variable number of hidden layers. Again, we should consider the caveat that the previous average has not been computed in the same way; we report here again the average of the 15 experiments times 15 trainings for the best result in every experiment. Even so, results are much better for the first and third partition, slightly better for the second, probably not significantly so; the best results reduce the error by almost half. It should be noted that, except in the first partition, there's been no early stopping of the experiment due to repetition of the best values. This probably hints at the fact that the evaluation budget for this specific problem should be increased.
 
-It's interesting also to observe in \autoref{tab:new:spambase} that the test results are, in some cases, better than the validation results that were the ones used for the actual evolution. At any rate, they are remarkably similar. This is also an advantage of the new way of reducing uncertainty via reevaluation (often called resampling): generalization capability is improved, at the same time that the solutions obtained are more robust, with a smaller standard deviation over the obtained values. Comparing the first column with the rest, it shows that the standard deviation is almost half of what was obtained in the original experiment.
+It's interesting also to observe in \autoref{tab:new:spambase} that the test results are, in some cases, better than the validation results that were the ones used for the actual evolution. At any rate, they are remarkably similar. This is also an advantage of the new way of reducing uncertainty via reevaluation (often called resampling): generalization capability is improved, at the same time that the solutions obtained are more robust, with a smaller standard deviation over the obtained values. Comparing the first column with the rest, it shows that the standard deviation is almost half of what was obtained in the original experiment, which shows the robustness of re-evaluation for the computation of the fitness of every individual
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}
@@ -1099,18 +1099,13 @@ It's interesting also to observe in \autoref{tab:new:spambase} that the test res
 
 In this paper a first approach to perform evolution of MLPs with
 several layers has been proposed, along with the first results reached
-with it.
+with it. Our point of departure was a neuroevolutionary algorithm called G-Prop, which was first re-implemented using modern tools, and then enhanced with the possibility of evolving perceptrons with more than one hidden layer and a re-sampling procedure that improved the robustness of evolution; we have called this new approach EvoMLP. Additionally, we have also proposed a new way of evaluating neuro-evolutionary algorithms by re-training weights obtained and reporting the average results.
 
-In our approach, the architecture (i.e. the initial weights, number of
+The experiments have proved that EvoMLP is able to robustly obtain good results using a limited budget, and in a reasonable amount of time. The architecture (i.e. the initial weights, number of
 hidden layers and hidden layer sizes) of multi-layer perceptrons with
-multiple layers is automatically designed using an EA, taking
-advantage of the EA to find a solution close to the global optimum and
+multiple layers is automatically designed using an EA, leveraging it to find a solution close to the global optimum and
 the ability of the training algorithm to tune the solution and reach
-the nearest local minimum.
-
-Results of the evolution of networks with two layers have been
-reported, thus demonstrating that the method can be applied to the
-evolution of networks with a high number of layers.
+the nearest local minimum. This new solution is able to consistently find the architecture and initial weights of multilayer perceptrons that have an excellent accuracy on a wide variety of problem sizes and difficulties, from the arguably easier {\tt cancer} to the more difficult {\tt spambase}. However, evaluation budget is an issue and population size as well as number of generations needs to be investigated further, over all taking into account that every evaluation can take a few seconds.
 
 As future works, we propose using deep neural nets with any number of
 layers to solve complex problems.
