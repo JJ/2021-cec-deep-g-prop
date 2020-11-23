@@ -334,6 +334,7 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
     % For future work: the crossover could select structure of one of the parents or mix-them. - M
     % Question: only the initial weights are evolved? or the search is mixed with BP? 
     % i.e., adjust after a few epochs or update the weight matrix after each fitness eval - M
+    % Just the initial weights - JJ
     
   \item There are several kinds of {\em mutation} operators: (initial) weights,
     biases, as well as changing the number of neurons and/or
@@ -367,12 +368,10 @@ took advantage of it fitness class \cite{deap-fitness} to rank the individuals
 of a population. It performs a lexicographical comparison of the three values,
 so we chose the order previously mentioned to approach as much as possible to
 the fitness function used by G-Prop.
-% Question for @jj related with #28. Do we need the hole expression? I don't
+% Question for @jj related with #28. Do we need the whole expression? I don't
 % really know how to create an expression for the fitnes score since it is a
 % tuple - Luis This is important because is related to many principles of ML
 % You just return a single value as a tuple, like this: return fitness,  (notice the comma at the end) - M
-
-
 
 
 \begin{figure}
@@ -1085,7 +1084,7 @@ is why we re-evaluate this individual 15 times to obtain an average.  The best w
   \centering
   \caption{{\sf EvoMLP} results for the second round of experiments;
     comparison with G-Prop}
-  \label{tab:setup}
+  \label{tab:improvement:gprop}
   \begin{tabular}{|l|c|c|c|c|c|}
     \hline
     Dataset &        & \multicolumn{3}{|c|}{EvoMLP} & \\
@@ -1096,6 +1095,8 @@ is why we re-evaluate this individual 15 times to obtain an average.  The best w
     {\tt cancer3} & $3.0\ \pm\ 0.7$  & 3.88 $\pm$ 0.61 & 1.98 $\pm$ 0.43 & 30 $\pm$ 4 & 2.86 \\ \hline
   \end{tabular}
 \end{table}
+%
+In \autoref{tab:improvement:gprop} we compare the new results obtained with the ones reported for G-Prop. The averages and standard deviation are the average of the 225 values obtained by evaluating the {\em best} individual in the last generation of every one of the 15 experiments 15 times. We also report the average number of generations that the algorithm has run; although the cap was set a 64 or 32, ten generations without a change in the best result led to a stop, which is why averages are slightly inferior. It should be noted that the way of reporting results is not comparable for G-Prop and our algorithm; this is why we also report the best result in the last column, which is the best test value obtained for any experiment, any re-training from the initial weights. In general, we can affirm that results are comparable, and slightly better in some cases ({\tt cancer2}, for instance). However, our objective of obtaining better results for EvoMLP have been achieved, if we compare with \autoref{tab:gprop-deepgprop-cancer} and \autoref{tab:gprop-deepgprop-cancer}, almost two points better in the case of helicases, although the way the average was computed is not really comparable. It should be noted that, since what the evolutionary algorithms is evolving is a set of {\em initial} weights, this would be the proper way of reporting results, since most training algorithms will not deterministically obtain a set of final weights from them; in here, we establish not only a baseline for results in these datasets, but also a new methodology for reporting results in this kind of neuroevolutionary algorithms.
 
 \begin{table}[h!tbp]
   \centering
@@ -1106,6 +1107,9 @@ is why we re-evaluate this individual 15 times to obtain an average.  The best w
     \hline
     Dataset &        & \multicolumn{3}{|c|}{EvoMLP} & \\
             & EvoMLP Exp 1 & Test & Validation & Generations & Best Test\\ \hline
+        \texttt{Spambase1}   & $41.46\ \pm\ 10.75$ &  35 $\pm$ 6 & 35 $\pm$ 6 & 28 $\pm$ 7 & 20.59 \\ \hline
+        \texttt{Spambase2}   & $35.13\ \pm\ 4.94$ & 34 $\pm$ 4 & 38 $\pm$ 6 & 32 & 22.94 \\ \hline
+        \texttt{Spambase3}   & $40.07\ \pm\ 12.26$ & 34 $\pm$ 6 & 32 $\pm$ 6 & 32 & 21.29 \\ \hline
   \end{tabular}
 \end{table}
 
