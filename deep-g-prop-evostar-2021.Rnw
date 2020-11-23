@@ -411,21 +411,24 @@ frameworks currently in the state-of-art on their respective area.
 All the results found in this sections related with {\sf EvoMLP}
 % This is the first time the name {\sf EvoMLP} appears, is better if this is presented in the
 % proposed method section - M
-\cite{deep-g-prop:anon} were obtained in a laptop with the specs shown in the
-\autoref{tab:setup}. The OS installed in the laptop is GNU/Linux, using the
-distribution ArchLinux (kernel version \texttt{5.9.2-arch1-1}).
+\cite{deep-g-prop:anon} were obtained in a laptop GNU/Linux, using the
+distribution ArchLinux (kernel version \texttt{5.9.2-arch1-1}). All code has been released under a free license, and is available in GitHub.
 
-\begin{table}[]
-  \centering
-  \caption{{\sf EvoMLP} results laptop specs.}
-  \label{tab:setup}
-  \begin{tabular}{|l|l|}
-  \hline
-    Spec & Value                                             \\ \hline
-    CPU  & Intel(R) Core(TM) i7-3612QM CPU 2.10GHz (8 cores) \\ \hline
-    MEM  & 6GB (2+4) DDR3                                    \\ \hline
-  \end{tabular}
-\end{table}
+% ---------------- Not relevant, since we're not reporting times. ----------
+% The OS installed in the laptop is GNU/Linux, using the
+% distribution ArchLinux (kernel version \texttt{5.9.2-arch1-1}).
+% 
+% \begin{table}[]
+%   \centering
+%   \caption{{\sf EvoMLP} results laptop specs.}
+%   \label{tab:setup}
+%   \begin{tabular}{|l|l|}
+%   \hline
+%     Spec & Value                                             \\ \hline
+%     CPU  & Intel(R) Core(TM) i7-3612QM CPU 2.10GHz (8 cores) \\ \hline
+%     MEM  & 6GB (2+4) DDR3                                    \\ \hline
+%   \end{tabular}
+% \end{table}
 
 We followed a progression path of increasing complexity in terms of models
 execution. First we trained a classic multi-layer perceptron with a fixed number
