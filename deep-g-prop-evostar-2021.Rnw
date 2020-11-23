@@ -246,7 +246,7 @@ view: \begin{itemize}
 
 The variation of architecture has lately evolved towards (almost)
 unconstrained evolution using Neuroevolution of Augmenting Topologies (NEAT), as shown in the recent review by
-Miikkulainet et al. \cite{miikkulainen2019evolving}. Since this blows
+Miikkulainen et al. \cite{miikkulainen2019evolving}. Since this blows
 up the search space, this needs computational resources that are
 really off the reach of most labs or individuals. The rest usually
 still use a fixed model for the network architecture, for instance SVM
@@ -297,12 +297,12 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
 
   \item An individual is coded as a list of \emph{Layers}. Each layer is
     composed by a matrix of weights and a list of bias (both Numpy
-    \cite{py-numpy} ndarrays) joined toguether with it's configuration (a
+    \cite{py-numpy} ndarrays) joined together with it's configuration (a
     Python dictionary) in a Python class. One column of the weight matrix
     represents all the connections from the previous layer to the nth neuron.
-    All the weights and bias are randomly initialized wiht a uniform
+    All the weights and bias are randomly initialized with a uniform
     distribution between -1.0 and 1.0. A random proportion of all this genes
-    and biases are muted for all the indiivduals each generation.
+    and biases are muted for all the individuals each generation.
 
     From this configuration, when the moment of evaluation comes, we create a
     \emph{Sequential} \cite{keras-sequential}  Keras \cite{keras-nn} model and
@@ -320,7 +320,7 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
     population and perform all the evolutionary operations to them. Each
     operation has it own probability to occur chosen when running EvoMLP
     CLI. For the weights/bias mutation, a percentage of each (selected too with
-    the CLI parametters) are muted randomly. After that, the worst half is
+    the CLI parameters) are muted randomly. After that, the worst half is
     replaced by this muted group.
 
   \item The {\em crossover} function will swap the ``neurons'' together with
@@ -368,7 +368,7 @@ of a population. It performs a lexicographical comparison of the three values,
 so we chose the order previously mentioned to approach as much as possible to
 the fitness function used by G-Prop.
 % Question for @jj related with #28. Do we need the whole expression? I don't
-% really know how to create an expression for the fitnes score since it is a
+% really know how to create an expression for the fitness score since it is a
 % tuple - Luis This is important because is related to many principles of ML
 % You just return a single value as a tuple, like this: return fitness,  (notice the comma at the end) - M
 %
@@ -557,7 +557,7 @@ published results. Since more than a dozen years have passed, we were
 also interested in finding out the speed with which the whole
 operation could be performed, despite being Python a priori a slower
 language than C++, which was the original language.
-% Is Keras/Theano not a wrapper to a C++ or C implemetation? PyTorch and others are. - M
+% Is Keras/Theano not a wrapper to a C++ or C implementation? PyTorch and others are. - M
 
 In the first two tables, we can see very similar results between the G-Prop and
 {\sf EvoMLP} algorithms regarding accuracy for
@@ -1013,7 +1013,7 @@ re-evaluated every generation, while before the single (and with a
 certain degree of randomness) value obtained in a generation was the
 one used for that particular data structure. Also, instead of testing
 the best individual in the last generation once, it is trained and
-tested 15 times. The results relow are the average over those 15
+tested 15 times. The results below are the average over those 15
 times. Please note that, since the accuracy after training is
 stochastic, picking {\em the best} individual is actually equivalent
 to picking an almost random individual in the last generation, which
