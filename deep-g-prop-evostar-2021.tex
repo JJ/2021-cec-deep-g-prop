@@ -147,10 +147,10 @@ This initial G-Prop algorithm was limited, first, by the fact that
 most of it had to be programmed from scratch, since there were few (if
 any) off-the-shelf software that could do this kind of task;
 additionally, available computational capability limited the size of
-the search space;
-this was further limited by the evolution of single-layer multi-layer perceptrons.
+the search space; this was further limited by the evolution of only single-layer perceptrons.
+% Please check, I had the idea that G-Prop was single-layer perceptrons - M
 
-The aim of this paper is to present an algorithm that searches over the initial weights, number of
+The aim of this paper is to present an algorithm that searches over, the initial weights, number of
 hidden layers and hidden layer sizes of a MLP, based on a EA and
 Stochastic Gradient Descent (SGD) \cite{bottou2012stochastic}. This
 algorithm has been used for training deep neural nets and other kind
@@ -203,8 +203,9 @@ same purpose, as revealed by Balakrishnan and Honavar's review
 \cite{balakrishnan95:EDNA}. This taxonomy classifies evolutionary
 design of the architecture of neural nets along three different axes
 (plus one for application domain): genotype representation, network
-topology, and a third axes that includes basically everything else,
-``variables of evolution''.
+topology, and a third axis that includes basically everything else,
+``variables of evolution''. % It seems like variables of evolution is disconnected. 
+% I think it requires something like "this is called" or "following a voe appproach"  - M
 
 A more precise classification of evolved neural architectures would include, from our point of
 view: \begin{itemize}
@@ -222,7 +223,7 @@ view: \begin{itemize}
     advantage of the Baldwin effect \cite{castillo-2006}) to applying
     a few cycles of learning that will become part of the codified
     solution.
-  \item How the lack of determination of the fitness is taken into account
+  \item How the lack of having a definite determination of the fitness, is taken into account
     % I think some adjective is missing for the kind of determination
     % The lack of a "crisp"|"optimum"|"hard"|"definite"  determination? - M
     in evolution. Either from the fact that an stochastic algorithm is
@@ -231,12 +232,14 @@ view: \begin{itemize}
     randomness, the fitness of a neural net cannot be pinned down to a
     single, crisp, number. This randomness in the fitness can be taken
     into account during the selection phase
-    \cite{DBLP:conf/ijcci/MereloLFGCCRMG15}, or not.
-
+    \cite{DBLP:conf/ijcci/MereloLFGCCRMG15}, or not. This is related to 
+    having models that can generalize better when classifying unseen data,
+    reducing overfitting. 
+    % Please check or extend the above sentence - M
     % There is also the problem of overfitting - M
 
 The variation of architecture has lately evolved towards (almost)
-unconstrained evolution using NEAT, as shown in the recent review by
+unconstrained evolution using Neuroevolution of Augmenting Topologies (NEAT), as shown in the recent review by
 Miikkulainet et al. \cite{miikkulainen2019evolving}. Since this blows
 up the search space, this needs computational resources that are
 really off the reach of most labs or individuals. The rest usually
@@ -283,27 +286,38 @@ The general the algorithm will proceed like the \autoref{alg:ga} shows.
 
 This is a canonical evolutionary algorithm. The key of the algorithm is
 in the different parts used, that extend and enhance those used by the
-original G-Prop.
+original G-Prop. % Briefly comment on these enhancements, where are they? - M 
+                 % (Update) This is done in some places but maybe you should do another pass to see if there are more 
+                 % enhancements - M 
 
 \begin{itemize}
 
   \item An individual is coded as a list of \emph{Layers}. Each layer is
-    composed by a matrix of weights and a list of bias. One column of the
-    weights matrix represents all the connections from the previous layer to the
+    composed by a matrix of weights and a list of bias. % A tuple or dictionary? - M
+    One column of the weight matrix represents all the connections from the previous layer to the
     nth neuron.
 
     From this configuration, when the moment of evaluation comes, we create a
     \emph{Sequential} \cite{keras-sequential}  Keras \cite{keras-nn} model and
     append each \emph{Layer} as a \emph{Dense} \cite{keras-dense} Keras layer.
 
+    % Are these weights initially random? Are they later tuned with back-propagation?
+    % If random, are they gaussian or uniform?
+    % Is the matrix a Tensor or Numpy array?
+    % Are they floats? between 0 an 1?  - M
+        
   \item There are three stop conditions that will finish the execution of the
     genetic algorithm: if we reach the maximum number of generations, if after
     10 generations there was no improvement in the best solution and if we find
     the ideal solution ($0\%$ error, 1 on the hidden-score and 1 on the F2
     score).
+    % Justify why after 10 generations, or even better make that a parameter, set in this
+    % experiments to 10 - M
 
   \item For each generation we clone the best half individuals of the current
-    population and perform all the operations to them. After that, the worst
+    population and perform all the operations to them. % evolutionary operations? 
+    % Is there a probability of performing a certain operation (i.e. mutation)? Here it seem as if this is not the case - M
+    After that, the worst
     half is replaced by this muted group.
 
   \item The {\em crossover} function will swap the ``neurons'' together with
@@ -312,9 +326,11 @@ original G-Prop.
     be either to output or to another layers. The crossover only occurs when
     the two models selected for it have the same structure (same number of
     layers and neurons per layers).
-
-    % Similar to NEAT in the "speciation" sense? - M
-
+    
+    % For future work: the crossover could select structure of one of the parents or mix-them. - M
+    % Question: only the initial weights are evolved? or the search is mixed with BP? 
+    % i.e., adjust after a few epochs or update the weight matrix after each fitness eval - M
+    
   \item There are several kinds of {\em mutation} operators: (initial) weights,
     biases, as well as changing the number of neurons and/or
     layers. For the neuron mutator, one neuron will be added last in the
@@ -350,7 +366,9 @@ the fitness function used by G-Prop.
 % Question for @jj related with #28. Do we need the hole expression? I don't
 % really know how to create an expression for the fitnes score since it is a
 % tuple - Luis This is important because is related to many principles of ML
- % General is usually better, I think this needs to be highlighted more - M
+% You just return a single value as a tuple, like this: return fitness,  (notice the comma at the end) - M
+
+
 
 
 \begin{figure}
@@ -439,7 +457,10 @@ every layer.
 % Cambié lo de sencillo y óptimo por conceptos más utilizados en el área. - M
 
 We compare against other classification algorithms using accuracy as a
-performance metric, as was used in the GProp paper \cite{castilloNC,CastilloNPL}. We hope to
+performance metric, % This needs to be explained further, 
+% accuracy using k-fold cross-validation? leave-one-out? 
+% accuracy of one run, or median of a few runs - M
+as was used in the GProp paper \cite{castilloNC,CastilloNPL}. We hope to
 increase the generalization of the model and avoid overfitting by reducing the
 network's complexity, we try to accomplish this by reducing the
 overall number of neurons in the MLP; this was also the intention of the GProp
@@ -470,11 +491,9 @@ We selected the following parameters for the network:
   making sure the neuron output values are all greater than zero.  On the other
   hand, for he last layer (the output layer) we used the Softmax function to
   allow an easy classification of the results normalizing the classes
-  probability between 0 and 1, having the sum of all the values equal to 1. %
-  WE need to justify that. - JJ
+  probability between 0 and 1, having the sum of all the values equal to 1. %  WE need to justify that. - JJ
 
-\item Optimization algorithm: We used the Stochastic Gradient Descend
-  (SGD) combined with back-propagation which allow a quick but solid computation
+\item Optimization algorithm: We used SGD combined with back-propagation which allow a quick but solid computation
   of the loss function for all the data split in batches. This allow the
   possibility of easy parallelization of the data, which as not used in this
   paper. As the learning rate \texttt{0.01} was chosen as a default suggested
@@ -540,6 +559,7 @@ published results. Since more than a dozen years have passed, we were
 also interested in finding out the speed with which the whole
 operation could be performed, despite being Python a priori a slower
 language than C++, which was the original language.
+% Is Keras/Theano not a wrapper to a C++ or C implemetation? PyTorch and others are. - M
 
 In the first two tables, we can see very similar results between the GProp and
 {\sf EvoMLP} algorithms regarding accuracy for
