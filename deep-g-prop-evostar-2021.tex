@@ -73,7 +73,9 @@ number of layers, number of neurons per layer and the weights of the
 ANN. This is not a new challenge; as a matter of fact a number of
 methods were proposed during the early years of this century,
 including G-Prop, a hybrid neurogenetic algorithm that optimized
-initial weights and the number of layers of a multilayer perceptron for
+initial weights and the number of layers of a multi-layer perceptron for 
+% Highlighting some properties of G-Prop could give a justification
+% and serve as a bridge for presenting this work (rewritten of G-Prop) - M
 different kind of tasks. Using the general concept of this algorithm
 as a baseline, we have rewritten the method using off-the-shelf tools
 and libraries; modern testing and deployment tools have been also
@@ -112,26 +114,26 @@ number of layers in the architecture as well as its type, every one
 with its own set of parameters, like the number of neurons in every
 layer.
 
-Using an optimization algorithm to solve at least part of the problem
+Using an optimization algorithm to solve at least part of the design problem
 is an usual approach to this challenge. Evolutionary neural networks are an efficient way of searching for the
 architecture, weights, and other ANN parameters (such as learning
 constants). This has been proved
 repeatedly for {\em shallow} architectures (with a single hidden
 layer) since late in the previous century
-\cite{yao1993evolutionary,CastilloNPL,stanley2002evolving}. However, in most cases design
-of the structure and conectivities of the different layers, as
+\cite{yao1993evolutionary,CastilloNPL,stanley2002evolving}. However, in most cases, design
+of the structure and connections between different layers, as
 indicated by \cite{miikkulainen2019evolving}, is still mostly done by
 hand. This is mainly due to the above mentioned fact that search
 spaces are huge, so using rules of thumb (such as the ones mentioned
-in \cite{qolomany2017parameters} of using certain formulas to set the
-number of layers) to decide on those parameters
+in \cite{qolomany2017parameters}, or using certain formulas to set the
+number of layers) to decide on those parameters,
 are a way of fixing part of the search space, letting the deep
-learning algorithm themselves figure out the weights, whose
+learning algorithm to figure out the weights themselves, whose
 optimization, in these cases, is able to cover big spans of the search
 space.
 
-We can also, however, fix a part of the architecture, choosing a
-multilayer perceptron trained with backpropagation, whose initial
+We can also, however, fix a part of the architecture, by choosing a
+multi-layer perceptron trained with backpropagation, whose initial
 weights as well as biases evolve using an evolutionary algorithm (EA). This
 algorithm was called \emph{G-Prop} (as in \emph{Genetic Back-Propagation})
 and was originally presented in \cite{castilloNC,CastilloNPL}. This
@@ -146,7 +148,7 @@ most of it had to be programmed from scratch, since there were few (if
 any) off-the-shelf software that could do this kind of task;
 additionally, available computational capability limited the size of
 the search space;
-this was further limited by the evolution of single-layer multilayer perceptrons.
+this was further limited by the evolution of single-layer multi-layer perceptrons.
 
 The aim of this paper is to present an algorithm that searches over the initial weights, number of
 hidden layers and hidden layer sizes of a MLP, based on a EA and
@@ -156,7 +158,9 @@ of machine learning algorithms
 \cite{bottou2012stochastic,bottou2010large}; however, in this case
 %there all intermediate (or hidden) layers have the same structure,
 intermediate (or hidden) layers have the same structure,
-which is the structure of a multi layer perceptron, justifying our
+which is the structure of a multi-layer perceptron, justifying our
+% In some pleaces there is multilayer or multi layer, we should be consistent.
+% I propose multi-layer, changing all - M
 denomination of {\sf EvoMLP} for this specific method.
 The use of this kind of {\em training} method does not imply that we
 are actually doing deep machine learning at large; however, this (and
@@ -403,7 +407,7 @@ distribution ArchLinux (kernel version \texttt{5.9.2-arch1-1}).
 \end{table}
 
 We followed a progression path of increasing complexity in terms of models
-execution. First we trained a classic multilayer perceptron with a fixed number
+execution. First we trained a classic multi-layer perceptron with a fixed number
 of layers and neurons per layer, modifying the hidden layer weights and biases
 for some of them. The second step was to replicate the method used in GProp
 \cite{castilloNC,CastilloNPL}: models with one hidden layer and a random
@@ -706,9 +710,9 @@ this case, the algorithm did not change the hidden layers.
 % complejas ya modificando la estructura del perceptrón multicapa de generación
 % en generación.
 It has become clear that generally you will obtain better results when applying
-small modifications to the multilayer perceptrons models than if we don't
+small modifications to the multi-layer perceptrons models than if we don't
 change anything. In the following sections we will explore new and more complex
-mutations modifying the structure of the multilayer perceptron from generation
+mutations modifying the structure of the multi-layer perceptron from generation
 to generation.
 
 % \section{Evolución de población con modificación de número de neuronas:
@@ -1065,7 +1069,7 @@ several layers has been proposed, along with the first results reached
 with it.
 
 In our approach, the architecture (i.e. the initial weights, number of
-hidden layers and hidden layer sizes) of multilayer perceptrons with
+hidden layers and hidden layer sizes) of multi-layer perceptrons with
 multiple layers is automatically designed using an EA, taking
 advantage of the EA to find a solution close to the global optimum and
 the ability of the training algorithm to tune the solution and reach
