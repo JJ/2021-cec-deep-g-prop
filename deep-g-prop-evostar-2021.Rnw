@@ -242,6 +242,8 @@ view: \begin{itemize}
     % Please check or extend the above sentence - M
     % There is also the problem of overfitting - M
 
+\end{itemize}
+
 The variation of architecture has lately evolved towards (almost)
 unconstrained evolution using Neuroevolution of Augmenting Topologies (NEAT), as shown in the recent review by
 Miikkulainet et al. \cite{miikkulainen2019evolving}. Since this blows
@@ -263,8 +265,6 @@ architecture through the use of genetic operators as well as
 codification of initial weights to a modern, standard based
 implementation, that will also be released as free software. We show
 how this new {\sf EvoMLP} method works next.
-
-\end{itemize}          % [pedro]  Do the "end{itemize}"" goes here or above?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Proposed Method}
