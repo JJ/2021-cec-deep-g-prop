@@ -29,7 +29,11 @@
 \definecolor{CornflowerBlue}{HTML}{6495ED}
 \definecolor{LimeGreen}{HTML}{32CD32}
 
-
+<<setup, cache=FALSE,echo=FALSE,message=FALSE,warning=FALSE>>=
+require(ggplot2)
+require(ggthemes)
+plotting <- read.csv("data/helicases.csv")
+@
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %

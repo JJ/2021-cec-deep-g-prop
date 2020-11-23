@@ -1,5 +1,9 @@
 require(ggplot2)
+require(ggthemes)
 
+
+cancer2 <- read.csv("../data/helicases.csv")
+ggplot(cancer2, aes(x=Experiment,y=Test,group=Experiment))+geom_boxplot()+theme_tufte()
 for (val in c("helicases","cancer1", "cancer2", "cancer3", "spambase1", "spambase2", "spambase3" ) ) {
     data <- read.csv(paste0("../data/",val,".csv"))
     print(val)
@@ -12,4 +16,5 @@ for (val in c("helicases","cancer1", "cancer2", "cancer3", "spambase1", "spambas
     print("Generations")
     print(summary(data$Generations))
     print(sd(data$Generations))
+
 }
