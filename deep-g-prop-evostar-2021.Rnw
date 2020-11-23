@@ -359,8 +359,8 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
 
 We need the fitness function to exert parsimony pressure, which is why
 we take into account not only the accuracy score reached after
-training, but also the overall size of the network (Equation
-\ref{eq:hidden-score}) and the F2 score metric (explained in the
+training, but also the overall size of the network $score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl$ ($nhl$ is the number of hidden layers and $nu_{i}$ the number
+of neurons for the layer $i$) and the F2 score metric (explained in the
 \autoref{sec:res}). At the end, the fitness value is a compound of
 three elements: accuracy, hidden-score and F2 score. As the DEAP framework
 \cite{deap-ga} where used as a base to create the genetic algorithm, also we
@@ -372,23 +372,22 @@ the fitness function used by G-Prop.
 % really know how to create an expression for the fitnes score since it is a
 % tuple - Luis This is important because is related to many principles of ML
 % You just return a single value as a tuple, like this: return fitness,  (notice the comma at the end) - M
-
-
-\begin{figure}
-    \centering
-    \caption{
-        {\sf EvoMLP} NN model score equation.
-    }
-    \label{eq:hidden-score}
-    \begin{equation}
-        score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl
-    \end{equation}
-\end{figure}
-
-Being $nhl$ the number of hidden layers and $nu_{i}$ the number
-of neurons for the layer $i$. So in summary, the score will be the
+%
+%
+% \begin{figure}
+%     \centering
+%     \caption{
+%         {\sf EvoMLP} NN model score equation.
+%     }
+%     \label{eq:hidden-score}
+%     \begin{equation}
+%         
+%     \end{equation}
+% \end{figure}
+%
+So in summary, the score will be the
 global number of neurons multiplied by the number of hidden layers.
-
+%
 The whole code for this has been released under a free license in
 GitHub. % Add URL later.
 
