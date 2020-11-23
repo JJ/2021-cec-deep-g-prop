@@ -1105,7 +1105,7 @@ In \autoref{tab:improvement:gprop} we compare the new results obtained with the 
   \centering
   \caption{{\sf EvoMLP} results for the second round of experiments;
     comparison with the previous round}
-  \label{tab:setup}
+  \label{tab:new:spambase}
   \begin{tabular}{|l|c|c|c|c|c|}
     \hline
     Dataset &        & \multicolumn{3}{|c|}{EvoMLP} & \\
@@ -1115,6 +1115,10 @@ In \autoref{tab:improvement:gprop} we compare the new results obtained with the 
         \texttt{Spambase3}   & $40.07\ \pm\ 12.26$ & 34 $\pm$ 6 & 32 $\pm$ 6 & 32 & 21.29 \\ \hline
   \end{tabular}
 \end{table}
+%
+We also run the experiments for the {\tt spambase} dataset, and the different partitions, mainly for the sake of comparison with the previous version of our own algorithm; this is shown in \autoref{tab:new:spambase}. The {\em EvoMLP Exp 1} column shows the results reported in \autoref{tab:spambase-2layer}, where EvoMLP used the same configuration with a variable number of hidden layers. Again, we should consider the caveat that the previous average has not been computed in the same way; we report here again the average of the 15 experiments times 15 trainings for the best result in every experiment. Even so, results are much better for the first and third partition, slightly better for the second, probably not significantly so; the best results reduce the error by almost half. It should be noted that, except in the first partition, there's been no early stopping of the experiment due to repetition of the best values. This probably hints at the fact that the evaluation budget for this specific problem should be increased.
+
+It's interesting also to observe in \autoref{tab:new:spambase} that the test results are, in some cases, better than the validation results that were the ones used for the actual evolution. At any rate, they are remarkably similar. This is also an advantage of the new way of reducing uncertainty via reevaluation (often called resampling): generalization capability is improved, at the same time that the solutions obtained are more robust, with a smaller standard deviation over the obtained values. Comparing the first column with the rest, it shows that the standard deviation is almost half of what was obtained in the original experiment.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}
