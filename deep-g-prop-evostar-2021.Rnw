@@ -431,17 +431,13 @@ distribution ArchLinux (kernel version \texttt{5.9.2-arch1-1}). All code has bee
 We followed a progression path of increasing complexity in terms of models
 execution. First we trained a classic multi-layer perceptron with a fixed number
 of layers and neurons per layer, modifying the hidden layer weights and biases
-for some of them. The second step was to replicate the method used in GProp
+for some of them. The second step was to replicate the method used in G-Prop
 \cite{castilloNC,CastilloNPL}: models with one hidden layer and a random
 variable number of neurons for it. For the last case, we evolved the models
 changing the number of hidden layers and neurons per layer.
 
 In these results, we will try to use the same metrics as the ones
-proposed in GProp. We are going to use Equation
-\ref{eq:hidden-score} as fitness score, where $nhl$ is the number of
-hidden layers and $nu_{i}$ the number of neurons in layer $i$; what we
-will try is to minimize the number of layers, and then of neurons in
-every layer.
+proposed in G-Prop, minimizing error while also trying to minimize the size as computed above
 
 % El porcentaje de error (en Inglés \emph{accuracy error}) viene dado por el
 % número de ejemplos bien clasificados dividido entre el número de ejemplos
@@ -464,13 +460,11 @@ We compare against other classification algorithms using accuracy as a
 performance metric, % This needs to be explained further, 
 % accuracy using k-fold cross-validation? leave-one-out? 
 % accuracy of one run, or median of a few runs - M
-as was used in the GProp paper \cite{castilloNC,CastilloNPL}. We hope to
+as was used in the G-Prop paper \cite{castilloNC,CastilloNPL}. We hope to
 increase the generalization of the model and avoid overfitting by reducing the
 network's complexity, we try to accomplish this by reducing the
-overall number of neurons in the MLP; this was also the intention of the GProp
-authors. Because we test with one or more hidden layers, we obtain the network's
-score using the expression \ref{eq:hidden-score}, where $nhl$ is the model's
-number of hidden layers and $nu_{i}$ is the number of neurons in layer {i}. With
+overall number of neurons in the MLP; this was also the intention of the G-Prop
+authors. We also compute a layer score with the formula shown above. With
 this expression, we aim to minimize the number of layers first, and then the number of
 neurons per layer.
 
@@ -516,7 +510,7 @@ We selected the following parameters for the network:
 
 When referring to a certain number of layers, we will be talking about hidden
 layers because the input and output layers are fixed depending on the problem.
-To compare our results against the GProp algorithm we selected the Proben1
+To compare our results against the G-Prop algorithm we selected the Proben1
 \cite{Proben1} dataset and other classification datasets found in the UCI
 \cite{uci} repository. Results shown are the mean of five runs with different
 random generator seeds (\texttt{2017725297}, \texttt{3842001146},
@@ -565,7 +559,7 @@ operation could be performed, despite being Python a priori a slower
 language than C++, which was the original language.
 % Is Keras/Theano not a wrapper to a C++ or C implemetation? PyTorch and others are. - M
 
-In the first two tables, we can see very similar results between the GProp and
+In the first two tables, we can see very similar results between the G-Prop and
 {\sf EvoMLP} algorithms regarding accuracy for
 the \emph{cancer1} dataset \cite{uci}, with the network with fixed hidden layers
 (\autoref{tab:fixed-7-1-const-can1}) obtaining the best result with an accuracy
@@ -658,10 +652,10 @@ generations for the \emph{cancer1} dataset.}
 
 On the other hand, if we compare the first instance with the results for the
 \emph{cancer2} dataset, it seems that the algorithm's accuracy improves while
-not keeping the weights in the hidden layer fixed. See Tables
-\ref{tab:fixed-7-1-noconst-can2} and \ref{tab:fixed-7-1-const-can2}).
+not keeping the weights in the hidden layer fixed. See 
+\autoref{tab:fixed-7-1-noconst-can2}.
 
- \begin{table}
+\begin{table}
      \centering
      \caption{
 %         Resultados de test del mejor individuo final tras 10 generaciones con
@@ -672,24 +666,19 @@ individuals and seven neurons per individual. In this case, the algorithm
 changing the hidden layers for the \emph{cancer2} dataset (top) or leaving them unchanged (bottom).
      }
      \label{tab:fixed-7-1-noconst-can2}
-     \begin{tabular}{rlll}
-         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+     \begin{tabular}{lr|lll}
+     Type   &\textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
          \hline
-         \textbf{Mean}      & $1.94\ \pm\ 0.28$ & $6.80\ \pm\ 0.40$  & $0.98258\ \pm\ 0.00272$ \\
-         \textbf{Max}       & $2.29$            & $7.00$             & $0.98432$               \\
-         \textbf{Min}       & $1.71$            & $6.00$             & $0.97731$               \\
-     \end{tabular}
- %
-     \label{tab:fixed-7-1-const-can2}
-     \begin{tabular}{rlll}
-         \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+     Changing & \textbf{Mean}      & $1.94\ \pm\ 0.28$ & $6.80\ \pm\ 0.40$  & $0.98258\ \pm\ 0.00272$ \\
+         & \textbf{Max}       & $2.29$            & $7.00$             & $0.98432$               \\
+         &\textbf{Min}       & $1.71$            & $6.00$             & $0.97731$               \\
          \hline
-         \textbf{Mean}      & $2.29\ \pm\ 0.36$ & $6.80\ \pm\ 0.40$  & $0.97943\ \pm\ 0.00339$ \\
-         \textbf{Max}       & $2.86$            & $7.00$             & $0.98432$               \\
-         \textbf{Min}       & $1.71$            & $6.00$             & $0.97561$               \\
+Fixed &         \textbf{Mean}      & $2.29\ \pm\ 0.36$ & $6.80\ \pm\ 0.40$  & $0.97943\ \pm\ 0.00339$ \\
+      &   \textbf{Max}       & $2.86$            & $7.00$             & $0.98432$               \\
+      &   \textbf{Min}       & $1.71$            & $6.00$             & $0.97561$               \\
      \end{tabular}
-   \end{table}
-
+\end{table}
+%
 % Se puede sacar en claro que generalmente al realizar pequeñas modificaciones en
 % los modelos de perceptrones multicapa se obtienen mejores resultados que si no
 % se hace. En las siguientes secciones se explorarán nuevas mutaciones más
@@ -725,7 +714,7 @@ generation.
 % \emph{G-Prop} sortea mejor los mínimos locales que \emph{{\sf EvoMLP}}.
 
 In the \autoref{tab:gprop-deepgprop-cancer} we can see the results obtained by
-GProp and {\sf EvoMLP} using the following configuration: initial population of
+G-Prop and {\sf EvoMLP} using the following configuration: initial population of
 $20$ individuals, a maximum of $10$ generations, random initial neuron number
 between $2$ and $20$ and the crossover probability of $0.5$.
 
@@ -736,7 +725,7 @@ between $2$ and $20$ and the crossover probability of $0.5$.
     \caption{
 %         Comparación de los resultados obtenidos en los problemas de \emph{cancer}
 %         por {\sf EvoMLP} y GProp.
-        Results comparison between {\sf EvoMLP} and GProp in the three partitions of \emph{Cancer}
+        Results comparison between {\sf EvoMLP} and G-Prop in the three partitions of \emph{Cancer}
     }
     \label{tab:gprop-deepgprop-cancer}
     \begin{tabular}{rllll}
@@ -769,10 +758,10 @@ same vein as the previous experiments, we run each execution 5 times, showing
 the final mean for each value. Looking at the results of the
 \autoref{tab:gprop-deepgprop-miniheli} we can see a big difference in all the
 relevant columns. The achieved precision of {\sf EvoMLP} is lower than the one
-obtained by GProp ran for the same amount of generations. Not much better
+obtained by G-Prop ran for the same amount of generations. Not much better
 results are reached when increasing the number of generations from 10 to 50 for
 {\sf EvoMLP}. When increasing significantly the problem size, we find a better
-performance for GProp.
+performance for G-Prop.
 
 % What's the number of evaluations? The most important thing is not
 % the number of generations, if the population is different - JJ
@@ -781,7 +770,7 @@ performance for GProp.
     \caption{
 %         Comparación de los resultados obtenidos en los problemas de
 %         \emph{Helicases} por {\sf EvoMLP} y GProp.
-        Results comparison between {\sf EvoMLP} and GProp for the problem \emph{Helicases}
+        Results comparison between {\sf EvoMLP} and G-Prop for the problem \emph{Helicases}
     }
     \label{tab:gprop-deepgprop-miniheli}
     \begin{tabular}{rllll}
@@ -841,7 +830,7 @@ accuracy. % And also generalization? - JJ
 In this section, we add a new operator which allow the addition or removal of
 hidden layers from the model. We can appreciate % Where? - JJ
 an improvement from the
-previous tests, but it doesn't reach the GProp results which only uses one
+previous tests, but it doesn't reach the G-Prop results which only uses one
 hidden layer.
 
 % Por ejemplo, viendo el problema de \emph{DNA Helicases}, en la
@@ -852,7 +841,7 @@ hidden layer.
 
 For example, if we run the problem of \emph{DNA Helicases} with this last
 operation in use, we will get slightly better accuracy than when using only one
-hidden layer on {\sf EvoMLP}, but the GProp result will be much better still. (see
+hidden layer on {\sf EvoMLP}, but the G-Prop result will be much better still. (see
 \autoref{tab:gprop-deepgprop-miniheli-multihidden}). % Why? Can we
                                 % make it better? - JJ
 
@@ -861,7 +850,7 @@ hidden layer on {\sf EvoMLP}, but the GProp result will be much better still. (s
     \caption{
 %         Comparación de los resultados obtenidos en los problemas de
 %         \emph{Helicases} por {\sf EvoMLP} y GProp.
-        Comparison between GProp and different variations of the algorithm: 10
+        Comparison between G-Prop and different variations of the algorithm: 10
         generations with only one layer, 50 generation with that one layer, or
         50 generations with variable number of layers.
     }
@@ -923,8 +912,7 @@ remark the lower overfitting when using more number of generations (50).
 % pruebas con el algoritmo G-prop con este tipo de problemas para compararlos.
 
 When running {\sf EvoMLP} in a complex problem like \emph{spambase} we obtain
-worse results (see \autoref{tab:spambase-onelayer} and
-\autoref{tab:spambase-2layer}). After running multiple executions with the
+worse results (see \autoref{tab:spambase}). After running multiple executions with the
 {\sf EvoMLP} algorithm, it seems the optimizer finds a local minimum when the
 loss function reaches $\approx0.6$. Then the best result obtained is around
 $36\%$ of error. For the first table, the results where obtained using a
@@ -939,35 +927,20 @@ from 2 to 50 neurons per layer (chosen randomly).
 %        \emph{spambase} para las tres particiones. Algoritmo ejecutado con 1
 %        capa fija.
         Comparison between the results obtained for the three partitions of the
-        \emph{spambase} problem using a fixed layer. % Fixed layer
+        \emph{spambase} problem using a fixed (top) and variable layer size (bottom rows). % Fixed layer
                                 % size? - JJ
     }
-    \label{tab:spambase-onelayer}
-    \begin{tabular}{r|l|l|l|l}
+    \label{tab:spambase}
+    \begin{tabular}{ll|l|l|l|l}
         \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
         \hline
-        \textbf{Spambase1}   & $36.80\ \pm\ 0.98$ & $10.80\ \pm\ 3.76$ & $0.03004\ \pm\ 0.04402$ \\
-        \textbf{Spambase2}   & $38.30\ \pm\ 0.88$ & $12.60\ \pm\ 2.87$ & $0.04019\ \pm\ 0.04078$ \\
-        \textbf{Spambase3}   & $37.64\ \pm\ 1.64$ & $16.40\ \pm\ 1.85$ & $0.05150\ \pm\ 0.06956$ \\
-    \end{tabular}
-\end{table}
-
-\begin{table}
-    \centering
-    \caption{
-%        Comparación de los resultados obtenidos en el problema de
-%        \emph{spambase} para las tres particiones. Algoritmo ejecutado con
-%        múltiples capas variables.
-        Comparison of the results obtained for the \emph{spambase} partitions
-        using multiple variable hidden layers.
-    }
-    \label{tab:spambase-2layer}
-    \begin{tabular}{r|l|l|l|l}
-        \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+        Fixed size &\textbf{Spambase1}   & $36.80\ \pm\ 0.98$ & $10.80\ \pm\ 3.76$ & $0.03004\ \pm\ 0.04402$ \\
+        &\textbf{Spambase2}   & $38.30\ \pm\ 0.88$ & $12.60\ \pm\ 2.87$ & $0.04019\ \pm\ 0.04078$ \\
+        &\textbf{Spambase3}   & $37.64\ \pm\ 1.64$ & $16.40\ \pm\ 1.85$ & $0.05150\ \pm\ 0.06956$ \\
         \hline
-        \textbf{Spambase1}   & $41.46\ \pm\ 10.75$ & $17.80\ \pm\ 6.71$ & $0.30304\ \pm\ 0.37119$ \\
-        \textbf{Spambase2}   & $35.13\ \pm\ 4.94$ & $29.40\ \pm\ 20.16$ & $0.28133\ \pm\ 0.34343$ \\
-        \textbf{Spambase3}   & $40.07\ \pm\ 12.26$ & $31.00\ \pm\ 14.48$ & $0.32100\ \pm\ 0.39295$ \\
+        Variable size &\textbf{Spambase1}   & $41.46\ \pm\ 10.75$ & $17.80\ \pm\ 6.71$ & $0.30304\ \pm\ 0.37119$ \\
+        &\textbf{Spambase2}   & $35.13\ \pm\ 4.94$ & $29.40\ \pm\ 20.16$ & $0.28133\ \pm\ 0.34343$ \\
+        &\textbf{Spambase3}   & $40.07\ \pm\ 12.26$ & $31.00\ \pm\ 14.48$ & $0.32100\ \pm\ 0.39295$ \\
     \end{tabular}
 \end{table}
 
@@ -1081,7 +1054,7 @@ It should be noted that the evaluation budget for EvoMLP is five times as high a
   \end{tabular}
 \end{table}
 %
-We also run the experiments for the {\tt spambase} dataset, and the different partitions, mainly for the sake of comparison with the previous version of our own algorithm; this is shown in \autoref{tab:new:spambase}. The {\em EvoMLP Exp 1} column shows the results reported in \autoref{tab:spambase-2layer}, where EvoMLP used the same configuration with a variable number of hidden layers. Again, we should consider the caveat that the previous average has not been computed in the same way; we report here again the average of the 15 experiments times 15 trainings for the best result in every experiment. Even so, results are much better for the first and third partition, slightly better for the second, probably not significantly so; the best results reduce the error by almost half. It should be noted that, except in the first partition, there's been no early stopping of the experiment due to repetition of the best values. This probably hints at the fact that the evaluation budget for this specific problem should be increased.
+We also run the experiments for the {\tt spambase} dataset, and the different partitions, mainly for the sake of comparison with the previous version of our own algorithm; this is shown in \autoref{tab:new:spambase}. The {\em EvoMLP Exp 1} column shows the results reported in \autoref{tab:spambase}, where EvoMLP used the same configuration with a variable number of hidden layers. Again, we should consider the caveat that the previous average has not been computed in the same way; we report here again the average of the 15 experiments times 15 trainings for the best result in every experiment. Even so, results are much better for the first and third partition, slightly better for the second, probably not significantly so; the best results reduce the error by almost half. It should be noted that, except in the first partition, there's been no early stopping of the experiment due to repetition of the best values. This probably hints at the fact that the evaluation budget for this specific problem should be increased.
 
 It's interesting also to observe in \autoref{tab:new:spambase} that the test results are, in some cases, better than the validation results that were the ones used for the actual evolution. At any rate, they are remarkably similar. This is also an advantage of the new way of reducing uncertainty via reevaluation (often called resampling): generalization capability is improved, at the same time that the solutions obtained are more robust, with a smaller standard deviation over the obtained values. Comparing the first column with the rest, it shows that the standard deviation is almost half of what was obtained in the original experiment, which shows the robustness of re-evaluation for the computation of the fitness of every individual
 
