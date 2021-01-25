@@ -613,7 +613,7 @@ Now, if we observe \autoref{tab:fixed-8-2-comp-can1}, we
 notice a considerable improvement in accuracy for both training and
 validation. % We can't say much about statistical significance - JJ
 
-\begin{table}
+\begin{table*}
     \centering
     \caption{
 %         Resultados de validación y test del mejor individuo inicial en una
@@ -631,7 +631,7 @@ generations for the \emph{cancer1} dataset.}
          \textbf{Mutables}  & \textbf{Validation} & $0.00$                 &        $32$             &      $1.00000$ \\
                         & \textbf{Test}       & $2.29$                 &        $32$             &      $0.98566$ \\
      \end{tabular}
- \end{table}
+ \end{table*}
 
 % Por el contrario, si comparamos el primer ejemplo con los datos obtenidos para
 % el problema \emph{cancer2}, parece que sí que mejora el algoritmo al no mantener
@@ -643,7 +643,7 @@ On the other hand, if we compare the first instance with the results for the
 not keeping the weights in the hidden layer fixed. See 
 \autoref{tab:fixed-7-1-noconst-can2}.
 
-\begin{table}
+\begin{table*}
      \centering
      \caption{
 %         Resultados de test del mejor individuo final tras 10 generaciones con
@@ -665,7 +665,7 @@ Fixed &         \textbf{Mean}      & $2.29\ \pm\ 0.36$ & $6.80\ \pm\ 0.40$  & $0
       &   \textbf{Max}       & $2.86$            & $7.00$             & $0.98432$               \\
       &   \textbf{Min}       & $1.71$            & $6.00$             & $0.97561$               \\
      \end{tabular}
-\end{table}
+\end{table*}
 %
 % Se puede sacar en claro que generalmente al realizar pequeñas modificaciones en
 % los modelos de perceptrones multicapa se obtienen mejores resultados que si no
@@ -708,7 +708,7 @@ between $2$ and $20$ and the crossover probability of $0.5$.
 
 % What's the average number of layers? - JJ
 
-\begin{table}
+\begin{table*}
     \centering
     \caption{
 %         Comparación de los resultados obtenidos en los problemas de \emph{cancer}
@@ -726,7 +726,7 @@ between $2$ and $20$ and the crossover probability of $0.5$.
         \textbf{Cancer2}   & G-Prop         & $3.0\ \pm\ 0.7$        & $4.3\ \pm\ 1.7$     & $--$                    \\
                        & {\sf EvoMLP}      & $4.46\ \pm\ 0.43$      & $21.60\ \pm\ 17.83$ & $0.95952\ \pm\ 0.00285$ \\
     \end{tabular}
-\end{table}
+\end{table*}
 
 % Continuando con el problema \emph{DNA Helicases}\cite{dna-heliases}, igual que
 % en los resultados anteriores, se ha obtenido la media de 5 ejecuciones con
@@ -753,7 +753,7 @@ performance for G-Prop.
 
 % What's the number of evaluations? The most important thing is not
 % the number of generations, if the population is different - JJ
-\begin{table}
+\begin{table*}
     \centering
     \caption{
 %         Comparación de los resultados obtenidos en los problemas de
@@ -770,7 +770,7 @@ performance for G-Prop.
         (Validation) & 10 gen             & $11.19\ \pm\ 1.36$ & $11.80\ \pm\ 6.01$ & $0.88280\ \pm\ 0.03664$ \\
                      & 50 gen             & $2.71\ \pm\ 2.30$ & $15.00\ \pm\ 4.38$ & $0.98952\ \pm\ 0.00887$ \\
     \end{tabular}
-\end{table}
+\end{table*}
 
 % Aparte se aprecia claramente la diferencia entre los datos de validación
 % (\autoref{tab:deepgprop-miniheli-validation}) y los de test comentados
@@ -833,7 +833,7 @@ hidden layer on {\sf EvoMLP}, but the G-Prop result will be much better still. (
 \autoref{tab:gprop-deepgprop-miniheli-multihidden}). % Why? Can we
                                 % make it better? - JJ
 
-\begin{table}
+\begin{table*}
     \centering
     \caption{
 %         Comparación de los resultados obtenidos en los problemas de
@@ -853,7 +853,7 @@ hidden layer on {\sf EvoMLP}, but the G-Prop result will be much better still. (
         \textbf{{\sf EvoMLP} ($>$1)} & 50 gen & $18.67\ \pm\ 2.45$ & $23.80\ \pm\ 24.25$ & $0.82569\ \pm\ 0.04718$ \\
         (Validation) & 50 gen &  $8.13\ \pm\ 3.62$ & $23.80\ \pm\ 24.25$ & $0.88853\ \pm\ 0.06346$ \\
     \end{tabular}
-\end{table}
+\end{table*}
 
 % Podemos recalcar que añadiéndole la posibilidad de utilizar número variable de
 % capas ocultas, el algoritmo \emph{{\sf EvoMLP}} generaliza mejor para el problema
@@ -908,7 +908,7 @@ variable number of neurons between 2 and 20 and only one hidden layer. The
 second table results where run using a variable number of hidden layers and
 from 2 to 50 neurons per layer (chosen randomly).
 
-\begin{table}
+\begin{table*}
     \centering
     \caption{
 %        Comparación de los resultados obtenidos en el problema de
@@ -930,7 +930,7 @@ from 2 to 50 neurons per layer (chosen randomly).
         &\textbf{Spambase2}   & $35.13\ \pm\ 4.94$ & $29.40\ \pm\ 20.16$ & $0.28133\ \pm\ 0.34343$ \\
         &\textbf{Spambase3}   & $40.07\ \pm\ 12.26$ & $31.00\ \pm\ 14.48$ & $0.32100\ \pm\ 0.39295$ \\
     \end{tabular}
-\end{table}
+\end{table*}
 
 We can draw some conclusions with these experiments. The first is
 that, in general, and despite no fine-tuning of evolutionary algorithm
@@ -1007,7 +1007,7 @@ stochastic, picking {\em the best} individual is actually equivalent
 to picking an almost random individual in the last generation, which
 is why we re-evaluate this individual 15 times to obtain an average.  The best way to represent every solution is by a boxplot, such as the one shown in \autoref{fig:heli}, which represents a boxplot of the test error values for the {\em best} individual in the last generation for every one of the experiments training EvoMLP on the DNA helicases test set. Even if in most cases the values are centered around a central one, there are some cases in which the range of possible values that it can obtain in a single evaluation can vary wildly, which explains why in the previous experiments sometimes the test and validation values obtained by the best individual were much worse than the ones reported during evolution. The situation in the rest of the sets is similar, although of course the range of variation may well vary.
 
-\begin{table}[h!tbp]
+\begin{table*}[h!tbp]
   \centering
   \caption{{\sf EvoMLP} results for the second round of experiments;
     comparison with G-Prop}
@@ -1021,13 +1021,13 @@ is why we re-evaluate this individual 15 times to obtain an average.  The best w
     {\tt cancer2} & $4.4\ \pm\ 0.4$  & 2.07 $\pm$ 0.36 & 2.66 $\pm$ 0.46 & 29.2 $\pm$ 4.7 & 1.71 \\ \hline
     {\tt cancer3} & $3.0\ \pm\ 0.7$  & 3.88 $\pm$ 0.61 & 1.98 $\pm$ 0.43 & 30 $\pm$ 4 & 2.86 \\ \hline
   \end{tabular}
-\end{table}
+\end{table*}
 %
 In \autoref{tab:improvement:gprop} we compare the new results obtained with the ones reported for G-Prop. The averages and standard deviation are the average of the 225 values obtained by evaluating the {\em best} individual in the last generation of every one of the 15 experiments 15 times. We also report the average number of generations that the algorithm has run; although the cap was set a 64 or 32, ten generations without a change in the best result led to a stop, which is why averages are slightly inferior. It should be noted that the way of reporting results is not comparable for G-Prop and our algorithm; this is why we also report the best result in the last column, which is the best test value obtained for any experiment, any re-training from the initial weights. In general, we can affirm that results are comparable, and slightly better in some cases ({\tt cancer2}, for instance). However, our objective of obtaining better results for EvoMLP have been achieved, if we compare with \autoref{tab:gprop-deepgprop-cancer} and \autoref{tab:gprop-deepgprop-cancer}, almost two points better in the case of helicases, although the way the average was computed is not really comparable. It should be noted that, since what the evolutionary algorithms is evolving is a set of {\em initial} weights, this would be the proper way of reporting results, since most training algorithms will not deterministically obtain a set of final weights from them; in here, we establish not only a baseline for results in these datasets, but also a new methodology for reporting results in this kind of neuroevolutionary algorithms.
 
 It should be noted that the evaluation budget for EvoMLP is five times as high as the one used for G-Prop, including the fact that MLPs can be evaluated several times if they remain in the population for a number of generations. However, with this budget we {\em buy} a better generalization ability, as well as the capability of tackling more complex problems due to using several hidden layers. Since the raw CPU power available now is much higher, in wallclock time these simulations take less time than it took in the original experiment, however, making the possibility of neuro-evolution available to normal desktop or laptop computers without the need to use GPUs or parallel systems.
 
-\begin{table}[h!tbp]
+\begin{table*}[h!tbp]
   \centering
   \caption{{\sf EvoMLP} results for the second round of experiments;
     comparison with the previous round}
@@ -1040,7 +1040,7 @@ It should be noted that the evaluation budget for EvoMLP is five times as high a
         \texttt{Spambase2}   & $35.13\ \pm\ 4.94$ & 34 $\pm$ 4 & 38 $\pm$ 6 & 32 & 22.94 \\ \hline
         \texttt{Spambase3}   & $40.07\ \pm\ 12.26$ & 34 $\pm$ 6 & 32 $\pm$ 6 & 32 & 21.29 \\ \hline
   \end{tabular}
-\end{table}
+\end{table*}
 %
 We also run the experiments for the {\tt spambase} dataset, and the different partitions, mainly for the sake of comparison with the previous version of our own algorithm; this is shown in \autoref{tab:new:spambase}. The {\em EvoMLP Exp 1} column shows the results reported in \autoref{tab:spambase}, where EvoMLP used the same configuration with a variable number of hidden layers. Again, we should consider the caveat that the previous average has not been computed in the same way; we report here again the average of the 15 experiments times 15 trainings for the best result in every experiment. Even so, results are much better for the first and third partition, slightly better for the second, probably not significantly so; the best results reduce the error by almost half. It should be noted that, except in the first partition, there's been no early stopping of the experiment due to repetition of the best values. This probably hints at the fact that the evaluation budget for this specific problem should be increased.
 
