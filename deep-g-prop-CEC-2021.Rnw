@@ -1,33 +1,15 @@
-\documentclass[runningheads]{llncs}
-%
-\usepackage{graphics, graphicx, float}
-\usepackage{algpseudocode,algorithm}
-\usepackage{hyperref}
-\def\algorithmautorefname{Algorithm}
-\usepackage{listings}
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
 \usepackage{xcolor}
-\usepackage{xstring}
-\usepackage[nointegrals]{wasysym}
-\usepackage{MnSymbol}
-\usepackage{booktabs} % For formal tables
-\graphicspath{ {../images/} }
-
-\definecolor{NavyBlue}{HTML}{000080}
-\definecolor{Magenta}{HTML}{FF00FF}
-\definecolor{Orange}{HTML}{FFA500}
-\definecolor{CornflowerBlue}{HTML}{6495ED}
-\definecolor{YellowGreen}{HTML}{9ACD32}
-\definecolor{Gray}{HTML}{BEBEBE}
-\definecolor{Yellow}{HTML}{FFFF00}
-\definecolor{GreenYellow}{HTML}{ADFF2F}
-\definecolor{ForestGreen}{HTML}{228B22}
-\definecolor{Lavender}{HTML}{FFC0CB}
-\definecolor{SkyBlue}{HTML}{87CEEB}
-\definecolor{NavyBlue}{HTML}{000080}
-\definecolor{Goldenrod}{HTML}{DDF700}
-\definecolor{VioletRed}{HTML}{D02090}
-\definecolor{CornflowerBlue}{HTML}{6495ED}
-\definecolor{LimeGreen}{HTML}{32CD32}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{hyperref}
 
 <<setup, cache=FALSE,echo=FALSE,message=FALSE,warning=FALSE>>=
 require(ggplot2)
@@ -45,24 +27,19 @@ plotting <- read.csv("data/helicases.csv")
 %
 \title{EvoMLP: Evolving the architecture of multi-layer perceptrons using free software}
 %
-\titlerunning{EvoMLP: evolving multi-layer perceptrons}
-% If the paper title is too long for the running head, you can set
-% an abbreviated paper title here
-%
-\author{First Author\inst{1}\orcidID{0000-1111-2222-3333} \and
-Second Author\inst{2,3}\orcidID{1111-2222-3333-4444} \and
-Third Author\inst{3}\orcidID{2222--3333-4444-5555}}
-%
-\authorrunning{F. Author et al.}
-% First names are abbreviated in the running head.
-% If there are more than two authors, 'et al.' is used.
-%
-\institute{Princeton University, Princeton NJ 08544, USA \and
-Springer Heidelberg, Tiergartenstr. 17, 69121 Heidelberg, Germany
-\email{lncs@springer.com}\\
-\url{http://www.springer.com/gp/computer-science/lncs} \and
-ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\
-\email{\{abc,lncs\}@uni-heidelberg.de}}
+\author{\IEEEauthorblockN{Luis Liñán-Villafranca}
+  \IEEEauthorblockA{\textit{RTI} \\
+    {\tt luis@rti.com}}
+  \and
+  \IEEEauthorblockN{Mario Garc\'ia-Valdez}
+  \IEEEauthorblockA{\textit{Instituto Tecnol\'ogico de Tijuana} \\
+    {\tt mario@tectijuana.edu.mx}}
+  \and
+  \IEEEauthorblockA{J.J. Merelo, Pedro Castillo-Valdivieso}
+  \IEEEauthorblockN{Computer Architecture and Technology\\
+    University of Granada, Spain\\
+    {\tt {jmerelo|pacv}@ugr.es}}
+}
 %
 \maketitle              % typeset the header of the contribution
 
@@ -104,6 +81,10 @@ the presence of uncertainty.
 % OK, changing this in issue #29
 
 \end{abstract}
+
+\begin{IEEEkeywords}
+  Neuroevolution, Python, Backpropagation, multilayer perceptrons.
+\end{IEEEkeywords}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
@@ -1087,12 +1068,10 @@ The framework we have used for EvoMLP has been developed and tested using best p
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
 
-The work is
-supported by the so and so.
-
+This paper has been supported in part by project DeepBio (TIN2017-85727-C4-2-P)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{splncs04}
+\bibliographystyle{IEEEtran}
 \bibliography{geneura,deep-g-prop,gprop,gpropnpl}
 
 \end{document}
