@@ -64,7 +64,7 @@ employed. On top of that algorithm, we have added a  component
 by being able not only to evolve the number of neurons, but also the
 number of layers in the neural net, as well as changing the training
 algorithm to one that is more suited to perceptrons with several
-layers. In this paper, we show how this has
+layers. In this paper we show how this has
 been achieved using the new {\sf EvoMLP} framework, which we present
 here for the first time, and how this new framework is able to beat the
 previous instance in accuracy, with very competitive running times. We
@@ -163,8 +163,8 @@ new experiments that will widen the search space by using perceptrons
 with several layers.
 
 The remainder of this paper is structured as follows:
-Section \ref{soa} makes a short overview of the methods to design ANN.
-In Section \ref{method} it is fully described the proposed model.
+section \ref{soa} makes a short overview of the methods to design ANN.
+In section \ref{method} it is fully described the proposed model.
 Section \ref{sec:res} describes the results obtained,
 followed by a brief conclusion in Section \ref{sec:conclus}.
 
@@ -176,23 +176,25 @@ followed by a brief conclusion in Section \ref{sec:conclus}.
 % review. https://www.sciencedirect.com/science/article/pii/S0925231200003027?casa_token=LZtZakZguVsAAAAA:iQNvGVO5fAQO6ED-pnBhQ5Ab-ZuYP7tIdFcpBurr9hdCzNnQAKwwKUoaY6_fEbiQx5fPiktf
 Searching the parameter space of neural networks, including deep
 learning algorithms, has been a problem traditionally approached
-in a number of ways. {\em Incremental algorithms}, in
+in a limited number of ways, using {\em incremental algorithms}, which, in
 general, will depart from a specific architecture, number of layers
 and elements in every layer, and offer a series of heuristic
 procedures to add/eliminate layers and/or hidden-layer neurons in
-those layers. This was, for a certain amount of time, the preferred
-way of doing this kind of thing, according to classical reviews such
-as the one by Alpaydim \cite{Alpaydim}. However, simultaneously a
+them. This way was, for a certain amount of time, the preferred
+one for optimizing the size of the neural net along with its weights, according to classical reviews such
+as the one by Alpaydim \cite{Alpaydim}. However and simultaneously, a
 series of evolutionary heuristics were starting to be applied for the
 same purpose, as revealed by Balakrishnan and Honavar's review
-\cite{balakrishnan95:EDNA}. This taxonomy classifies evolutionary
+\cite{balakrishnan95:EDNA}. They propose a taxonomy, that classifies evolutionary
 design of the architecture of neural nets along three different axes
 (plus one for application domain): genotype representation, network
 topology, and a third axis that includes basically everything else,
 ``variables of evolution''. % It seems like variables of evolution is disconnected. 
 % I think it requires something like "this is called" or "following a voe appproach"  - M
+% Check if this is OK - JJ
+This classification was much more comprehensive, and included many more degrees of freedom in evolution than simply adding or eliminating neurons. However, it still left some constraints and probably did not emphasize the parameters that are most likely to have the greater influence in the outcome.
 
-A more precise classification of evolved neural architectures would include, from our point of
+This is why, form our point of view, a more precise classification of evolved neural architectures would include
 view: \begin{itemize}
   \item Fixed or variable architecture. Irrespective of the kind of
     data structured used to represent it, what is relevant is if that
@@ -208,12 +210,13 @@ view: \begin{itemize}
     advantage of the Baldwin effect \cite{castillo-2006}) to applying
     a few cycles of learning that will become part of the codified
     solution.
-  \item How the lack of having a definite determination of the fitness, is taken into account
+  \item How the lack of a "crisp" value for the fitness, is taken into account
     % I think some adjective is missing for the kind of determination
     % The lack of a "crisp"|"optimum"|"hard"|"definite"  determination? - M
-    in evolution. Either from the fact that an stochastic algorithm is
+    % solved - JJ
+    during evolution. Either from the fact that an stochastic algorithm is
     used to train the neural net before evaluating fitness, or the
-    fact that the data set might not be totally fixed but subject to
+    fact that the data set (or how it's presented for training) might not be totally fixed but subject to
     randomness, the fitness of a neural net cannot be pinned down to a
     single, crisp, number. This randomness in the fitness can be taken
     into account during the selection phase
@@ -222,6 +225,7 @@ view: \begin{itemize}
     reducing overfitting. 
     % Please check or extend the above sentence - M
     % There is also the problem of overfitting - M
+    % It's OK - JJ
 
 \end{itemize}
 
@@ -280,10 +284,10 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
     composed by a matrix of weights and a list of bias (both Numpy
     \cite{py-numpy} ndarrays) joined together with it's configuration (a
     Python dictionary) in a Python class. One column of the weight matrix
-    represents all the connections from the previous layer to the $n$th neuron.
+    represents all the connections from the previous layer to the nth neuron.
     All the weights and bias are randomly initialized with a uniform
     distribution between -1.0 and 1.0. A random proportion of all this genes
-    and biases are mutated for all the individuals each generation.
+    and biases are muted for all the individuals each generation.
 
     From this configuration, when the moment of evaluation comes, we create a
     \emph{Sequential} \cite{keras-sequential}  Keras \cite{keras-nn} model and
@@ -301,8 +305,8 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
     population and perform all the evolutionary operations to them. Each
     operation has it own probability to occur chosen when running EvoMLP
     CLI. For the weights/bias mutation, a percentage of each (selected too with
-    the CLI parameters) are mutated randomly. After that, the worst half is
-    replaced by this mutated group.
+    the CLI parameters) are muted randomly. After that, the worst half is
+    replaced by this muted group.
 
   \item The {\em crossover} function will swap the ``neurons'' together with
     their connections. Main difference with respect to original G-Prop is that,
@@ -342,11 +346,11 @@ we take into account not only the accuracy score reached after
 training, but also the overall size of the network $score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl$ ($nhl$ is the number of hidden layers and $nu_{i}$ the number
 of neurons for the layer $i$) and the F2 score metric (explained in the
 \autoref{sec:res}). At the end, the fitness value is a compound of
-three elements: accuracy, hidden-score and F2 score. Because the DEAP framework
-\cite{deap-ga} was used to create the genetic algorithm, we
-took advantage of its fitness class \cite{deap-fitness} to rank the individuals
-of the population. The ranking algorithm performs a lexicographical comparison of the three values,
-so we chose the order previously mentioned, to approach as much as possible, 
+three elements: accuracy, hidden-score and F2 score. As the DEAP framework
+\cite{deap-ga} where used as a base to create the genetic algorithm, also we
+took advantage of it fitness class \cite{deap-fitness} to rank the individuals
+of a population. It performs a lexicographical comparison of the three values,
+so we chose the order previously mentioned to approach as much as possible to
 the fitness function used by G-Prop.
 % Question for @jj related with #28. Do we need the whole expression? I don't
 % really know how to create an expression for the fitness score since it is a
@@ -365,7 +369,7 @@ the fitness function used by G-Prop.
 %     \end{equation}
 % \end{figure}
 %
-In summary, the score will be the
+So in summary, the score will be the
 global number of neurons multiplied by the number of hidden layers.
 %
 The whole code for this has been released under a free license in
@@ -418,7 +422,7 @@ variable number of neurons for it. For the last case, we evolved the models
 changing the number of hidden layers and neurons per layer.
 
 In these results, we will try to use the same metrics as the ones
-proposed in G-Prop, minimizing error while also trying to minimize the size as computed above.
+proposed in G-Prop, minimizing error while also trying to minimize the size as computed above
 
 % El porcentaje de error (en Inglés \emph{accuracy error}) viene dado por el
 % número de ejemplos bien clasificados dividido entre el número de ejemplos
@@ -475,7 +479,7 @@ We selected the following parameters for the network:
   activation function for hidden layers to ensure the correct performance of
   the Stochastic Gradient Descent algorithm used to optimize the network,
   making sure the neuron output values are all greater than zero.  On the other
-  hand, for the last layer (the output layer) we used the Softmax function to
+  hand, for he last layer (the output layer) we used the Softmax function to
   allow an easy classification of the results normalizing the classes
   probability between 0 and 1, having the sum of all the values equal to 1. %  WE need to justify that. - JJ
 
@@ -547,8 +551,7 @@ operation could be performed, despite being Python a priori a slower
 language than C++, which was the original language.
 % Is Keras/Theano not a wrapper to a C++ or C implementation? PyTorch and others are. - M
 
-%Please check if the Table numbers are correct - M
-In tables \ref{tab:fixed-7-1-const-can1} and \ref{tab:fixed-7-1-inicial-can1}, we can see very similar results between the G-Prop and
+In the first two tables, we can see very similar results between the G-Prop and
 {\sf EvoMLP} algorithms regarding accuracy for
 the \emph{cancer1} dataset \cite{uci}, with the network with fixed hidden layers
 (\autoref{tab:fixed-7-1-const-can1}) obtaining the best result with an accuracy
@@ -904,7 +907,7 @@ When running {\sf EvoMLP} in a complex problem like \emph{spambase} we obtain
 worse results (see \autoref{tab:spambase}). After running multiple executions with the
 {\sf EvoMLP} algorithm, it seems the optimizer finds a local minimum when the
 loss function reaches $\approx0.6$. Then the best result obtained is around
-$36\%$ of error. For the first table, the results were obtained using a
+$36\%$ of error. For the first table, the results where obtained using a
 variable number of neurons between 2 and 20 and only one hidden layer. The
 second table results where run using a variable number of hidden layers and
 from 2 to 50 neurons per layer (chosen randomly).
@@ -985,7 +988,7 @@ cancer (any partition).
 <<helicases, cache=FALSE,echo=FALSE,message=FALSE,warning=FALSE>>=
 ggplot(plotting, aes(x=Experiment,y=Test,group=Experiment))+geom_boxplot()+theme_tufte()
 @
-\caption{Example of distribution of test accuracy for the fifteen helicases experiments; accuracy is represented in the $x$ axis, while the $x$ axis corresponds to the experiment number.}
+\caption{Example of distribution of test accuracy for the fifteen helicases experiments; accuracy is represented in the $y$ axis, while the $x$ axis corresponds to the experiment number.}
   \label{fig:heli}
  \end{figure} 
  %
@@ -1024,29 +1027,7 @@ is why we re-evaluate this individual 15 times to obtain an average.  The best w
   \end{tabular}
 \end{table*}
 %
-
-In \autoref{tab:improvement:gprop} we compare the new results obtained with the
-ones reported for G-Prop. The averages and standard deviation are the average of
-the 225 values obtained by evaluating the {\em best} individual in the last
-generation of every one of the 15 experiments 15 times. We also report the
-average number of generations that the algorithm has run; although the cap was
-set a 64 or 32, ten generations without a change in the best result led to a
-stop, which is why averages are slightly inferior. It should be noted that the
-way of reporting results is not comparable for G-Prop and our algorithm; this is
-why we also report the best result in the last column, which is the best test
-value obtained for any experiment, any re-training from the initial weights. In
-general, we can affirm that results are comparable, and slightly better in some
-cases ({\tt cancer2}, for instance). However, our objective of obtaining better
-results for EvoMLP have been achieved, if we compare with
-\autoref{tab:gprop-deepgprop-cancer} and \autoref{tab:gprop-deepgprop-cancer},
-% Please correct the number of the Tables the are the same - M
-almost two points better in the case of helicases, although the way the average
-was computed is not really comparable. It should be noted that, since what the
-evolutionary algorithms is evolving is a set of {\em initial} weights, this
-would be the proper way of reporting results, since most training algorithms
-will not deterministically obtain a set of final weights from them; in here, we
-establish not only a baseline for results in these datasets, but also a new
-methodology for reporting results in this kind of neuroevolutionary algorithms.
+In \autoref{tab:improvement:gprop} we compare the new results obtained with the ones reported for G-Prop. The averages and standard deviation are the average of the 225 values obtained by evaluating the {\em best} individual in the last generation of every one of the 15 experiments 15 times. We also report the average number of generations that the algorithm has run; although the cap was set a 64 or 32, ten generations without a change in the best result led to a stop, which is why averages are slightly inferior. It should be noted that the way of reporting results is not comparable for G-Prop and our algorithm; this is why we also report the best result in the last column, which is the best test value obtained for any experiment, any re-training from the initial weights. In general, we can affirm that results are comparable, and slightly better in some cases ({\tt cancer2}, for instance). However, our objective of obtaining better results for EvoMLP have been achieved, if we compare with \autoref{tab:gprop-deepgprop-cancer} and \autoref{tab:gprop-deepgprop-cancer}, almost two points better in the case of helicases, although the way the average was computed is not really comparable. It should be noted that, since what the evolutionary algorithms is evolving is a set of {\em initial} weights, this would be the proper way of reporting results, since most training algorithms will not deterministically obtain a set of final weights from them; in here, we establish not only a baseline for results in these datasets, but also a new methodology for reporting results in this kind of neuroevolutionary algorithms.
 
 It should be noted that the evaluation budget for EvoMLP is five times as high as the one used for G-Prop, including the fact that MLPs can be evaluated several times if they remain in the population for a number of generations. However, with this budget we {\em buy} a better generalization ability, as well as the capability of tackling more complex problems due to using several hidden layers. Since the raw CPU power available now is much higher, in wallclock time these simulations take less time than it took in the original experiment, however, making the possibility of neuro-evolution available to normal desktop or laptop computers without the need to use GPUs or parallel systems.
 
@@ -1065,21 +1046,7 @@ It should be noted that the evaluation budget for EvoMLP is five times as high a
   \end{tabular}
 \end{table*}
 %
-
-We also run the experiments for the {\tt spambase} dataset, and the different
-partitions, mainly for the sake of comparison with the previous version of our
-own algorithm; this is shown in \autoref{tab:new:spambase}. The {\em EvoMLP Exp
-1} column shows the results reported in \autoref{tab:spambase}, where EvoMLP
-used the same configuration with a variable number of hidden layers. Again, we
-should consider the caveat that the previous average has not been computed in
-the same way; we report here again the average of the 15 experiments times 15
-trainings for the best result in every experiment. Even so, results are much
-better for the first and third partition, slightly better for the second,
-probably not significantly so; the best results reduce the error by almost half.
-It should be noted that, except in the first partition, there's been no early
-stopping of the experiment due to repetition of the best values. This probably
-hints at the fact that the evaluation budget for this specific problem should be
-increased.
+We also run the experiments for the {\tt spambase} dataset, and the different partitions, mainly for the sake of comparison with the previous version of our own algorithm; this is shown in \autoref{tab:new:spambase}. The {\em EvoMLP Exp 1} column shows the results reported in \autoref{tab:spambase}, where EvoMLP used the same configuration with a variable number of hidden layers. Again, we should consider the caveat that the previous average has not been computed in the same way; we report here again the average of the 15 experiments times 15 trainings for the best result in every experiment. Even so, results are much better for the first and third partition, slightly better for the second, probably not significantly so; the best results reduce the error by almost half. It should be noted that, except in the first partition, there's been no early stopping of the experiment due to repetition of the best values. This probably hints at the fact that the evaluation budget for this specific problem should be increased.
 
 It's interesting also to observe in \autoref{tab:new:spambase} that the test results are, in some cases, better than the validation results that were the ones used for the actual evolution. At any rate, they are remarkably similar. This is also an advantage of the new way of reducing uncertainty via reevaluation (often called resampling): generalization capability is improved, at the same time that the solutions obtained are more robust, with a smaller standard deviation over the obtained values. Comparing the first column with the rest, it shows that the standard deviation is almost half of what was obtained in the original experiment, which shows the robustness of re-evaluation for the computation of the fitness of every individual
 
@@ -1087,51 +1054,19 @@ It's interesting also to observe in \autoref{tab:new:spambase} that the test res
 \section{Conclusions and future work}
 \label{sec:conclus}
 
-In this paper a first approach to perform evolution of MLPs with several layers
-has been proposed, along with the first results reached with it. Our point of
-departure was a neuroevolutionary algorithm called G-Prop, which was first
-re-implemented using modern tools, and then enhanced with the possibility of
-evolving perceptrons with more than one hidden layer and a re-sampling procedure
-that improved the robustness of evolution; we have called this new approach
-EvoMLP. Additionally, we have also proposed a new way of evaluating
-neuro-evolutionary algorithms by re-training weights obtained and reporting the
-average results.
+In this paper a first approach to perform evolution of MLPs with
+several layers has been proposed, along with the first results reached
+with it. Our point of departure was a neuroevolutionary algorithm called G-Prop, which was first re-implemented using modern tools, and then enhanced with the possibility of evolving perceptrons with more than one hidden layer and a re-sampling procedure that improved the robustness of evolution; we have called this new approach EvoMLP. Additionally, we have also proposed a new way of evaluating neuro-evolutionary algorithms by re-training weights obtained and reporting the average results.
 
-In this paper, we have proved how using a simple re-evaluation strategy fixes
-the gap observed initially between the observed validation error and the test
-error. Both will have a random component, but re-evaluation induces the
-selection of those individuals that consistently return better results, as
-opposed with the initial version of EvoMLP, which possibly could select an
-individual on the basis of a single, lucky evaluation. Re-evaluation or
-re-sampling is a well-known strategy to deal with uncertain optimization
-problems, and we have applied it here successfully.
+In this paper, we have proved how using a simple re-evaluation strategy fixes the gap observed initially between the observed validation error and the test error. Both will have a random component, but re-evaluation induces the selection of those individuals that consistently return better results, as opposed with the initial version of EvoMLP, which possibly could select an individual on the basis of a single, lucky evaluation. Re-evaluation or re-sampling is a well-known strategy to deal with uncertain optimization problems, and we have applied it here successfully.
 
-The experiments have proved that EvoMLP is able to robustly obtain good results
-using a limited budget, and in a reasonable amount of time. The architecture
-(i.e. the initial weights, number of hidden layers and hidden layer sizes) of
-multi-layer perceptrons with multiple layers is automatically designed using an
-EA, leveraging it to find a solution close to the global optimum and the ability
-of the training algorithm to tune the solution and reach the nearest local
-minimum. This new solution is able to consistently find the architecture and
-initial weights of multilayer perceptrons that have an excellent accuracy on a
-wide variety of problem sizes and difficulties, from the arguably easier {\tt
-cancer} to the more difficult {\tt spambase}. However, evaluation budget is an
-issue and population size as well as number of generations needs to be
-investigated further, over all taking into account that every evaluation can
-take a few seconds.
+The experiments have proved that EvoMLP is able to robustly obtain good results using a limited budget, and in a reasonable amount of time. The architecture (i.e. the initial weights, number of
+hidden layers and hidden layer sizes) of multi-layer perceptrons with
+multiple layers is automatically designed using an EA, leveraging it to find a solution close to the global optimum and
+the ability of the training algorithm to tune the solution and reach
+the nearest local minimum. This new solution is able to consistently find the architecture and initial weights of multilayer perceptrons that have an excellent accuracy on a wide variety of problem sizes and difficulties, from the arguably easier {\tt cancer} to the more difficult {\tt spambase}. However, evaluation budget is an issue and population size as well as number of generations needs to be investigated further, over all taking into account that every evaluation can take a few seconds.
 
-The framework we have used for EvoMLP has been developed and tested using best
-practices and can be easily evolved into new programs that allow scientists to
-explore different possibilities. Within the strict framework of multilayer
-perceptrons, we need to pay attention to evaluation budgets as indicated in the
-previous paragraph, but we can also open up the range of evolvable parameters to
-include different training algorithms, as well as the optimization of their
-specific parameters, such as learning constants. An extension to other kind of
-more open, deep learning, architectures, would also be interesting, following
-the same principles of simple variation of the number (and possibly type) of
-layers as well as its size. Finally, a profiling of the whole application
-looking for speed ups without resorting to hardware accelerations is also in the
-roadmap.
+The framework we have used for EvoMLP has been developed and tested using best practices and can be easily evolved into new programs that allow scientists to explore different possibilities. Within the strict framework of multilayer perceptrons, we need to pay attention to evaluation budgets as indicated in the previous paragraph, but we can also open up the range of evolvable parameters to include different training algorithms, as well as the optimization of their specific parameters, such as learning constants. An extension to other kind of more open, deep learning, architectures, would also be interesting, following the same principles of simple variation of the number (and possibly type) of layers as well as its size. Finally, a profiling of the whole application looking for speed ups without resorting to hardware accelerations is also in the roadmap.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
