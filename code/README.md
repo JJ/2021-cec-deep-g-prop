@@ -113,7 +113,7 @@ in the required Python version.
 > in editable mode. checkout in
 > [Installing the DeepGProp CLI](#installing-the-deepgprop-cli) section how to
 > do it.
-> 
+
 First, we need to install the [Nox] tool:
 
 ```shell
