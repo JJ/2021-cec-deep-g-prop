@@ -67,7 +67,7 @@ Table 1.1: *Activating the virtual environment.*
 
 ### Installing the DeepGProp CLI
 
-To run DeepGProp first we need to install it's cli. For that, run the following
+To run DeepGProp first we need to install its cli. For that, run the following
 command:
 
 ```shell
@@ -98,14 +98,14 @@ evitar instalar librerías no deseadas si vamos a realizar tareas concretas
 | Optimizers comparison     | [`requirements/hp_optimization.txt`] | Packages used for the hyper-parametter optimizers comparison.                         |
 | MLP Frameworks comparison | [`requirements/mlp_frameworks.txt`]  | Packages used for the neural net frameworks comparison.                               |
 
-To install any of this packages you can run:
+To install any of these packages you can run:
 
 ```shell
 pip install -r <file path>
 ```
 
-If you are not using any virtual environment, ensure you install this packages
-in the required Python version.
+If you are not using any virtual environment, make sure you install
+these packages so that they are available in the required Python version.
 
 ## Tests and formatting
 
