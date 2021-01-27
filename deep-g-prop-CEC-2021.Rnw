@@ -347,8 +347,8 @@ training, but also the overall size of the network $score = (\sum_{i=0}^{nhl} nu
 of neurons for the layer $i$) and the F2 score metric (explained in the
 \autoref{sec:res}). At the end, the fitness value is a compound of
 three elements: accuracy, hidden-score and F2 score. As the DEAP framework
-\cite{deap-ga} where used as a base to create the genetic algorithm, also we
-took advantage of it fitness class \cite{deap-fitness} to rank the individuals
+\cite{deap-ga} was used as a base to create the genetic algorithm, we also
+took advantage of its fitness class \cite{deap-fitness} to rank the individuals
 of a population. It performs a lexicographical comparison of the three values,
 so we chose the order previously mentioned to approach as much as possible to
 the fitness function used by G-Prop.
