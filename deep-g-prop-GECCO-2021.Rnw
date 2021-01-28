@@ -101,39 +101,9 @@ plotting <- read.csv("data/helicases.csv")
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-In order to solve classification problems using artificial neural
-networks (ANN), the optimization of the network architecture is
-of great importance. Evolutionary neural networks provide an
-alternative for this task of designing the neural network, i.e. choosing the
-number of layers, number of neurons per layer and the weights of the
-ANN. This is not a new challenge; as a matter of fact a number of
-methods were proposed during the early years of this century,
-including G-Prop, a hybrid neurogenetic algorithm that optimized
-initial weights and the number of layers of a multi-layer perceptron for 
-% Highlighting some properties of G-Prop could give a justification
-% and serve as a bridge for presenting this work (rewritten of G-Prop) - M
-different kind of tasks. Using the general concept of this algorithm
-as a baseline, we have rewritten the method using off-the-shelf tools
-and libraries; modern testing and deployment tools have been also
-employed. On top of that algorithm, we have added a  component
-by being able not only to evolve the number of neurons, but also the
-number of layers in the neural net, as well as changing the training
-algorithm to one that is more suited to perceptrons with several
-layers. In this paper we show how this has
-been achieved using the new {\sf EvoMLP} framework, which we present
-here for the first time, and how this new framework is able to beat the
-previous instance in accuracy, with very competitive running times. We
-will also give initial solutions to the challenges this kind of
-problems present, namely, evaluating the performance of solutions in
-the presence of uncertainty.
-
-% A multi-layer perceptron is not considered "Deep", this usually
-% means other types of layers like convolutional, filters, etc. that
-% are added before the MLP. - M
-% But the method could be used for other types of layers, maybe this
-% could be mentioned - M
-% Deep is related to representational learning.
-% OK, changing this in issue #29
+Finding an optimum neural network implies using search algorithms over the design parameter space trying to balance final performance with search space size. With time, this space has grown from including only weights, to network size and architecture. An algorithm called G-Prop optimized
+initial weights and the number of neurons of a multi-layer perceptron for 
+different kind of tasks, for instance, and it was novel by introducing the variation of the number of neurons in a single hidden layer as part of the optimization process. EvoMLP, the algorithm and framework introduced here, uses that algorithm and concept as a baseline, but introduces another degree of freedom: the number of layers in the neural net. In order to overcome the problems of false positives, we also use use the $F_2$ score as part of the fitness function, and take into account uncertainty in evaluation. With this, we prove that results obtained with these new degrees of freedom can be very competitive, and even better, than the results obtained back then. They are also competitive with the current state of the art, and by releasing EvoMLP as free software, offer a solution for researchers and practitioners alike.
 
 \end{abstract}
 
@@ -527,11 +497,12 @@ authors. We also compute a layer score with the formula shown above. With
 this expression, we aim to minimize the number of layers first, and then the number of
 neurons per layer.
 
-We also included the F2 score as an extra metric to have a way of
-distinguishing two very similar indiviudals. This metric has the ability to
-detect a bad performance on inbalanced datasets (for example, the \emph{breast
-cancer database datasets}), giving more importance to the false negatives
+We have also included the F2 score as an extra metric to have a way of
+distinguishing two very similar individuals. This metric has the ability to
+detect a bad performance on unbalanced datasets (for example, the \emph{breast
+cancer database} datasets), giving more importance to the false negatives
 predictions.
+% We need to expand this a little bit with what's written below - JJ
 
 % La métrica F2 score es una definida como la media armónica ponderada entre
 % precisión (\emph{precision})\footnote{Fracción de instancias que son de la
@@ -997,7 +968,7 @@ from 2 to 50 neurons per layer (chosen randomly).
     }
     \label{tab:spambase}
     \begin{tabular}{ll|l|l|l|l}
-        \textbf{Partition} & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+        \textbf{Partition} & & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
         \hline
         Fixed size &\textbf{Spambase1}   & $36.80\ \pm\ 0.98$ & $10.80\ \pm\ 3.76$ & $0.03004\ \pm\ 0.04402$ \\
         &\textbf{Spambase2}   & $38.30\ \pm\ 0.88$ & $12.60\ \pm\ 2.87$ & $0.04019\ \pm\ 0.04078$ \\
