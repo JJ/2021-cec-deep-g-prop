@@ -119,11 +119,23 @@ different kind of tasks, for instance, and it was novel by introducing the varia
 <concept_desc>Theory of computation~Evolutionary algorithms</concept_desc>
 <concept_significance>500</concept_significance>
 </concept>
+ <concept>
+<concept_id>10002951.10003317.10003347.10003356</concept_id>
+<concept_desc>Information systems~Clustering and classification</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+
+<concept>
+<concept_id>10010520.10010521.10010542.10010294</concept_id>
+<concept_desc>Computer systems organization~Neural networks</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
 </ccs2012>
 \end{CCSXML}
 
 \ccsdesc[500]{Theory of computation~Evolutionary algorithms}
-
+\ccsdesc[400]{Information systems~Clustering and classification}
+\ccsdesc[500]{Computer systems organization~Neural networks}
 
 \keywords{Neuroevolution, Python, Backpropagation, multilayer perceptrons.}
 
