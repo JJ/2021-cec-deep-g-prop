@@ -193,6 +193,8 @@ later try and go beyond the state of the art established there with
 new experiments that will widen the search space by using perceptrons
 with several layers.
 
+The new method, EvoMLP, is innovative in a series of ways. First, when the possibility of adding new layers is included in the algorithm it needs to be dealt with at the operator level; not only new operators need to be used to add/eliminate layers (or otherwise deal with them), a solution to the problem of crossover between individuals with different number of layers must be found. Additionally, the problem of uncertainty in fitness was not even considered in the initial implementation of GProp (or any other done later). EvoMLP will try to directly address this problem, and even check what kind of influence it's got on the final results. Additionally, implementation matters \cite{DBLP:conf/iwann/MereloRACML11} so using best practices, and mature and tried software packages, choosing best-of-breed to achieve the maximum performance, will make the algorithm perform faster, independently of the language that was chosen.
+
 The remainder of this paper is structured as follows:
 section \ref{soa} makes a short overview of the methods to design ANN.
 In section \ref{method} it is fully described the proposed model.
