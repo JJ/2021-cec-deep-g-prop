@@ -144,74 +144,50 @@ different kind of tasks, for instance, and it was novel by introducing the varia
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Applying artificial neural networks (ANN) to the solution of
-classification problems requires establishing their structure in
+Applying artificial neural networks (ANN) to classification problems requires establishing their structure in
 layers and connections between them, the initial parameters (such as
-initial weights) and a set of learning constants. This is true for
-neural as well as deep learning architectures
-\cite{goodfellow,nielsen}, where a design parameter is added: the
-number of layers in the architecture as well as its type, every one
-with its own set of parameters, like the number of neurons in every
-layer.
+initial weights) and a set of learning constants. Using an optimization algorithm to solve at least part of the design problem
+is an usual approach to this challenge; this process is usually called neuroevolution. Neuroevolution combines two optimization algorithms: the neural net learning algorithm, and, at a different level, an evolutionary algorithm to optimize part, or all, the parameters needed to define a neural net.
 
-Using an optimization algorithm to solve at least part of the design problem
-is an usual approach to this challenge. Evolutionary neural networks are an efficient way of searching for the
-architecture, weights, and other ANN parameters (such as learning
-constants). This has been proved
-repeatedly for {\em shallow} architectures (with a single hidden
-layer) since late in the previous century
+A big portion of the neural net models have been organized in {\em layers}; a layer is a set of neurons that are not connected between them, but only with neurons placed in other layers. All neural networks have an input and output layer; some of them also include one or several {\em hidden} layers that are not "visible" directly from outside, only connected to other layers. This organization in layers favors a more complex processing of inputs, coupled with a more complex internal representation of them. This explains the success of architectures such as the multilayer perceptron \cite{murtagh1991multilayer,6917150}.
+
+Still, deciding on the overall architecture (such as choosing the multilayer perceptron) still leaves many degrees of freedom without cover. For instance, the number of layers. Neuroevolution has been proved to work repeatedly for {\em shallow} architectures, with a single hidden layer, and with a fixed number of neurons, since late in the previous century
 \cite{yao1993evolutionary,CastilloNPL,stanley2002evolving}. However, in most cases, design
 of the structure and connections between different layers, as
 indicated by \cite{miikkulainen2019evolving}, is still mostly done by
 hand. This is mainly due to the above mentioned fact that search
 spaces are huge, so using rules of thumb (such as the ones mentioned
 in \cite{qolomany2017parameters}, or using certain formulas to set the
-number of layers) to decide on those parameters,
-are a way of fixing part of the search space, letting the deep
+number of layers) to decide on those parameters 
+is a way of fixing part of the search space, letting the deep
 learning algorithm to figure out the weights themselves, whose
 optimization, in these cases, is able to cover big spans of the search
-space.
+space anyway.
 
-We can also, however, fix a part of the architecture, by choosing a
+We can also, however, make a part of the architecture fixed, by choosing a
 multi-layer perceptron trained with back-propagation, whose initial
-weights as well as biases evolve using an evolutionary algorithm (EA). This
+weights as well as biases evolve using an evolutionary algorithm (EA). The number of neurons in the hidden layer, however, is let for the algorithm to optimize. This
 algorithm was called \emph{G-Prop} (as in \emph{Genetic Back-Propagation})
-and was originally presented in \cite{castilloNC,CastilloNPL}. This
-method leverages the capabilities of two classes of algorithms: the
-ability of EA to find a solution close to the global optimum, and the
-ability of the back-propagation algorithm (BP) \cite{Rumelhart86} to tune a solution and
-reach the nearest local minimum by means of local search from the
-solution found by the EA.
+and was originally presented in \cite{castilloNC,CastilloNPL}. The two main innovations presented by this algorithm, the use of genetic operators that were able to change the size of the hidden layer of a MLP, and encoding only the initial weights and letting the training algorithm, in this case backpropagation, set the final weights, allowed a more exhaustive run of the search space, and better results, at the cost of introducing uncertainty in the fitness of a single individual, since backpropagation is a stochastic algorithm whose result will depend on a series of factors such as the order of presentation of the training set.
 
 This initial G-Prop algorithm was limited, first, by the fact that
 most of it had to be programmed from scratch, since there were few (if
 any) off-the-shelf software that could do this kind of task;
 additionally, available computational capability limited the size of
-the search space; this was further limited by the evolution of only single-layer perceptrons.
-% Please check, I had the idea that G-Prop was single-layer perceptrons - M
+the search space; this was further limited by the evolution of only single-layer perceptrons. The fact that it was mostly programmed ad-hoc limited its evolution. The unavailibility of modern tools for publication and release of open source software also limited its utility.
 
-The aim of this paper is to present an algorithm that searches over, the initial weights, number of
-hidden layers and hidden layer sizes of a MLP, based on a EA and
-Stochastic Gradient Descent (SGD) \cite{bottou2012stochastic}. This
+This is why the the aim of this paper is twofold. First to extend G-Prop with an an algorithm that adds another degree of freedom to the search for optimal multilayer perceptrons by searching over the initial weights, number of
+hidden layers {\em and} hidden layer sizes of a MLP; we will also adapt the training algorithm with which the final result is obtained to the state of the art Stochastic Gradient Descent (SGD) \cite{bottou2012stochastic}, as opposed to the classical back-propagation; this
 algorithm has been used for training deep neural nets and other kind
 of machine learning algorithms
 \cite{bottou2012stochastic,bottou2010large}; however, in this case
-%there all intermediate (or hidden) layers have the same structure,
 intermediate (or hidden) layers have the same structure,
 which is the structure of a multi-layer perceptron, justifying our
-% In some pleaces there is multilayer or multi layer, we should be consistent.
-% I propose multi-layer, changing all - M
 denomination of {\sf EvoMLP} for this specific method.
-The use of this kind of {\em training} method does not imply that we
-are actually doing deep machine learning at large; however, this (and
-other possible methods included in the machine learning framework we
-are using) are suitable for deep neural nets,
-leaving the possibility of using deep neural nets or any other
-deep learning methods open for the future.
 
-In this paper what we will do is to first bring the implementation of
-the G-Prop concept to current tools and languages, choosing the best
-suited for the purpose. Then we will try and reproduce the results
+The second objective of this paper is to first bring the implementation of EvoMLP, based on the
+the G-Prop concept to current tools, programming best practices, and languages, choosing the best
+suited for the purpose. With this new implementation we will try and reproduce the results
 obtained in those classical papers with the basic configuration, to
 later try and go beyond the state of the art established there with
 new experiments that will widen the search space by using perceptrons
