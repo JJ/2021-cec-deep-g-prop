@@ -137,7 +137,7 @@ different kind of tasks, for instance, and it was novel by introducing the varia
 \ccsdesc[400]{Information systems~Clustering and classification}
 \ccsdesc[500]{Computer systems organization~Neural networks}
 
-\keywords{Neuroevolution, Python, Backpropagation, multilayer perceptrons.}
+\keywords{Neuroevolution, Python, Backpropagation, multilayer perceptrons, neurogenetic optimization.}
 
 \maketitle              % typeset the header of the contribution
 
@@ -1104,10 +1104,10 @@ The framework we have used for EvoMLP has been developed and tested using best p
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Acknowledgments}
+\section*{Acknowledgements}
 
 % This paper has been supported in part by project DeepBio (TIN2017-85727-C4-2-P)
-This paper has been supported by a project\
+This paper has been supported by a project \\
 using this much space
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
