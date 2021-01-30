@@ -204,20 +204,15 @@ Section \ref{sec:res} shows an initial exploration of the capabilities of the Ev
 \section{State of the Art}
 \label{soa}
 
-% This contains a very good
-% review. https://www.sciencedirect.com/science/article/pii/S0925231200003027?casa_token=LZtZakZguVsAAAAA:iQNvGVO5fAQO6ED-pnBhQ5Ab-ZuYP7tIdFcpBurr9hdCzNnQAKwwKUoaY6_fEbiQx5fPiktf
-Searching the parameter space of neural networks, including deep
-learning algorithms, has been a problem traditionally approached
-in a limited number of ways, using {\em incremental algorithms}, which, in
+Searching the parameter space of neural networks has been a problem  that was, for some time, according to classical reviews such as the one by Alpaydin \cite{alpaydin1994gal}, approached
+using {\em incremental algorithms}, which, in
 general, will depart from a specific architecture, number of layers
 and elements in every layer, and offer a series of heuristic
 procedures to add/eliminate layers and/or hidden-layer neurons in
-them. This way was, for a certain amount of time, the preferred
-one for optimizing the size of the neural net along with its weights, according to classical reviews such
-as the one by Alpaydin \cite{alpaydin1994gal}. However and simultaneously, a
+them. However, and simultaneously, a
 series of evolutionary heuristics were starting to be applied for the
 same purpose, as revealed by Balakrishnan and Honavar's review
-\cite{balakrishnan95:EDNA}. They propose a taxonomy, that classifies evolutionary
+\cite{balakrishnan95:EDNA}. These authors propose a taxonomy, that classifies evolutionary
 design of the architecture of neural nets along three different axes
 (plus one for application domain): genotype representation, network
 topology, and a third axis that includes basically everything else,
@@ -243,9 +238,6 @@ view: \begin{itemize}
     a few cycles of learning that will become part of the codified
     solution.
   \item How the lack of a "crisp" value for the fitness, is taken into account
-    % I think some adjective is missing for the kind of determination
-    % The lack of a "crisp"|"optimum"|"hard"|"definite"  determination? - M
-    % solved - JJ
     during evolution. Either from the fact that an stochastic algorithm is
     used to train the neural net before evaluating fitness, or the
     fact that the data set (or how it's presented for training) might not be totally fixed but subject to
@@ -262,7 +254,7 @@ view: \begin{itemize}
 \end{itemize}
 
 With these axes in mind, the first one, the variation of architecture, has been the one that has developed the most,  lately evolving towards (almost)
-unconstrained evolution using Neuroevolution of Augmenting Topologies (NEAT), as shown in the recent review by
+unconstrained evolution using Neuroevolution of Augmenting Topologies (NEAT), as shown in the review by
 Miikkulainen et al. \cite{miikkulainen2019evolving}. Since this blows
 up the search space, these methods need computational resources that are
 really off the reach of most labs or individuals. This is the reason why most of the latest publications 
