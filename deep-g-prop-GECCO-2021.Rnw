@@ -419,7 +419,7 @@ frameworks currently in the state-of-art on their respective area.
 % Here could be a good place to present and justify these implementation details - M
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Results}
+\section{Initial results}
 \label{sec:res}
 
 % Something should be said about the experimental setup.
@@ -538,11 +538,8 @@ When referring to a certain number of layers, we will be talking about hidden
 layers because the input and output layers are fixed depending on the problem.
 To compare our results against the G-Prop algorithm we selected the Proben1
 \cite{Proben1} dataset and other classification datasets found in the UCI
-\cite{uci} repository. Results shown are the mean of five runs with different
-random generator seeds (\texttt{2017725297}, \texttt{3842001146},
-\texttt{788305541}, \texttt{1367677890}, and \texttt{3074644809}). We obtained
-these seeds using the \texttt{getrandbits} function from the \texttt{random}
-module found in Python's standard library.
+\cite{uci} repository. In this section, results shown are the mean of five runs with different
+random generator seeds, since its intention was mainly to check out the general performance, and it's not really intended for comparison with the state of the art.
 
 % %
 % % no structure modification
@@ -718,6 +715,9 @@ to generation.
 
 % \section{Evolución de población con modificación de número de neuronas:
 % reproducción de resultados}
+\section{Comparing EvoMLP with G-Prop}
+
+In this subsection, we will try and compare the new EvoMLP with the old results.
 
 \subsection{Evolution of Networks with a Mutable Architecture: neuron number modifications}
 
@@ -824,7 +824,7 @@ An overfitting to the validation data is occurring for sure. In the
 \emph{cancer} problem before, there was not that big a difference than the one we
 go here, in with the \emph{DNA Helicases} dataset. We will try in the next
 section a variable number of layers, which should increase the
-accuracy. % And also generalization? - JJ
+accuracy, and it might result in an improvement of the generalization ability.
 
 % \begin{table}
 %     \centering
@@ -1022,7 +1022,7 @@ cancer (any partition).
 <<helicases, cache=FALSE,echo=FALSE,message=FALSE,warning=FALSE>>=
 ggplot(plotting, aes(x=Experiment,y=Test,group=Experiment))+geom_boxplot()+theme_tufte()
 @
-\caption{Example of distribution of test accuracy for the fifteen helicases experiments; accuracy is represented in the $y$ axis, while the $x$ axis corresponds to the experiment number.}
+\caption{Example of distribution of test accuracy for the 15 helicases experiments; accuracy is represented in the $y$ axis, while the $x$ axis corresponds to the experiment number.}
   \label{fig:heli}
  \end{figure} 
  %
@@ -1063,7 +1063,7 @@ is why we re-evaluate this individual 15 times to obtain an average.  The best w
 %
 In \autoref{tab:improvement:gprop} we compare the new results obtained with the ones reported for G-Prop. The averages and standard deviation are the average of the 225 values obtained by evaluating the {\em best} individual in the last generation of every one of the 15 experiments 15 times. We also report the average number of generations that the algorithm has run; although the cap was set a 64 or 32, ten generations without a change in the best result led to a stop, which is why averages are slightly inferior. It should be noted that the way of reporting results is not comparable for G-Prop and our algorithm; this is why we also report the best result in the last column, which is the best test value obtained for any experiment, any re-training from the initial weights. In general, we can affirm that results are comparable, and slightly better in some cases ({\tt cancer2}, for instance). However, our objective of obtaining better results for EvoMLP have been achieved, if we compare with \autoref{tab:gprop-deepgprop-cancer} and \autoref{tab:gprop-deepgprop-cancer}, almost two points better in the case of helicases, although the way the average was computed is not really comparable. It should be noted that, since what the evolutionary algorithms is evolving is a set of {\em initial} weights, this would be the proper way of reporting results, since most training algorithms will not deterministically obtain a set of final weights from them; in here, we establish not only a baseline for results in these datasets, but also a new methodology for reporting results in this kind of neuroevolutionary algorithms.
 
-It should be noted that the evaluation budget for EvoMLP is five times as high as the one used for G-Prop, including the fact that MLPs can be evaluated several times if they remain in the population for a number of generations; this is simply due to the fact that we are explicitly taking into account the fact that there is uncertainty in the evaluation of every individual, something that was not taken into account in the original G-Prop. This with this "extra" budget we {\em buy} a better generalization ability, as well as the capability of tackling more complex problems due to using several hidden layers. Since the raw CPU power available now is much higher, in wallclock time these simulations take less time than it took in the original experiment, however, making the possibility of neuro-evolution available to normal desktop or laptop computers without the need to use GPUs or parallel systems. We could try and measure if the original code would take the same amount of time in current hardware; however, this would involve installing the original tooling ({\tt gcc} compiler, for instance), and even so, there is no guarantee that it would work. Besides, the current consensus is that, since most low-level Python libraries are actually written using C or C++, the performance boost you would obtain with C++ over Python would be minimal, as it has been proved, for instance, here \cite{fua2020comparing}. For us, this means that rewriting (and improving over) G-Prop using Python and off-the-shelf, mature and tested, software libraries, will not result in a significant performance penalty, while resulting in an algorithmic improvement, mainly due to the expansion of the search space and the explicit addressing of uncertainty in evaluation.
+It should be noted that the evaluation budget for EvoMLP is five times as high as the one used for G-Prop, including the fact that MLPs can be evaluated several times if they remain in the population for a number of generations; this is simply due to the fact that we are explicitly taking into account the fact that there is uncertainty in the evaluation of every individual, something that was not taken into account in the original G-Prop. This with this "extra" budget we {\em buy} a better generalization ability, as well as the capability of tackling more complex problems due to using several hidden layers. Since the raw CPU power available now is much higher, in wallclock time these simulations take less time than it took in the original experiment, however, making the possibility of neuro-evolution available to normal desktop or laptop computers without the need to use GPUs or parallel systems. We could try and measure if the original code would take the same amount of time in current hardware; however, this would involve installing the original tooling ({\tt gcc} compiler, for instance), and even so, there is no guarantee that it would work. Besides, the current consensus is that, since most low-level Python libraries are actually written using C or C++, the performance boost you would obtain with C++ over Python would be minimal, as it has been proved, for instance, here \cite{fua2020comparing}. For us, this means that rewriting (and improving over) G-Prop (which was written using C++) using Python and off-the-shelf, mature and tested, software libraries, will not result in a significant performance penalty, while resulting in an algorithmic improvement, mainly due to the expansion of the search space and the explicit addressing of uncertainty in evaluation.
 
 
 \begin{table*}[h!tbp]
