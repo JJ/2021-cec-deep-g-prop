@@ -198,8 +198,7 @@ The new method, EvoMLP, is innovative in a series of ways. First, when the possi
 The remainder of this paper is structured as follows:
 section \ref{soa} makes a short overview of the methods to design ANN.
 In section \ref{method} it is fully described the proposed model.
-Section \ref{sec:res} describes the results obtained,
-followed by a brief conclusion in Section \ref{sec:conclus}.
+Section \ref{sec:res} shows an initial exploration of the capabilities of the EvoMLP framework, while \autoref{sec:evomlp} shows how the additions to the original algorithm are able to outperform them. Finally, these results are discussed in Section \ref{sec:conclus}, with conclusions drawn from them.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the Art}
@@ -716,6 +715,7 @@ to generation.
 % \section{Evolución de población con modificación de número de neuronas:
 % reproducción de resultados}
 \section{Comparing EvoMLP with G-Prop}
+\label{sec:evomlp}
 
 In this subsection, we will try and compare the new EvoMLP with the old results.
 
