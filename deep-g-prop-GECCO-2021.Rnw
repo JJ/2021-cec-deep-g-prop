@@ -510,9 +510,6 @@ We selected the following parameters for the network:
 
 \item Optimization algorithm: We used SGD combined with back-propagation which allow a quick but solid computation
   of the loss function for all the data split in batches.
-  This allow the
-  possibility of easy parallelization of the data, which as not used in this
-  paper. % Possibly eliminate this. Not sure what it means - JJ
   As the learning rate \texttt{0.01} was chosen as a default suggested
   value.
   % We have probably said that before, but we need to refer back to where, and
