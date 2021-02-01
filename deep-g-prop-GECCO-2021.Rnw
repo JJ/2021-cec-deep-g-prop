@@ -287,16 +287,13 @@ We will first need to adapt the different parts of the original G-Prop, so that 
 
 An individual is coded as a list of \emph{Layers}. Each layer is
     composed by a matrix of weights and a list of bias (both Numpy
-    \cite{py-numpy} ndarrays) joined together with it's configuration (a
+    \cite{py-numpy} {\tt ndarrays}) joined together with it's configuration (a
     Python dictionary) in a Python class. One column of the weight matrix
     represents all the connections from the previous layer to the nth neuron.
     All the weights and bias are randomly initialized with a uniform
     distribution between -1.0 and 1.0. A random proportion of all this genes
-    and biases are muted for all the individuals each generation.
-
-    From this configuration, when the moment of evaluation comes, we create a
-    \emph{Sequential} \cite{keras-sequential}  Keras \cite{keras-nn} model and
-    append each \emph{Layer} as a \emph{Dense} \cite{keras-dense} Keras layer.
+    and biases are muted for all the individuals each generation. From this configuration, when the moment of evaluation comes, we create a
+    \emph{Sequential} Keras \cite{keras-nn} model with \emph{Dense} \emph{Layer}s.
 
 There are three stop conditions that will finish the execution of the
     genetic algorithm: reaching the maximum number of generations, no improvement after
@@ -318,13 +315,8 @@ The {\em crossover} function will swap the ``neurons'' together with
     the two models selected for it have the same structure (same number of
     layers and neurons per layers).
     
-    % For future work: the crossover could select structure of one of the parents or mix-them. - M
-    % Question: only the initial weights are evolved? or the search is mixed with BP? 
-    % i.e., adjust after a few epochs or update the weight matrix after each fitness eval - M
-    % Just the initial weights - JJ
-    
 There are several kinds of {\em mutation} operators: (initial) weights,
-    biases, as well as changing the number of neurons and/or
+    biases, as well as others changing the number of neurons and/or
     layers. For the neuron mutator, one neuron will be added last in the
     randomly selected layer, and it will be eliminated in the same way. Since
     we use fully connected neural networks, it does not really matter where the
@@ -343,17 +335,17 @@ we take into account not only the accuracy score reached after
 training, but also the overall size of the network $score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl$ ($nhl$ is the number of hidden layers and $nu_{i}$ the number
 of neurons for the layer $i$) and the F2 score metric (explained in the
 \autoref{sec:res}). At the end, the fitness value is a compound of
-three elements: accuracy, hidden-score and F2 score. As the DEAP framework
+three elements: accuracy, hidden-score and F2 score, with the first one being the most important, followed by the others. As the DEAP framework
 \cite{deap-ga} was used as a base to create the genetic algorithm, we also
-took advantage of its fitness class \cite{deap-fitness} to rank the individuals
-of a population. It performs a lexicographical comparison of the three values,
+took advantage of its fitness class to rank the individuals
+of a population; it performs a lexicographical comparison of the three values,
 so we chose the order previously mentioned to approach as much as possible to
 the fitness function used by G-Prop.
 % Question for @jj related with #28. Do we need the whole expression? I don't
 % really know how to create an expression for the fitness score since it is a
 % tuple - Luis This is important because is related to many principles of ML
 % You just return a single value as a tuple, like this: return fitness,  (notice the comma at the end) - M
-%
+% Are we sure about the lexicographical comparison? Is it not using a single expression? - JJ
 %
 % \begin{figure}
 %     \centering
