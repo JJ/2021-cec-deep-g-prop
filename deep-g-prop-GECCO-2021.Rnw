@@ -250,7 +250,7 @@ up the search space, these methods need computational resources that are
 really off the reach of most labs or individuals. This is the reason why most of the latest publications 
 still use a fixed model for the network architecture, for instance SVM
 or MLPs, and even, in some cases, fixed number of layers and weights
-\cite{ecer2020training,Gupta2020,10.1007/978-981-15-7130-5_38}; however, recent papers like the one by
+\cite{ecer2020training,Gupta2020,10.1007/978-981-15-7130-5_38,LUO20211}; however, recent papers like the one by
 Tajmiri et al. \cite{TAJMIRI2020108997} and Faris et al. \cite{faris2019automatic} already use a representation
 that is able to accommodate a maximum number of layers, as well as the
 number of neurons in every layer. This encoding of
@@ -283,7 +283,11 @@ We show how, and if, this new {\sf EvoMLP} method works next. This means it will
 %   \end{algorithmic}
 % \end{algorithm}
 
-We will first need to adapt the different parts of the original G-Prop, so that we can advance further. We will use a canonical evolutionary algorithm, as implemented by the DEAP evolutionary algorithm library.
+We will first need to adapt the different parts of the original G-Prop, so that we can advance further. Implementation was done using the Python programming language.  There are
+many reasons to use this language, but two of the most significant reasons are
+the extensive documentation, use and community it has, and the vast amount of
+ML ready frameworks that are developed for it. Keras and DEAP are two impressive
+frameworks, and currently state-of-art on their respective area. We will also use a canonical evolutionary algorithm, as implemented by the DEAP \cite{deap-ga} evolutionary algorithm library, which is also to a large extent the state of the art. With these choices we fulfill one of the requisites for our work here: use state-of-the-art, open source, off-the-shelf software components.
 
 An individual is coded as a list of \emph{Layers}. Each layer is
     composed by a matrix of weights and a list of bias (both Numpy
@@ -341,34 +345,10 @@ took advantage of its fitness class to rank the individuals
 of a population; it performs a lexicographical comparison of the three values,
 so we chose the order previously mentioned to approach as much as possible to
 the fitness function used by G-Prop.
-% Question for @jj related with #28. Do we need the whole expression? I don't
-% really know how to create an expression for the fitness score since it is a
-% tuple - Luis This is important because is related to many principles of ML
-% You just return a single value as a tuple, like this: return fitness,  (notice the comma at the end) - M
-% Are we sure about the lexicographical comparison? Is it not using a single expression? - JJ
-%
-% \begin{figure}
-%     \centering
-%     \caption{
-%         {\sf EvoMLP} NN model score equation.
-%     }
-%     \label{eq:hidden-score}
-%     \begin{equation}
-%         
-%     \end{equation}
-% \end{figure}
-%
-So in summary, the score will be the
-global number of neurons multiplied by the number of hidden layers.
-%
+
 The whole code for this has been released under a free license in
 GitHub. % Add URL later.
 
-{\sf EvoMLP} has been implemented using the Python programming language. Tests with pypy, an accelerated, just-in-time version of the regular interpreter were tested, but although it is supposed to accelerate most numerical workloads, it actually was almost twice as slow as the one using the regular interpreter. There are
-many reasons to use this language, but two of the most significant reasons are
-the extensive documentation, use and community it has, and the vast amount of
-ML ready frameworks that are developed for it. Keras and DEAP are two impressive
-frameworks currently in the state-of-art on their respective area.
 % Do we want to talk about technical implementation details as suggested in
 % #10? Explaining all the code and that stuff - Luis
 % In the abstract the bringing to modern languages and tools is highlighted
@@ -435,7 +415,7 @@ We compare against other classification algorithms using the mean accuracy (perc
 of correctly predicted examples) as a performance metric after a few runs, % This needs to be explained further, 
 % accuracy using k-fold cross-validation? leave-one-out? 
 % accuracy of one run, or median of a few runs - M
-as was used in the G-Prop paper \cite{castilloNC,CastilloNPL}. We hope to
+as was used in the G-Prop papers \cite{castilloNC,CastilloNPL}. We hope to
 increase the generalization of the model and avoid overfitting by reducing the
 network's complexity, we try to accomplish this by reducing the
 overall number of neurons in the MLP; this was also the intention of the G-Prop
@@ -444,22 +424,10 @@ this expression, we aim to minimize the number of layers first, and then the num
 neurons per layer.
 
 We have also included the F2 score as an extra metric to have a way of
-distinguishing two very similar individuals. This metric has the ability to
+distinguishing two very similar individuals, by giving more weight to false positives than false negatives. This metric has the ability to
 detect a bad performance on unbalanced datasets (for example, the \emph{breast
 cancer database} datasets), giving more importance to the false negatives
-predictions.
-% We need to expand this a little bit with what's written below - JJ
-
-% La métrica F2 score es una definida como la media armónica ponderada entre
-% precisión (\emph{precision})\footnote{Fracción de instancias que son de la
-% clase relevante. Esto es: el número de ejemplos que pertenecen a la clase
-% relevante dividido por el número total de ejemplos que se han predicho.} y
-% sensibilidad (\emph{recall})\footnote{Fracción de instancias de la clase
-% relevante que se han clasificado bien.}. Por un lado, si los datos están
-% desbalanceados la precisión puede salir alta pero la sensibilidad saldrá baja.
-% Usando cómo parámetro de ponderación el número dos, le damos más importancia a
-% la sensibilidad, para evitar lo antes comentado.
-
+predictions; we use 2 as the weighting parameter in this case. This fitness was not included in the original algorithm, and has been recently used by other authors \cite{DEVARRIYA2020112866} as part or the whole fitness function.
 
 We selected the following parameters for the network:
 
