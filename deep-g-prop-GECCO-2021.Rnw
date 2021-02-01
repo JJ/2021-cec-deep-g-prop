@@ -36,13 +36,6 @@ require(ggthemes)
 plotting <- read.csv("data/helicases.csv")
 @
 
-% Used for displaying a sample figure. If possible, figure files should
-% be included in EPS format.
-%
-% If you use the hyperref package, please uncomment the following line
-% to display URLs in blue roman font according to Springer's eBook style:
-% \renewcommand\UrlFont{\color{blue}\rmfamily}
-
 \begin{document}
 %
 \title{EvoMLP: revisiting the evolution of the architecture of multi-layer perceptrons}
@@ -290,14 +283,9 @@ We show how, and if, this new {\sf EvoMLP} method works next. This means it will
 %   \end{algorithmic}
 % \end{algorithm}
 
-In this work we will use a canonical evolutionary algorithm, as implemented by DEAP. The key of the adaptation of the algorithm for the neuroevolution task we are doing here is in the different parts used, that extend and enhance those used by the
-original G-Prop. % Briefly comment on these enhancements, where are they? - M 
-                 % (Update) This is done in some places but maybe you should do another pass to see if there are more 
-                 % enhancements - M 
+We will first need to adapt the different parts of the original G-Prop, so that we can advance further. We will use a canonical evolutionary algorithm, as implemented by the DEAP evolutionary algorithm library.
 
-\begin{itemize}
-
-  \item An individual is coded as a list of \emph{Layers}. Each layer is
+An individual is coded as a list of \emph{Layers}. Each layer is
     composed by a matrix of weights and a list of bias (both Numpy
     \cite{py-numpy} ndarrays) joined together with it's configuration (a
     Python dictionary) in a Python class. One column of the weight matrix
@@ -310,22 +298,20 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
     \emph{Sequential} \cite{keras-sequential}  Keras \cite{keras-nn} model and
     append each \emph{Layer} as a \emph{Dense} \cite{keras-dense} Keras layer.
 
-  \item There are three stop conditions that will finish the execution of the
-    genetic algorithm: if we reach the maximum number of generations, if after
-    10 generations there was no improvement in the best solution and if we find
+There are three stop conditions that will finish the execution of the
+    genetic algorithm: reaching the maximum number of generations, no improvement after
+    10 generations, and finding
     the ideal solution ($0\%$ error, 1 on the hidden-score and 1 on the F2
-    score).
-    % Justify why after 10 generations, or even better make that a parameter, set in this
-    % experiments to 10 - M
+    score). The fact that we choose 10 is that it seems reasonable enough, and at any rate, it's relatively unlikely that it ends because of this reason.
 
-  \item For each generation we clone the best half individuals of the current
-    population and perform all the evolutionary operations to them. Each
+For each generation we clone the best half individuals of the current
+population and perform all the evolutionary operations to them. Each
     operation has it own probability to occur chosen when running EvoMLP
     CLI. For the weights/bias mutation, a percentage of each (selected too with
     the CLI parameters) are muted randomly. After that, the worst half is
-    replaced by this muted group.
+    replaced by this mutated group.
 
-  \item The {\em crossover} function will swap the ``neurons'' together with
+The {\em crossover} function will swap the ``neurons'' together with
     their connections. Main difference with respect to original G-Prop is that,
     in this case, there can be several hidden layers, so the connections might
     be either to output or to another layers. The crossover only occurs when
@@ -337,7 +323,7 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
     % i.e., adjust after a few epochs or update the weight matrix after each fitness eval - M
     % Just the initial weights - JJ
     
-  \item There are several kinds of {\em mutation} operators: (initial) weights,
+There are several kinds of {\em mutation} operators: (initial) weights,
     biases, as well as changing the number of neurons and/or
     layers. For the neuron mutator, one neuron will be added last in the
     randomly selected layer, and it will be eliminated in the same way. Since
@@ -348,15 +334,9 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
     layer is eliminated, the weights from the previous layer to the eliminated
     one are kept, adding randomly generated weights and biases if the output
     layer (newly connected with this previous layer) have more ``neurons'' than
-    the recently deleted layer. When adding a new hidden layer, the connections
     between the last hidden layer and the output layer are recycled, and the
     connections between the newly created layer and the output layer are
     calculated randomly (running similar fix as when we delete the layer).
-
-    % What is the activation function for the hidden layers? Is this
-    % fixed? - M
-    % It's answered below - JJ
-\end{itemize}
 
 We need the fitness function to exert parsimony pressure, which is why
 we take into account not only the accuracy score reached after
@@ -1085,7 +1065,7 @@ multiple layers is automatically designed using an EA, leveraging it to find a s
 the ability of the training algorithm to tune the solution and reach
 the nearest local minimum. This new solution is able to consistently find the architecture and initial weights of multilayer perceptrons that have an excellent accuracy on a wide variety of problem sizes and difficulties, from the arguably easier {\tt cancer} to the more difficult {\tt spambase}. However, evaluation budget is an issue and population size as well as number of generations needs to be investigated further, over all taking into account that every evaluation can take a few seconds.
 
-The framework we have used for EvoMLP has been developed and tested using best practices and can be easily evolved into new programs that allow scientists to explore different possibilities. Within the strict framework of multilayer perceptrons, we need to pay attention to evaluation budgets as indicated in the previous paragraph, but we can also open up the range of evolvable parameters to include different training algorithms, as well as the optimization of their specific parameters, such as learning constants. An extension to other kind of more open, deep learning, architectures, would also be interesting, following the same principles of simple variation of the number (and possibly type) of layers as well as its size. Finally, a profiling of the whole application looking for speed ups without resorting to hardware accelerations is also in the roadmap.
+The framework we have used for EvoMLP has been developed and tested using best practices and can be easily evolved into new programs that allow scientists to explore different possibilities. Within the strict framework of multilayer perceptrons, we need to pay attention to evaluation budgets as indicated in the previous paragraph, but we can also open up the range of evolvable parameters to include different training algorithms, as well as the optimization of their specific parameters, such as learning constants. An extension to other kind of more open, deep learning, architectures, would also be interesting, following the same principles of simple variation of the number of layers as well as its size. Finally, a profiling of the whole application looking for speed ups without resorting to hardware accelerations is also in the roadmap.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
