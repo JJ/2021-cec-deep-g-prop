@@ -429,17 +429,9 @@ detect a bad performance on unbalanced datasets (for example, the \emph{breast
 cancer database} datasets), giving more importance to the false negatives
 predictions; we use 2 as the weighting parameter in this case. This fitness was not included in the original algorithm, and has been recently used by other authors \cite{DEVARRIYA2020112866} as part or the whole fitness function.
 
-We selected the following parameters for the network:
+In order to upgrade G-Prop to the current state of the art, we made the following choices in Keras: 
 
 \begin{itemize}
-
-\item Activation function: We selected a (\emph{rectified linear unit}) ReLU
-  activation function for hidden layers to ensure the correct performance of
-  the Stochastic Gradient Descent algorithm used to optimize the network,
-  making sure the neuron output values are all greater than zero.  On the other
-  hand, for he last layer (the output layer) we used the Softmax function to
-  allow an easy classification of the results normalizing the classes
-  probability between 0 and 1, having the sum of all the values equal to 1. %  WE need to justify that. - JJ
 
 \item Optimization algorithm: We used SGD combined with back-propagation which allow a quick but solid computation
   of the loss function for all the data split in batches.
@@ -447,21 +439,29 @@ We selected the following parameters for the network:
   value.
   % We have probably said that before, but we need to refer back to where, and
   % also justify - JJ
+  
+\item A (\emph{rectified linear unit}) ReLU
+  activation function for hidden layers was selected to ensure the correct performance of
+  the Stochastic Gradient Descent algorithm used to optimize the network,
+  making sure the neuron output values are all greater than zero.  On the other
+  hand, for he last layer (the output layer) we used the Softmax function to
+  allow an easy classification of the results normalizing the classes
+  probability between 0 and 1, having the sum of all the values equal to 1. %  WE need to justify that. - JJ
 
 \item Loss function: We selected the cross-entropy loss function to fit the
   chosen optimization algorithm (since its output is suitable for SGD) and
-  because it provide a fast and great generalization method. As opposed to
-  G-Prop
-  % Maybe @pacastillo can tell me which method was used for G-Prop. MSE? - Luis
-  % Again, justify choice, and also compare it with G-Prop - JJ
+  because it provides a fast generalization method. As opposed to
+  G-Prop, which used MSE.
 
 \end{itemize}
 
-When referring to a certain number of layers, we will be talking about hidden
-layers because the input and output layers are fixed depending on the problem.
 To compare our results against the G-Prop algorithm we selected the Proben1
 \cite{Proben1} dataset and other classification datasets found in the UCI
-\cite{uci} repository. In this section, results shown are the mean of five runs with different
+\cite{uci} repository.
+
+
+% Before this, we need to say why we are doing it. And we'll probably eliminate it anyway - JJ
+In this section, results shown are the mean of five runs with different
 random generator seeds, since its intention was mainly to check out the general performance, and it's not really intended for comparison with the state of the art.
 
 % %
@@ -501,9 +501,7 @@ neurons in them. In this case, what we try to establish is a new
 baseline for results, while also trying to reproduce the originally
 published results. Since more than a dozen years have passed, we were
 also interested in finding out the speed with which the whole
-operation could be performed, despite being Python a priori a slower
-language than C++, which was the original language.
-% Is Keras/Theano not a wrapper to a C++ or C implementation? PyTorch and others are. - M
+operation could be performed.
 
 In the first two tables, we can see very similar results between the G-Prop and
 {\sf EvoMLP} algorithms regarding accuracy for
