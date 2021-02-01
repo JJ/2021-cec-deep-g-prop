@@ -247,9 +247,6 @@ view: \begin{itemize}
     \cite{DBLP:conf/ijcci/MereloLFGCCRMG15}, or not. This is related to 
     having models that can generalize better when classifying unseen data,
     reducing overfitting. 
-    % Please check or extend the above sentence - M
-    % There is also the problem of overfitting - M
-    % It's OK - JJ
 
 \end{itemize}
 
@@ -260,20 +257,16 @@ up the search space, these methods need computational resources that are
 really off the reach of most labs or individuals. This is the reason why most of the latest publications 
 still use a fixed model for the network architecture, for instance SVM
 or MLPs, and even, in some cases, fixed number of layers and weights
-\cite{ecer2020training}; however, recent papers like the one by
-Tajmiri et al. \cite{TAJMIRI2020108997} already use a representation
+\cite{ecer2020training,Gupta2020,10.1007/978-981-15-7130-5_38}; however, recent papers like the one by
+Tajmiri et al. \cite{TAJMIRI2020108997} and Faris et al. \cite{faris2019automatic} already use a representation
 that is able to accommodate a maximum number of layers, as well as the
 number of neurons in every layer. This encoding of
 architecture does not have any place for initial weights, which in the
 case of G-Prop, were proved to be essential for a good performance,
 including the emergence of a Baldwin effect \cite{castillo-2006}
-during evolution.
+during evolution. So, along the two first axes described above, there seems to be a huge gap in the middle: Either unconstrained evolution, or fixed size; along the second axis, there seems to be little research on the combination of the two scales of learning, genetic and neural, with most researchers using just the metaheuristic to set weights \cite{9308303,ALBADARNEH2020}. This leaves room for the kind of research that we present in this paper: constrained evolution of architecture, which is in the middle of the first axis, and full use of neural learning algorithm, which would be at the extreme of the second axis. This continues, in a way, the methodology introduced for G-Prop, but takes it further, by using a variable number of layers as well as different, state of the art, neural training algorithms, and also using a modern, standard based implementation, that will also be released as free software.
 
-In this paper we will extend the principles of variation of a MLP
-architecture through the use of genetic operators as well as
-codification of initial weights to a modern, standard based
-implementation, that will also be released as free software. We show
-how this new {\sf EvoMLP} method works next. This means it will again use the architecture axis of evolution, although constraining it to a particular type of neural nets so that, by constraining search, we shrink the search space and make finding good architectures easier.
+We show how, and if, this new {\sf EvoMLP} method works next. This means it will again use the architecture axis of evolution, although constraining it to a particular type of neural nets so that, by constraining search, we shrink the search space and make finding good architectures easier.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Proposed Method}
