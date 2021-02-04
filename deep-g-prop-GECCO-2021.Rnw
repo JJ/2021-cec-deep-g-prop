@@ -450,8 +450,7 @@ In order to upgrade G-Prop to the current state of the art, we made the followin
 
 \item Loss function: We selected the cross-entropy loss function to fit the
   chosen optimization algorithm (since its output is suitable for SGD) and
-  because it provides a fast generalization method. As opposed to
-  G-Prop, which used MSE.
+  because it provides a fast generalization method. Originally, G-Prop used MSE.
 
 \end{itemize}
 
@@ -461,7 +460,7 @@ To compare our results against the G-Prop algorithm we selected the Proben1
 
 
 % Before this, we need to say why we are doing it. And we'll probably eliminate it anyway - JJ
-In this section, results shown are the mean of five runs with different
+Since this was only an initial exploration, in this section results shown are the mean of five runs with different
 random generator seeds, since its intention was mainly to check out the general performance, and it's not really intended for comparison with the state of the art.
 
 % %
@@ -505,7 +504,7 @@ operation could be performed.
 
 In the first two tables, we can see very similar results between the G-Prop and
 {\sf EvoMLP} algorithms regarding accuracy for
-the \emph{cancer1} dataset \cite{uci}, with the network with fixed hidden layers
+the \emph{cancer1} dataset \cite{uci}, with the network with a fixed hidden layer
 (\autoref{tab:fixed-7-1-const-can1}) obtaining the best result with an accuracy
 of $2.86\%$ against the $3.09\%$ (in \autoref{tab:fixed-7-1-noconst-can1}) from
 the population with modified hidden layers. We can suppose that this result is
@@ -515,19 +514,15 @@ distribution used to generate the population produces good results from the
 beginning. Another reason for this discrepancy, which is basic but important, is
 how the algorithm sorts the data within a problem. Because of that, we tested
 with larger populations and individuals to see if results are effectively
-improved when hidden layers are mutated. We also tested with another partition
-of the same dataset to further prove this intuition. % And represented
-                                % results where? - JJ
-As we commented at the end of this section introduction, every result shown
-here is the mean of 5 executions. % This is not too much... - JJ
-
+improved when hidden layers are mutated.
+%
  \begin{table}
      \centering
      \caption{
 %         Resultados de test del mejor individuo final tras 10 generaciones con
 %         20 individuos iniciales y 7 neuronas por individuo haciendo operaciones
 %         sobre las capas internas para el problema \emph{cancer1}.
-Optimizing the hidden layers of networks classifying the \emph{cancer1} dataset; 200 evaluations, 7 neurons in the hidden layer (top), without hidden layer optimization (middle), using only hidden layer (bottom)}
+Optimizing the hidden layers of networks classifying the \emph{cancer1} dataset; 200 evaluations, 7 neurons in the hidden layer (top), without hidden layer optimization (middle), using only hidden layer (bottom)} % What is optimized and what's not? The number of layers? Or the initial weights? - JJ
      \label{tab:fixed-7-1-noconst-can1}
      \begin{tabular}{rlll}
          \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
