@@ -618,6 +618,7 @@ Fixed &         \textbf{Mean}      & $2.29\ \pm\ 0.36$ & $6.80\ \pm\ 0.40$  & $0
       &   \textbf{Min}       & $1.71$            & $6.00$             & $0.97561$               \\
      \end{tabular}
 \end{table*}
+% Changing and mutables is the same as changing and fixed? Are we doing exactly the same? What are we doing here? - JJ
 %
 % Se puede sacar en claro que generalmente al realizar pequeñas modificaciones en
 % los modelos de perceptrones multicapa se obtienen mejores resultados que si no
