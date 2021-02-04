@@ -167,7 +167,7 @@ This initial G-Prop algorithm was limited, first, by the fact that
 most of it had to be programmed from scratch, since there were few (if
 any) off-the-shelf software that could do this kind of task;
 additionally, available computational capability limited the size of
-the search space; this was further limited by the evolution of only single-layer perceptrons. The fact that it was mostly programmed ad-hoc limited its evolution. The unavailibility of modern tools for publication and release of open source software also limited its utility.
+the search space; this was further limited by the evolution of only single-layer perceptrons. The fact that it was mostly programmed ad-hoc limited its evolution. The unavailability of modern tools for publication and release of open source software also limited its utility.
 
 This is why the the aim of this paper is twofold. First to extend G-Prop with an an algorithm that adds another degree of freedom to the search for optimal multilayer perceptrons by searching over the initial weights, number of
 hidden layers {\em and} hidden layer sizes of a MLP; we will also adapt the training algorithm with which the final result is obtained to the state of the art Stochastic Gradient Descent (SGD) \cite{bottou2012stochastic}, as opposed to the classical back-propagation; this
@@ -411,7 +411,7 @@ proposed in G-Prop, minimizing error while also trying to minimize the size as c
 % Cambié lo de sencillo y óptimo por conceptos más utilizados en el área. - M
 
 
-We compare against other classification algorithms using the mean accuracy (percentaje
+We compare against other classification algorithms using the mean accuracy (percentage
 of correctly predicted examples) as a performance metric after a few runs, % This needs to be explained further, 
 % accuracy using k-fold cross-validation? leave-one-out? 
 % accuracy of one run, or median of a few runs - M
@@ -786,7 +786,7 @@ hidden layer.
 
 For example, if we run the problem of \emph{DNA Helicases} with this last
 operation in use, we will get slightly better accuracy than when using only one
-hidden layer on {\sf EvoMLP}, but the G-Prop result will be much better still. (see
+hidden layer on {\sf EvoMLP}, but the G-Prop result will be much better still (see
 \autoref{tab:gprop-deepgprop-miniheli-multihidden}). % Why? Can we
                                 % make it better? - JJ
 
