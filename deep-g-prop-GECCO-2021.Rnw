@@ -522,7 +522,11 @@ improved when hidden layers are mutated.
 %         Resultados de test del mejor individuo final tras 10 generaciones con
 %         20 individuos iniciales y 7 neuronas por individuo haciendo operaciones
 %         sobre las capas internas para el problema \emph{cancer1}.
-Optimizing the hidden layers of networks classifying the \emph{cancer1} dataset; 200 evaluations, 7 neurons in the hidden layer (top), without hidden layer optimization (middle), using only hidden layer (bottom)} % What is optimized and what's not? The number of layers? Or the initial weights? - JJ
+        Optimizing the hidden layers of networks classifying the \emph{cancer1}
+        dataset with 200 evaluations and 7 neurons in the hidden layer: evolving
+        the weights of the weights of the whole network (top) and without
+        evolving the hidden layer (just the output layer) (middle). Also we show
+        the best individual of the initial population (bottom)}
      \label{tab:fixed-7-1-noconst-can1}
      \begin{tabular}{rlll}
          \textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
