@@ -491,10 +491,10 @@ random generator seeds, since its intention was mainly to check out the general 
 % capas ocultas. También se prueba con otra partición del mismo problema para ver
 % cómo efectivamente ahí si mejora.
 
-\subsection{Evolution of Networks with a Fixed Architecture}
+% \subsection{Evolution of Networks with a Fixed Architecture}
 
-In this section, we compare the evolution of networks with and without weight
-evolution. For this, we present the results of comparing the evolution networks
+We compare the evolution of networks with and without weight
+evolution to see how they complement each other. For this, we present the results of comparing the evolution networks
 with fixed architectures, in which we manually chose the number of layers and
 neurons in them. In this case, what we try to establish is a new
 baseline for results, while also trying to reproduce the originally
