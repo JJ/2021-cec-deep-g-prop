@@ -500,7 +500,7 @@ neurons in them. In this case, what we try to establish is a new
 baseline for results, while also trying to reproduce the originally
 published results. Since more than a dozen years have passed, we were
 also interested in finding out the speed with which the whole
-operation could be performed.
+operation could be performed. % But nothing is said about time. How much does it take? - JJ
 
 In the first two tables, we can see very similar results between the G-Prop and
 {\sf EvoMLP} algorithms regarding accuracy for
