@@ -503,7 +503,7 @@ also interested in finding out the speed with which the whole
 operation could be performed. % But nothing is said about time. How much does it take? - JJ
 
 In the first two tables, we can see very similar results between the G-Prop and
-{\sf EvoMLP} algorithms regarding accuracy for
+{\sf EvoMLP} algorithms regarding accuracy for % G-Prop are the results on top? - JJ
 the \emph{cancer1} dataset \cite{uci}, with the network with a fixed hidden layer
 (\autoref{tab:fixed-7-1-const-can1}) obtaining the best result with an accuracy
 of $2.86\%$ against the $3.09\%$ (in \autoref{tab:fixed-7-1-noconst-can1}) from
