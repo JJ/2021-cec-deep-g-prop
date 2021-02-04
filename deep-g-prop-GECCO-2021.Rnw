@@ -590,7 +590,8 @@ generations for the \emph{cancer1} dataset.}
 % \ref{tab:fixed-7-1-noconst-can2} y \ref{tab:fixed-7-1-const-can2}).
 
 On the other hand, if we compare the first instance with the results for the
-\emph{cancer2} dataset, it seems that the algorithm's accuracy improves while
+\emph{cancer2} dataset, it seems that the algorithm's accuracy improves % Improves what? - JJ
+while
 not keeping the weights in the hidden layer fixed. See 
 \autoref{tab:fixed-7-1-noconst-can2}.
 
@@ -629,8 +630,8 @@ change anything. In the following sections we will explore new and more complex
 mutations modifying the structure of the multi-layer perceptron from generation
 to generation.
 
-% \section{Evolución de población con modificación de número de neuronas:
-% reproducción de resultados}
+% We need to draw a conclusion here. Why did we do this? - JJ
+
 \section{Comparing EvoMLP with G-Prop}
 \label{sec:evomlp}
 
