@@ -606,22 +606,24 @@ not keeping the weights in the hidden layer fixed. See
 %         sobre las capas internas para el problema \emph{cancer2}.
 Test results for the best individual after ten generations with twenty initial
 individuals and seven neurons per individual. In this case, the algorithm
-changing the hidden layers for the \emph{cancer2} dataset (top) or leaving them unchanged (bottom).
+mutating the hidden layer weights for the \emph{cancer2} dataset (top) or
+leaving them unchanged (bottom).
      }
      \label{tab:fixed-7-1-noconst-can2}
      \begin{tabular}{lr|lll}
-     Type   &\textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
-         \hline
+     Type     &\textbf{Measure}   & \textbf{Accuracy error \%} & \textbf{\# neurons} & \textbf{F2 score} \\
+      \hline
      Changing & \textbf{Mean}      & $1.94\ \pm\ 0.28$ & $6.80\ \pm\ 0.40$  & $0.98258\ \pm\ 0.00272$ \\
-         & \textbf{Max}       & $2.29$            & $7.00$             & $0.98432$               \\
-         &\textbf{Min}       & $1.71$            & $6.00$             & $0.97731$               \\
-         \hline
-Fixed &         \textbf{Mean}      & $2.29\ \pm\ 0.36$ & $6.80\ \pm\ 0.40$  & $0.97943\ \pm\ 0.00339$ \\
-      &   \textbf{Max}       & $2.86$            & $7.00$             & $0.98432$               \\
-      &   \textbf{Min}       & $1.71$            & $6.00$             & $0.97561$               \\
+              & \textbf{Max}       & $2.29$            & $7.00$             & $0.98432$               \\
+              & \textbf{Min}       & $1.71$            & $6.00$             & $0.97731$               \\
+      \hline
+        Fixed & \textbf{Mean}      & $2.29\ \pm\ 0.36$ & $6.80\ \pm\ 0.40$  & $0.97943\ \pm\ 0.00339$ \\
+              & \textbf{Max}       & $2.86$            & $7.00$             & $0.98432$               \\
+              & \textbf{Min}       & $1.71$            & $6.00$             & $0.97561$               \\
      \end{tabular}
 \end{table*}
 % Changing and mutables is the same as changing and fixed? Are we doing exactly the same? What are we doing here? - JJ
+% Changing (hidden layer weights and biases) is the same as mutable (mutable can also mean changing the number of neurons) - lulivi
 %
 % Se puede sacar en claro que generalmente al realizar pequeñas modificaciones en
 % los modelos de perceptrones multicapa se obtienen mejores resultados que si no
