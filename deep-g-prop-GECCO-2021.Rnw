@@ -580,9 +580,9 @@ generations for the \emph{cancer1} dataset.}
      \begin{tabular}{rllll}
          \textbf{Hidden l.} & \textbf{Partition}  & \textbf{Accuracy error \%} & \textbf{Neuron/Layer score} & \textbf{F2 score} \\
          \hline
-         \textbf{Constant}  & \textbf{Validation} & $0.57$                 &        $32$             &      $0.98765$ \\
+         \textbf{Changing}  & \textbf{Validation} & $0.57$                 &        $32$             &      $0.98765$ \\
                         & \textbf{Test}       & $2.86$                 &        $32$             &      $0.96014$ \\
-         \textbf{Mutables}  & \textbf{Validation} & $0.00$                 &        $32$             &      $1.00000$ \\
+         \textbf{Fixed}  & \textbf{Validation} & $0.00$                 &        $32$             &      $1.00000$ \\
                         & \textbf{Test}       & $2.29$                 &        $32$             &      $0.98566$ \\
      \end{tabular}
  \end{table*}
@@ -635,9 +635,8 @@ mutations modifying the structure of the multi-layer perceptron from generation
 to generation.
 
 This opens up a whole range of possible modifications to try in the research of
-better results escaping from static and non-changing solutions.
-% We need to draw a conclusion here. Why did we do this? - JJ
-% What do you think? - lulivi
+better results escaping from static and non-changing solutions. We will see how they compare with G-Prop in the next section.
+
 
 \section{Comparing EvoMLP with G-Prop}
 \label{sec:evomlp}
