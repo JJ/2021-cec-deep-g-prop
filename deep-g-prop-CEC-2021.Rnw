@@ -45,45 +45,30 @@ plotting <- read.csv("data/helicases.csv")
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-
-In order to solve classification problems using artificial neural
-networks (ANN), the optimization of the network architecture is
-of great importance. Evolutionary neural networks provide an
-alternative for this task of designing the neural network, i.e. choosing the
-number of layers, number of neurons per layer and the weights of the
-ANN. This is not a new challenge; as a matter of fact a number of
-methods were proposed during the early years of this century,
-including G-Prop, a hybrid neurogenetic algorithm that optimized
-initial weights and the number of layers of a multi-layer perceptron for 
-% Highlighting some properties of G-Prop could give a justification
-% and serve as a bridge for presenting this work (rewritten of G-Prop) - M
-different kind of tasks. Using the general concept of this algorithm
-as a baseline, we have rewritten the method using off-the-shelf tools
-and libraries; modern testing and deployment tools have been also
-employed. On top of that algorithm, we have added a  component
-by being able not only to evolve the number of neurons, but also the
-number of layers in the neural net, as well as changing the training
-algorithm to one that is more suited to perceptrons with several
-layers. In this paper we show how this has
-been achieved using the new {\sf EvoMLP} framework, which we present
-here for the first time, and how this new framework is able to beat the
-previous instance in accuracy, with very competitive running times. We
-will also give initial solutions to the challenges this kind of
-problems present, namely, evaluating the performance of solutions in
-the presence of uncertainty.
-
-% A multi-layer perceptron is not considered "Deep", this usually
-% means other types of layers like convolutional, filters, etc. that
-% are added before the MLP. - M
-% But the method could be used for other types of layers, maybe this
-% could be mentioned - M
-% Deep is related to representational learning.
-% OK, changing this in issue #29
+Designing neural networks for classification or regresion can be
+considered a search problem, and, as such, can be approached using
+different optimization procedures. As such, there are several design
+challenges. The first and more important is to constrain the search
+space in such a way that proper solutions can be found in a reasonable
+amount of time; the second is to take into account that, depending on
+how the optimization procedure is formulated, the fitness score used
+for it can have a certain degree of uncertainty. This means that
+creating a framework for evolving neural networks for classification
+implies taking a series of decisions that range from the purely
+technical to the algorithmical at different levels: neural or the
+optimization framework chosen. This will be the focus of this paper,
+where we will introduce DeepGProp, a framework for genetic
+optimization of multilayer perceptrons, that is able to explore the
+space of neural nets with different layers and layer size and find
+good solutions in a reasonable amount of time. The different design
+decisions taken and how they affect the output will be presented and
+compared with other state of the art frameworks.
 
 \end{abstract}
 
 \begin{IEEEkeywords}
-  Neuroevolution, Python, Backpropagation, multilayer perceptrons.
+  Neuroevolution, Python, Backpropagation, multilayer perceptrons,
+  software frameworks, MLPs.
 \end{IEEEkeywords}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -341,7 +326,7 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
     % It's answered below - JJ
 \end{itemize}
 
-We need the fitness function to exert parsimony pressure, which is why
+We need the selection process, via the fitness function, to exert parsimony pressure, which is why
 we take into account not only the accuracy score reached after
 training, but also the overall size of the network $score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl$ ($nhl$ is the number of hidden layers and $nu_{i}$ the number
 of neurons for the layer $i$) and the F2 score metric (explained in the
