@@ -328,9 +328,15 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
 
 We need the selection process, via the fitness function, to exert parsimony pressure, which is why
 we take into account not only the accuracy score reached after
-training, but also the overall size of the network $score = (\sum_{i=0}^{nhl} nu_{i}) \times nhl$ ($nhl$ is the number of hidden layers and $nu_{i}$ the number
-of neurons for the layer $i$) and the F2 score metric (explained in the
-\autoref{sec:res}). At the end, the fitness value is a compound of
+training, but also the overall size of the network using this score: 
+\begin{equation}
+f_{s} = (\sum_{i=0}^{nhl} nu_{i}) \times nhl
+\end{equation}
+where $f_{s}$, is the hidden-layer, or size, score, $nhl$ is the number of hidden layers and $nu_{i}$ the number of neurons for the layer $i$). This score is minimized, meaning that the less neurons, the better, but also that less hidden layers are preferred over more hidden layers. This $f_s$, however, receives a very low weight equivalent to 1\% of the accuracy, meaning that it will be only determinant, in practice, if there's a very small difference in accuracy when comparing two individuals of if accuracy is virtually the same.
+
+
+Finally, the F2 score metric (explained in the
+\autoref{sec:res}) is also considered. At the end, the fitness value is a compound of
 three elements: accuracy, hidden-score and F2 score. As the DEAP framework
 \cite{deap-ga} was used as a base to create the genetic algorithm, we also
 took advantage of its fitness class \cite{deap-fitness} to rank the individuals
