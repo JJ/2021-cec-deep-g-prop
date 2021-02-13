@@ -167,7 +167,7 @@ and elements in every layer, and offer a series of heuristic
 procedures to add/eliminate layers and/or hidden-layer neurons in
 them. This way was, for a certain amount of time, the preferred
 one for optimizing the size of the neural net along with its weights, according to classical reviews such
-as the one by Alpaydim \cite{Alpaydim}. However and simultaneously, a
+as the one by Alpaydin \cite{alpaydin1994gal}. However and simultaneously, a
 series of evolutionary heuristics were starting to be applied for the
 same purpose, as revealed by Balakrishnan and Honavar's review
 \cite{balakrishnan95:EDNA}. They propose a taxonomy, that classifies evolutionary
