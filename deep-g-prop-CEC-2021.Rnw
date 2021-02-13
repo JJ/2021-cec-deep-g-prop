@@ -321,9 +321,6 @@ original G-Prop. % Briefly comment on these enhancements, where are they? - M
     connections between the newly created layer and the output layer are
     calculated randomly (running similar fix as when we delete the layer).
 
-    % What is the activation function for the hidden layers? Is this
-    % fixed? - M
-    % It's answered below - JJ
 \end{itemize}
 
 We need the selection process, via the fitness function, to exert parsimony pressure, which is why

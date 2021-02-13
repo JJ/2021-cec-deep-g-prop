@@ -1,0 +1,16 @@
+2021-02-13  jmerelo  <jmerelo@princess-carolyn>
+
+	* code/scripts/run-experiment.sh: Changing temporarily to 4 to account for missing runs. Changed name of file to code/scripts/run-experiment.sh spambase3 &> data/evomlp-cec2021-spambase3.dat &
+
+
+	* code/data/spambase3-p64.txt: Performing experiments with spambase, also taking into account the experiments performed so far. Experiments with the old backend (using Theano) are repeated with spambase1, new experiments go to the "data" directory, and are called ng
+
+	This is the new script for experiments:
+
+	for i in {1..15}
+do
+   evomlp -d $1 -ip 64 -mg 32
+done
+
+	Experiments for this are in JJ/dgp-lib 
+
