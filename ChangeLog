@@ -1,3 +1,7 @@
+2021-02-14  jmerelo  <jmerelo@princess-carolyn>
+
+	* code/scripts/run-experiment-dgp.sh: Running new experiment using the docker container.
+
 2021-02-13  jmerelo  <jmerelo@princess-carolyn>
 
 	* code/scripts/run-experiment.sh: Changing temporarily to 4 to account for missing runs. Changed name of file to code/scripts/run-experiment.sh spambase3 &> data/evomlp-cec2021-spambase3.dat &
