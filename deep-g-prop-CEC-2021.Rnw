@@ -40,7 +40,7 @@ require(ggthemes)
 \begin{abstract}
 Designing neural networks for classification or regresion can be
 considered a search problem, and, as such, can be approached using
-different optimization procedures. As such, there are several design
+different optimization procedures. There are also several design
 challenges. The first and more important is to constrain the search
 space in such a way that proper solutions can be found in a reasonable
 amount of time; the second is to take into account that, depending on
