@@ -14,14 +14,7 @@
 <<setup, cache=FALSE,echo=FALSE,message=FALSE,warning=FALSE>>=
 require(ggplot2)
 require(ggthemes)
-plotting <- read.csv("data/helicases.csv")
 @
-% Used for displaying a sample figure. If possible, figure files should
-% be included in EPS format.
-%
-% If you use the hyperref package, please uncomment the following line
-% to display URLs in blue roman font according to Springer's eBook style:
-% \renewcommand\UrlFont{\color{blue}\rmfamily}
 
 \begin{document}
 %
@@ -77,15 +70,9 @@ compared with other state of the art frameworks.
 Applying artificial neural networks (ANN) to the solution of
 classification problems requires establishing their structure in
 layers and connections between them, the initial parameters (such as
-initial weights) and a set of learning constants. This is true for
-neural as well as deep learning architectures
-\cite{goodfellow,nielsen}, where a design parameter is added: the
-number of layers in the architecture as well as its type, every one
-with its own set of parameters, like the number of neurons in every
-layer.
-
-Using an optimization algorithm to solve at least part of the design problem
-is an usual approach to this challenge. Evolutionary neural networks are an efficient way of searching for the
+initial weights) and a set of learning constants. 
+Using an optimization algorithm to solve at least part of this design problem
+is an usual approach to this challenge, and evolutionary neural networks \cite{GOMESPEREIRADELACERDA2021100777,Martinez2021LightsAS} have been proved to be an efficient way of searching for the
 architecture, weights, and other ANN parameters (such as learning
 constants). This has been proved
 repeatedly for {\em shallow} architectures (with a single hidden
@@ -93,21 +80,18 @@ layer) since late in the previous century
 \cite{yao1993evolutionary,CastilloNPL,stanley2002evolving}. However, in most cases, design
 of the structure and connections between different layers, as
 indicated by \cite{miikkulainen2019evolving}, is still mostly done by
-hand. This is mainly due to the above mentioned fact that search
-spaces are huge, so using rules of thumb (such as the ones mentioned
+hand and left off the evolutionary process. This is mainly due to the above mentioned fact that including this makes search
+spaces huge, so using rules of thumb (such as the ones mentioned
 in \cite{qolomany2017parameters}, or using certain formulas to set the
 number of layers) to decide on those parameters,
-are a way of fixing part of the search space, letting the deep
-learning algorithm to figure out the weights themselves, whose
+are a way of fixing part of the search space, letting the neural net training algorithm to figure out the weights themselves, whose
 optimization, in these cases, is able to cover big spans of the search
-space.
+space. Some of these algorithms stop short of setting weights, and leave that to an actual neural net training algorithm. The fitness of the neural net is measured {\em after} training, thus including training time within the fitness evaluation time. Adding long evaluation time to the size of the search space makes, sometimes, the mixture of evolutionary algorithms with neural networks something that can be approached only with big evaluation budgets.
 
-We can also, however, fix a part of the architecture, by choosing a
-multi-layer perceptron trained with back-propagation, whose initial
-weights as well as biases evolve using an evolutionary algorithm (EA). This
-algorithm was called \emph{G-Prop} (as in \emph{Genetic Back-Propagation})
-and was originally presented in \cite{castilloNC,CastilloNPL}. This
-method leverages the capabilities of two classes of algorithms: the
+That high budget needed needs to be managed, and this is done in several ways, usually. One of them is to fix a part of the architecture, by choosing a
+multi-layer perceptron (MLPs) using some well-proven training algorithm. After all, MLPs with a single hidden layer are universal approximators, and have been used extensively for classification and regression problems. Once that part of the search space is fixed, the initial
+weights as well as biases will evolve using an evolutionary algorithm (EA), and some MLP training algorithm such as backpropagation will be used to find the final MLP that's tested and eventually produced as the solution to a problem. This algorithm was proposed in the early years of the century, and called \emph{G-Prop} (as in \emph{Genetic Back-Propagation}), originally presented in \cite{castilloNC,CastilloNPL}. G-Prop evolves a population of data structures representing multi-layer perceptrons initial weights and biases, which are trained and tested to obtain the fitness. 
+This method leverages the capabilities of two classes of algorithms: the
 ability of EA to find a solution close to the global optimum, and the
 ability of the back-propagation algorithm (BP) \cite{Rumelhart86} to tune a solution and
 reach the nearest local minimum by means of local search from the
@@ -117,35 +101,23 @@ This initial G-Prop algorithm was limited, first, by the fact that
 most of it had to be programmed from scratch, since there were few (if
 any) off-the-shelf software that could do this kind of task;
 additionally, available computational capability limited the size of
-the search space; this was further limited by the evolution of only single-layer perceptrons.
-% Please check, I had the idea that G-Prop was single-layer perceptrons - M
+the search space; this was further limited by the evolution of only single-layer perceptrons. This is why only small problems could be approached, and the evaluation budget used in them was, forcibly, limited.
 
-The aim of this paper is to present an algorithm that searches over, the initial weights, number of
+However, the {\em memetic} combination of optimization at two levels, the weight level (handled by backpropagation) and the parametrized architecture level (handled by an evolutionary algorithm), is still conceptually new, since not many methods use them. Besides, the implementation, even being open source, is not maintained. This is why in this paper we propose, first, a reimplementation of the G-Prop concept, and second, an extension that solves some problems with this initial method: the inability to work with neural nets with several layers, and also the implicit dealing with the uncertainty in computing the fitness using a stochastic method like neural net training.
+
+Thus, the aim of this paper is to present EvoMLP, a neuroevolution framework that evolves the initial weights, number of
 hidden layers and hidden layer sizes of a MLP, based on a EA and
 Stochastic Gradient Descent (SGD) \cite{bottou2012stochastic}. This
 algorithm has been used for training deep neural nets and other kind
 of machine learning algorithms
 \cite{bottou2012stochastic,bottou2010large}; however, in this case
-%there all intermediate (or hidden) layers have the same structure,
 intermediate (or hidden) layers have the same structure,
 which is the structure of a multi-layer perceptron, justifying our
-% In some pleaces there is multilayer or multi layer, we should be consistent.
-% I propose multi-layer, changing all - M
 denomination of {\sf EvoMLP} for this specific method.
-The use of this kind of {\em training} method does not imply that we
-are actually doing deep machine learning at large; however, this (and
-other possible methods included in the machine learning framework we
-are using) are suitable for deep neural nets,
-leaving the possibility of using deep neural nets or any other
-deep learning methods open for the future.
 
 In this paper what we will do is to first bring the implementation of
 the G-Prop concept to current tools and languages, choosing the best
-suited for the purpose. Then we will try and reproduce the results
-obtained in those classical papers with the basic configuration, to
-later try and go beyond the state of the art established there with
-new experiments that will widen the search space by using perceptrons
-with several layers.
+suited for the purpose and show the design decisions that were taken in order to do so; since we are using off the shelf software libraries which are in constant evolution, we will also show, since implementation matters \cite{DBLP:conf/iwann/MereloRACML11}, how this change of versions affects (or not) the performance of the algorithm. We will also attempt to characterize the size of the problems for which this type of algorithm can be considered useful.
 
 The remainder of this paper is structured as follows:
 section \ref{soa} makes a short overview of the methods to design ANN.
