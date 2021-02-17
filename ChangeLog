@@ -1,3 +1,7 @@
+2021-02-17  jmerelo  <jmerelo@princess-carolyn>
+
+	* code/scripts/run-experiment.sh: Let's try with a single layer, to see if there's a difference in the result (and in the speed).
+
 2021-02-14  jmerelo  <jmerelo@princess-carolyn>
 
 	* code/scripts/run-experiment-dgp.sh: Running new experiment using the docker container.
