@@ -134,8 +134,13 @@ in a limited number of ways, using {\em incremental algorithms}, which, in
 general, will depart from a specific architecture, number of layers
 and elements in every layer, and offer a series of heuristic
 procedures to add/eliminate layers and/or hidden-layer neurons in
-them. This way was, for a certain amount of time, the preferred
-one for optimizing the size of the neural net along with its weights, according to classical reviews such
+% I think at this time there are only input and output layers (and these must remain fixed) 
+% and we have the option of adding and removing only hidden layers. 
+% I propose to only say: to add/eliminate layers and the number of neurons in them 
+% In more advanced networks there are other types like  recurrent, convolution etc. 
+% but making the distinction is a bit confusing - M 
+them. This way was, for a certain amount of time, the preferred % the preferred technique?
+one for optimizing the size of the neural net along with its weights, according to classical reviews such % architecture of the nn ? - M
 as the one by Alpaydin \cite{alpaydin1994gal}. However and simultaneously, a
 series of evolutionary heuristics were starting to be applied for the
 same purpose, as revealed by Balakrishnan and Honavar's review
@@ -151,11 +156,11 @@ This is why, form our point of view, a more precise classification of evolved ne
     data structured used to represent it, what is relevant is if that
     representation allows for a variation of the architectural
     parameters, that is, adding or eliminating new nodes, layers, or
-    in general nodes and edges in a graph representation of the
+    in general, nodes and edges in a graph representation of the
     architecture.
   \item Articulation of the neural learning method. There is a whole
     range of possibilities, from letting the evolutionary process set
-    all weights and other parameters, to using learning process just
+    all weights and other parameters, to using a learning process just
     to find the success rate, with additional possibilities like
     evaluating success {\em before applying learning} (to take
     advantage of the Baldwin effect \cite{castillo-2006}) to applying
@@ -177,7 +182,13 @@ This is why, form our point of view, a more precise classification of evolved ne
     % Please check or extend the above sentence - M
     % There is also the problem of overfitting - M
     % It's OK - JJ
-  \item Mono or multiobjective optimization. In general, the main issue is to get the highest accuracy possible. However, several other factors can be taken into account; in unbalanced data sets, accuracy for every one of the categories must be taken into account separately; besides, it is almost impossible to optimize by generalization, so a proxy for it, size, is instead optimized. All these objectives can be aggregated into a single one (using weights), hierarchized or considered properly as different objectives to be optimized separately.
+  \item Mono or multiobjective optimization. In general, the main issue is to get the highest accuracy possible. However, 
+  several other factors can be taken into account; in unbalanced data sets, accuracy for every one of the categories must be taken into account separately; besides, it is almost impossible to optimize by generalization, so a proxy for it, size, is instead optimized. All these objectives can be aggregated into a single one (using weights), hierarchized or considered properly as different objectives to be optimized separately.
+ % Single or multiobjective?
+ % There is more research in this aspect, changing "size" by "entropy", "message length" etc., there
+ % is much more future work to do, just in this aspect alone. - M 
+ % In the area of decision tree classifiers there are many estimators of their size/complexity.
+
 \end{itemize}
 
 With these axes in mind, the first one, the variation of architecture, has been the one that has developed the most,  lately evolving towards (almost)
@@ -185,7 +196,8 @@ unconstrained evolution using Neuroevolution of Augmenting Topologies (NEAT), as
 Miikkulainen et al. \cite{miikkulainen2019evolving}. Since this blows
 up the search space (essentially evolving graphs), these methods need computational resources that are
 really beyond the reach of most labs or individuals. This is the reason why most of the latest publications 
-still use a fixed model for the network architecture, for instance SVM
+still use a fixed model for the network architecture, for instance SVM % support vector machines? these are not NN,
+% or is it a kind of network I don't know of? - M
 or MLPs, and even, in some cases, fixed number of layers and weights
 \cite{ecer2020training}; however, recent papers like the one by
 Tajmiri et al. \cite{TAJMIRI2020108997} already use a representation
