@@ -129,10 +129,7 @@ followed by a brief conclusion in Section \ref{sec:conclus}.
 \section{State of the Art}
 \label{soa}
 
-% This contains a very good
-% review. https://www.sciencedirect.com/science/article/pii/S0925231200003027?casa_token=LZtZakZguVsAAAAA:iQNvGVO5fAQO6ED-pnBhQ5Ab-ZuYP7tIdFcpBurr9hdCzNnQAKwwKUoaY6_fEbiQx5fPiktf
-Searching the parameter space of neural networks, including deep
-learning algorithms, has been a problem traditionally approached
+Searching the parameter space of neural networks looking for optimal combinations  has been a problem traditionally approached
 in a limited number of ways, using {\em incremental algorithms}, which, in
 general, will depart from a specific architecture, number of layers
 and elements in every layer, and offer a series of heuristic
@@ -146,13 +143,10 @@ same purpose, as revealed by Balakrishnan and Honavar's review
 design of the architecture of neural nets along three different axes
 (plus one for application domain): genotype representation, network
 topology, and a third axis that includes basically everything else,
-``variables of evolution''. % It seems like variables of evolution is disconnected. 
-% I think it requires something like "this is called" or "following a voe appproach"  - M
-% Check if this is OK - JJ
+``variables of evolution''.
 This classification was much more comprehensive, and included many more degrees of freedom in evolution than simply adding or eliminating neurons. However, it still left some constraints and probably did not emphasize the parameters that are most likely to have the greater influence in the outcome.
 
-This is why, form our point of view, a more precise classification of evolved neural architectures would include
-view: \begin{itemize}
+This is why, form our point of view, a more precise classification of evolved neural architectures would include: \begin{itemize}
   \item Fixed or variable architecture. Irrespective of the kind of
     data structured used to represent it, what is relevant is if that
     representation allows for a variation of the architectural
@@ -183,14 +177,14 @@ view: \begin{itemize}
     % Please check or extend the above sentence - M
     % There is also the problem of overfitting - M
     % It's OK - JJ
-
+  \item Mono or multiobjective optimization. In general, the main issue is to get the highest accuracy possible. However, several other factors can be taken into account; in unbalanced data sets, accuracy for every one of the categories must be taken into account separately; besides, it is almost impossible to optimize by generalization, so a proxy for it, size, is instead optimized. All these objectives can be aggregated into a single one (using weights), hierarchized or considered properly as different objectives to be optimized separately.
 \end{itemize}
 
 With these axes in mind, the first one, the variation of architecture, has been the one that has developed the most,  lately evolving towards (almost)
 unconstrained evolution using Neuroevolution of Augmenting Topologies (NEAT), as shown in the recent review by
 Miikkulainen et al. \cite{miikkulainen2019evolving}. Since this blows
-up the search space, these methods need computational resources that are
-really off the reach of most labs or individuals. This is the reason why most of the latest publications 
+up the search space (essentially evolving graphs), these methods need computational resources that are
+really beyond the reach of most labs or individuals. This is the reason why most of the latest publications 
 still use a fixed model for the network architecture, for instance SVM
 or MLPs, and even, in some cases, fixed number of layers and weights
 \cite{ecer2020training}; however, recent papers like the one by
@@ -201,6 +195,7 @@ architecture does not have any place for initial weights, which in the
 case of G-Prop, were proved to be essential for a good performance,
 including the emergence of a Baldwin effect \cite{castillo-2006}
 during evolution.
+On the other hand, lately multi-objective algorithms are being explored. Senhaji et al. \cite{SENHAJI20201} optimizes performance at the same time that minimizes size using the NSGA-II algorithm. This is a generally good strategy, once again involving, as is usual in multiobjective algorithms, a boost in the size of the search space requiring big evaluation budgets.
 
 In this paper we will extend the principles of variation of a MLP
 architecture through the use of genetic operators as well as
