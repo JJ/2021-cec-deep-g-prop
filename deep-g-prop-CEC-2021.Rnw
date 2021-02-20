@@ -139,8 +139,10 @@ procedures to add/eliminate layers and/or hidden-layer neurons in
 % I propose to only say: to add/eliminate layers and the number of neurons in them 
 % In more advanced networks there are other types like  recurrent, convolution etc. 
 % but making the distinction is a bit confusing - M 
-them. This way was, for a certain amount of time, the preferred % the preferred technique?
-one for optimizing the size of the neural net along with its weights, according to classical reviews such % architecture of the nn ? - M
+% Can you please ellaborate on this? Or simply rewrite it, no problem - JJ
+them. This way was, for a certain amount of time, the preferred technique
+for optimizing the size of the neural net along with its weights, according to classical reviews such % architecture of the nn ? - M
+% don't get it, sorry - JJ
 as the one by Alpaydin \cite{alpaydin1994gal}. However and simultaneously, a
 series of evolutionary heuristics were starting to be applied for the
 same purpose, as revealed by Balakrishnan and Honavar's review
@@ -167,9 +169,6 @@ This is why, form our point of view, a more precise classification of evolved ne
     a few cycles of learning that will become part of the codified
     solution.
   \item How the lack of a "crisp" value for the fitness, is taken into account
-    % I think some adjective is missing for the kind of determination
-    % The lack of a "crisp"|"optimum"|"hard"|"definite"  determination? - M
-    % solved - JJ
     during evolution. Either from the fact that an stochastic algorithm is
     used to train the neural net before evaluating fitness, or the
     fact that the data set (or how it's presented for training) might not be totally fixed but subject to
@@ -209,11 +208,14 @@ including the emergence of a Baldwin effect \cite{castillo-2006}
 during evolution.
 On the other hand, lately multi-objective algorithms are being explored. Senhaji et al. \cite{SENHAJI20201} optimizes performance at the same time that minimizes size using the NSGA-II algorithm. This is a generally good strategy, once again involving, as is usual in multiobjective algorithms, a boost in the size of the search space requiring big evaluation budgets.
 
+More generally, network architecture search algorithms are also model search algorithms \cite{mazzawi21}, a framework for which was recently released by Google. These methods are generally appropriate if you have unlimited evaluation budget or if problems are complex enough that only this kind of algorithms are able to find the correct model.
+
+However, there is a huge amount of moderately-sized problems (with their corresponding datasets), where constrained search can be successful.
 In this paper we will extend the principles of variation of a MLP
 architecture through the use of genetic operators as well as
 codification of initial weights to a modern, standard based
 implementation, that will also be released as free software. We show
-how this new {\sf EvoMLP} method works next. This means it will again use the architecture axis of evolution, although constraining it to a particular type of neural nets so that, by constraining search, we shrink the search space and make finding good architectures easier.
+how this new {\sf EvoMLP} method works next. This means it will again use the architecture axis of evolution, although constraining it to a particular type of neural nets so that, by constraining search, we shrink the search space and make finding good architectures easier. Even so, the size of the datasets (and thus problems) that can be approached must be characterized, which we will do in the next sections.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Proposed Method}
