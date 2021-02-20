@@ -17,6 +17,7 @@ require(ggthemes)
 @
 
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 %
 \title{EvoMLP: a framework for evolving multilayer perceptrons}
 %
@@ -221,28 +222,11 @@ how this new {\sf EvoMLP} method works next. This means it will again use the ar
 \section{Proposed Method}
 \label{method}
 
-%The general the algorithm will proceed like the \autoref{alg:ga} shows.
+There are two parts in this EvoMLP framework, the "neural" part and the "evolutionary" part. Our objective from the beginning was to use off-the-shelf frameworks as much as possible.
 
-% \begin{algorithm}
-%   \caption{Genetic Algorithm loop}\label{alg:ga}
-%   \begin{algorithmic}[1]
-%     \State \textit{evaluate initial population}
-%     \While{\textit{max fit is less than ideal and there are generations left}}
-%     \If{\textit{max fit hasn't improved in some generations}}
-%     \State \textit{Stop algorithm}
-%     \EndIf
-%     \State \textit{select the offspring from the best population individuals}
-%     \State \textit{apply crossover to the offspring}
-%     \State \textit{apply mutations to the offspring}
-%     \State \textit{replace the worst population individuals with the modified offspring}
-%     \EndWhile
-%   \end{algorithmic}
-% \end{algorithm}
+The first line of choice is the programming language. {\sf G-Prop} was written in C++ mainly because the underlying library used, EO \cite{EO:FEA2000}, used that language. In this case, we went in the opposite direction. Most popular high-performance machine learning libraries, like Tensorflow, are written in Python. Once we settled for TensorFlow, working with Python was the most obvious choice.
 
-In this work we will use a canonical evolutionary algorithm, as implemented by DEAP. The key of the adaptation of the algorithm for the neuroevolution task we are doing here is in the different parts used, that extend and enhance those used by the
-original G-Prop. % Briefly comment on these enhancements, where are they? - M 
-                 % (Update) This is done in some places but maybe you should do another pass to see if there are more 
-                 % enhancements - M 
+There are indeed several evolutionary frameworks written in Python; EvoloPy, for instance \cite{DBLP:conf/ijcci/FarisAMCM16}, includes many hyperheuristics, including EAs. However, DEAP \cite{deap-ga} has emerged as a standard for this language, covering all that is needed to evolver multilayer perceptrons, so this is what we chose. This will definitely have some impact in performance \cite{kim2019software}, however for us researcher time is more important than computer time, and we can always use that time saved to improve the algorithm or the implementation.
 
 \begin{itemize}
 
