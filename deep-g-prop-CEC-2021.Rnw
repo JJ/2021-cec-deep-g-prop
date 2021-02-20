@@ -224,13 +224,13 @@ how this new {\sf EvoMLP} method works next. This means it will again use the ar
 
 There are two parts in this EvoMLP framework, the "neural" part and the "evolutionary" part. Our objective from the beginning was to use off-the-shelf frameworks as much as possible.
 
-The first line of choice is the programming language. {\sf G-Prop} was written in C++ mainly because the underlying library used, EO \cite{EO:FEA2000}, used that language. In this case, we went in the opposite direction. Most popular high-performance machine learning libraries, like Tensorflow, are written in Python. Once we settled for TensorFlow, working with Python was the most obvious choice.
+The first line of choice is the programming language. {\sf G-Prop} was written in C++ mainly because the underlying library used, EO \cite{EO:FEA2000}, used that language. In this case, we went in the opposite direction. Most popular high-performance machine learning libraries, like Tensorflow, are written in Python. Once we settled for TensorFlow, working with Python was the obvious choice.
 
 There are indeed several evolutionary frameworks written in Python; EvoloPy, for instance \cite{DBLP:conf/ijcci/FarisAMCM16}, includes many hyperheuristics, including EAs. However, DEAP \cite{deap-ga} has emerged as a standard for this language, covering all that is needed to evolver multilayer perceptrons, so this is what we chose. This will definitely have some impact in performance \cite{kim2019software}, however for us researcher time is more important than computer time, and we can always use that time saved to improve the algorithm or the implementation.
 
-\begin{itemize}
+Tensorflow is a low-level framework based on representing machine learning models as graphs; we will need a higher-level library to work with multilayer perceptrons. Once again, unlike G-Prop, we will choose the off-the-shelf Keras package \cite{keras-nn}, a framework for building multi-layer deep learning models In the version used in the initial stages of this research, Keras allowed multiple backends, meaning different frameworks for the effective representation of the neural net. That has changed lately, as we will later see. Once again, Keras is characterized for offering a simple API as opposed to a flexible and low-level interface, which is characteristic of Tensorflow or others like PyTorch; this has an impact on performance, but it helps ease the burden of the designers. The fact that it's maintained and updated often also ensures that the software created with it is kept up-to-date. This is important for a software framework like the one we're presenting here.
 
-  \item An individual is coded as a list of \emph{Layers}. Each layer is
+We need to make a series of decisions on the data structures and functions used in Keras; these are presented below. An individual is coded as a list of \emph{Layers}. Each layer is
     composed by a matrix of weights and a list of bias (both Numpy
     \cite{py-numpy} ndarrays) joined together with it's configuration (a
     Python dictionary) in a Python class. One column of the weight matrix
@@ -240,10 +240,10 @@ There are indeed several evolutionary frameworks written in Python; EvoloPy, for
     and biases are muted for all the individuals each generation.
 
     From this configuration, when the moment of evaluation comes, we create a
-    \emph{Sequential} \cite{keras-sequential}  Keras \cite{keras-nn} model and
+    \emph{Sequential} \cite{keras-sequential}  Keras model and
     append each \emph{Layer} as a \emph{Dense} \cite{keras-dense} Keras layer.
 
-  \item There are three stop conditions that will finish the execution of the
+There are three stop conditions that will finish the execution of the
     genetic algorithm: if we reach the maximum number of generations, if after
     10 generations there was no improvement in the best solution and if we find
     the ideal solution ($0\%$ error, 1 on the hidden-score and 1 on the F2
@@ -251,14 +251,14 @@ There are indeed several evolutionary frameworks written in Python; EvoloPy, for
     % Justify why after 10 generations, or even better make that a parameter, set in this
     % experiments to 10 - M
 
-  \item For each generation we clone the best half individuals of the current
+For each generation we clone the best half individuals of the current
     population and perform all the evolutionary operations to them. Each
     operation has it own probability to occur chosen when running EvoMLP
     CLI. For the weights/bias mutation, a percentage of each (selected too with
     the CLI parameters) are muted randomly. After that, the worst half is
     replaced by this muted group.
 
-  \item The {\em crossover} function will swap the ``neurons'' together with
+The {\em crossover} function will swap the ``neurons'' together with
     their connections. Main difference with respect to original G-Prop is that,
     in this case, there can be several hidden layers, so the connections might
     be either to output or to another layers. The crossover only occurs when
@@ -270,7 +270,7 @@ There are indeed several evolutionary frameworks written in Python; EvoloPy, for
     % i.e., adjust after a few epochs or update the weight matrix after each fitness eval - M
     % Just the initial weights - JJ
     
-  \item There are several kinds of {\em mutation} operators: (initial) weights,
+There are several kinds of {\em mutation} operators: (initial) weights,
     biases, as well as changing the number of neurons and/or
     layers. For the neuron mutator, one neuron will be added last in the
     randomly selected layer, and it will be eliminated in the same way. Since
@@ -285,8 +285,6 @@ There are indeed several evolutionary frameworks written in Python; EvoloPy, for
     between the last hidden layer and the output layer are recycled, and the
     connections between the newly created layer and the output layer are
     calculated randomly (running similar fix as when we delete the layer).
-
-\end{itemize}
 
 We need the selection process, via the fitness function, to exert parsimony pressure, which is why
 we take into account not only the accuracy score reached after
