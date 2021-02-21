@@ -240,16 +240,14 @@ We need to make a series of decisions on the data structures and functions used 
     and biases are muted for all the individuals each generation.
 
     From this configuration, when the moment of evaluation comes, we create a
-    \emph{Sequential} \cite{keras-sequential}  Keras model and
+    \emph{Sequential} \cite{keras-sequential}  Keras  model and
     append each \emph{Layer} as a \emph{Dense} \cite{keras-dense} Keras layer.
 
 There are three stop conditions that will finish the execution of the
     genetic algorithm: if we reach the maximum number of generations, if after
     10 generations there was no improvement in the best solution and if we find
-    the ideal solution ($0\%$ error, 1 on the hidden-score and 1 on the F2
-    score).
-    % Justify why after 10 generations, or even better make that a parameter, set in this
-    % experiments to 10 - M
+    the ideal solution ($0\%$ error, a single neuron left and 1 on the F2
+    score). We used these 10 generations as an indication that evolution was stuck and could proceed no further, thus stopping being a better option.
 
 For each generation we clone the best half individuals of the current
     population and perform all the evolutionary operations to them. Each
