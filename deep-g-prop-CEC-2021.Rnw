@@ -299,7 +299,6 @@ the fitness function used by G-Prop.
 
 We handle uncertainty by {\em resampling}, that is, re-evaluating all individuals every generation. Every training-testing set will yield a different fitness, which usually have a skewed distribution \cite{DBLP:conf/ijcci/MereloLFGCCRMG15}. However, by repeatedly evaluating them individuals that have a statistically better fitness that the rest will {\em survive} to the next generation. This method, though simple, is generally adequate and tends to select individuals whose fitness distribution has a lower standard deviation and are less skewed.
 
-
 The library was packaged and uploaded to the Python package registry, including the scripts that are used to run the experiments here. You can download it directly with {\tt pip install DeepGProp}. It has been released under the GNU GPL v3, and between releases it's also available from its GitHub repository \url{https://github.com/lulivi/dgp-lib}.
 
 Since we have implemented {\sf EvoMLP} using the Python programming language. Tests with pypy, an accelerated, just-in-time version of the regular interpreter were performed, but although it is supposed to accelerate most numerical workloads, it actually was almost twice as slow as the one using the regular interpreter.
