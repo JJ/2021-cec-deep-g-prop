@@ -74,22 +74,22 @@ initial weights) and a set of learning constants.
 Using an optimization algorithm to solve at least part of this design problem
 is an usual approach to this challenge, and evolutionary neural networks \cite{GOMESPEREIRADELACERDA2021100777,Martinez2021LightsAS} have been proved to be an efficient way of searching for the
 architecture, weights, and other ANN parameters (such as learning
-constants). This has been proved
+constants). This has been demonstrated
 repeatedly for {\em shallow} architectures (with a single hidden
 layer) since late in the previous century
 \cite{yao1993evolutionary,CastilloNPL,stanley2002evolving}. However, in most cases, design
 of the structure and connections between different layers, as
 indicated by \cite{miikkulainen2019evolving}, is still mostly done by
 hand and left off the evolutionary process. This is mainly due to the above mentioned fact that including this makes search
-spaces huge, so using rules of thumb (such as the ones mentioned
+spaces huge, so using rules of thumb (such as the ones detailed
 in \cite{qolomany2017parameters}, or using certain formulas to set the
 number of layers) to decide on those parameters,
 are a way of fixing part of the search space, letting the neural net training algorithm to figure out the weights themselves, whose
 optimization, in these cases, is able to cover big spans of the search
 space. Some of these algorithms stop short of setting weights, and leave that to an actual neural net training algorithm. The fitness of the neural net is measured {\em after} training, thus including training time within the fitness evaluation time. Adding long evaluation time to the size of the search space makes, sometimes, the mixture of evolutionary algorithms with neural networks something that can be approached only with big evaluation budgets.
 
-That high budget needed needs to be managed, and this is done in several ways, usually. One of them is to fix a part of the architecture, by choosing a
-multi-layer perceptron (MLPs) using some well-proven training algorithm. After all, MLPs with a single hidden layer are universal approximators, and have been used extensively for classification and regression problems. Once that part of the search space is fixed, the initial
+That high budget required needs to be managed, and this is done in several ways. Usually one of them is to fix a part of the architecture, by choosing a
+multi-layer perceptron (MLPs) using some well-proven training algorithm. After all, MLPs with a single hidden layer are universal approximators, and have been used extensively for classification and regression problems. Once that part of the search space is covered, the initial
 weights as well as biases will evolve using an evolutionary algorithm (EA), and some MLP training algorithm such as backpropagation will be used to find the final MLP that's tested and eventually produced as the solution to a problem. This algorithm was proposed in the early years of the century, and called \emph{G-Prop} (as in \emph{Genetic Back-Propagation}), originally presented in \cite{castilloNC,CastilloNPL}. G-Prop evolves a population of data structures representing multi-layer perceptrons initial weights and biases, which are trained and tested to obtain the fitness. 
 This method leverages the capabilities of two classes of algorithms: the
 ability of EA to find a solution close to the global optimum, and the
