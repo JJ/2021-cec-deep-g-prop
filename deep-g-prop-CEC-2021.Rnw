@@ -264,9 +264,7 @@ The {\em crossover} function will swap the ``neurons'' together with
     layers and neurons per layers).
     
     % For future work: the crossover could select structure of one of the parents or mix-them. - M
-    % Question: only the initial weights are evolved? or the search is mixed with BP? 
-    % i.e., adjust after a few epochs or update the weight matrix after each fitness eval - M
-    % Just the initial weights - JJ
+    % I don't know what you mean here, maybe you could directly add it to the future work section - JJ
     
 There are several kinds of {\em mutation} operators: (initial) weights,
     biases, as well as changing the number of neurons and/or
@@ -292,7 +290,6 @@ f_{s} = (\sum_{i=0}^{nhl} nu_{i}) \times nhl
 \end{equation}
 where $f_{s}$, is the hidden-layer, or size, score, $nhl$ is the number of hidden layers and $nu_{i}$ the number of neurons for the layer $i$). This score is minimized, meaning that the less neurons, the better, but also that less hidden layers are preferred over more hidden layers. This $f_s$, however, receives a very low weight equivalent to 1\% of the accuracy, meaning that it will be only determinant, in practice, if there's a very small difference in accuracy when comparing two individuals of if accuracy is virtually the same.
 
-
 Finally, the F2 score metric (explained in the
 \autoref{sec:res}) is also considered. At the end, the fitness value is a compound of
 three elements: accuracy, hidden-score and F2 score. As the DEAP framework
@@ -305,7 +302,7 @@ the fitness function used by G-Prop.
 % really know how to create an expression for the fitness score since it is a
 % tuple - Luis This is important because is related to many principles of ML
 % You just return a single value as a tuple, like this: return fitness,  (notice the comma at the end) - M
-%
+% We are using an expression since we are optimizing three things at the same time, although to be honest, I think that the fitness does have the bigger importance (although F2 will also have some influence) - JJ
 %
 % \begin{figure}
 %     \centering
@@ -318,21 +315,15 @@ the fitness function used by G-Prop.
 %     \end{equation}
 % \end{figure}
 %
-So in summary, the score will be the
-global number of neurons multiplied by the number of hidden layers.
 %
-The whole code for this has been released under a free license in
-GitHub. % Add URL later.
 
-{\sf EvoMLP} has been implemented using the Python programming language. Tests with pypy, an accelerated, just-in-time version of the regular interpreter were tested, but although it is supposed to accelerate most numerical workloads, it actually was almost twice as slow as the one using the regular interpreter. There are
-many reasons to use this language, but two of the most significant reasons are
-the extensive documentation, use and community it has, and the vast amount of
-ML ready frameworks that are developed for it. Keras and DEAP are two impressive
-frameworks currently in the state-of-art on their respective area.
+
+Since we have implemented {\sf EvoMLP} using the Python programming language. Tests with pypy, an accelerated, just-in-time version of the regular interpreter were performed, but although it is supposed to accelerate most numerical workloads, it actually was almost twice as slow as the one using the regular interpreter.
 % Do we want to talk about technical implementation details as suggested in
 % #10? Explaining all the code and that stuff - Luis
 % In the abstract the bringing to modern languages and tools is highlighted
 % Here could be a good place to present and justify these implementation details - M
+% But what more detail could we present? JJ
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
