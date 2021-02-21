@@ -333,6 +333,47 @@ Initial results comparing EvoMLP with G-Prop under different circumstances were 
 
 In this paper we will first try to show the performance of the algorithm for this kind of problem, as well as create a baseline for comparison as we evolve the framework and the underlying algorithm. For that purpose, we have chosen {\sf spambase} as the dataset for all experiments. Taken from the UCI \cite{uci} database, it is a highly unbalanced dataset, with a good amount of features, and has been used extensively for benchmarking frameworks and algorithms. In papers such as the one by Duriqi et al. \cite{duriqi2016comparative}, which tests the algorithms implemented in WEKA, the accuracy reported is around 90\%, although it's not clear how the data set was split and if it is measured with a part of the dataset unseen before in any way. In order to measure generalization, in our experiments we have followed the PROBEN1 convention \cite{Prechelt94c} which is equivalent to a three-fold cross validation, splitting the dataset in three parts and sequentially using two of them for training and validation, finally testing them with the third part. By testing the models with an unseen part of the dataset, we guarantee that we are measuring its generalization capability, and not overfitting the model to the specific data it has been trained with.
 
+\begin{table*}
+<<spambase.table,echo=FALSE>>=
+spambase1.base <- read.csv("data/spambase1-p64.csv")
+
+spambase <- data.frame( partition = "spambase1",
+                       best.validation = min(spambase1.base$Validation),
+                       median.validation = median(spambase1.base$Validation),
+                       average.validation = mean(spambase1.base$Validation),
+                       best.test = min(spambase1.base$Test),
+                       median.test = median(spambase1.base$Test),
+                       average.test = mean(spambase1.base$Test),
+                       sd.test = sd(spambase1.base$Test))
+
+spambase2.base <- read.csv("data/spambase2-p64.csv")
+
+spambase <- rbind( spambase,
+                  data.frame( partition = "spambase2",
+                       best.validation = min(spambase2.base$Validation),
+                       median.validation = median(spambase2.base$Validation),
+                       average.validation = mean(spambase2.base$Validation),
+                       best.test = min(spambase2.base$Test),
+                       median.test = median(spambase2.base$Test),
+                       average.test = mean(spambase2.base$Test),
+                       sd.test = sd(spambase2.base$Test) ) )
+
+spambase3.base <- read.csv("data/spambase3-p64.csv")
+
+spambase <- rbind( spambase,
+                  data.frame( partition = "spambase3",
+                       best.validation = min(spambase3.base$Validation),
+                       median.validation = median(spambase3.base$Validation),
+                       average.validation = mean(spambase3.base$Validation),
+                       best.test = min(spambase3.base$Test),
+                       median.test = median(spambase3.base$Test),
+                       average.test = mean(spambase3.base$Test),
+                       sd.test = sd(spambase1.base$Test) ) )
+options(knitr.table.format = "latex")
+knitr::kable(spambase)
+@
+\end{table*}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}
 \label{sec:conclus}
