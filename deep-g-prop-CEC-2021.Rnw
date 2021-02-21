@@ -347,6 +347,13 @@ spambase <- data.frame( partition = "spambase1",
                        average.test = mean(spambase1.base$Test),
                        sd.test = sd(spambase1.base$Test))
 
+comparison <- data.frame( partition = "spambase1 Theano",
+                       best.validation = min(spambase1.base$Validation),
+                       median.validation = median(spambase1.base$Validation),
+                       best.test = min(spambase1.base$Test),
+                       median.test = median(spambase1.base$Test),
+                       sd.test = sd(spambase1.base$Test))
+
 spambase2.base <- read.csv("data/spambase2-p64.csv")
 
 spambase <- rbind( spambase,
@@ -357,6 +364,14 @@ spambase <- rbind( spambase,
                        best.test = min(spambase2.base$Test),
                        median.test = median(spambase2.base$Test),
                        average.test = mean(spambase2.base$Test),
+                       sd.test = sd(spambase2.base$Test) ) )
+
+comparison <- rbind( comparison,
+                    data.frame( partition = "spambase2 Theano",
+                       best.validation = min(spambase2.base$Validation),
+                       median.validation = median(spambase2.base$Validation),
+                       best.test = min(spambase2.base$Test),
+                       median.test = median(spambase2.base$Test),
                        sd.test = sd(spambase2.base$Test) ) )
 
 spambase3.base <- read.csv("data/spambase3-p64.csv")
@@ -370,10 +385,18 @@ spambase <- rbind( spambase,
                        median.test = median(spambase3.base$Test),
                        average.test = mean(spambase3.base$Test),
                        sd.test = sd(spambase1.base$Test) ) )
+
+comparison <- rbind( comparison,
+                  data.frame( partition = "spambase3 Theano",
+                       best.validation = min(spambase3.base$Validation),
+                       median.validation = median(spambase3.base$Validation),
+                       best.test = min(spambase3.base$Test),
+                       median.test = median(spambase3.base$Test),
+                       sd.test = sd(spambase1.base$Test) ) )
 options(knitr.table.format = "latex")
 knitr::kable(spambase, col.names=c("Partition","Validation,best","Validation, median","Validation,mean", "Test, best", "Test, median", "Test, average", "Test, SD"))
 @
-\caption{Baseline error percentage results for {\spambase} per partition, with validation (used by the algorith) and test (unseen data, used for generalization) results.}
+\caption{Baseline error percentage results for {\sf spambase} per partition, with validation (used by the algorith) and test (unseen data, used for generalization) results.}
 \label{tab:spambase:base}
 \end{table*}
 
