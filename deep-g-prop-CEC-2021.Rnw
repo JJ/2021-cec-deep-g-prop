@@ -17,7 +17,6 @@ require(ggthemes)
 @
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
 %
 \title{EvoMLP: a framework for evolving multilayer perceptrons}
 %
@@ -335,7 +334,7 @@ In this paper we will first try to show the performance of the algorithm for thi
 
 \begin{table*}
 \centering
-<<spambase.table,echo=FALSE, results=tex>>=
+<<spambase.table,echo=FALSE, results="asis">>=
 spambase1.base <- read.csv("data/spambase1-p64.csv")
 
 spambase <- data.frame( partition = "spambase1",
@@ -388,7 +387,7 @@ knitr::kable(spambase, col.names=c("Partition","Validation,best","Validation, me
 
 \begin{table*}
 \centering
-<<comparison.table,echo=FALSE, results=tex>>=
+<<comparison.table,echo=FALSE, results="asis">>=
 spambase1.tf <- read.csv("data/cec-2021-spambase-1.csv")
 spambase2.tf <- read.csv("data/cec-2021-spambase-2.csv")
 spambase3.tf <- read.csv("data/cec-2021-spambase-3.csv")
