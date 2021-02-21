@@ -290,8 +290,7 @@ f_{s} = (\sum_{i=0}^{nhl} nu_{i}) \times nhl
 \end{equation}
 where $f_{s}$, is the hidden-layer, or size, score, $nhl$ is the number of hidden layers and $nu_{i}$ the number of neurons for the layer $i$). This score is minimized, meaning that the less neurons, the better, but also that less hidden layers are preferred over more hidden layers. This $f_s$, however, receives a very low weight equivalent to 1\% of the accuracy, meaning that it will be only determinant, in practice, if there's a very small difference in accuracy when comparing two individuals of if accuracy is virtually the same.
 
-Finally, the F2 score metric (explained in the
-\autoref{sec:res}) is also considered. At the end, the fitness value is a compound of
+Finally, the F2 score metric (explained in \autoref{sec:res}) is also considered. At the end, the fitness value is a compound of
 three elements: accuracy, hidden-score and F2 score. As the DEAP framework
 \cite{deap-ga} was used as a base to create the genetic algorithm, we also
 took advantage of its fitness class \cite{deap-fitness} to rank the individuals
@@ -317,6 +316,7 @@ the fitness function used by G-Prop.
 %
 %
 
+The library was packaged and uploaded to the Python package registry, including the scripts that are used to run the experiments here. You can download it directly with {\tt pip install DeepGProp}. It has been released under the GNU GPL v3, and between releases it's also available from its GitHub repository \url{https://github.com/lulivi/dgp-lib}.
 
 Since we have implemented {\sf EvoMLP} using the Python programming language. Tests with pypy, an accelerated, just-in-time version of the regular interpreter were performed, but although it is supposed to accelerate most numerical workloads, it actually was almost twice as slow as the one using the regular interpreter.
 % Do we want to talk about technical implementation details as suggested in
@@ -329,6 +329,9 @@ Since we have implemented {\sf EvoMLP} using the Python programming language. Te
 \section{Results}
 \label{sec:res}
 
+Initial results comparing EvoMLP with G-Prop under different circumstances were already presented in \cite{deep-g-prop}. In general, allowing the evolution to optimize the number of layers allowed to obtain significantly better results than the original results published by G-Prop. Since then, however, new datasets have been published and we will need to establish a new baseline, as well as characterize the size of problems that are suitable for optimization with this package.
+
+In this paper we will first try to show the performance of the algorithm for this kind of problem, as well as create a baseline for comparison as we evolve the framework and the underlying algorithm. For that purpose, we have chosen {\sf spambase} as the dataset for all experiments. Taken from the UCI \cite{uci} database, it is a highly unbalanced dataset, with a good amount of features, and has been used extensively for benchmarking frameworks and algorithms. In papers such as the one by Duriqi et al. \cite{duriqi2016comparative}, which tests the algorithms implemented in WEKA, the accuracy reported is around 90\%, although it's not clear how the data set was split and if it is measured with a part of the dataset unseen before in any way. In order to measure generalization, in our experiments we have followed the PROBEN1 convention \cite{Prechelt94c} which is equivalent to a three-fold cross validation, splitting the dataset in three parts and sequentially using two of them for training and validation, finally testing them with the third part. By testing the models with an unseen part of the dataset, we guarantee that we are measuring its generalization capability, and not overfitting the model to the specific data it has been trained with.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}
