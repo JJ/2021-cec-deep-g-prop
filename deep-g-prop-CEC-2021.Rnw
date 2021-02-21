@@ -369,7 +369,7 @@ knitr::kable(spambase, col.names=c("Partition","Validation,best","Validation, me
 \label{tab:spambase:base}
 \end{table*}
 
-We are going to use the arguments shown in Table \autoref{tab:params}. Just the parameters indicated with * differ from the default values.
+We are going to use the arguments shown in Table \autoref{tab:params}. Just the parameters indicated with {\tt *} differ from the default values.
 %
 \begin{table}
 \centering
@@ -393,9 +393,9 @@ Number of neurons per layer & 2-20 \\
 \end{table}
 %
 
-In general, these values have been found by exploration; a further sensitivity study is probably needed, but meanwhile we try to use a reasonable amount of exploitation with exploration that is more intense for weights, and less intense for the other possibilities of change. This version will use Python 3.8.6, as well as Theano 2.3.1 with a Theano backend; Theano is a good choice, and it was proved to be slightly faster than other backends, like Tensorflow. Results are shown in \autoref{tab:spambase:base}. That table represents the average over {\em all} individuals in the last generation. We should take into account the uncertainty in the evaluation of the fitness via training and testing, so the concept of {\em best} individual in the last generation includes the same amount of uncertainty. 
+In general, these values have been found by exploration; a further sensitivity study is probably needed, but meanwhile we try to use a reasonable amount of exploitation with exploration that is more intense for weights, and less intense for the other possibilities of change. This version will use Python 3.8.6, as well as Theano 2.3.1 with a Theano backend; Theano is a good choice, and it was proved to be slightly faster than other backends, like Tensorflow. Results are shown in \autoref{tab:spambase:base}. That table represents the average over {\em all} individuals in the last generation. We should take into account the uncertainty in the evaluation of the fitness via training and testing, so the concept of {\em best} individual in the last generation includes the same amount of uncertainty; this is why in the table we include the median and the average; in these uncertain environments, median might be a better measure of success reached. This should be essentially considered a baseline value, and we do not want to present it as the state of the art. Looking at published results, these are comparable with those obtained with the Naive Bayes algorithm and shown, for instance, in \cite{duriqi2016comparative}, although the way of measuring them is totally different and we cannot really draw a comparison.
 
-
+The time needed to reach these results is around 2 hours for every run. This shows the relative lack of performance of Python, but at the same time, 2 hours is acceptable if we do not need a real time flow of results. The spambase problem is mid-size, with many inputs and a sizeable dataset, so this might be, in fact, in the limit of the kind of problems that can be approached with this algorithm, unless some improvements in performance (and accuracy) are made. Taking into account that all we have used is 2048 evaluations, it is not such a bad result, leading us to think that incresing the budget would probably obtain better results.
 %
 \begin{table*}
 \centering
@@ -450,10 +450,18 @@ knitr::kable(comparison, col.names=c("Partition","Validation,best","Validation, 
 \caption{Comparison of baseline (Theano-based) and the last version, based on Tensorflow, error percentage results for {\sf spambase} per partition, with validation (used by the algorithm) and test (unseen data, used for generalization) results.}
 \label{tab:spambase:comparison}
 \end{table*}
+
+However, another possible way of obtaining better results in one way or another is upgrading the dependencies. As a matter of fact, Keras underwent a change in the last version, being incorporated into the Tensorflow module, instead of being an independent one. That also had as a result eliminating the possibility of using different backends, reducing itself to only one backend: Tensorflow. We need to find out how this will affect the results of the algorithm, so we created a fork of the problem, changing all dependencies from the original version to the one included with Tensorflow, and run again using the same datasets and the same command line. The result is shown in \autoref{tab:spambase:comparison}. The set of last-generation results have been compared using Wilcoxon test, and in all cases difference is significant. However, as you can see, the result with this new version are worse than the original {\em in median}, although, since the standard deviation is higher, the best values are, in general, better. We should emphasize that the library code is exactly the same, except for a line that imports Keras as part of the Tensorflow library.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}
 \label{sec:conclus}
 
+We have introduced DeepGProp, a new Python library that uses state-of-the-art libraries for evolutionary algorithms and neural nets, and combines them in a way that can easily design a multilayer perceptron that solves problems up to mid size, such as {\sf spambase}.
+
+Depending on other libraries is always an issue in stochastic algorithms, but this implies that careful tests must be performed to see how that change affects our specific library. In this case, upgrading to Keras 2.4.0 has yielded higher uncertainty in the results obtained by our algorithm, although this has resulted in better exploration and eventually a better {\em best} result.
+
+As future line of work, we will try to obtain the best results possible by finding the optimal population as well as number of generations. Since this will increase the time needed to train, additional changes will have to be included, possibly sampling the testing set in every generation, which will have the effect of increasing uncertainty, but certainly reducing training time. Sensitivity to changes in the parameters beyond population and number of generations will also have to be investigated. Finally, all possibilities of increasing speed like parallelization or using GPU instructions will also be investigated.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
