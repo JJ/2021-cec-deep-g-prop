@@ -10,7 +10,7 @@ for @experiments[1..*-1].kv -> $i, $e {
     my @generations = $e ~~ m:g/ Generation \s+ (\d+) /;
     my @validation = $e ~~ m:g/ Validation  \s+ (\d+\.\d+) /;
     my @test = $e ~~ m:g/ Test  \s+ (\d+\.\d+) /;
-    for 0..^@validation.elems -> $j {
+    for 1..^@validation.elems -> $j {
         say "$i, {+@validation[$j][0]}, {+@test[$j][0]}, ", +@generations[*-1][0];
     }
 }
