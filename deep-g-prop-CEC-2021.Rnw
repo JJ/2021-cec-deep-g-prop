@@ -366,14 +366,6 @@ spambase <- rbind( spambase,
                        average.test = mean(spambase2.base$Test),
                        sd.test = sd(spambase2.base$Test) ) )
 
-comparison <- rbind( comparison,
-                    data.frame( partition = "spambase2 Theano",
-                       best.validation = min(spambase2.base$Validation),
-                       median.validation = median(spambase2.base$Validation),
-                       best.test = min(spambase2.base$Test),
-                       median.test = median(spambase2.base$Test),
-                       sd.test = sd(spambase2.base$Test) ) )
-
 spambase3.base <- read.csv("data/spambase3-p64.csv")
 
 spambase <- rbind( spambase,
@@ -386,13 +378,6 @@ spambase <- rbind( spambase,
                        average.test = mean(spambase3.base$Test),
                        sd.test = sd(spambase1.base$Test) ) )
 
-comparison <- rbind( comparison,
-                  data.frame( partition = "spambase3 Theano",
-                       best.validation = min(spambase3.base$Validation),
-                       median.validation = median(spambase3.base$Validation),
-                       best.test = min(spambase3.base$Test),
-                       median.test = median(spambase3.base$Test),
-                       sd.test = sd(spambase1.base$Test) ) )
 options(knitr.table.format = "latex")
 knitr::kable(spambase, col.names=c("Partition","Validation,best","Validation, median","Validation,mean", "Test, best", "Test, median", "Test, average", "Test, SD"))
 @
@@ -400,6 +385,59 @@ knitr::kable(spambase, col.names=c("Partition","Validation,best","Validation, me
 \label{tab:spambase:base}
 \end{table*}
 
+
+\begin{table*}
+\centering
+<<comparison.table,echo=FALSE, results=tex>>=
+spambase1.tf <- read.csv("data/cec-2021-spambase-1.csv")
+spambase2.tf <- read.csv("data/cec-2021-spambase-2.csv")
+spambase3.tf <- read.csv("data/cec-2021-spambase-3.csv")
+
+comparison <- rbind(comparison,
+                    data.frame( partition = "spambase1 TF",
+                       best.validation = min(spambase1.tf$Validation),
+                       median.validation = median(spambase1.tf$Validation),
+                       best.test = min(spambase1.tf$Test),
+                       median.test = median(spambase1.tf$Test),
+                       sd.test = sd(spambase1.tf$Test)))
+                    
+comparison <- rbind( comparison,
+                    data.frame( partition = "spambase2 Theano",
+                       best.validation = min(spambase2.base$Validation),
+                       median.validation = median(spambase2.base$Validation),
+                       best.test = min(spambase2.base$Test),
+                       median.test = median(spambase2.base$Test),
+                       sd.test = sd(spambase2.base$Test) ) )                    
+
+comparison <- rbind( comparison,
+                      data.frame( partition = "spambase2 TF",
+                       best.validation = min(spambase2.tf$Validation),
+                       median.validation = median(spambase2.tf$Validation),
+                       best.test = min(spambase2.tf$Test),
+                       median.test = median(spambase2.tf$Test),
+                       sd.test = sd(spambase2.tf$Test) ) )
+
+comparison <- rbind( comparison,
+                  data.frame( partition = "spambase3 Theano",
+                       best.validation = min(spambase3.base$Validation),
+                       median.validation = median(spambase3.base$Validation),
+                       best.test = min(spambase3.base$Test),
+                       median.test = median(spambase3.base$Test),
+                       sd.test = sd(spambase1.base$Test) ) )
+
+comparison <- rbind( comparison,
+                  data.frame( partition = "spambase3 TF",
+                       best.validation = min(spambase3.tf$Validation),
+                       median.validation = median(spambase3.tf$Validation),
+                       best.test = min(spambase3.tf$Test),
+                       median.test = median(spambase3.tf$Test),
+                       sd.test = sd(spambase1.tf$Test) ) )
+options(knitr.table.format = "latex")
+knitr::kable(comparison, col.names=c("Partition","Validation,best","Validation, median", "Test, best", "Test, median", "Test, SD"))
+@
+\caption{Comparison of baseline (Theano-based) and the last version, based on Tensorflow, error percentage results for {\sf spambase} per partition, with validation (used by the algorithm) and test (unseen data, used for generalization) results.}
+\label{tab:spambase:base}
+\end{table*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}
 \label{sec:conclus}
