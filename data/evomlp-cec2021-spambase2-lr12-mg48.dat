@@ -32557,3 +32557,32 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 2021-02-23 08:07:22.538064: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      
 2021-02-23 08:07:22.583162: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
 2021-02-23 08:07:22.583534: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 3493540000 Hz
+/home/jmerelo/.pyenv/versions/3.8.6/lib/python3.8/site-packages/tensorflow/python/keras/engine/sequential.py:450: UserWarning: `model.predict_classes()` is deprecated and will be removed after 2021-01-01. Please use instead:* `np.argmax(model.predict(x), axis=-1)`,   if your model does multi-class classification   (e.g. if it uses a `softmax` last-layer activation).* `(model.predict(x) > 0.5).astype("int32")`,   if your model does binary classification   (e.g. if it uses a `sigmoid` last-layer activation).
+  warnings.warn('`model.predict_classes()` is deprecated and '
+21Feb23_081118|-- Generation 1 --
+21Feb23_081118|    -- Crossed 2 individual pairs.
+21Feb23_081118|    -- Mutated 32 individuals.
+21Feb23_081512|    -- Evaluated 64 individuals.
+21Feb23_081512|    Summary of generation 1:
+21Feb23_081512| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_081512|-----------  ------------------  --------------------  ----------
+21Feb23_081512|    Max            42.35                96.00           0.76285
+21Feb23_081512|    Avg            41.74                22.81           0.01410
+21Feb23_081512|    Min            26.87                 2.00           0.00000
+21Feb23_081512|    Std             1.88                19.74           0.09441
+21Feb23_081512|   Best            26.87                39.00           0.76285
+21Feb23_081512|-- Generation 2 --
+21Feb23_081512|    -- Crossed 1 individual pairs.
+21Feb23_081512|    -- Mutated 32 individuals.
+21Feb23_081903|    -- Evaluated 64 individuals.
+21Feb23_081903|    Summary of generation 2:
+21Feb23_081903| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_081903|-----------  ------------------  --------------------  ----------
+21Feb23_081903|    Max            42.17                74.00           0.02573
+21Feb23_081903|    Avg            41.95                14.17           0.00298
+21Feb23_081903|    Min            41.22                 2.00           0.00000
+21Feb23_081903|    Std             0.15                14.00           0.00491
+21Feb23_081903|   Best            41.22                16.00           0.02573
+21Feb23_081903|-- Generation 3 --
+21Feb23_081903|    -- Crossed 6 individual pairs.
+21Feb23_081903|    -- Mutated 32 individuals.

@@ -2,7 +2,7 @@
 
 my $file-name = @*ARGS[0] // "data/helicases.txt";
 
-my @experiments = $file-name.IO.slurp.split(/"libcudart.so.11.0" \s+ /);
+my @experiments = $file-name.IO.slurp.split(/"Data summary: Train" \s+ /);
 
 say "Experiment, Validation, Test, Generations";
 

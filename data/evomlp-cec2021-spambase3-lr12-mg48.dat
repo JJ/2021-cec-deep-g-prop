@@ -30709,3 +30709,27 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 21Feb23_080717|-- Generation 35 --
 21Feb23_080717|    -- Crossed 1 individual pairs.
 21Feb23_080717|    -- Mutated 32 individuals.
+21Feb23_081136|    -- Evaluated 64 individuals.
+21Feb23_081136|    Summary of generation 35:
+21Feb23_081136| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_081136|-----------  ------------------  --------------------  ----------
+21Feb23_081136|    Max            38.78                297.00          0.83040
+21Feb23_081136|    Avg            32.35                77.34           0.31047
+21Feb23_081136|    Min            21.48                14.00           0.00000
+21Feb23_081136|    Std             5.99                73.01           0.30974
+21Feb23_081136|   Best            21.48                126.00          0.77749
+21Feb23_081136|-- Generation 36 --
+21Feb23_081136|    -- Crossed 1 individual pairs.
+21Feb23_081136|    -- Mutated 32 individuals.
+21Feb23_081554|    -- Evaluated 64 individuals.
+21Feb23_081554|    Summary of generation 36:
+21Feb23_081554| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_081554|-----------  ------------------  --------------------  ----------
+21Feb23_081554|    Max            39.04                240.00          0.75738
+21Feb23_081554|    Avg            32.60                67.03           0.27652
+21Feb23_081554|    Min            22.00                14.00           0.00000
+21Feb23_081554|    Std             6.29                56.58           0.29716
+21Feb23_081554|   Best            22.00                126.00          0.69336
+21Feb23_081554|-- Generation 37 --
+21Feb23_081554|    -- Crossed 2 individual pairs.
+21Feb23_081554|    -- Mutated 32 individuals.
