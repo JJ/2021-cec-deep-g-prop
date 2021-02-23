@@ -74,22 +74,22 @@ initial weights) and a set of learning constants.
 Using an optimization algorithm to solve at least part of this design problem
 is an usual approach to this challenge, and evolutionary neural networks \cite{GOMESPEREIRADELACERDA2021100777,Martinez2021LightsAS} have been proved to be an efficient way of searching for the
 architecture, weights, and other ANN parameters (such as learning
-constants). This has been proved
+constants). This has been demonstrated
 repeatedly for {\em shallow} architectures (with a single hidden
 layer) since late in the previous century
 \cite{yao1993evolutionary,CastilloNPL,stanley2002evolving}. However, in most cases, design
 of the structure and connections between different layers, as
 indicated by \cite{miikkulainen2019evolving}, is still mostly done by
 hand and left off the evolutionary process. This is mainly due to the above mentioned fact that including this makes search
-spaces huge, so using rules of thumb (such as the ones mentioned
+spaces huge, so using rules of thumb (such as the ones detailed
 in \cite{qolomany2017parameters}, or using certain formulas to set the
 number of layers) to decide on those parameters,
 are a way of fixing part of the search space, letting the neural net training algorithm to figure out the weights themselves, whose
 optimization, in these cases, is able to cover big spans of the search
 space. Some of these algorithms stop short of setting weights, and leave that to an actual neural net training algorithm. The fitness of the neural net is measured {\em after} training, thus including training time within the fitness evaluation time. Adding long evaluation time to the size of the search space makes, sometimes, the mixture of evolutionary algorithms with neural networks something that can be approached only with big evaluation budgets.
 
-That high budget needed needs to be managed, and this is done in several ways, usually. One of them is to fix a part of the architecture, by choosing a
-multi-layer perceptron (MLPs) using some well-proven training algorithm. After all, MLPs with a single hidden layer are universal approximators, and have been used extensively for classification and regression problems. Once that part of the search space is fixed, the initial
+That high budget required needs to be managed, and this is done in several ways. Usually one of them is to fix a part of the architecture, by choosing a
+multi-layer perceptron (MLPs) using some well-proven training algorithm. After all, MLPs with a single hidden layer are universal approximators, and have been used extensively for classification and regression problems. Once that part of the search space is covered, the initial
 weights as well as biases will evolve using an evolutionary algorithm (EA), and some MLP training algorithm such as backpropagation will be used to find the final MLP that's tested and eventually produced as the solution to a problem. This algorithm was proposed in the early years of the century, and called \emph{G-Prop} (as in \emph{Genetic Back-Propagation}), originally presented in \cite{castilloNC,CastilloNPL}. G-Prop evolves a population of data structures representing multi-layer perceptrons initial weights and biases, which are trained and tested to obtain the fitness. 
 This method leverages the capabilities of two classes of algorithms: the
 ability of EA to find a solution close to the global optimum, and the
@@ -117,7 +117,7 @@ denomination of {\sf EvoMLP} for this specific method.
 
 In this paper what we will do is to first bring the implementation of
 the G-Prop concept to current tools and languages, choosing the best
-suited for the purpose and show the design decisions that were taken in order to do so; since we are using off the shelf software libraries which are in constant evolution, we will also show, since implementation matters \cite{DBLP:conf/iwann/MereloRACML11}, how this change of versions affects (or not) the performance of the algorithm. We will also attempt to characterize the size of the problems for which this type of algorithm can be considered useful.
+suited for the purpose and show the design decisions that were taken in order to do so; since we are using off the shelf software libraries which are in constant evolution, we will also demonstrate, since implementation matters \cite{DBLP:conf/iwann/MereloRACML11}, how this change of versions affects (or not) the performance of the algorithm. Apart from that, we will also attempt to characterize the size of problems for which this type of algorithm can be considered useful.
 
 The remainder of this paper is structured as follows:
 section \ref{soa} makes a short overview of the methods to design ANN.
@@ -133,15 +133,16 @@ Searching the parameter space of neural networks looking for optimal combination
 in a limited number of ways, using {\em incremental algorithms}, which, in
 general, will depart from a specific architecture, number of layers
 and elements in every layer, and offer a series of heuristic
-procedures to add/eliminate layers and/or hidden-layer neurons in
+procedures to add/eliminate hidden-layers and/or neurons from them.
 % I think at this time there are only input and output layers (and these must remain fixed) 
 % and we have the option of adding and removing only hidden layers. 
 % I propose to only say: to add/eliminate layers and the number of neurons in them 
 % In more advanced networks there are other types like  recurrent, convolution etc. 
 % but making the distinction is a bit confusing - M 
 % Can you please ellaborate on this? Or simply rewrite it, no problem - JJ
-them. This way was, for a certain amount of time, the preferred technique
-for optimizing the size of the neural net along with its weights, according to classical reviews such % architecture of the nn ? - M
+% I think this is what Mario was refering - L
+This way was, for a certain amount of time, the preferred technique
+for optimizing the architecture of the neural net along with its weights, according to classical reviews such % architecture of the nn ? - M
 % don't get it, sorry - JJ
 as the one by Alpaydin \cite{alpaydin1994gal}. However and simultaneously, a
 series of evolutionary heuristics were starting to be applied for the
@@ -149,14 +150,14 @@ same purpose, as revealed by Balakrishnan and Honavar's review
 \cite{balakrishnan95:EDNA}. They propose a taxonomy, that classifies evolutionary
 design of the architecture of neural nets along three different axes
 (plus one for application domain): genotype representation, network
-topology, and a third axis that includes basically everything else,
+topology, and a third axis that includes basically everything else:
 ``variables of evolution''.
 This classification was much more comprehensive, and included many more degrees of freedom in evolution than simply adding or eliminating neurons. However, it still left some constraints and probably did not emphasize the parameters that are most likely to have the greater influence in the outcome.
 
-This is why, form our point of view, a more precise classification of evolved neural architectures would include: \begin{itemize}
-  \item Fixed or variable architecture. Irrespective of the kind of
-    data structured used to represent it, what is relevant is if that
-    representation allows for a variation of the architectural
+This is why, from our point of view, a more precise classification of evolved neural architectures would include: \begin{itemize}
+  \item Fixed or variable architecture. Regardless of the kind of
+    data structure used to represent it, the relevant matter is if that
+    representation allows a variation of the architectural
     parameters, that is, adding or eliminating new nodes, layers, or
     in general, nodes and edges in a graph representation of the
     architecture.
@@ -165,7 +166,7 @@ This is why, form our point of view, a more precise classification of evolved ne
     all weights and other parameters, to using a learning process just
     to find the success rate, with additional possibilities like
     evaluating success {\em before applying learning} (to take
-    advantage of the Baldwin effect \cite{castillo-2006}) to applying
+    advantage of the Baldwin effect \cite{castillo-2006}), to running
     a few cycles of learning that will become part of the codified
     solution.
   \item How the lack of a "crisp" value for the fitness, is taken into account
@@ -181,7 +182,7 @@ This is why, form our point of view, a more precise classification of evolved ne
     % Please check or extend the above sentence - M
     % There is also the problem of overfitting - M
     % It's OK - JJ
-  \item Mono or multiobjective optimization. In general, the main issue is to get the highest accuracy possible. However, 
+  \item Single or multiobjective optimization. In general, the main issue is to get the highest accuracy possible. However, 
   several other factors can be taken into account; in unbalanced data sets, accuracy for every one of the categories must be taken into account separately; besides, it is almost impossible to optimize by generalization, so a proxy for it, size, is instead optimized. All these objectives can be aggregated into a single one (using weights), hierarchized or considered properly as different objectives to be optimized separately.
  % Single or multiobjective?
  % There is more research in this aspect, changing "size" by "entropy", "message length" etc., there
