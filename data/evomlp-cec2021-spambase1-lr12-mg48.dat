@@ -24311,3 +24311,39 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 21Feb23_081852|-- Generation 25 --
 21Feb23_081852|    -- Crossed 7 individual pairs.
 21Feb23_081852|    -- Mutated 32 individuals.
+21Feb23_082240|    -- Evaluated 64 individuals.
+21Feb23_082240|    Summary of generation 25:
+21Feb23_082240| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_082240|-----------  ------------------  --------------------  ----------
+21Feb23_082240|    Max            38.96                16.00           0.54472
+21Feb23_082240|    Avg            38.60                 4.19           0.00869
+21Feb23_082240|    Min            26.61                 2.00           0.00000
+21Feb23_082240|    Std             1.51                 4.14           0.06755
+21Feb23_082240|   Best            26.61                10.00           0.54472
+21Feb23_082240|-- Generation 26 --
+21Feb23_082240|    -- Crossed 8 individual pairs.
+21Feb23_082240|    -- Mutated 32 individuals.
+21Feb23_082626|    -- Evaluated 64 individuals.
+21Feb23_082626|    Summary of generation 26:
+21Feb23_082626| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_082626|-----------  ------------------  --------------------  ----------
+21Feb23_082626|    Max            38.96                16.00           0.60920
+21Feb23_082626|    Avg            38.60                 4.61           0.00952
+21Feb23_082626|    Min            26.70                 2.00           0.00000
+21Feb23_082626|    Std             1.50                 4.65           0.07555
+21Feb23_082626|   Best            26.70                10.00           0.60920
+21Feb23_082626|-- Generation 27 --
+21Feb23_082626|    -- Crossed 9 individual pairs.
+21Feb23_082626|    -- Mutated 32 individuals.
+21Feb23_083013|    -- Evaluated 64 individuals.
+21Feb23_083013|    Summary of generation 27:
+21Feb23_083013| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_083013|-----------  ------------------  --------------------  ----------
+21Feb23_083013|    Max            40.17                16.00           0.37340
+21Feb23_083013|    Avg            38.65                 3.59           0.00583
+21Feb23_083013|    Min            28.26                 2.00           0.00000
+21Feb23_083013|    Std             1.32                 3.51           0.04631
+21Feb23_083013|   Best            28.26                10.00           0.37340
+21Feb23_083013|-- Generation 28 --
+21Feb23_083013|    -- Crossed 10 individual pairs.
+21Feb23_083013|    -- Mutated 32 individuals.
