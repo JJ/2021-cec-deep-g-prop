@@ -478,7 +478,30 @@ knitr::kable(comparison, col.names=c("Partition","Validation,best","Validation, 
 
 However, another possible way of obtaining better results in one way or another is upgrading the dependencies. As a matter of fact, Keras underwent a change in the last version, being incorporated into the Tensorflow module, instead of being an independent one. That also had as a result eliminating the possibility of using different backends, reducing itself to only one backend: Tensorflow. We need to find out how this will affect the results of the algorithm, so we created a fork of the problem, changing all dependencies from the original version to the one included with Tensorflow, and run again using the same datasets and the same command line. The result is shown in \autoref{tab:spambase:comparison}. The set of last-generation results have been compared using Wilcoxon test, and in all cases difference is significant. However, as you can see, the result with this new version are worse than the original {\em in median}, although, since the standard deviation is higher, the best values are, in general, better. We should emphasize that the library code is exactly the same, except for a line that imports Keras as part of the Tensorflow library.
 
-Once it is clear that the latest version of Tensorflow offers the best results, we will use it exclusively to check if one of the changes of EvoMLP, being able to evolve the number of layers, really brings any kind of improvement to the overall performance. On one hand, theoretically better results can be obtained; on the other hand, the search space again blows up, so with the same budget you might be, as it were, fishing in a bigger pond with a smaller fishing rod. So let us run an experiment where the number of layers is stuck at one, comparing it with these results.
+\begin{figure}
+\centering
+<<comparison.layers,echo=FALSE,message=FALSE>>=
+spambase1.lr11 <- read.csv("data/cec-2021-spambase1-lr11.csv")
+spambase2.lr11 <- read.csv("data/cec-2021-spambase2-lr11.csv")
+spambase3.lr11 <- read.csv("data/cec-2021-spambase3-lr11.csv")
+comparison.layers <- data.frame(experiment=c(rep("spambase1.3L",length(spambase1.tf$Test)),
+                                             rep("spambase1.1L",length(spambase1.lr11$Test)),
+                                             rep("spambase2.3L",length(spambase2.tf$Test)),
+                                             rep("spambase2.1L",length(spambase2.lr11$Test)),
+                                             rep("spambase3.3L",length(spambase3.tf$Test)),
+                                             rep("spambase3.1L",length(spambase3.lr11$Test))),
+                                Accuracy=c(spambase1.tf$Test,spambase1.lr11$Test,
+                                           spambase2.tf$Test,spambase2.lr11$Test,
+                                           spambase3.tf$Test,spambase3.lr11$Test))
+ggplot(comparison.layers,aes(x=experiment,y=Accuracy,group=experiment))+geom_boxplot(notch=T)+theme_tufte()
+@
+\caption{Comparing test results over the three partitions allowing up to three layers to evolve (results reported above) or fixing the number of hidden layers to 1 (1L).}
+\label{fig:comparison:layers}
+\end{figure}
+%
+Once it is clear that the latest version of TensorFlow offers the best results, we will use it exclusively to check if one of the changes of EvoMLP, being able to evolve the number of layers, really brings any kind of improvement to the overall performance. On one hand, theoretically better results can be obtained; on the other hand, the search space again blows up, so with the same budget you might be, as it were, fishing in a bigger pond with a smaller fishing rod. So let us run an experiment where the number of layers is stuck at one, comparing it with these results. These are shown in \autoref{fig:comparison:layers}.
+
+Although the difference is significant in all three cases, the problem is that it differs on which one is the best; using a single partition would probably hide that. The single-layer version is better in spambase2, the 3-layer version is better in the other two. Overall, however, there is no significant difference between in these three experiments the way we have done it, which probably means that, since we are using the same budget, as we have indicated above, the constrain added of having a single layer makes search in the space of architectures reach further, so we would need more evaluations to really see a difference. We should also take into account that we are using all the individuals in the last generation, due to the practical impossibility to select the absolute best, since the evaluation for every individual is affected by the uncertainty in training. The best results seem to indicate that, in some cases, using 3 layers is able to reach accuracies that are just not possible with one layer. However, this is left as an hypothesis to be checked in the future.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}

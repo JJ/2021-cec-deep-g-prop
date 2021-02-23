@@ -39,4 +39,17 @@ comparison.layers <- data.frame(experiment=c(rep("spambase1.3L",length(spambase1
                                 Accuracy=c(spambase1.tf$Test,spambase1.lr11$Test,
                                            spambase2.tf$Test,spambase2.lr11$Test,
                                            spambase3.tf$Test,spambase3.lr11$Test))
+
 ggplot(comparison.layers,aes(x=experiment,y=Accuracy,group=experiment))+geom_boxplot(notch=T)+theme_tufte()
+
+comparison.overall <- data.frame(experiment=c(rep("spambase.3L",length(spambase1.tf$Test)),
+                                             rep("spambase.1L",length(spambase1.lr11$Test)),
+                                             rep("spambase.3L",length(spambase2.tf$Test)),
+                                             rep("spambase.1L",length(spambase2.lr11$Test)),
+                                             rep("spambase.3L",length(spambase3.tf$Test)),
+                                             rep("spambase.1L",length(spambase3.lr11$Test))),
+                                Accuracy=c(spambase1.tf$Test,spambase1.lr11$Test,
+                                           spambase2.tf$Test,spambase2.lr11$Test,
+                                           spambase3.tf$Test,spambase3.lr11$Test))
+
+wilcox.test(comparison.overall[comparison.overall$experiment=="spambase.3L",]$Accuracy, comparison.overall[comparison.overall$experiment=="spambase.1L",]$Accuracy)
