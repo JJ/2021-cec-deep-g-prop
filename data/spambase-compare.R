@@ -63,3 +63,20 @@ spambase2.t.lr11 <- read.csv("../data/cec-2021-spambase-2-lr11-times.csv")
 spambase3.t.lr11 <- read.csv("../data/cec-2021-spambase-3-lr11-times.csv")
 
 wilcox.test(spambase3.t.tf$Time,spambase3.t.lr11$Time)
+
+spambase1.lr12 <- read.csv("../data/cec-2021-spambase1-lr12-mg48.csv")
+spambase2.lr12 <- read.csv("../data/cec-2021-spambase2-lr12-mg48.csv")
+spambase3.lr12 <- read.csv("../data/cec-2021-spambase3-lr12-mg48.csv")
+
+comparison.generations <- data.frame(experiment=c(rep("spambase1.3L",length(spambase1.tf$Test)),
+                                                  rep("spambase1.2L",length(spambase1.lr12$Test)),
+                                                  rep("spambase2.3L",length(spambase2.tf$Test)),
+                                                  rep("spambase2.2L",length(spambase2.lr12$Test)),
+                                                  rep("spambase3.3L",length(spambase3.tf$Test)),
+                                                  rep("spambase3.2L",length(spambase3.lr12$Test))),
+                                Accuracy=c(spambase1.tf$Test,spambase1.lr12$Test,
+                                           spambase2.tf$Test,spambase2.lr12$Test,
+                                           spambase3.tf$Test,spambase3.lr12$Test))
+
+
+ggplot(comparison.generations,aes(x=experiment,y=Accuracy,group=experiment))+geom_boxplot(notch=T)+theme_tufte()

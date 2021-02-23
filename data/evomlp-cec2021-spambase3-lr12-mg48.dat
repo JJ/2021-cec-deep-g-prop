@@ -40117,3 +40117,1845 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 21Feb23_190100|-- Generation 47 --
 21Feb23_190100|    -- Crossed 0 individual pairs.
 21Feb23_190100|    -- Mutated 32 individuals.
+21Feb23_190520|    -- Evaluated 64 individuals.
+21Feb23_190520|    Summary of generation 47:
+21Feb23_190520| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_190520|-----------  ------------------  --------------------  ----------
+21Feb23_190520|    Max            38.87                189.00          0.78574
+21Feb23_190520|    Avg            30.37                75.22           0.39299
+21Feb23_190520|    Min            23.83                 4.00           0.00000
+21Feb23_190520|    Std             5.74                44.92           0.27662
+21Feb23_190520|   Best            23.83                27.00           0.51193
+21Feb23_190520|-- Generation 48 --
+21Feb23_190520|    -- Crossed 0 individual pairs.
+21Feb23_190520|    -- Mutated 32 individuals.
+21Feb23_190940|    -- Evaluated 64 individuals.
+21Feb23_190940|    Summary of generation 48:
+21Feb23_190940| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_190940|-----------  ------------------  --------------------  ----------
+21Feb23_190940|    Max            38.52                240.00          0.77021
+21Feb23_190940|    Avg            29.03                81.06           0.45014
+21Feb23_190940|    Min            22.09                12.00           0.00000
+21Feb23_190940|    Std             5.14                45.98           0.26238
+21Feb23_190940|   Best            22.09                52.00           0.73503
+21Feb23_190940|Best initial individual weights
+21Feb23_190940|Individual:
+21Feb23_190940|-- Constant hidden layers --
+21Feb23_190940|False
+21Feb23_190940|Layer 0:
+21Feb23_190940|-- Config --
+21Feb23_190940|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 19, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190940|-- Weights --
+21Feb23_190940|[[ 0.71999  0.48896 -0.59228 ... -0.43387  0.74135 -0.18716]
+21Feb23_190940| [ 0.84515 -0.84160 -0.97413 ...  0.90845 -0.88656 -0.47061]
+21Feb23_190940| [-0.14486 -0.98148 -0.61901 ...  0.49057 -0.50844 -0.79938]
+21Feb23_190940| ...
+21Feb23_190940| [ 0.97014  0.42685 -0.60449 ... -0.25706 -0.91501 -0.31388]
+21Feb23_190940| [-0.61259  0.55113  0.52708 ...  0.86941  0.35853 -0.36780]
+21Feb23_190940| [-0.56773  0.91476 -0.90273 ... -0.93189 -0.56010  0.63839]]
+21Feb23_190940|-- Bias --
+21Feb23_190940|[ 0.68600  0.43673 -0.72222 -0.55277  0.86228  0.96608 -0.73146 -0.40150
+21Feb23_190940| -0.51059  0.46762 -0.55380  0.31102  0.95577  0.32639 -0.00103  0.01829
+21Feb23_190940| -0.16387  0.15423  0.26419]
+21Feb23_190940|Layer 1:
+21Feb23_190940|-- Config --
+21Feb23_190940|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 19], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190940|-- Weights --
+21Feb23_190940|[[-0.97761  0.76156]
+21Feb23_190940| [-0.99366  0.99063]
+21Feb23_190940| [-0.65390  0.94303]
+21Feb23_190940| [ 0.77790 -0.92813]
+21Feb23_190940| [-0.63660  0.10879]
+21Feb23_190940| [ 0.60460 -0.25640]
+21Feb23_190940| [-0.58421  0.45055]
+21Feb23_190940| [-0.84636 -0.25223]
+21Feb23_190940| [-0.38002  0.49469]
+21Feb23_190940| [-0.54717 -0.00798]
+21Feb23_190940| [-0.09852 -0.87887]
+21Feb23_190940| [ 0.95900  0.67815]
+21Feb23_190940| [-0.15659 -0.38243]
+21Feb23_190940| [-0.22064 -0.36778]
+21Feb23_190940| [-0.69043 -0.47192]
+21Feb23_190940| [-0.53182  0.99888]
+21Feb23_190940| [ 0.99673 -0.43406]
+21Feb23_190940| [ 0.13151  0.77712]
+21Feb23_190940| [ 0.26224 -0.70792]]
+21Feb23_190940|-- Bias --
+21Feb23_190940|[-0.91303  0.40725]
+21Feb23_190940|Predicting the validation and test data with the Best initial individual.
+21Feb23_190948| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_190948|-----------  ------------------  --------------------  ----------
+21Feb23_190948|Validation         39.13                  19            0.00000
+21Feb23_190948|   Test            35.45                  19            0.14628
+21Feb23_190948|-------------------- Test #0 --------------------
+21Feb23_190948|Best final individual weights
+21Feb23_190948|Individual:
+21Feb23_190948|-- Constant hidden layers --
+21Feb23_190948|False
+21Feb23_190948|Layer 0:
+21Feb23_190948|-- Config --
+21Feb23_190948|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190948|-- Weights --
+21Feb23_190948|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_190948| [ 0.79002  0.31213 -0.86304]
+21Feb23_190948| [ 0.61705 -1.64884 -0.97221]
+21Feb23_190948| [ 0.13833  1.71994  0.77236]
+21Feb23_190948| [ 0.31934  1.50374 -0.68725]
+21Feb23_190948| [-1.90085  0.15046 -0.07561]
+21Feb23_190948| [-0.60993  1.39039 -0.46394]
+21Feb23_190948| [ 2.54954  1.17828 -1.04656]
+21Feb23_190948| [ 0.30420  0.23973 -0.01569]
+21Feb23_190948| [ 0.72731  0.59382  1.46010]
+21Feb23_190948| [ 0.31749  0.18924 -1.46856]
+21Feb23_190948| [-1.35275 -0.32416 -1.07065]
+21Feb23_190948| [-0.33171  0.12090  0.79750]
+21Feb23_190948| [ 0.06671  1.39111  0.62179]
+21Feb23_190948| [-0.13836 -0.01265 -0.37504]
+21Feb23_190948| [-0.58275 -1.50370  2.17998]
+21Feb23_190948| [ 0.45418  2.35023 -0.13957]
+21Feb23_190948| [-1.03000  1.95381 -0.25933]
+21Feb23_190948| [-0.44308  0.97727  0.95559]
+21Feb23_190948| [ 0.27001 -0.61438 -0.93120]
+21Feb23_190948| [-1.13842 -0.41684 -0.52778]
+21Feb23_190948| [-1.16600  0.00720  1.18948]
+21Feb23_190948| [-0.12653  0.73549 -1.36697]
+21Feb23_190948| [ 2.03070 -0.09275 -0.58549]
+21Feb23_190948| [ 0.18686 -1.12873  0.71513]
+21Feb23_190948| [-1.00562 -2.79831 -0.50221]
+21Feb23_190948| [ 1.67673  0.53823  0.20677]
+21Feb23_190948| [-1.29691  0.29036 -0.46059]
+21Feb23_190948| [-0.72800 -0.37109  0.02418]
+21Feb23_190948| [ 1.25098  1.24634  0.28313]
+21Feb23_190948| [ 0.47449  0.99704 -0.77940]
+21Feb23_190948| [ 0.12947  0.15882  2.04904]
+21Feb23_190948| [-0.88475  0.01778 -3.23506]
+21Feb23_190948| [-1.79267 -1.16006  0.88464]
+21Feb23_190948| [ 0.78148 -1.93572 -1.24057]
+21Feb23_190948| [-1.29342 -1.06830  0.61716]
+21Feb23_190948| [ 0.37293  0.20970 -1.96565]
+21Feb23_190948| [-0.44082 -1.34747 -1.51449]
+21Feb23_190948| [ 1.85410 -0.84025 -0.65535]
+21Feb23_190948| [ 0.72680  1.05212  2.04635]
+21Feb23_190948| [-2.17638 -1.33491  0.73664]
+21Feb23_190948| [ 0.09247  0.94111 -0.16696]
+21Feb23_190948| [-1.54434 -0.21276 -0.59742]
+21Feb23_190948| [ 0.71986  0.95892  0.37814]
+21Feb23_190948| [-0.42768 -0.41481  1.41418]
+21Feb23_190948| [ 0.93623  0.27167 -0.17780]
+21Feb23_190948| [-0.34607  2.49823 -0.68396]
+21Feb23_190948| [ 0.19979  1.16766 -0.73370]
+21Feb23_190948| [ 1.17053  0.75363  0.82168]
+21Feb23_190948| [-1.11306 -1.63775  0.12946]
+21Feb23_190948| [ 0.17495  0.17393  1.94998]
+21Feb23_190948| [ 0.76945  0.82383 -1.17665]
+21Feb23_190948| [-1.42652  0.84634  2.12379]
+21Feb23_190948| [-0.60414 -1.72003 -0.40822]
+21Feb23_190948| [-1.55747 -0.00775  0.02646]
+21Feb23_190948| [ 2.72793  0.49311  1.70797]
+21Feb23_190948| [-0.79940  0.57341 -1.52454]]
+21Feb23_190948|-- Bias --
+21Feb23_190948|[-0.29016  0.52554  0.57153]
+21Feb23_190948|Layer 1:
+21Feb23_190948|-- Config --
+21Feb23_190948|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190948|-- Weights --
+21Feb23_190948|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_190948| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_190948| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_190948|-- Bias --
+21Feb23_190948|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_190948|Layer 2:
+21Feb23_190948|-- Config --
+21Feb23_190948|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190948|-- Weights --
+21Feb23_190948|[[ 0.23333  0.60101]
+21Feb23_190948| [ 0.30179 -0.26645]
+21Feb23_190948| [-0.48905  0.48009]
+21Feb23_190948| [-0.14506  1.32852]]
+21Feb23_190948|-- Bias --
+21Feb23_190948|[-1.01737 -0.63304]
+21Feb23_190948|Layer 3:
+21Feb23_190948|-- Config --
+21Feb23_190948|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190948|-- Weights --
+21Feb23_190948|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_190948| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_190948|-- Bias --
+21Feb23_190948|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_190948|Layer 4:
+21Feb23_190948|-- Config --
+21Feb23_190948|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190948|-- Weights --
+21Feb23_190948|[[ 0.73210  1.31236]
+21Feb23_190948| [-0.34309 -0.29066]
+21Feb23_190948| [ 0.41825  0.22431]
+21Feb23_190948| [-0.07199  0.69437]]
+21Feb23_190948|-- Bias --
+21Feb23_190948|[-1.36544 -0.72244]
+21Feb23_190948|Predicting the validation and test data with the Best final individual.
+21Feb23_190956| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_190956|-----------  ------------------  --------------------  ----------
+21Feb23_190956|Validation         26.17                  52            0.73075
+21Feb23_190956|   Test            24.24                  52            0.72172
+21Feb23_190956|-------------------- Test #1 --------------------
+21Feb23_190956|Best final individual weights
+21Feb23_190956|Individual:
+21Feb23_190956|-- Constant hidden layers --
+21Feb23_190956|False
+21Feb23_190956|Layer 0:
+21Feb23_190956|-- Config --
+21Feb23_190956|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190956|-- Weights --
+21Feb23_190956|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_190956| [ 0.79002  0.31213 -0.86304]
+21Feb23_190956| [ 0.61705 -1.64884 -0.97221]
+21Feb23_190956| [ 0.13833  1.71994  0.77236]
+21Feb23_190956| [ 0.31934  1.50374 -0.68725]
+21Feb23_190956| [-1.90085  0.15046 -0.07561]
+21Feb23_190956| [-0.60993  1.39039 -0.46394]
+21Feb23_190956| [ 2.54954  1.17828 -1.04656]
+21Feb23_190956| [ 0.30420  0.23973 -0.01569]
+21Feb23_190956| [ 0.72731  0.59382  1.46010]
+21Feb23_190956| [ 0.31749  0.18924 -1.46856]
+21Feb23_190956| [-1.35275 -0.32416 -1.07065]
+21Feb23_190956| [-0.33171  0.12090  0.79750]
+21Feb23_190956| [ 0.06671  1.39111  0.62179]
+21Feb23_190956| [-0.13836 -0.01265 -0.37504]
+21Feb23_190956| [-0.58275 -1.50370  2.17998]
+21Feb23_190956| [ 0.45418  2.35023 -0.13957]
+21Feb23_190956| [-1.03000  1.95381 -0.25933]
+21Feb23_190956| [-0.44308  0.97727  0.95559]
+21Feb23_190956| [ 0.27001 -0.61438 -0.93120]
+21Feb23_190956| [-1.13842 -0.41684 -0.52778]
+21Feb23_190956| [-1.16600  0.00720  1.18948]
+21Feb23_190956| [-0.12653  0.73549 -1.36697]
+21Feb23_190956| [ 2.03070 -0.09275 -0.58549]
+21Feb23_190956| [ 0.18686 -1.12873  0.71513]
+21Feb23_190956| [-1.00562 -2.79831 -0.50221]
+21Feb23_190956| [ 1.67673  0.53823  0.20677]
+21Feb23_190956| [-1.29691  0.29036 -0.46059]
+21Feb23_190956| [-0.72800 -0.37109  0.02418]
+21Feb23_190956| [ 1.25098  1.24634  0.28313]
+21Feb23_190956| [ 0.47449  0.99704 -0.77940]
+21Feb23_190956| [ 0.12947  0.15882  2.04904]
+21Feb23_190956| [-0.88475  0.01778 -3.23506]
+21Feb23_190956| [-1.79267 -1.16006  0.88464]
+21Feb23_190956| [ 0.78148 -1.93572 -1.24057]
+21Feb23_190956| [-1.29342 -1.06830  0.61716]
+21Feb23_190956| [ 0.37293  0.20970 -1.96565]
+21Feb23_190956| [-0.44082 -1.34747 -1.51449]
+21Feb23_190956| [ 1.85410 -0.84025 -0.65535]
+21Feb23_190956| [ 0.72680  1.05212  2.04635]
+21Feb23_190956| [-2.17638 -1.33491  0.73664]
+21Feb23_190956| [ 0.09247  0.94111 -0.16696]
+21Feb23_190956| [-1.54434 -0.21276 -0.59742]
+21Feb23_190956| [ 0.71986  0.95892  0.37814]
+21Feb23_190956| [-0.42768 -0.41481  1.41418]
+21Feb23_190956| [ 0.93623  0.27167 -0.17780]
+21Feb23_190956| [-0.34607  2.49823 -0.68396]
+21Feb23_190956| [ 0.19979  1.16766 -0.73370]
+21Feb23_190956| [ 1.17053  0.75363  0.82168]
+21Feb23_190956| [-1.11306 -1.63775  0.12946]
+21Feb23_190956| [ 0.17495  0.17393  1.94998]
+21Feb23_190956| [ 0.76945  0.82383 -1.17665]
+21Feb23_190956| [-1.42652  0.84634  2.12379]
+21Feb23_190956| [-0.60414 -1.72003 -0.40822]
+21Feb23_190956| [-1.55747 -0.00775  0.02646]
+21Feb23_190956| [ 2.72793  0.49311  1.70797]
+21Feb23_190956| [-0.79940  0.57341 -1.52454]]
+21Feb23_190956|-- Bias --
+21Feb23_190956|[-0.29016  0.52554  0.57153]
+21Feb23_190956|Layer 1:
+21Feb23_190956|-- Config --
+21Feb23_190956|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190956|-- Weights --
+21Feb23_190956|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_190956| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_190956| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_190956|-- Bias --
+21Feb23_190956|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_190956|Layer 2:
+21Feb23_190956|-- Config --
+21Feb23_190956|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190956|-- Weights --
+21Feb23_190956|[[ 0.23333  0.60101]
+21Feb23_190956| [ 0.30179 -0.26645]
+21Feb23_190956| [-0.48905  0.48009]
+21Feb23_190956| [-0.14506  1.32852]]
+21Feb23_190956|-- Bias --
+21Feb23_190956|[-1.01737 -0.63304]
+21Feb23_190956|Layer 3:
+21Feb23_190956|-- Config --
+21Feb23_190956|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190956|-- Weights --
+21Feb23_190956|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_190956| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_190956|-- Bias --
+21Feb23_190956|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_190956|Layer 4:
+21Feb23_190956|-- Config --
+21Feb23_190956|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_190956|-- Weights --
+21Feb23_190956|[[ 0.73210  1.31236]
+21Feb23_190956| [-0.34309 -0.29066]
+21Feb23_190956| [ 0.41825  0.22431]
+21Feb23_190956| [-0.07199  0.69437]]
+21Feb23_190956|-- Bias --
+21Feb23_190956|[-1.36544 -0.72244]
+21Feb23_190956|Predicting the validation and test data with the Best final individual.
+21Feb23_191004| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191004|-----------  ------------------  --------------------  ----------
+21Feb23_191004|Validation         27.48                  52            0.82994
+21Feb23_191004|   Test            23.54                  52            0.65522
+21Feb23_191004|-------------------- Test #2 --------------------
+21Feb23_191004|Best final individual weights
+21Feb23_191004|Individual:
+21Feb23_191004|-- Constant hidden layers --
+21Feb23_191004|False
+21Feb23_191004|Layer 0:
+21Feb23_191004|-- Config --
+21Feb23_191004|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191004|-- Weights --
+21Feb23_191004|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191004| [ 0.79002  0.31213 -0.86304]
+21Feb23_191004| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191004| [ 0.13833  1.71994  0.77236]
+21Feb23_191004| [ 0.31934  1.50374 -0.68725]
+21Feb23_191004| [-1.90085  0.15046 -0.07561]
+21Feb23_191004| [-0.60993  1.39039 -0.46394]
+21Feb23_191004| [ 2.54954  1.17828 -1.04656]
+21Feb23_191004| [ 0.30420  0.23973 -0.01569]
+21Feb23_191004| [ 0.72731  0.59382  1.46010]
+21Feb23_191004| [ 0.31749  0.18924 -1.46856]
+21Feb23_191004| [-1.35275 -0.32416 -1.07065]
+21Feb23_191004| [-0.33171  0.12090  0.79750]
+21Feb23_191004| [ 0.06671  1.39111  0.62179]
+21Feb23_191004| [-0.13836 -0.01265 -0.37504]
+21Feb23_191004| [-0.58275 -1.50370  2.17998]
+21Feb23_191004| [ 0.45418  2.35023 -0.13957]
+21Feb23_191004| [-1.03000  1.95381 -0.25933]
+21Feb23_191004| [-0.44308  0.97727  0.95559]
+21Feb23_191004| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191004| [-1.13842 -0.41684 -0.52778]
+21Feb23_191004| [-1.16600  0.00720  1.18948]
+21Feb23_191004| [-0.12653  0.73549 -1.36697]
+21Feb23_191004| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191004| [ 0.18686 -1.12873  0.71513]
+21Feb23_191004| [-1.00562 -2.79831 -0.50221]
+21Feb23_191004| [ 1.67673  0.53823  0.20677]
+21Feb23_191004| [-1.29691  0.29036 -0.46059]
+21Feb23_191004| [-0.72800 -0.37109  0.02418]
+21Feb23_191004| [ 1.25098  1.24634  0.28313]
+21Feb23_191004| [ 0.47449  0.99704 -0.77940]
+21Feb23_191004| [ 0.12947  0.15882  2.04904]
+21Feb23_191004| [-0.88475  0.01778 -3.23506]
+21Feb23_191004| [-1.79267 -1.16006  0.88464]
+21Feb23_191004| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191004| [-1.29342 -1.06830  0.61716]
+21Feb23_191004| [ 0.37293  0.20970 -1.96565]
+21Feb23_191004| [-0.44082 -1.34747 -1.51449]
+21Feb23_191004| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191004| [ 0.72680  1.05212  2.04635]
+21Feb23_191004| [-2.17638 -1.33491  0.73664]
+21Feb23_191004| [ 0.09247  0.94111 -0.16696]
+21Feb23_191004| [-1.54434 -0.21276 -0.59742]
+21Feb23_191004| [ 0.71986  0.95892  0.37814]
+21Feb23_191004| [-0.42768 -0.41481  1.41418]
+21Feb23_191004| [ 0.93623  0.27167 -0.17780]
+21Feb23_191004| [-0.34607  2.49823 -0.68396]
+21Feb23_191004| [ 0.19979  1.16766 -0.73370]
+21Feb23_191004| [ 1.17053  0.75363  0.82168]
+21Feb23_191004| [-1.11306 -1.63775  0.12946]
+21Feb23_191004| [ 0.17495  0.17393  1.94998]
+21Feb23_191004| [ 0.76945  0.82383 -1.17665]
+21Feb23_191004| [-1.42652  0.84634  2.12379]
+21Feb23_191004| [-0.60414 -1.72003 -0.40822]
+21Feb23_191004| [-1.55747 -0.00775  0.02646]
+21Feb23_191004| [ 2.72793  0.49311  1.70797]
+21Feb23_191004| [-0.79940  0.57341 -1.52454]]
+21Feb23_191004|-- Bias --
+21Feb23_191004|[-0.29016  0.52554  0.57153]
+21Feb23_191004|Layer 1:
+21Feb23_191004|-- Config --
+21Feb23_191004|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191004|-- Weights --
+21Feb23_191004|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191004| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191004| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191004|-- Bias --
+21Feb23_191004|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191004|Layer 2:
+21Feb23_191004|-- Config --
+21Feb23_191004|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191004|-- Weights --
+21Feb23_191004|[[ 0.23333  0.60101]
+21Feb23_191004| [ 0.30179 -0.26645]
+21Feb23_191004| [-0.48905  0.48009]
+21Feb23_191004| [-0.14506  1.32852]]
+21Feb23_191004|-- Bias --
+21Feb23_191004|[-1.01737 -0.63304]
+21Feb23_191004|Layer 3:
+21Feb23_191004|-- Config --
+21Feb23_191004|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191004|-- Weights --
+21Feb23_191004|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191004| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191004|-- Bias --
+21Feb23_191004|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191004|Layer 4:
+21Feb23_191004|-- Config --
+21Feb23_191004|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191004|-- Weights --
+21Feb23_191004|[[ 0.73210  1.31236]
+21Feb23_191004| [-0.34309 -0.29066]
+21Feb23_191004| [ 0.41825  0.22431]
+21Feb23_191004| [-0.07199  0.69437]]
+21Feb23_191004|-- Bias --
+21Feb23_191004|[-1.36544 -0.72244]
+21Feb23_191004|Predicting the validation and test data with the Best final individual.
+21Feb23_191012| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191012|-----------  ------------------  --------------------  ----------
+21Feb23_191012|Validation         26.61                  52            0.52708
+21Feb23_191012|   Test            28.93                  52            0.47152
+21Feb23_191012|-------------------- Test #3 --------------------
+21Feb23_191012|Best final individual weights
+21Feb23_191012|Individual:
+21Feb23_191012|-- Constant hidden layers --
+21Feb23_191012|False
+21Feb23_191012|Layer 0:
+21Feb23_191012|-- Config --
+21Feb23_191012|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191012|-- Weights --
+21Feb23_191012|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191012| [ 0.79002  0.31213 -0.86304]
+21Feb23_191012| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191012| [ 0.13833  1.71994  0.77236]
+21Feb23_191012| [ 0.31934  1.50374 -0.68725]
+21Feb23_191012| [-1.90085  0.15046 -0.07561]
+21Feb23_191012| [-0.60993  1.39039 -0.46394]
+21Feb23_191012| [ 2.54954  1.17828 -1.04656]
+21Feb23_191012| [ 0.30420  0.23973 -0.01569]
+21Feb23_191012| [ 0.72731  0.59382  1.46010]
+21Feb23_191012| [ 0.31749  0.18924 -1.46856]
+21Feb23_191012| [-1.35275 -0.32416 -1.07065]
+21Feb23_191012| [-0.33171  0.12090  0.79750]
+21Feb23_191012| [ 0.06671  1.39111  0.62179]
+21Feb23_191012| [-0.13836 -0.01265 -0.37504]
+21Feb23_191012| [-0.58275 -1.50370  2.17998]
+21Feb23_191012| [ 0.45418  2.35023 -0.13957]
+21Feb23_191012| [-1.03000  1.95381 -0.25933]
+21Feb23_191012| [-0.44308  0.97727  0.95559]
+21Feb23_191012| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191012| [-1.13842 -0.41684 -0.52778]
+21Feb23_191012| [-1.16600  0.00720  1.18948]
+21Feb23_191012| [-0.12653  0.73549 -1.36697]
+21Feb23_191012| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191012| [ 0.18686 -1.12873  0.71513]
+21Feb23_191012| [-1.00562 -2.79831 -0.50221]
+21Feb23_191012| [ 1.67673  0.53823  0.20677]
+21Feb23_191012| [-1.29691  0.29036 -0.46059]
+21Feb23_191012| [-0.72800 -0.37109  0.02418]
+21Feb23_191012| [ 1.25098  1.24634  0.28313]
+21Feb23_191012| [ 0.47449  0.99704 -0.77940]
+21Feb23_191012| [ 0.12947  0.15882  2.04904]
+21Feb23_191012| [-0.88475  0.01778 -3.23506]
+21Feb23_191012| [-1.79267 -1.16006  0.88464]
+21Feb23_191012| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191012| [-1.29342 -1.06830  0.61716]
+21Feb23_191012| [ 0.37293  0.20970 -1.96565]
+21Feb23_191012| [-0.44082 -1.34747 -1.51449]
+21Feb23_191012| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191012| [ 0.72680  1.05212  2.04635]
+21Feb23_191012| [-2.17638 -1.33491  0.73664]
+21Feb23_191012| [ 0.09247  0.94111 -0.16696]
+21Feb23_191012| [-1.54434 -0.21276 -0.59742]
+21Feb23_191012| [ 0.71986  0.95892  0.37814]
+21Feb23_191012| [-0.42768 -0.41481  1.41418]
+21Feb23_191012| [ 0.93623  0.27167 -0.17780]
+21Feb23_191012| [-0.34607  2.49823 -0.68396]
+21Feb23_191012| [ 0.19979  1.16766 -0.73370]
+21Feb23_191012| [ 1.17053  0.75363  0.82168]
+21Feb23_191012| [-1.11306 -1.63775  0.12946]
+21Feb23_191012| [ 0.17495  0.17393  1.94998]
+21Feb23_191012| [ 0.76945  0.82383 -1.17665]
+21Feb23_191012| [-1.42652  0.84634  2.12379]
+21Feb23_191012| [-0.60414 -1.72003 -0.40822]
+21Feb23_191012| [-1.55747 -0.00775  0.02646]
+21Feb23_191012| [ 2.72793  0.49311  1.70797]
+21Feb23_191012| [-0.79940  0.57341 -1.52454]]
+21Feb23_191012|-- Bias --
+21Feb23_191012|[-0.29016  0.52554  0.57153]
+21Feb23_191012|Layer 1:
+21Feb23_191012|-- Config --
+21Feb23_191012|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191012|-- Weights --
+21Feb23_191012|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191012| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191012| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191012|-- Bias --
+21Feb23_191012|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191012|Layer 2:
+21Feb23_191012|-- Config --
+21Feb23_191012|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191012|-- Weights --
+21Feb23_191012|[[ 0.23333  0.60101]
+21Feb23_191012| [ 0.30179 -0.26645]
+21Feb23_191012| [-0.48905  0.48009]
+21Feb23_191012| [-0.14506  1.32852]]
+21Feb23_191012|-- Bias --
+21Feb23_191012|[-1.01737 -0.63304]
+21Feb23_191012|Layer 3:
+21Feb23_191012|-- Config --
+21Feb23_191012|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191012|-- Weights --
+21Feb23_191012|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191012| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191012|-- Bias --
+21Feb23_191012|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191012|Layer 4:
+21Feb23_191012|-- Config --
+21Feb23_191012|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191012|-- Weights --
+21Feb23_191012|[[ 0.73210  1.31236]
+21Feb23_191012| [-0.34309 -0.29066]
+21Feb23_191012| [ 0.41825  0.22431]
+21Feb23_191012| [-0.07199  0.69437]]
+21Feb23_191012|-- Bias --
+21Feb23_191012|[-1.36544 -0.72244]
+21Feb23_191012|Predicting the validation and test data with the Best final individual.
+21Feb23_191020| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191020|-----------  ------------------  --------------------  ----------
+21Feb23_191020|Validation         23.30                  52            0.74758
+21Feb23_191020|   Test            26.59                  52            0.61483
+21Feb23_191020|-------------------- Test #4 --------------------
+21Feb23_191020|Best final individual weights
+21Feb23_191020|Individual:
+21Feb23_191020|-- Constant hidden layers --
+21Feb23_191020|False
+21Feb23_191020|Layer 0:
+21Feb23_191020|-- Config --
+21Feb23_191020|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191020|-- Weights --
+21Feb23_191020|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191020| [ 0.79002  0.31213 -0.86304]
+21Feb23_191020| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191020| [ 0.13833  1.71994  0.77236]
+21Feb23_191020| [ 0.31934  1.50374 -0.68725]
+21Feb23_191020| [-1.90085  0.15046 -0.07561]
+21Feb23_191020| [-0.60993  1.39039 -0.46394]
+21Feb23_191020| [ 2.54954  1.17828 -1.04656]
+21Feb23_191020| [ 0.30420  0.23973 -0.01569]
+21Feb23_191020| [ 0.72731  0.59382  1.46010]
+21Feb23_191020| [ 0.31749  0.18924 -1.46856]
+21Feb23_191020| [-1.35275 -0.32416 -1.07065]
+21Feb23_191020| [-0.33171  0.12090  0.79750]
+21Feb23_191020| [ 0.06671  1.39111  0.62179]
+21Feb23_191020| [-0.13836 -0.01265 -0.37504]
+21Feb23_191020| [-0.58275 -1.50370  2.17998]
+21Feb23_191020| [ 0.45418  2.35023 -0.13957]
+21Feb23_191020| [-1.03000  1.95381 -0.25933]
+21Feb23_191020| [-0.44308  0.97727  0.95559]
+21Feb23_191020| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191020| [-1.13842 -0.41684 -0.52778]
+21Feb23_191020| [-1.16600  0.00720  1.18948]
+21Feb23_191020| [-0.12653  0.73549 -1.36697]
+21Feb23_191020| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191020| [ 0.18686 -1.12873  0.71513]
+21Feb23_191020| [-1.00562 -2.79831 -0.50221]
+21Feb23_191020| [ 1.67673  0.53823  0.20677]
+21Feb23_191020| [-1.29691  0.29036 -0.46059]
+21Feb23_191020| [-0.72800 -0.37109  0.02418]
+21Feb23_191020| [ 1.25098  1.24634  0.28313]
+21Feb23_191020| [ 0.47449  0.99704 -0.77940]
+21Feb23_191020| [ 0.12947  0.15882  2.04904]
+21Feb23_191020| [-0.88475  0.01778 -3.23506]
+21Feb23_191020| [-1.79267 -1.16006  0.88464]
+21Feb23_191020| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191020| [-1.29342 -1.06830  0.61716]
+21Feb23_191020| [ 0.37293  0.20970 -1.96565]
+21Feb23_191020| [-0.44082 -1.34747 -1.51449]
+21Feb23_191020| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191020| [ 0.72680  1.05212  2.04635]
+21Feb23_191020| [-2.17638 -1.33491  0.73664]
+21Feb23_191020| [ 0.09247  0.94111 -0.16696]
+21Feb23_191020| [-1.54434 -0.21276 -0.59742]
+21Feb23_191020| [ 0.71986  0.95892  0.37814]
+21Feb23_191020| [-0.42768 -0.41481  1.41418]
+21Feb23_191020| [ 0.93623  0.27167 -0.17780]
+21Feb23_191020| [-0.34607  2.49823 -0.68396]
+21Feb23_191020| [ 0.19979  1.16766 -0.73370]
+21Feb23_191020| [ 1.17053  0.75363  0.82168]
+21Feb23_191020| [-1.11306 -1.63775  0.12946]
+21Feb23_191020| [ 0.17495  0.17393  1.94998]
+21Feb23_191020| [ 0.76945  0.82383 -1.17665]
+21Feb23_191020| [-1.42652  0.84634  2.12379]
+21Feb23_191020| [-0.60414 -1.72003 -0.40822]
+21Feb23_191020| [-1.55747 -0.00775  0.02646]
+21Feb23_191020| [ 2.72793  0.49311  1.70797]
+21Feb23_191020| [-0.79940  0.57341 -1.52454]]
+21Feb23_191020|-- Bias --
+21Feb23_191020|[-0.29016  0.52554  0.57153]
+21Feb23_191020|Layer 1:
+21Feb23_191020|-- Config --
+21Feb23_191020|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191020|-- Weights --
+21Feb23_191020|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191020| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191020| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191020|-- Bias --
+21Feb23_191020|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191020|Layer 2:
+21Feb23_191020|-- Config --
+21Feb23_191020|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191020|-- Weights --
+21Feb23_191020|[[ 0.23333  0.60101]
+21Feb23_191020| [ 0.30179 -0.26645]
+21Feb23_191020| [-0.48905  0.48009]
+21Feb23_191020| [-0.14506  1.32852]]
+21Feb23_191020|-- Bias --
+21Feb23_191020|[-1.01737 -0.63304]
+21Feb23_191020|Layer 3:
+21Feb23_191020|-- Config --
+21Feb23_191020|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191020|-- Weights --
+21Feb23_191020|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191020| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191020|-- Bias --
+21Feb23_191020|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191020|Layer 4:
+21Feb23_191020|-- Config --
+21Feb23_191020|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191020|-- Weights --
+21Feb23_191020|[[ 0.73210  1.31236]
+21Feb23_191020| [-0.34309 -0.29066]
+21Feb23_191020| [ 0.41825  0.22431]
+21Feb23_191020| [-0.07199  0.69437]]
+21Feb23_191020|-- Bias --
+21Feb23_191020|[-1.36544 -0.72244]
+21Feb23_191020|Predicting the validation and test data with the Best final individual.
+21Feb23_191028| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191028|-----------  ------------------  --------------------  ----------
+21Feb23_191028|Validation         26.96                  52            0.48522
+21Feb23_191028|   Test            28.67                  52            0.45849
+21Feb23_191028|-------------------- Test #5 --------------------
+21Feb23_191028|Best final individual weights
+21Feb23_191028|Individual:
+21Feb23_191028|-- Constant hidden layers --
+21Feb23_191028|False
+21Feb23_191028|Layer 0:
+21Feb23_191028|-- Config --
+21Feb23_191028|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191028|-- Weights --
+21Feb23_191028|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191028| [ 0.79002  0.31213 -0.86304]
+21Feb23_191028| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191028| [ 0.13833  1.71994  0.77236]
+21Feb23_191028| [ 0.31934  1.50374 -0.68725]
+21Feb23_191028| [-1.90085  0.15046 -0.07561]
+21Feb23_191028| [-0.60993  1.39039 -0.46394]
+21Feb23_191028| [ 2.54954  1.17828 -1.04656]
+21Feb23_191028| [ 0.30420  0.23973 -0.01569]
+21Feb23_191028| [ 0.72731  0.59382  1.46010]
+21Feb23_191028| [ 0.31749  0.18924 -1.46856]
+21Feb23_191028| [-1.35275 -0.32416 -1.07065]
+21Feb23_191028| [-0.33171  0.12090  0.79750]
+21Feb23_191028| [ 0.06671  1.39111  0.62179]
+21Feb23_191028| [-0.13836 -0.01265 -0.37504]
+21Feb23_191028| [-0.58275 -1.50370  2.17998]
+21Feb23_191028| [ 0.45418  2.35023 -0.13957]
+21Feb23_191028| [-1.03000  1.95381 -0.25933]
+21Feb23_191028| [-0.44308  0.97727  0.95559]
+21Feb23_191028| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191028| [-1.13842 -0.41684 -0.52778]
+21Feb23_191028| [-1.16600  0.00720  1.18948]
+21Feb23_191028| [-0.12653  0.73549 -1.36697]
+21Feb23_191028| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191028| [ 0.18686 -1.12873  0.71513]
+21Feb23_191028| [-1.00562 -2.79831 -0.50221]
+21Feb23_191028| [ 1.67673  0.53823  0.20677]
+21Feb23_191028| [-1.29691  0.29036 -0.46059]
+21Feb23_191028| [-0.72800 -0.37109  0.02418]
+21Feb23_191028| [ 1.25098  1.24634  0.28313]
+21Feb23_191028| [ 0.47449  0.99704 -0.77940]
+21Feb23_191028| [ 0.12947  0.15882  2.04904]
+21Feb23_191028| [-0.88475  0.01778 -3.23506]
+21Feb23_191028| [-1.79267 -1.16006  0.88464]
+21Feb23_191028| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191028| [-1.29342 -1.06830  0.61716]
+21Feb23_191028| [ 0.37293  0.20970 -1.96565]
+21Feb23_191028| [-0.44082 -1.34747 -1.51449]
+21Feb23_191028| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191028| [ 0.72680  1.05212  2.04635]
+21Feb23_191028| [-2.17638 -1.33491  0.73664]
+21Feb23_191028| [ 0.09247  0.94111 -0.16696]
+21Feb23_191028| [-1.54434 -0.21276 -0.59742]
+21Feb23_191028| [ 0.71986  0.95892  0.37814]
+21Feb23_191028| [-0.42768 -0.41481  1.41418]
+21Feb23_191028| [ 0.93623  0.27167 -0.17780]
+21Feb23_191028| [-0.34607  2.49823 -0.68396]
+21Feb23_191028| [ 0.19979  1.16766 -0.73370]
+21Feb23_191028| [ 1.17053  0.75363  0.82168]
+21Feb23_191028| [-1.11306 -1.63775  0.12946]
+21Feb23_191028| [ 0.17495  0.17393  1.94998]
+21Feb23_191028| [ 0.76945  0.82383 -1.17665]
+21Feb23_191028| [-1.42652  0.84634  2.12379]
+21Feb23_191028| [-0.60414 -1.72003 -0.40822]
+21Feb23_191028| [-1.55747 -0.00775  0.02646]
+21Feb23_191028| [ 2.72793  0.49311  1.70797]
+21Feb23_191028| [-0.79940  0.57341 -1.52454]]
+21Feb23_191028|-- Bias --
+21Feb23_191028|[-0.29016  0.52554  0.57153]
+21Feb23_191028|Layer 1:
+21Feb23_191028|-- Config --
+21Feb23_191028|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191028|-- Weights --
+21Feb23_191028|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191028| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191028| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191028|-- Bias --
+21Feb23_191028|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191028|Layer 2:
+21Feb23_191028|-- Config --
+21Feb23_191028|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191028|-- Weights --
+21Feb23_191028|[[ 0.23333  0.60101]
+21Feb23_191028| [ 0.30179 -0.26645]
+21Feb23_191028| [-0.48905  0.48009]
+21Feb23_191028| [-0.14506  1.32852]]
+21Feb23_191028|-- Bias --
+21Feb23_191028|[-1.01737 -0.63304]
+21Feb23_191028|Layer 3:
+21Feb23_191028|-- Config --
+21Feb23_191028|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191028|-- Weights --
+21Feb23_191028|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191028| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191028|-- Bias --
+21Feb23_191028|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191028|Layer 4:
+21Feb23_191028|-- Config --
+21Feb23_191028|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191028|-- Weights --
+21Feb23_191028|[[ 0.73210  1.31236]
+21Feb23_191028| [-0.34309 -0.29066]
+21Feb23_191028| [ 0.41825  0.22431]
+21Feb23_191028| [-0.07199  0.69437]]
+21Feb23_191028|-- Bias --
+21Feb23_191028|[-1.36544 -0.72244]
+21Feb23_191028|Predicting the validation and test data with the Best final individual.
+21Feb23_191036| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191036|-----------  ------------------  --------------------  ----------
+21Feb23_191036|Validation         24.00                  52            0.59104
+21Feb23_191036|   Test            27.54                  52            0.42306
+21Feb23_191036|-------------------- Test #6 --------------------
+21Feb23_191036|Best final individual weights
+21Feb23_191036|Individual:
+21Feb23_191036|-- Constant hidden layers --
+21Feb23_191036|False
+21Feb23_191036|Layer 0:
+21Feb23_191036|-- Config --
+21Feb23_191036|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191036|-- Weights --
+21Feb23_191036|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191036| [ 0.79002  0.31213 -0.86304]
+21Feb23_191036| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191036| [ 0.13833  1.71994  0.77236]
+21Feb23_191036| [ 0.31934  1.50374 -0.68725]
+21Feb23_191036| [-1.90085  0.15046 -0.07561]
+21Feb23_191036| [-0.60993  1.39039 -0.46394]
+21Feb23_191036| [ 2.54954  1.17828 -1.04656]
+21Feb23_191036| [ 0.30420  0.23973 -0.01569]
+21Feb23_191036| [ 0.72731  0.59382  1.46010]
+21Feb23_191036| [ 0.31749  0.18924 -1.46856]
+21Feb23_191036| [-1.35275 -0.32416 -1.07065]
+21Feb23_191036| [-0.33171  0.12090  0.79750]
+21Feb23_191036| [ 0.06671  1.39111  0.62179]
+21Feb23_191036| [-0.13836 -0.01265 -0.37504]
+21Feb23_191036| [-0.58275 -1.50370  2.17998]
+21Feb23_191036| [ 0.45418  2.35023 -0.13957]
+21Feb23_191036| [-1.03000  1.95381 -0.25933]
+21Feb23_191036| [-0.44308  0.97727  0.95559]
+21Feb23_191036| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191036| [-1.13842 -0.41684 -0.52778]
+21Feb23_191036| [-1.16600  0.00720  1.18948]
+21Feb23_191036| [-0.12653  0.73549 -1.36697]
+21Feb23_191036| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191036| [ 0.18686 -1.12873  0.71513]
+21Feb23_191036| [-1.00562 -2.79831 -0.50221]
+21Feb23_191036| [ 1.67673  0.53823  0.20677]
+21Feb23_191036| [-1.29691  0.29036 -0.46059]
+21Feb23_191036| [-0.72800 -0.37109  0.02418]
+21Feb23_191036| [ 1.25098  1.24634  0.28313]
+21Feb23_191036| [ 0.47449  0.99704 -0.77940]
+21Feb23_191036| [ 0.12947  0.15882  2.04904]
+21Feb23_191036| [-0.88475  0.01778 -3.23506]
+21Feb23_191036| [-1.79267 -1.16006  0.88464]
+21Feb23_191036| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191036| [-1.29342 -1.06830  0.61716]
+21Feb23_191036| [ 0.37293  0.20970 -1.96565]
+21Feb23_191036| [-0.44082 -1.34747 -1.51449]
+21Feb23_191036| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191036| [ 0.72680  1.05212  2.04635]
+21Feb23_191036| [-2.17638 -1.33491  0.73664]
+21Feb23_191036| [ 0.09247  0.94111 -0.16696]
+21Feb23_191036| [-1.54434 -0.21276 -0.59742]
+21Feb23_191036| [ 0.71986  0.95892  0.37814]
+21Feb23_191036| [-0.42768 -0.41481  1.41418]
+21Feb23_191036| [ 0.93623  0.27167 -0.17780]
+21Feb23_191036| [-0.34607  2.49823 -0.68396]
+21Feb23_191036| [ 0.19979  1.16766 -0.73370]
+21Feb23_191036| [ 1.17053  0.75363  0.82168]
+21Feb23_191036| [-1.11306 -1.63775  0.12946]
+21Feb23_191036| [ 0.17495  0.17393  1.94998]
+21Feb23_191036| [ 0.76945  0.82383 -1.17665]
+21Feb23_191036| [-1.42652  0.84634  2.12379]
+21Feb23_191036| [-0.60414 -1.72003 -0.40822]
+21Feb23_191036| [-1.55747 -0.00775  0.02646]
+21Feb23_191036| [ 2.72793  0.49311  1.70797]
+21Feb23_191036| [-0.79940  0.57341 -1.52454]]
+21Feb23_191036|-- Bias --
+21Feb23_191036|[-0.29016  0.52554  0.57153]
+21Feb23_191036|Layer 1:
+21Feb23_191036|-- Config --
+21Feb23_191036|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191036|-- Weights --
+21Feb23_191036|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191036| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191036| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191036|-- Bias --
+21Feb23_191036|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191036|Layer 2:
+21Feb23_191036|-- Config --
+21Feb23_191036|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191036|-- Weights --
+21Feb23_191036|[[ 0.23333  0.60101]
+21Feb23_191036| [ 0.30179 -0.26645]
+21Feb23_191036| [-0.48905  0.48009]
+21Feb23_191036| [-0.14506  1.32852]]
+21Feb23_191036|-- Bias --
+21Feb23_191036|[-1.01737 -0.63304]
+21Feb23_191036|Layer 3:
+21Feb23_191036|-- Config --
+21Feb23_191036|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191036|-- Weights --
+21Feb23_191036|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191036| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191036|-- Bias --
+21Feb23_191036|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191036|Layer 4:
+21Feb23_191036|-- Config --
+21Feb23_191036|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191036|-- Weights --
+21Feb23_191036|[[ 0.73210  1.31236]
+21Feb23_191036| [-0.34309 -0.29066]
+21Feb23_191036| [ 0.41825  0.22431]
+21Feb23_191036| [-0.07199  0.69437]]
+21Feb23_191036|-- Bias --
+21Feb23_191036|[-1.36544 -0.72244]
+21Feb23_191036|Predicting the validation and test data with the Best final individual.
+21Feb23_191044| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191044|-----------  ------------------  --------------------  ----------
+21Feb23_191044|Validation         27.13                  52            0.41497
+21Feb23_191044|   Test            28.50                  52            0.50708
+21Feb23_191044|-------------------- Test #7 --------------------
+21Feb23_191044|Best final individual weights
+21Feb23_191044|Individual:
+21Feb23_191044|-- Constant hidden layers --
+21Feb23_191044|False
+21Feb23_191044|Layer 0:
+21Feb23_191044|-- Config --
+21Feb23_191044|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191044|-- Weights --
+21Feb23_191044|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191044| [ 0.79002  0.31213 -0.86304]
+21Feb23_191044| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191044| [ 0.13833  1.71994  0.77236]
+21Feb23_191044| [ 0.31934  1.50374 -0.68725]
+21Feb23_191044| [-1.90085  0.15046 -0.07561]
+21Feb23_191044| [-0.60993  1.39039 -0.46394]
+21Feb23_191044| [ 2.54954  1.17828 -1.04656]
+21Feb23_191044| [ 0.30420  0.23973 -0.01569]
+21Feb23_191044| [ 0.72731  0.59382  1.46010]
+21Feb23_191044| [ 0.31749  0.18924 -1.46856]
+21Feb23_191044| [-1.35275 -0.32416 -1.07065]
+21Feb23_191044| [-0.33171  0.12090  0.79750]
+21Feb23_191044| [ 0.06671  1.39111  0.62179]
+21Feb23_191044| [-0.13836 -0.01265 -0.37504]
+21Feb23_191044| [-0.58275 -1.50370  2.17998]
+21Feb23_191044| [ 0.45418  2.35023 -0.13957]
+21Feb23_191044| [-1.03000  1.95381 -0.25933]
+21Feb23_191044| [-0.44308  0.97727  0.95559]
+21Feb23_191044| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191044| [-1.13842 -0.41684 -0.52778]
+21Feb23_191044| [-1.16600  0.00720  1.18948]
+21Feb23_191044| [-0.12653  0.73549 -1.36697]
+21Feb23_191044| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191044| [ 0.18686 -1.12873  0.71513]
+21Feb23_191044| [-1.00562 -2.79831 -0.50221]
+21Feb23_191044| [ 1.67673  0.53823  0.20677]
+21Feb23_191044| [-1.29691  0.29036 -0.46059]
+21Feb23_191044| [-0.72800 -0.37109  0.02418]
+21Feb23_191044| [ 1.25098  1.24634  0.28313]
+21Feb23_191044| [ 0.47449  0.99704 -0.77940]
+21Feb23_191044| [ 0.12947  0.15882  2.04904]
+21Feb23_191044| [-0.88475  0.01778 -3.23506]
+21Feb23_191044| [-1.79267 -1.16006  0.88464]
+21Feb23_191044| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191044| [-1.29342 -1.06830  0.61716]
+21Feb23_191044| [ 0.37293  0.20970 -1.96565]
+21Feb23_191044| [-0.44082 -1.34747 -1.51449]
+21Feb23_191044| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191044| [ 0.72680  1.05212  2.04635]
+21Feb23_191044| [-2.17638 -1.33491  0.73664]
+21Feb23_191044| [ 0.09247  0.94111 -0.16696]
+21Feb23_191044| [-1.54434 -0.21276 -0.59742]
+21Feb23_191044| [ 0.71986  0.95892  0.37814]
+21Feb23_191044| [-0.42768 -0.41481  1.41418]
+21Feb23_191044| [ 0.93623  0.27167 -0.17780]
+21Feb23_191044| [-0.34607  2.49823 -0.68396]
+21Feb23_191044| [ 0.19979  1.16766 -0.73370]
+21Feb23_191044| [ 1.17053  0.75363  0.82168]
+21Feb23_191044| [-1.11306 -1.63775  0.12946]
+21Feb23_191044| [ 0.17495  0.17393  1.94998]
+21Feb23_191044| [ 0.76945  0.82383 -1.17665]
+21Feb23_191044| [-1.42652  0.84634  2.12379]
+21Feb23_191044| [-0.60414 -1.72003 -0.40822]
+21Feb23_191044| [-1.55747 -0.00775  0.02646]
+21Feb23_191044| [ 2.72793  0.49311  1.70797]
+21Feb23_191044| [-0.79940  0.57341 -1.52454]]
+21Feb23_191044|-- Bias --
+21Feb23_191044|[-0.29016  0.52554  0.57153]
+21Feb23_191044|Layer 1:
+21Feb23_191044|-- Config --
+21Feb23_191044|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191044|-- Weights --
+21Feb23_191044|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191044| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191044| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191044|-- Bias --
+21Feb23_191044|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191044|Layer 2:
+21Feb23_191044|-- Config --
+21Feb23_191044|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191044|-- Weights --
+21Feb23_191044|[[ 0.23333  0.60101]
+21Feb23_191044| [ 0.30179 -0.26645]
+21Feb23_191044| [-0.48905  0.48009]
+21Feb23_191044| [-0.14506  1.32852]]
+21Feb23_191044|-- Bias --
+21Feb23_191044|[-1.01737 -0.63304]
+21Feb23_191044|Layer 3:
+21Feb23_191044|-- Config --
+21Feb23_191044|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191044|-- Weights --
+21Feb23_191044|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191044| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191044|-- Bias --
+21Feb23_191044|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191044|Layer 4:
+21Feb23_191044|-- Config --
+21Feb23_191044|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191044|-- Weights --
+21Feb23_191044|[[ 0.73210  1.31236]
+21Feb23_191044| [-0.34309 -0.29066]
+21Feb23_191044| [ 0.41825  0.22431]
+21Feb23_191044| [-0.07199  0.69437]]
+21Feb23_191044|-- Bias --
+21Feb23_191044|[-1.36544 -0.72244]
+21Feb23_191044|Predicting the validation and test data with the Best final individual.
+21Feb23_191052| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191052|-----------  ------------------  --------------------  ----------
+21Feb23_191052|Validation         26.61                  52            0.59167
+21Feb23_191052|   Test            28.67                  52            0.46046
+21Feb23_191052|-------------------- Test #8 --------------------
+21Feb23_191052|Best final individual weights
+21Feb23_191052|Individual:
+21Feb23_191052|-- Constant hidden layers --
+21Feb23_191052|False
+21Feb23_191052|Layer 0:
+21Feb23_191052|-- Config --
+21Feb23_191052|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191052|-- Weights --
+21Feb23_191052|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191052| [ 0.79002  0.31213 -0.86304]
+21Feb23_191052| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191052| [ 0.13833  1.71994  0.77236]
+21Feb23_191052| [ 0.31934  1.50374 -0.68725]
+21Feb23_191052| [-1.90085  0.15046 -0.07561]
+21Feb23_191052| [-0.60993  1.39039 -0.46394]
+21Feb23_191052| [ 2.54954  1.17828 -1.04656]
+21Feb23_191052| [ 0.30420  0.23973 -0.01569]
+21Feb23_191052| [ 0.72731  0.59382  1.46010]
+21Feb23_191052| [ 0.31749  0.18924 -1.46856]
+21Feb23_191052| [-1.35275 -0.32416 -1.07065]
+21Feb23_191052| [-0.33171  0.12090  0.79750]
+21Feb23_191052| [ 0.06671  1.39111  0.62179]
+21Feb23_191052| [-0.13836 -0.01265 -0.37504]
+21Feb23_191052| [-0.58275 -1.50370  2.17998]
+21Feb23_191052| [ 0.45418  2.35023 -0.13957]
+21Feb23_191052| [-1.03000  1.95381 -0.25933]
+21Feb23_191052| [-0.44308  0.97727  0.95559]
+21Feb23_191052| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191052| [-1.13842 -0.41684 -0.52778]
+21Feb23_191052| [-1.16600  0.00720  1.18948]
+21Feb23_191052| [-0.12653  0.73549 -1.36697]
+21Feb23_191052| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191052| [ 0.18686 -1.12873  0.71513]
+21Feb23_191052| [-1.00562 -2.79831 -0.50221]
+21Feb23_191052| [ 1.67673  0.53823  0.20677]
+21Feb23_191052| [-1.29691  0.29036 -0.46059]
+21Feb23_191052| [-0.72800 -0.37109  0.02418]
+21Feb23_191052| [ 1.25098  1.24634  0.28313]
+21Feb23_191052| [ 0.47449  0.99704 -0.77940]
+21Feb23_191052| [ 0.12947  0.15882  2.04904]
+21Feb23_191052| [-0.88475  0.01778 -3.23506]
+21Feb23_191052| [-1.79267 -1.16006  0.88464]
+21Feb23_191052| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191052| [-1.29342 -1.06830  0.61716]
+21Feb23_191052| [ 0.37293  0.20970 -1.96565]
+21Feb23_191052| [-0.44082 -1.34747 -1.51449]
+21Feb23_191052| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191052| [ 0.72680  1.05212  2.04635]
+21Feb23_191052| [-2.17638 -1.33491  0.73664]
+21Feb23_191052| [ 0.09247  0.94111 -0.16696]
+21Feb23_191052| [-1.54434 -0.21276 -0.59742]
+21Feb23_191052| [ 0.71986  0.95892  0.37814]
+21Feb23_191052| [-0.42768 -0.41481  1.41418]
+21Feb23_191052| [ 0.93623  0.27167 -0.17780]
+21Feb23_191052| [-0.34607  2.49823 -0.68396]
+21Feb23_191052| [ 0.19979  1.16766 -0.73370]
+21Feb23_191052| [ 1.17053  0.75363  0.82168]
+21Feb23_191052| [-1.11306 -1.63775  0.12946]
+21Feb23_191052| [ 0.17495  0.17393  1.94998]
+21Feb23_191052| [ 0.76945  0.82383 -1.17665]
+21Feb23_191052| [-1.42652  0.84634  2.12379]
+21Feb23_191052| [-0.60414 -1.72003 -0.40822]
+21Feb23_191052| [-1.55747 -0.00775  0.02646]
+21Feb23_191052| [ 2.72793  0.49311  1.70797]
+21Feb23_191052| [-0.79940  0.57341 -1.52454]]
+21Feb23_191052|-- Bias --
+21Feb23_191052|[-0.29016  0.52554  0.57153]
+21Feb23_191052|Layer 1:
+21Feb23_191052|-- Config --
+21Feb23_191052|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191052|-- Weights --
+21Feb23_191052|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191052| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191052| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191052|-- Bias --
+21Feb23_191052|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191052|Layer 2:
+21Feb23_191052|-- Config --
+21Feb23_191052|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191052|-- Weights --
+21Feb23_191052|[[ 0.23333  0.60101]
+21Feb23_191052| [ 0.30179 -0.26645]
+21Feb23_191052| [-0.48905  0.48009]
+21Feb23_191052| [-0.14506  1.32852]]
+21Feb23_191052|-- Bias --
+21Feb23_191052|[-1.01737 -0.63304]
+21Feb23_191052|Layer 3:
+21Feb23_191052|-- Config --
+21Feb23_191052|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191052|-- Weights --
+21Feb23_191052|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191052| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191052|-- Bias --
+21Feb23_191052|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191052|Layer 4:
+21Feb23_191052|-- Config --
+21Feb23_191052|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191052|-- Weights --
+21Feb23_191052|[[ 0.73210  1.31236]
+21Feb23_191052| [-0.34309 -0.29066]
+21Feb23_191052| [ 0.41825  0.22431]
+21Feb23_191052| [-0.07199  0.69437]]
+21Feb23_191052|-- Bias --
+21Feb23_191052|[-1.36544 -0.72244]
+21Feb23_191052|Predicting the validation and test data with the Best final individual.
+21Feb23_191100| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191100|-----------  ------------------  --------------------  ----------
+21Feb23_191100|Validation         26.43                  52            0.47465
+21Feb23_191100|   Test            28.24                  52            0.52828
+21Feb23_191100|-------------------- Test #9 --------------------
+21Feb23_191100|Best final individual weights
+21Feb23_191100|Individual:
+21Feb23_191100|-- Constant hidden layers --
+21Feb23_191100|False
+21Feb23_191100|Layer 0:
+21Feb23_191100|-- Config --
+21Feb23_191100|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191100|-- Weights --
+21Feb23_191100|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191100| [ 0.79002  0.31213 -0.86304]
+21Feb23_191100| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191100| [ 0.13833  1.71994  0.77236]
+21Feb23_191100| [ 0.31934  1.50374 -0.68725]
+21Feb23_191100| [-1.90085  0.15046 -0.07561]
+21Feb23_191100| [-0.60993  1.39039 -0.46394]
+21Feb23_191100| [ 2.54954  1.17828 -1.04656]
+21Feb23_191100| [ 0.30420  0.23973 -0.01569]
+21Feb23_191100| [ 0.72731  0.59382  1.46010]
+21Feb23_191100| [ 0.31749  0.18924 -1.46856]
+21Feb23_191100| [-1.35275 -0.32416 -1.07065]
+21Feb23_191100| [-0.33171  0.12090  0.79750]
+21Feb23_191100| [ 0.06671  1.39111  0.62179]
+21Feb23_191100| [-0.13836 -0.01265 -0.37504]
+21Feb23_191100| [-0.58275 -1.50370  2.17998]
+21Feb23_191100| [ 0.45418  2.35023 -0.13957]
+21Feb23_191100| [-1.03000  1.95381 -0.25933]
+21Feb23_191100| [-0.44308  0.97727  0.95559]
+21Feb23_191100| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191100| [-1.13842 -0.41684 -0.52778]
+21Feb23_191100| [-1.16600  0.00720  1.18948]
+21Feb23_191100| [-0.12653  0.73549 -1.36697]
+21Feb23_191100| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191100| [ 0.18686 -1.12873  0.71513]
+21Feb23_191100| [-1.00562 -2.79831 -0.50221]
+21Feb23_191100| [ 1.67673  0.53823  0.20677]
+21Feb23_191100| [-1.29691  0.29036 -0.46059]
+21Feb23_191100| [-0.72800 -0.37109  0.02418]
+21Feb23_191100| [ 1.25098  1.24634  0.28313]
+21Feb23_191100| [ 0.47449  0.99704 -0.77940]
+21Feb23_191100| [ 0.12947  0.15882  2.04904]
+21Feb23_191100| [-0.88475  0.01778 -3.23506]
+21Feb23_191100| [-1.79267 -1.16006  0.88464]
+21Feb23_191100| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191100| [-1.29342 -1.06830  0.61716]
+21Feb23_191100| [ 0.37293  0.20970 -1.96565]
+21Feb23_191100| [-0.44082 -1.34747 -1.51449]
+21Feb23_191100| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191100| [ 0.72680  1.05212  2.04635]
+21Feb23_191100| [-2.17638 -1.33491  0.73664]
+21Feb23_191100| [ 0.09247  0.94111 -0.16696]
+21Feb23_191100| [-1.54434 -0.21276 -0.59742]
+21Feb23_191100| [ 0.71986  0.95892  0.37814]
+21Feb23_191100| [-0.42768 -0.41481  1.41418]
+21Feb23_191100| [ 0.93623  0.27167 -0.17780]
+21Feb23_191100| [-0.34607  2.49823 -0.68396]
+21Feb23_191100| [ 0.19979  1.16766 -0.73370]
+21Feb23_191100| [ 1.17053  0.75363  0.82168]
+21Feb23_191100| [-1.11306 -1.63775  0.12946]
+21Feb23_191100| [ 0.17495  0.17393  1.94998]
+21Feb23_191100| [ 0.76945  0.82383 -1.17665]
+21Feb23_191100| [-1.42652  0.84634  2.12379]
+21Feb23_191100| [-0.60414 -1.72003 -0.40822]
+21Feb23_191100| [-1.55747 -0.00775  0.02646]
+21Feb23_191100| [ 2.72793  0.49311  1.70797]
+21Feb23_191100| [-0.79940  0.57341 -1.52454]]
+21Feb23_191100|-- Bias --
+21Feb23_191100|[-0.29016  0.52554  0.57153]
+21Feb23_191100|Layer 1:
+21Feb23_191100|-- Config --
+21Feb23_191100|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191100|-- Weights --
+21Feb23_191100|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191100| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191100| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191100|-- Bias --
+21Feb23_191100|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191100|Layer 2:
+21Feb23_191100|-- Config --
+21Feb23_191100|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191100|-- Weights --
+21Feb23_191100|[[ 0.23333  0.60101]
+21Feb23_191100| [ 0.30179 -0.26645]
+21Feb23_191100| [-0.48905  0.48009]
+21Feb23_191100| [-0.14506  1.32852]]
+21Feb23_191100|-- Bias --
+21Feb23_191100|[-1.01737 -0.63304]
+21Feb23_191100|Layer 3:
+21Feb23_191100|-- Config --
+21Feb23_191100|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191100|-- Weights --
+21Feb23_191100|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191100| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191100|-- Bias --
+21Feb23_191100|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191100|Layer 4:
+21Feb23_191100|-- Config --
+21Feb23_191100|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191100|-- Weights --
+21Feb23_191100|[[ 0.73210  1.31236]
+21Feb23_191100| [-0.34309 -0.29066]
+21Feb23_191100| [ 0.41825  0.22431]
+21Feb23_191100| [-0.07199  0.69437]]
+21Feb23_191100|-- Bias --
+21Feb23_191100|[-1.36544 -0.72244]
+21Feb23_191100|Predicting the validation and test data with the Best final individual.
+21Feb23_191108| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191108|-----------  ------------------  --------------------  ----------
+21Feb23_191108|Validation         38.43                  52            0.00000
+21Feb23_191108|   Test            29.19                  52            0.45323
+21Feb23_191108|-------------------- Test #10 --------------------
+21Feb23_191108|Best final individual weights
+21Feb23_191108|Individual:
+21Feb23_191108|-- Constant hidden layers --
+21Feb23_191108|False
+21Feb23_191108|Layer 0:
+21Feb23_191108|-- Config --
+21Feb23_191108|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191108|-- Weights --
+21Feb23_191108|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191108| [ 0.79002  0.31213 -0.86304]
+21Feb23_191108| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191108| [ 0.13833  1.71994  0.77236]
+21Feb23_191108| [ 0.31934  1.50374 -0.68725]
+21Feb23_191108| [-1.90085  0.15046 -0.07561]
+21Feb23_191108| [-0.60993  1.39039 -0.46394]
+21Feb23_191108| [ 2.54954  1.17828 -1.04656]
+21Feb23_191108| [ 0.30420  0.23973 -0.01569]
+21Feb23_191108| [ 0.72731  0.59382  1.46010]
+21Feb23_191108| [ 0.31749  0.18924 -1.46856]
+21Feb23_191108| [-1.35275 -0.32416 -1.07065]
+21Feb23_191108| [-0.33171  0.12090  0.79750]
+21Feb23_191108| [ 0.06671  1.39111  0.62179]
+21Feb23_191108| [-0.13836 -0.01265 -0.37504]
+21Feb23_191108| [-0.58275 -1.50370  2.17998]
+21Feb23_191108| [ 0.45418  2.35023 -0.13957]
+21Feb23_191108| [-1.03000  1.95381 -0.25933]
+21Feb23_191108| [-0.44308  0.97727  0.95559]
+21Feb23_191108| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191108| [-1.13842 -0.41684 -0.52778]
+21Feb23_191108| [-1.16600  0.00720  1.18948]
+21Feb23_191108| [-0.12653  0.73549 -1.36697]
+21Feb23_191108| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191108| [ 0.18686 -1.12873  0.71513]
+21Feb23_191108| [-1.00562 -2.79831 -0.50221]
+21Feb23_191108| [ 1.67673  0.53823  0.20677]
+21Feb23_191108| [-1.29691  0.29036 -0.46059]
+21Feb23_191108| [-0.72800 -0.37109  0.02418]
+21Feb23_191108| [ 1.25098  1.24634  0.28313]
+21Feb23_191108| [ 0.47449  0.99704 -0.77940]
+21Feb23_191108| [ 0.12947  0.15882  2.04904]
+21Feb23_191108| [-0.88475  0.01778 -3.23506]
+21Feb23_191108| [-1.79267 -1.16006  0.88464]
+21Feb23_191108| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191108| [-1.29342 -1.06830  0.61716]
+21Feb23_191108| [ 0.37293  0.20970 -1.96565]
+21Feb23_191108| [-0.44082 -1.34747 -1.51449]
+21Feb23_191108| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191108| [ 0.72680  1.05212  2.04635]
+21Feb23_191108| [-2.17638 -1.33491  0.73664]
+21Feb23_191108| [ 0.09247  0.94111 -0.16696]
+21Feb23_191108| [-1.54434 -0.21276 -0.59742]
+21Feb23_191108| [ 0.71986  0.95892  0.37814]
+21Feb23_191108| [-0.42768 -0.41481  1.41418]
+21Feb23_191108| [ 0.93623  0.27167 -0.17780]
+21Feb23_191108| [-0.34607  2.49823 -0.68396]
+21Feb23_191108| [ 0.19979  1.16766 -0.73370]
+21Feb23_191108| [ 1.17053  0.75363  0.82168]
+21Feb23_191108| [-1.11306 -1.63775  0.12946]
+21Feb23_191108| [ 0.17495  0.17393  1.94998]
+21Feb23_191108| [ 0.76945  0.82383 -1.17665]
+21Feb23_191108| [-1.42652  0.84634  2.12379]
+21Feb23_191108| [-0.60414 -1.72003 -0.40822]
+21Feb23_191108| [-1.55747 -0.00775  0.02646]
+21Feb23_191108| [ 2.72793  0.49311  1.70797]
+21Feb23_191108| [-0.79940  0.57341 -1.52454]]
+21Feb23_191108|-- Bias --
+21Feb23_191108|[-0.29016  0.52554  0.57153]
+21Feb23_191108|Layer 1:
+21Feb23_191108|-- Config --
+21Feb23_191108|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191108|-- Weights --
+21Feb23_191108|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191108| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191108| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191108|-- Bias --
+21Feb23_191108|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191108|Layer 2:
+21Feb23_191108|-- Config --
+21Feb23_191108|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191108|-- Weights --
+21Feb23_191108|[[ 0.23333  0.60101]
+21Feb23_191108| [ 0.30179 -0.26645]
+21Feb23_191108| [-0.48905  0.48009]
+21Feb23_191108| [-0.14506  1.32852]]
+21Feb23_191108|-- Bias --
+21Feb23_191108|[-1.01737 -0.63304]
+21Feb23_191108|Layer 3:
+21Feb23_191108|-- Config --
+21Feb23_191108|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191108|-- Weights --
+21Feb23_191108|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191108| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191108|-- Bias --
+21Feb23_191108|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191108|Layer 4:
+21Feb23_191108|-- Config --
+21Feb23_191108|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191108|-- Weights --
+21Feb23_191108|[[ 0.73210  1.31236]
+21Feb23_191108| [-0.34309 -0.29066]
+21Feb23_191108| [ 0.41825  0.22431]
+21Feb23_191108| [-0.07199  0.69437]]
+21Feb23_191108|-- Bias --
+21Feb23_191108|[-1.36544 -0.72244]
+21Feb23_191108|Predicting the validation and test data with the Best final individual.
+21Feb23_191116| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191116|-----------  ------------------  --------------------  ----------
+21Feb23_191116|Validation         26.96                  52            0.47525
+21Feb23_191116|   Test            22.24                  52            0.68447
+21Feb23_191116|-------------------- Test #11 --------------------
+21Feb23_191116|Best final individual weights
+21Feb23_191116|Individual:
+21Feb23_191116|-- Constant hidden layers --
+21Feb23_191116|False
+21Feb23_191116|Layer 0:
+21Feb23_191116|-- Config --
+21Feb23_191116|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191116|-- Weights --
+21Feb23_191116|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191116| [ 0.79002  0.31213 -0.86304]
+21Feb23_191116| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191116| [ 0.13833  1.71994  0.77236]
+21Feb23_191116| [ 0.31934  1.50374 -0.68725]
+21Feb23_191116| [-1.90085  0.15046 -0.07561]
+21Feb23_191116| [-0.60993  1.39039 -0.46394]
+21Feb23_191116| [ 2.54954  1.17828 -1.04656]
+21Feb23_191116| [ 0.30420  0.23973 -0.01569]
+21Feb23_191116| [ 0.72731  0.59382  1.46010]
+21Feb23_191116| [ 0.31749  0.18924 -1.46856]
+21Feb23_191116| [-1.35275 -0.32416 -1.07065]
+21Feb23_191116| [-0.33171  0.12090  0.79750]
+21Feb23_191116| [ 0.06671  1.39111  0.62179]
+21Feb23_191116| [-0.13836 -0.01265 -0.37504]
+21Feb23_191116| [-0.58275 -1.50370  2.17998]
+21Feb23_191116| [ 0.45418  2.35023 -0.13957]
+21Feb23_191116| [-1.03000  1.95381 -0.25933]
+21Feb23_191116| [-0.44308  0.97727  0.95559]
+21Feb23_191116| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191116| [-1.13842 -0.41684 -0.52778]
+21Feb23_191116| [-1.16600  0.00720  1.18948]
+21Feb23_191116| [-0.12653  0.73549 -1.36697]
+21Feb23_191116| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191116| [ 0.18686 -1.12873  0.71513]
+21Feb23_191116| [-1.00562 -2.79831 -0.50221]
+21Feb23_191116| [ 1.67673  0.53823  0.20677]
+21Feb23_191116| [-1.29691  0.29036 -0.46059]
+21Feb23_191116| [-0.72800 -0.37109  0.02418]
+21Feb23_191116| [ 1.25098  1.24634  0.28313]
+21Feb23_191116| [ 0.47449  0.99704 -0.77940]
+21Feb23_191116| [ 0.12947  0.15882  2.04904]
+21Feb23_191116| [-0.88475  0.01778 -3.23506]
+21Feb23_191116| [-1.79267 -1.16006  0.88464]
+21Feb23_191116| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191116| [-1.29342 -1.06830  0.61716]
+21Feb23_191116| [ 0.37293  0.20970 -1.96565]
+21Feb23_191116| [-0.44082 -1.34747 -1.51449]
+21Feb23_191116| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191116| [ 0.72680  1.05212  2.04635]
+21Feb23_191116| [-2.17638 -1.33491  0.73664]
+21Feb23_191116| [ 0.09247  0.94111 -0.16696]
+21Feb23_191116| [-1.54434 -0.21276 -0.59742]
+21Feb23_191116| [ 0.71986  0.95892  0.37814]
+21Feb23_191116| [-0.42768 -0.41481  1.41418]
+21Feb23_191116| [ 0.93623  0.27167 -0.17780]
+21Feb23_191116| [-0.34607  2.49823 -0.68396]
+21Feb23_191116| [ 0.19979  1.16766 -0.73370]
+21Feb23_191116| [ 1.17053  0.75363  0.82168]
+21Feb23_191116| [-1.11306 -1.63775  0.12946]
+21Feb23_191116| [ 0.17495  0.17393  1.94998]
+21Feb23_191116| [ 0.76945  0.82383 -1.17665]
+21Feb23_191116| [-1.42652  0.84634  2.12379]
+21Feb23_191116| [-0.60414 -1.72003 -0.40822]
+21Feb23_191116| [-1.55747 -0.00775  0.02646]
+21Feb23_191116| [ 2.72793  0.49311  1.70797]
+21Feb23_191116| [-0.79940  0.57341 -1.52454]]
+21Feb23_191116|-- Bias --
+21Feb23_191116|[-0.29016  0.52554  0.57153]
+21Feb23_191116|Layer 1:
+21Feb23_191116|-- Config --
+21Feb23_191116|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191116|-- Weights --
+21Feb23_191116|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191116| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191116| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191116|-- Bias --
+21Feb23_191116|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191116|Layer 2:
+21Feb23_191116|-- Config --
+21Feb23_191116|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191116|-- Weights --
+21Feb23_191116|[[ 0.23333  0.60101]
+21Feb23_191116| [ 0.30179 -0.26645]
+21Feb23_191116| [-0.48905  0.48009]
+21Feb23_191116| [-0.14506  1.32852]]
+21Feb23_191116|-- Bias --
+21Feb23_191116|[-1.01737 -0.63304]
+21Feb23_191116|Layer 3:
+21Feb23_191116|-- Config --
+21Feb23_191116|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191116|-- Weights --
+21Feb23_191116|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191116| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191116|-- Bias --
+21Feb23_191116|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191116|Layer 4:
+21Feb23_191116|-- Config --
+21Feb23_191116|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191116|-- Weights --
+21Feb23_191116|[[ 0.73210  1.31236]
+21Feb23_191116| [-0.34309 -0.29066]
+21Feb23_191116| [ 0.41825  0.22431]
+21Feb23_191116| [-0.07199  0.69437]]
+21Feb23_191116|-- Bias --
+21Feb23_191116|[-1.36544 -0.72244]
+21Feb23_191116|Predicting the validation and test data with the Best final individual.
+21Feb23_191124| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191124|-----------  ------------------  --------------------  ----------
+21Feb23_191124|Validation         38.43                  52            0.00000
+21Feb23_191124|   Test            26.15                  52            0.50216
+21Feb23_191124|-------------------- Test #12 --------------------
+21Feb23_191124|Best final individual weights
+21Feb23_191124|Individual:
+21Feb23_191124|-- Constant hidden layers --
+21Feb23_191124|False
+21Feb23_191124|Layer 0:
+21Feb23_191124|-- Config --
+21Feb23_191124|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191124|-- Weights --
+21Feb23_191124|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191124| [ 0.79002  0.31213 -0.86304]
+21Feb23_191124| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191124| [ 0.13833  1.71994  0.77236]
+21Feb23_191124| [ 0.31934  1.50374 -0.68725]
+21Feb23_191124| [-1.90085  0.15046 -0.07561]
+21Feb23_191124| [-0.60993  1.39039 -0.46394]
+21Feb23_191124| [ 2.54954  1.17828 -1.04656]
+21Feb23_191124| [ 0.30420  0.23973 -0.01569]
+21Feb23_191124| [ 0.72731  0.59382  1.46010]
+21Feb23_191124| [ 0.31749  0.18924 -1.46856]
+21Feb23_191124| [-1.35275 -0.32416 -1.07065]
+21Feb23_191124| [-0.33171  0.12090  0.79750]
+21Feb23_191124| [ 0.06671  1.39111  0.62179]
+21Feb23_191124| [-0.13836 -0.01265 -0.37504]
+21Feb23_191124| [-0.58275 -1.50370  2.17998]
+21Feb23_191124| [ 0.45418  2.35023 -0.13957]
+21Feb23_191124| [-1.03000  1.95381 -0.25933]
+21Feb23_191124| [-0.44308  0.97727  0.95559]
+21Feb23_191124| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191124| [-1.13842 -0.41684 -0.52778]
+21Feb23_191124| [-1.16600  0.00720  1.18948]
+21Feb23_191124| [-0.12653  0.73549 -1.36697]
+21Feb23_191124| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191124| [ 0.18686 -1.12873  0.71513]
+21Feb23_191124| [-1.00562 -2.79831 -0.50221]
+21Feb23_191124| [ 1.67673  0.53823  0.20677]
+21Feb23_191124| [-1.29691  0.29036 -0.46059]
+21Feb23_191124| [-0.72800 -0.37109  0.02418]
+21Feb23_191124| [ 1.25098  1.24634  0.28313]
+21Feb23_191124| [ 0.47449  0.99704 -0.77940]
+21Feb23_191124| [ 0.12947  0.15882  2.04904]
+21Feb23_191124| [-0.88475  0.01778 -3.23506]
+21Feb23_191124| [-1.79267 -1.16006  0.88464]
+21Feb23_191124| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191124| [-1.29342 -1.06830  0.61716]
+21Feb23_191124| [ 0.37293  0.20970 -1.96565]
+21Feb23_191124| [-0.44082 -1.34747 -1.51449]
+21Feb23_191124| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191124| [ 0.72680  1.05212  2.04635]
+21Feb23_191124| [-2.17638 -1.33491  0.73664]
+21Feb23_191124| [ 0.09247  0.94111 -0.16696]
+21Feb23_191124| [-1.54434 -0.21276 -0.59742]
+21Feb23_191124| [ 0.71986  0.95892  0.37814]
+21Feb23_191124| [-0.42768 -0.41481  1.41418]
+21Feb23_191124| [ 0.93623  0.27167 -0.17780]
+21Feb23_191124| [-0.34607  2.49823 -0.68396]
+21Feb23_191124| [ 0.19979  1.16766 -0.73370]
+21Feb23_191124| [ 1.17053  0.75363  0.82168]
+21Feb23_191124| [-1.11306 -1.63775  0.12946]
+21Feb23_191124| [ 0.17495  0.17393  1.94998]
+21Feb23_191124| [ 0.76945  0.82383 -1.17665]
+21Feb23_191124| [-1.42652  0.84634  2.12379]
+21Feb23_191124| [-0.60414 -1.72003 -0.40822]
+21Feb23_191124| [-1.55747 -0.00775  0.02646]
+21Feb23_191124| [ 2.72793  0.49311  1.70797]
+21Feb23_191124| [-0.79940  0.57341 -1.52454]]
+21Feb23_191124|-- Bias --
+21Feb23_191124|[-0.29016  0.52554  0.57153]
+21Feb23_191124|Layer 1:
+21Feb23_191124|-- Config --
+21Feb23_191124|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191124|-- Weights --
+21Feb23_191124|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191124| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191124| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191124|-- Bias --
+21Feb23_191124|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191124|Layer 2:
+21Feb23_191124|-- Config --
+21Feb23_191124|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191124|-- Weights --
+21Feb23_191124|[[ 0.23333  0.60101]
+21Feb23_191124| [ 0.30179 -0.26645]
+21Feb23_191124| [-0.48905  0.48009]
+21Feb23_191124| [-0.14506  1.32852]]
+21Feb23_191124|-- Bias --
+21Feb23_191124|[-1.01737 -0.63304]
+21Feb23_191124|Layer 3:
+21Feb23_191124|-- Config --
+21Feb23_191124|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191124|-- Weights --
+21Feb23_191124|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191124| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191124|-- Bias --
+21Feb23_191124|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191124|Layer 4:
+21Feb23_191124|-- Config --
+21Feb23_191124|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191124|-- Weights --
+21Feb23_191124|[[ 0.73210  1.31236]
+21Feb23_191124| [-0.34309 -0.29066]
+21Feb23_191124| [ 0.41825  0.22431]
+21Feb23_191124| [-0.07199  0.69437]]
+21Feb23_191124|-- Bias --
+21Feb23_191124|[-1.36544 -0.72244]
+21Feb23_191124|Predicting the validation and test data with the Best final individual.
+21Feb23_191132| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191132|-----------  ------------------  --------------------  ----------
+21Feb23_191132|Validation         22.43                  52            0.59615
+21Feb23_191132|   Test            39.44                  52            0.00000
+21Feb23_191132|-------------------- Test #13 --------------------
+21Feb23_191132|Best final individual weights
+21Feb23_191132|Individual:
+21Feb23_191132|-- Constant hidden layers --
+21Feb23_191132|False
+21Feb23_191132|Layer 0:
+21Feb23_191132|-- Config --
+21Feb23_191132|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191132|-- Weights --
+21Feb23_191132|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191132| [ 0.79002  0.31213 -0.86304]
+21Feb23_191132| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191132| [ 0.13833  1.71994  0.77236]
+21Feb23_191132| [ 0.31934  1.50374 -0.68725]
+21Feb23_191132| [-1.90085  0.15046 -0.07561]
+21Feb23_191132| [-0.60993  1.39039 -0.46394]
+21Feb23_191132| [ 2.54954  1.17828 -1.04656]
+21Feb23_191132| [ 0.30420  0.23973 -0.01569]
+21Feb23_191132| [ 0.72731  0.59382  1.46010]
+21Feb23_191132| [ 0.31749  0.18924 -1.46856]
+21Feb23_191132| [-1.35275 -0.32416 -1.07065]
+21Feb23_191132| [-0.33171  0.12090  0.79750]
+21Feb23_191132| [ 0.06671  1.39111  0.62179]
+21Feb23_191132| [-0.13836 -0.01265 -0.37504]
+21Feb23_191132| [-0.58275 -1.50370  2.17998]
+21Feb23_191132| [ 0.45418  2.35023 -0.13957]
+21Feb23_191132| [-1.03000  1.95381 -0.25933]
+21Feb23_191132| [-0.44308  0.97727  0.95559]
+21Feb23_191132| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191132| [-1.13842 -0.41684 -0.52778]
+21Feb23_191132| [-1.16600  0.00720  1.18948]
+21Feb23_191132| [-0.12653  0.73549 -1.36697]
+21Feb23_191132| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191132| [ 0.18686 -1.12873  0.71513]
+21Feb23_191132| [-1.00562 -2.79831 -0.50221]
+21Feb23_191132| [ 1.67673  0.53823  0.20677]
+21Feb23_191132| [-1.29691  0.29036 -0.46059]
+21Feb23_191132| [-0.72800 -0.37109  0.02418]
+21Feb23_191132| [ 1.25098  1.24634  0.28313]
+21Feb23_191132| [ 0.47449  0.99704 -0.77940]
+21Feb23_191132| [ 0.12947  0.15882  2.04904]
+21Feb23_191132| [-0.88475  0.01778 -3.23506]
+21Feb23_191132| [-1.79267 -1.16006  0.88464]
+21Feb23_191132| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191132| [-1.29342 -1.06830  0.61716]
+21Feb23_191132| [ 0.37293  0.20970 -1.96565]
+21Feb23_191132| [-0.44082 -1.34747 -1.51449]
+21Feb23_191132| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191132| [ 0.72680  1.05212  2.04635]
+21Feb23_191132| [-2.17638 -1.33491  0.73664]
+21Feb23_191132| [ 0.09247  0.94111 -0.16696]
+21Feb23_191132| [-1.54434 -0.21276 -0.59742]
+21Feb23_191132| [ 0.71986  0.95892  0.37814]
+21Feb23_191132| [-0.42768 -0.41481  1.41418]
+21Feb23_191132| [ 0.93623  0.27167 -0.17780]
+21Feb23_191132| [-0.34607  2.49823 -0.68396]
+21Feb23_191132| [ 0.19979  1.16766 -0.73370]
+21Feb23_191132| [ 1.17053  0.75363  0.82168]
+21Feb23_191132| [-1.11306 -1.63775  0.12946]
+21Feb23_191132| [ 0.17495  0.17393  1.94998]
+21Feb23_191132| [ 0.76945  0.82383 -1.17665]
+21Feb23_191132| [-1.42652  0.84634  2.12379]
+21Feb23_191132| [-0.60414 -1.72003 -0.40822]
+21Feb23_191132| [-1.55747 -0.00775  0.02646]
+21Feb23_191132| [ 2.72793  0.49311  1.70797]
+21Feb23_191132| [-0.79940  0.57341 -1.52454]]
+21Feb23_191132|-- Bias --
+21Feb23_191132|[-0.29016  0.52554  0.57153]
+21Feb23_191132|Layer 1:
+21Feb23_191132|-- Config --
+21Feb23_191132|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191132|-- Weights --
+21Feb23_191132|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191132| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191132| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191132|-- Bias --
+21Feb23_191132|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191132|Layer 2:
+21Feb23_191132|-- Config --
+21Feb23_191132|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191132|-- Weights --
+21Feb23_191132|[[ 0.23333  0.60101]
+21Feb23_191132| [ 0.30179 -0.26645]
+21Feb23_191132| [-0.48905  0.48009]
+21Feb23_191132| [-0.14506  1.32852]]
+21Feb23_191132|-- Bias --
+21Feb23_191132|[-1.01737 -0.63304]
+21Feb23_191132|Layer 3:
+21Feb23_191132|-- Config --
+21Feb23_191132|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191132|-- Weights --
+21Feb23_191132|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191132| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191132|-- Bias --
+21Feb23_191132|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191132|Layer 4:
+21Feb23_191132|-- Config --
+21Feb23_191132|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191132|-- Weights --
+21Feb23_191132|[[ 0.73210  1.31236]
+21Feb23_191132| [-0.34309 -0.29066]
+21Feb23_191132| [ 0.41825  0.22431]
+21Feb23_191132| [-0.07199  0.69437]]
+21Feb23_191132|-- Bias --
+21Feb23_191132|[-1.36544 -0.72244]
+21Feb23_191132|Predicting the validation and test data with the Best final individual.
+21Feb23_191140| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191140|-----------  ------------------  --------------------  ----------
+21Feb23_191140|Validation         20.52                  52            0.67864
+21Feb23_191140|   Test            24.24                  52            0.73244
+21Feb23_191140|-------------------- Test #14 --------------------
+21Feb23_191140|Best final individual weights
+21Feb23_191140|Individual:
+21Feb23_191140|-- Constant hidden layers --
+21Feb23_191140|False
+21Feb23_191140|Layer 0:
+21Feb23_191140|-- Config --
+21Feb23_191140|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191140|-- Weights --
+21Feb23_191140|[[ 1.33884 -1.61999 -0.08684]
+21Feb23_191140| [ 0.79002  0.31213 -0.86304]
+21Feb23_191140| [ 0.61705 -1.64884 -0.97221]
+21Feb23_191140| [ 0.13833  1.71994  0.77236]
+21Feb23_191140| [ 0.31934  1.50374 -0.68725]
+21Feb23_191140| [-1.90085  0.15046 -0.07561]
+21Feb23_191140| [-0.60993  1.39039 -0.46394]
+21Feb23_191140| [ 2.54954  1.17828 -1.04656]
+21Feb23_191140| [ 0.30420  0.23973 -0.01569]
+21Feb23_191140| [ 0.72731  0.59382  1.46010]
+21Feb23_191140| [ 0.31749  0.18924 -1.46856]
+21Feb23_191140| [-1.35275 -0.32416 -1.07065]
+21Feb23_191140| [-0.33171  0.12090  0.79750]
+21Feb23_191140| [ 0.06671  1.39111  0.62179]
+21Feb23_191140| [-0.13836 -0.01265 -0.37504]
+21Feb23_191140| [-0.58275 -1.50370  2.17998]
+21Feb23_191140| [ 0.45418  2.35023 -0.13957]
+21Feb23_191140| [-1.03000  1.95381 -0.25933]
+21Feb23_191140| [-0.44308  0.97727  0.95559]
+21Feb23_191140| [ 0.27001 -0.61438 -0.93120]
+21Feb23_191140| [-1.13842 -0.41684 -0.52778]
+21Feb23_191140| [-1.16600  0.00720  1.18948]
+21Feb23_191140| [-0.12653  0.73549 -1.36697]
+21Feb23_191140| [ 2.03070 -0.09275 -0.58549]
+21Feb23_191140| [ 0.18686 -1.12873  0.71513]
+21Feb23_191140| [-1.00562 -2.79831 -0.50221]
+21Feb23_191140| [ 1.67673  0.53823  0.20677]
+21Feb23_191140| [-1.29691  0.29036 -0.46059]
+21Feb23_191140| [-0.72800 -0.37109  0.02418]
+21Feb23_191140| [ 1.25098  1.24634  0.28313]
+21Feb23_191140| [ 0.47449  0.99704 -0.77940]
+21Feb23_191140| [ 0.12947  0.15882  2.04904]
+21Feb23_191140| [-0.88475  0.01778 -3.23506]
+21Feb23_191140| [-1.79267 -1.16006  0.88464]
+21Feb23_191140| [ 0.78148 -1.93572 -1.24057]
+21Feb23_191140| [-1.29342 -1.06830  0.61716]
+21Feb23_191140| [ 0.37293  0.20970 -1.96565]
+21Feb23_191140| [-0.44082 -1.34747 -1.51449]
+21Feb23_191140| [ 1.85410 -0.84025 -0.65535]
+21Feb23_191140| [ 0.72680  1.05212  2.04635]
+21Feb23_191140| [-2.17638 -1.33491  0.73664]
+21Feb23_191140| [ 0.09247  0.94111 -0.16696]
+21Feb23_191140| [-1.54434 -0.21276 -0.59742]
+21Feb23_191140| [ 0.71986  0.95892  0.37814]
+21Feb23_191140| [-0.42768 -0.41481  1.41418]
+21Feb23_191140| [ 0.93623  0.27167 -0.17780]
+21Feb23_191140| [-0.34607  2.49823 -0.68396]
+21Feb23_191140| [ 0.19979  1.16766 -0.73370]
+21Feb23_191140| [ 1.17053  0.75363  0.82168]
+21Feb23_191140| [-1.11306 -1.63775  0.12946]
+21Feb23_191140| [ 0.17495  0.17393  1.94998]
+21Feb23_191140| [ 0.76945  0.82383 -1.17665]
+21Feb23_191140| [-1.42652  0.84634  2.12379]
+21Feb23_191140| [-0.60414 -1.72003 -0.40822]
+21Feb23_191140| [-1.55747 -0.00775  0.02646]
+21Feb23_191140| [ 2.72793  0.49311  1.70797]
+21Feb23_191140| [-0.79940  0.57341 -1.52454]]
+21Feb23_191140|-- Bias --
+21Feb23_191140|[-0.29016  0.52554  0.57153]
+21Feb23_191140|Layer 1:
+21Feb23_191140|-- Config --
+21Feb23_191140|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191140|-- Weights --
+21Feb23_191140|[[ 0.72969 -0.05453  1.11730 -0.22698]
+21Feb23_191140| [ 0.24600 -0.21431  0.22790  0.11924]
+21Feb23_191140| [ 0.41839 -1.42934 -0.78641 -0.42124]]
+21Feb23_191140|-- Bias --
+21Feb23_191140|[-0.28098 -0.63621  0.02142  0.24873]
+21Feb23_191140|Layer 2:
+21Feb23_191140|-- Config --
+21Feb23_191140|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191140|-- Weights --
+21Feb23_191140|[[ 0.23333  0.60101]
+21Feb23_191140| [ 0.30179 -0.26645]
+21Feb23_191140| [-0.48905  0.48009]
+21Feb23_191140| [-0.14506  1.32852]]
+21Feb23_191140|-- Bias --
+21Feb23_191140|[-1.01737 -0.63304]
+21Feb23_191140|Layer 3:
+21Feb23_191140|-- Config --
+21Feb23_191140|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191140|-- Weights --
+21Feb23_191140|[[ 0.01070  0.95128 -0.78172  0.43097]
+21Feb23_191140| [-0.42335  0.41068  0.05149 -0.09425]]
+21Feb23_191140|-- Bias --
+21Feb23_191140|[ 0.67852  0.70386 -0.86684  0.30636]
+21Feb23_191140|Layer 4:
+21Feb23_191140|-- Config --
+21Feb23_191140|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_191140|-- Weights --
+21Feb23_191140|[[ 0.73210  1.31236]
+21Feb23_191140| [-0.34309 -0.29066]
+21Feb23_191140| [ 0.41825  0.22431]
+21Feb23_191140| [-0.07199  0.69437]]
+21Feb23_191140|-- Bias --
+21Feb23_191140|[-1.36544 -0.72244]
+21Feb23_191140|Predicting the validation and test data with the Best final individual.
+21Feb23_191148| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_191148|-----------  ------------------  --------------------  ----------
+21Feb23_191148|Validation         22.43                  52            0.73687
+21Feb23_191148|   Test            28.41                  52            0.44526
+2021-02-23 19:11:49.463744: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+21Feb23_191150|Data summary: Train
+21Feb23_191150|data.shape = (2300, 57)
+21Feb23_191150|labels.shape = (2300,)
+21Feb23_191150|Class distribution:
+21Feb23_191150|	0 - 1383 (0.60)
+21Feb23_191150|	1 - 917 (0.40)
+21Feb23_191150|Data summary: Validation
+21Feb23_191150|data.shape = (1150, 57)
+21Feb23_191150|labels.shape = (1150,)
+21Feb23_191150|Class distribution:
+21Feb23_191150|	0 - 708 (0.62)
+21Feb23_191150|	1 - 442 (0.38)
+21Feb23_191150|Data summary: Test
+21Feb23_191150|data.shape = (1151, 57)
+21Feb23_191150|labels.shape = (1151,)
+21Feb23_191150|Class distribution:
+21Feb23_191150|	0 - 697 (0.61)
+21Feb23_191150|	1 - 454 (0.39)
+21Feb23_191150|Selected configuration values
+21Feb23_191150|-- Dataset name: spambase3
+21Feb23_191150|-- Initial population size: 64
+21Feb23_191150|-- Maximun number of generations: 48
+21Feb23_191150|-- Neurons per hidden layer range: (2, 20)
+21Feb23_191150|-- Hidden layers number range: (1, 2)
+21Feb23_191150|-- Crossover probability: 0.5
+21Feb23_191150|-- Bias gene mutation probability: 0.2
+21Feb23_191150|-- Weights gene mutation probability: 0.75
+21Feb23_191150|-- Neuron mutation probability: 0.3
+21Feb23_191150|-- Layer mutation probability: 0.3
+21Feb23_191150|-- Constant hidden layers: False
+21Feb23_191150|-- Seed: 31415
+21Feb23_191150|Entering GA
+21Feb23_191150|Start the algorithm
+2021-02-23 19:11:50.374535: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-02-23 19:11:50.375204: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-02-23 19:11:50.398180: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-02-23 19:11:50.398531: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:08:00.0 name: GeForce RTX 2060 computeCapability: 7.5
+coreClock: 1.71GHz coreCount: 30 deviceMemorySize: 5.79GiB deviceMemoryBandwidth: 312.97GiB/s
+2021-02-23 19:11:50.398553: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-02-23 19:11:50.400267: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-02-23 19:11:50.400315: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-02-23 19:11:50.400922: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-02-23 19:11:50.401086: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-02-23 19:11:50.401174: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcusolver.so.10'; dlerror: libcusolver.so.10: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/jmerelo/Code/torch/install/lib:/home/jmerelo/Code/torch/install/lib:
+2021-02-23 19:11:50.401649: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-02-23 19:11:50.401700: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcudnn.so.8'; dlerror: libcudnn.so.8: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/jmerelo/Code/torch/install/lib:/home/jmerelo/Code/torch/install/lib:
+2021-02-23 19:11:50.401711: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1757] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2021-02-23 19:11:50.401922: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-02-23 19:11:50.402850: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-02-23 19:11:50.402876: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-02-23 19:11:50.402882: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      
+2021-02-23 19:11:50.450984: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-02-23 19:11:50.451352: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 3493540000 Hz
+/home/jmerelo/.pyenv/versions/3.8.6/lib/python3.8/site-packages/tensorflow/python/keras/engine/sequential.py:450: UserWarning: `model.predict_classes()` is deprecated and will be removed after 2021-01-01. Please use instead:* `np.argmax(model.predict(x), axis=-1)`,   if your model does multi-class classification   (e.g. if it uses a `softmax` last-layer activation).* `(model.predict(x) > 0.5).astype("int32")`,   if your model does binary classification   (e.g. if it uses a `sigmoid` last-layer activation).
+  warnings.warn('`model.predict_classes()` is deprecated and '
+21Feb23_191542|-- Generation 1 --
+21Feb23_191542|    -- Crossed 0 individual pairs.
+21Feb23_191542|    -- Mutated 32 individuals.
+21Feb23_191935|    -- Evaluated 64 individuals.
+21Feb23_191935|    Summary of generation 1:
+21Feb23_191935| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_191935|-----------  ------------------  --------------------  ----------
+21Feb23_191935|    Max            39.30                75.00           0.71492
+21Feb23_191935|    Avg            36.42                27.47           0.09118
+21Feb23_191935|    Min            22.26                 2.00           0.00000
+21Feb23_191935|    Std             4.44                17.80           0.19193
+21Feb23_191935|   Best            22.26                15.00           0.65187
+21Feb23_191935|-- Generation 2 --
+21Feb23_191935|    -- Crossed 1 individual pairs.
+21Feb23_191935|    -- Mutated 32 individuals.
+21Feb23_192326|    -- Evaluated 64 individuals.
+21Feb23_192326|    Summary of generation 2:
+21Feb23_192326| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_192326|-----------  ------------------  --------------------  ----------
+21Feb23_192326|    Max            38.87                64.00           0.67286
+21Feb23_192326|    Avg            37.42                25.25           0.04990
+21Feb23_192326|    Min            23.57                 2.00           0.00000
+21Feb23_192326|    Std             3.14                17.08           0.14300
+21Feb23_192326|   Best            23.57                15.00           0.57961
+21Feb23_192326|-- Generation 3 --
+21Feb23_192326|    -- Crossed 1 individual pairs.
+21Feb23_192326|    -- Mutated 32 individuals.
+21Feb23_192715|    -- Evaluated 64 individuals.
+21Feb23_192715|    Summary of generation 3:
+21Feb23_192715| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_192715|-----------  ------------------  --------------------  ----------
+21Feb23_192715|    Max            39.13                102.00          0.71875
+21Feb23_192715|    Avg            36.91                20.59           0.06815
+21Feb23_192715|    Min            23.48                 2.00           0.00000
+21Feb23_192715|    Std             3.81                18.53           0.16228
+21Feb23_192715|   Best            23.48                12.00           0.71875
+21Feb23_192715|-- Generation 4 --
+21Feb23_192715|    -- Crossed 3 individual pairs.
+21Feb23_192715|    -- Mutated 32 individuals.
+21Feb23_193105|    -- Evaluated 64 individuals.
+21Feb23_193105|    Summary of generation 4:
+21Feb23_193105| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_193105|-----------  ------------------  --------------------  ----------
+21Feb23_193105|    Max            38.96                44.00           0.74581
+21Feb23_193105|    Avg            36.24                16.73           0.09663
+21Feb23_193105|    Min            22.00                 2.00           0.00000
+21Feb23_193105|    Std             4.58                13.11           0.19795
+21Feb23_193105|   Best            22.00                15.00           0.72425
+21Feb23_193105|-- Generation 5 --
+21Feb23_193105|    -- Crossed 2 individual pairs.
+21Feb23_193105|    -- Mutated 32 individuals.
+21Feb23_193455|    -- Evaluated 64 individuals.
+21Feb23_193455|    Summary of generation 5:
+21Feb23_193455| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_193455|-----------  ------------------  --------------------  ----------
+21Feb23_193455|    Max            38.96                56.00           0.54074
+21Feb23_193455|    Avg            36.58                19.45           0.07744
+21Feb23_193455|    Min            24.78                 2.00           0.00000
+21Feb23_193455|    Std             3.79                14.19           0.15408
+21Feb23_193455|   Best            24.78                30.00           0.50717
+21Feb23_193455|-- Generation 6 --
+21Feb23_193455|    -- Crossed 1 individual pairs.
+21Feb23_193455|    -- Mutated 32 individuals.
