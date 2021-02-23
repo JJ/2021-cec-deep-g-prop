@@ -24563,3 +24563,27 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 21Feb23_093802|-- Generation 46 --
 21Feb23_093802|    -- Crossed 7 individual pairs.
 21Feb23_093802|    -- Mutated 32 individuals.
+21Feb23_094150|    -- Evaluated 64 individuals.
+21Feb23_094150|    Summary of generation 46:
+21Feb23_094150| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_094150|-----------  ------------------  --------------------  ----------
+21Feb23_094150|    Max            39.13                16.00           0.49927
+21Feb23_094150|    Avg            38.60                 3.59           0.00780
+21Feb23_094150|    Min            25.83                 2.00           0.00000
+21Feb23_094150|    Std             1.61                 3.61           0.06192
+21Feb23_094150|   Best            25.83                14.00           0.49927
+21Feb23_094150|-- Generation 47 --
+21Feb23_094150|    -- Crossed 9 individual pairs.
+21Feb23_094150|    -- Mutated 32 individuals.
+21Feb23_094537|    -- Evaluated 64 individuals.
+21Feb23_094537|    Summary of generation 47:
+21Feb23_094537| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_094537|-----------  ------------------  --------------------  ----------
+21Feb23_094537|    Max            39.13                14.00           0.51351
+21Feb23_094537|    Avg            38.57                 3.88           0.00802
+21Feb23_094537|    Min            24.26                 2.00           0.00000
+21Feb23_094537|    Std             1.80                 3.68           0.06369
+21Feb23_094537|   Best            24.26                14.00           0.51351
+21Feb23_094537|-- Generation 48 --
+21Feb23_094537|    -- Crossed 7 individual pairs.
+21Feb23_094537|    -- Mutated 32 individuals.
