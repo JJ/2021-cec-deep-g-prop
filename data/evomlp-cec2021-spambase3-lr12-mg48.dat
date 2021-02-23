@@ -33393,3 +33393,75 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 21Feb23_091346|-- Generation 1 --
 21Feb23_091346|    -- Crossed 1 individual pairs.
 21Feb23_091346|    -- Mutated 32 individuals.
+21Feb23_091739|    -- Evaluated 64 individuals.
+21Feb23_091739|    Summary of generation 1:
+21Feb23_091739| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_091739|-----------  ------------------  --------------------  ----------
+21Feb23_091739|    Max            38.96                90.00           0.72972
+21Feb23_091739|    Avg            37.46                24.72           0.04861
+21Feb23_091739|    Min            23.30                 2.00           0.00000
+21Feb23_091739|    Std             3.25                19.96           0.15582
+21Feb23_091739|   Best            23.30                48.00           0.63959
+21Feb23_091739|-- Generation 2 --
+21Feb23_091739|    -- Crossed 2 individual pairs.
+21Feb23_091739|    -- Mutated 32 individuals.
+21Feb23_092129|    -- Evaluated 64 individuals.
+21Feb23_092129|    Summary of generation 2:
+21Feb23_092129| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_092129|-----------  ------------------  --------------------  ----------
+21Feb23_092129|    Max            38.87                48.00           0.24013
+21Feb23_092129|    Avg            38.18                16.02           0.01461
+21Feb23_092129|    Min            32.00                 2.00           0.00000
+21Feb23_092129|    Std             1.04                14.15           0.04098
+21Feb23_092129|   Best            32.00                15.00           0.24013
+21Feb23_092129|-- Generation 3 --
+21Feb23_092129|    -- Crossed 4 individual pairs.
+21Feb23_092129|    -- Mutated 32 individuals.
+21Feb23_092517|    -- Evaluated 64 individuals.
+21Feb23_092517|    Summary of generation 3:
+21Feb23_092517| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_092517|-----------  ------------------  --------------------  ----------
+21Feb23_092517|    Max            38.70                84.00           0.77486
+21Feb23_092517|    Avg            36.72                13.88           0.07916
+21Feb23_092517|    Min            21.74                 2.00           0.00000
+21Feb23_092517|    Std             4.30                15.72           0.19687
+21Feb23_092517|   Best            21.74                15.00           0.67084
+21Feb23_092517|-- Generation 4 --
+21Feb23_092517|    -- Crossed 2 individual pairs.
+21Feb23_092517|    -- Mutated 32 individuals.
+21Feb23_092907|    -- Evaluated 64 individuals.
+21Feb23_092907|    Summary of generation 4:
+21Feb23_092907| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_092907|-----------  ------------------  --------------------  ----------
+21Feb23_092907|    Max            38.78                48.00           0.66588
+21Feb23_092907|    Avg            37.39                12.69           0.04537
+21Feb23_092907|    Min            20.26                 2.00           0.00000
+21Feb23_092907|    Std             3.06                11.85           0.12177
+21Feb23_092907|   Best            20.26                 5.00           0.66588
+21Feb23_092907|-- Generation 5 --
+21Feb23_092907|    -- Crossed 2 individual pairs.
+21Feb23_092907|    -- Mutated 32 individuals.
+21Feb23_093254|    -- Evaluated 64 individuals.
+21Feb23_093254|    Summary of generation 5:
+21Feb23_093254| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_093254|-----------  ------------------  --------------------  ----------
+21Feb23_093254|    Max            38.87                46.00           0.48205
+21Feb23_093254|    Avg            37.06                11.31           0.06061
+21Feb23_093254|    Min            27.39                 2.00           0.00000
+21Feb23_093254|    Std             2.66                10.19           0.11221
+21Feb23_093254|   Best            27.39                16.00           0.48205
+21Feb23_093254|-- Generation 6 --
+21Feb23_093254|    -- Crossed 3 individual pairs.
+21Feb23_093254|    -- Mutated 32 individuals.
+21Feb23_093645|    -- Evaluated 64 individuals.
+21Feb23_093645|    Summary of generation 6:
+21Feb23_093645| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_093645|-----------  ------------------  --------------------  ----------
+21Feb23_093645|    Max            38.52                44.00           0.54781
+21Feb23_093645|    Avg            36.84                14.09           0.06883
+21Feb23_093645|    Min            26.00                 2.00           0.00000
+21Feb23_093645|    Std             2.98                11.04           0.12335
+21Feb23_093645|   Best            26.00                16.00           0.54781
+21Feb23_093645|-- Generation 7 --
+21Feb23_093645|    -- Crossed 0 individual pairs.
+21Feb23_093645|    -- Mutated 32 individuals.
