@@ -1,4 +1,4 @@
-Experiment, Average-F2, Max-F2, Average-Acc, Min-Acc 
+Generation, Average-F2, Max-F2, Average-Acc, Min-Acc 
 0, 0.05871, 0.78210, 39.54, 26.52
 1, 0.04764, 0.79595, 39.03, 27.39
 2, 0.05468, 0.77714, 38.39, 23.04

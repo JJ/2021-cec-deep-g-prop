@@ -4,7 +4,7 @@ my $file-name = @*ARGS[0] // "data/helicases.txt";
 
 my @experiments = $file-name.IO.slurp.split(/"Data summary: Train" \s+ /);
 
-say "Experiment, Average-F2, Max-F2, Average-Acc, Min-Acc ";
+say "Generation, Average-F2, Max-F2, Average-Acc, Min-Acc ";
 
 for @experiments[1..*].kv -> $i, $e {
     my @generations = $e.split( /"-- Generation " \d+ " --" \s+ / );
