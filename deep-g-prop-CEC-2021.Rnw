@@ -310,6 +310,30 @@ Since we have implemented {\sf EvoMLP} using the Python programming language. Te
 % But what more detail could we present? JJ
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We would need to find out first if this method really works. Taking into account the uncertainty in the fitness, will it really make the (according to some criteria) best individuals stay until the last generation? For a typical run (baseline run with the {\sf spambase1} partition), we will see how, on average, accuracy and F2 progress every generation.
+%
+\begin{figure}
+<<generations.fs.table,echo=FALSE, results="asis">>=
+library(ggplot2)
+library(ggthemes)
+
+generations <- read.csv("data/ng-spambase1-generations.csv")
+ggplot(generations,aes(x=Generation,y=Average.F2,group=Generation,color="Average F2"))+geom_boxplot()+geom_boxplot(aes(x=Generation,y=Max.F2,group=Generation, color="Max F2", fill="Max F2"))+theme_tufte()
+@
+\caption{Boxplot of the best F2 (filled) and average F2 (clear, transparent) over 15 different runs for the spambase1 dataset partition.}
+\label{fig:gen:f2}
+\end{figure}
+%
+\begin{figure}
+<<generations.acc.table,echo=FALSE, results="asis">>=
+ggplot(generations,aes(x=Generation,y=Average.Acc,group=Generation,color="Average Accuracy"))+geom_boxplot()+geom_boxplot(aes(x=Generation,y=Min.Acc,group=Generation, color="Min Accuracy", fill="Max Accuracy"))+theme_tufte()
+@
+\caption{Boxplot of the max accuracy (filled) and average accuracy (clear, transparent) over 15 different runs for the spambase1 dataset partition.}
+\label{fig:gen:acc}
+\end{figure}
+%
+We show F2 in \autoref{fig:gen:f2}, where the most appreciable change is seen in the average F2, whose median tends to increase. Maximum F2 averaged through the different runs does not show a clear trend, however: it reaches around 0.75 and then it keeps more or less that level. However, we should remember that the main optimization criterion is accuracy, which we show in \autoref{fig:gen:acc}. This one is minimized, and again we observe the same pattern: mean average accuracy decreases with generations, and mean minimum accuracy decreases more sharply in the first generations, to then have a rough trend to decrease. The standard deviation also increase in general, implying that the variation between the extremes is also different. You can observe several outliers, which are individuals which, in that particular measurement, yielded a very good result. In general, however, we can observe a certain improvement in all counts. The main problem is the limited budget on one hand, and on the other hand the uncertainty in measurement in fitness, that acts as a booster in search space size. However, in general, we can affirm that, to a certain point, uncertainty can be mitigated by resampling. Better strategies (that would obviously involve more evaluations) might be needed for a more accurate result, however.
 \section{Results}
 \label{sec:res}
 
