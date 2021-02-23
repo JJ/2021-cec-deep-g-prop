@@ -117,7 +117,7 @@ denomination of {\sf EvoMLP} for this specific method.
 
 In this paper what we will do is to first bring the implementation of
 the G-Prop concept to current tools and languages, choosing the best
-suited for the purpose and show the design decisions that were taken in order to do so; since we are using off the shelf software libraries which are in constant evolution, we will also show, since implementation matters \cite{DBLP:conf/iwann/MereloRACML11}, how this change of versions affects (or not) the performance of the algorithm. We will also attempt to characterize the size of the problems for which this type of algorithm can be considered useful.
+suited for the purpose and show the design decisions that were taken in order to do so; since we are using off the shelf software libraries which are in constant evolution, we will also demonstrate, since implementation matters \cite{DBLP:conf/iwann/MereloRACML11}, how this change of versions affects (or not) the performance of the algorithm. Apart from that, we will also attempt to characterize the size of problems for which this type of algorithm can be considered useful.
 
 The remainder of this paper is structured as follows:
 section \ref{soa} makes a short overview of the methods to design ANN.
@@ -133,15 +133,16 @@ Searching the parameter space of neural networks looking for optimal combination
 in a limited number of ways, using {\em incremental algorithms}, which, in
 general, will depart from a specific architecture, number of layers
 and elements in every layer, and offer a series of heuristic
-procedures to add/eliminate layers and/or hidden-layer neurons in
+procedures to add/eliminate hidden-layers and/or neurons from them.
 % I think at this time there are only input and output layers (and these must remain fixed) 
 % and we have the option of adding and removing only hidden layers. 
 % I propose to only say: to add/eliminate layers and the number of neurons in them 
 % In more advanced networks there are other types like  recurrent, convolution etc. 
 % but making the distinction is a bit confusing - M 
 % Can you please ellaborate on this? Or simply rewrite it, no problem - JJ
-them. This way was, for a certain amount of time, the preferred technique
-for optimizing the size of the neural net along with its weights, according to classical reviews such % architecture of the nn ? - M
+% I think this is what Mario was refering - L
+This way was, for a certain amount of time, the preferred technique
+for optimizing the architecture of the neural net along with its weights, according to classical reviews such % architecture of the nn ? - M
 % don't get it, sorry - JJ
 as the one by Alpaydin \cite{alpaydin1994gal}. However and simultaneously, a
 series of evolutionary heuristics were starting to be applied for the
@@ -149,7 +150,7 @@ same purpose, as revealed by Balakrishnan and Honavar's review
 \cite{balakrishnan95:EDNA}. They propose a taxonomy, that classifies evolutionary
 design of the architecture of neural nets along three different axes
 (plus one for application domain): genotype representation, network
-topology, and a third axis that includes basically everything else,
+topology, and a third axis that includes basically everything else:
 ``variables of evolution''.
 This classification was much more comprehensive, and included many more degrees of freedom in evolution than simply adding or eliminating neurons. However, it still left some constraints and probably did not emphasize the parameters that are most likely to have the greater influence in the outcome.
 
@@ -181,7 +182,7 @@ This is why, form our point of view, a more precise classification of evolved ne
     % Please check or extend the above sentence - M
     % There is also the problem of overfitting - M
     % It's OK - JJ
-  \item Mono or multiobjective optimization. In general, the main issue is to get the highest accuracy possible. However, 
+  \item Mono or multiobjective optimization. In general, the main issue is to get the h ighest accuracy possible. However, 
   several other factors can be taken into account; in unbalanced data sets, accuracy for every one of the categories must be taken into account separately; besides, it is almost impossible to optimize by generalization, so a proxy for it, size, is instead optimized. All these objectives can be aggregated into a single one (using weights), hierarchized or considered properly as different objectives to be optimized separately.
  % Single or multiobjective?
  % There is more research in this aspect, changing "size" by "entropy", "message length" etc., there
