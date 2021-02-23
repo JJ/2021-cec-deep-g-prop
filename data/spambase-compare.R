@@ -53,3 +53,13 @@ comparison.overall <- data.frame(experiment=c(rep("spambase.3L",length(spambase1
                                            spambase3.tf$Test,spambase3.lr11$Test))
 
 wilcox.test(comparison.overall[comparison.overall$experiment=="spambase.3L",]$Accuracy, comparison.overall[comparison.overall$experiment=="spambase.1L",]$Accuracy)
+
+spambase1.t.tf <- read.csv("../data/cec-2021-spambase-1-times.csv")
+spambase2.t.tf <- read.csv("../data/cec-2021-spambase-2-times.csv")
+spambase3.t.tf <- read.csv("../data/cec-2021-spambase-3-times.csv")
+
+spambase1.t.lr11 <- read.csv("../data/cec-2021-spambase-1-lr11-times.csv")
+spambase2.t.lr11 <- read.csv("../data/cec-2021-spambase-2-lr11-times.csv")
+spambase3.t.lr11 <- read.csv("../data/cec-2021-spambase-3-lr11-times.csv")
+
+wilcox.test(spambase3.t.tf$Time,spambase3.t.lr11$Time)
