@@ -38,7 +38,7 @@ require(ggthemes)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Designing neural networks for classification or regresion can be
+Designing neural networks for classification or regression can be
 considered a search problem, and, as such, can be approached using
 different optimization procedures. There are also several design
 challenges. The first and more important is to constrain the search
@@ -48,7 +48,7 @@ how the optimization procedure is formulated, the fitness score used
 for it can have a certain degree of uncertainty. This means that
 creating a framework for evolving neural networks for classification
 implies taking a series of decisions that range from the purely
-technical to the algorithmical at different levels: neural or the
+technical to the algorithmic at different levels: neural or the
 optimization framework chosen. This will be the focus of this paper,
 where we will introduce DeepGProp, a framework for genetic
 optimization of multilayer perceptrons, that is able to explore the
@@ -224,11 +224,11 @@ how this new {\sf EvoMLP} method works next. This means it will again use the ar
 
 There are two parts in this EvoMLP framework, the "neural" part and the "evolutionary" part. Our objective from the beginning was to use off-the-shelf frameworks as much as possible.
 
-The first line of choice is the programming language. {\sf G-Prop} was written in C++ mainly because the underlying library used, EO \cite{EO:FEA2000}, used that language. In this case, we went in the opposite direction. Most popular high-performance machine learning libraries, like Tensorflow, are written in Python. Once we settled for TensorFlow, working with Python was the obvious choice.
+The first line of choice is the programming language. {\sf G-Prop} was written in C++ mainly because the underlying library used, EO \cite{EO:FEA2000}, used that language. In this case, we went in the opposite direction. Most popular high-performance machine learning libraries, like TensorFlow, are written in Python. Once we settled for TensorFlow, working with Python was the obvious choice.
 
 There are indeed several evolutionary frameworks written in Python; EvoloPy, for instance \cite{DBLP:conf/ijcci/FarisAMCM16}, includes many hyperheuristics, including EAs. However, DEAP \cite{deap-ga} has emerged as a standard for this language, covering all that is needed to evolver multilayer perceptrons, so this is what we chose. This will definitely have some impact in performance \cite{kim2019software}, however for us researcher time is more important than computer time, and we can always use that time saved to improve the algorithm or the implementation.
 
-Tensorflow is a low-level framework based on representing machine learning models as graphs; we will need a higher-level library to work with multilayer perceptrons. Once again, unlike G-Prop, we will choose the off-the-shelf Keras package \cite{keras-nn}, a framework for building multi-layer deep learning models In the version used in the initial stages of this research, Keras allowed multiple backends, meaning different frameworks for the effective representation of the neural net. That has changed lately, as we will later see. Once again, Keras is characterized for offering a simple API as opposed to a flexible and low-level interface, which is characteristic of Tensorflow or others like PyTorch; this has an impact on performance, but it helps ease the burden of the designers. The fact that it's maintained and updated often also ensures that the software created with it is kept up-to-date. This is important for a software framework like the one we're presenting here.
+TensorFlow is a low-level framework based on representing machine learning models as graphs; we will need a higher-level library to work with multilayer perceptrons. Once again, unlike G-Prop, we will choose the off-the-shelf Keras package \cite{keras-nn}, a framework for building multi-layer deep learning models In the version used in the initial stages of this research, Keras allowed multiple backends, meaning different frameworks for the effective representation of the neural net. That has changed lately, as we will later see. Once again, Keras is characterized for offering a simple API as opposed to a flexible and low-level interface, which is characteristic of TensorFlow or others like PyTorch; this has an impact on performance, but it helps ease the burden of the designers. The fact that it's maintained and updated often also ensures that the software created with it is kept up-to-date. This is important for a software framework like the one we're presenting here.
 
 We need to make a series of decisions on the data structures and functions used in Keras; these are presented below. An individual is coded as a list of \emph{Layers}. Each layer is
     composed by a matrix of weights and a list of bias (both Numpy
@@ -390,7 +390,7 @@ options(knitr.table.format = "latex")
 knitr::kable(spambase, col.names=c("Partition","Validation,best","Validation, median","Validation,mean", "Test, best", "Test, median", "Test, average", "Test, SD"))
 @
 \vspace*{1mm}
-\caption{Baseline error percentage results for {\sf spambase} per partition, with validation (used by the algorith) and test (unseen data, used for generalization) results.}
+\caption{Baseline error percentage results for {\sf spambase} per partition, with validation (used by the algorithm) and test (unseen data, used for generalization) results.}
 \label{tab:spambase:base}
 \end{table*}
 
@@ -418,7 +418,7 @@ Number of neurons per layer & 2-20 \\
 \end{table}
 %
 
-In general, these values have been found by exploration; a further sensitivity study is probably needed, but meanwhile we try to use a reasonable amount of exploitation with exploration that is more intense for weights, and less intense for the other possibilities of change. This version will use Python 3.8.6, as well as Theano 2.3.1 with a Theano backend; Theano is a good choice, and it was proved to be slightly faster than other backends, like Tensorflow. Results are shown in \autoref{tab:spambase:base}. That table represents the average over {\em all} individuals in the last generation. We should take into account the uncertainty in the evaluation of the fitness via training and testing, so the concept of {\em best} individual in the last generation includes the same amount of uncertainty; this is why in the table we include the median and the average; in these uncertain environments, median might be a better measure of success reached. This should be essentially considered a baseline value, and we do not want to present it as the state of the art. Looking at published results, these are comparable with those obtained with the Naive Bayes algorithm and shown, for instance, in \cite{duriqi2016comparative}, although the way of measuring them is totally different and we cannot really draw a comparison.
+In general, these values have been found by exploration; a further sensitivity study is probably needed, but meanwhile we try to use a reasonable amount of exploitation with exploration that is more intense for weights, and less intense for the other possibilities of change. This version will use Python 3.8.6, as well as Theano 2.3.1 with a Theano backend; Theano is a good choice, and it was proved to be slightly faster than other backends, like TensorFlow. Results are shown in \autoref{tab:spambase:base}. That table represents the average over {\em all} individuals in the last generation. We should take into account the uncertainty in the evaluation of the fitness via training and testing, so the concept of {\em best} individual in the last generation includes the same amount of uncertainty; this is why in the table we include the median and the average; in these uncertain environments, median might be a better measure of success reached. This should be essentially considered a baseline value, and we do not want to present it as the state of the art. Looking at published results, these are comparable with those obtained with the Naive Bayes algorithm and shown, for instance, in \cite{duriqi2016comparative}, although the way of measuring them is totally different and we cannot really draw a comparison.
 
 The time needed to reach these results is around 2 hours for every run. This shows the relative lack of performance of Python, but at the same time, 2 hours is acceptable if we do not need a real time flow of results. The spambase problem is mid-size, with many inputs and a sizable dataset, so this might be, in fact, in the limit of the kind of problems that can be approached with this algorithm, unless some improvements in performance (and accuracy) are made. Taking into account that all we have used is 2048 evaluations, it is not such a bad result, leading us to think that increasing the budget would probably obtain better results.
 %
@@ -472,11 +472,11 @@ options(knitr.table.format = "latex")
 knitr::kable(comparison, col.names=c("Partition","Validation,best","Validation, median", "Test, best", "Test, median", "Test, SD"))
 @
 \vspace*{1mm}
-\caption{Comparison of baseline (Theano-based) and the last version, based on Tensorflow, error percentage results for {\sf spambase} per partition, with validation (used by the algorithm) and test (unseen data, used for generalization) results.}
+\caption{Comparison of baseline (Theano-based) and the last version, based on TensorFlow, error percentage results for {\sf spambase} per partition, with validation (used by the algorithm) and test (unseen data, used for generalization) results.}
 \label{tab:spambase:comparison}
 \end{table*}
 
-However, another possible way of obtaining better results in one way or another is upgrading the dependencies. As a matter of fact, Keras underwent a change in the last version, being incorporated into the Tensorflow module, instead of being an independent one. That also had as a result eliminating the possibility of using different backends, reducing itself to only one backend: Tensorflow. We need to find out how this will affect the results of the algorithm, so we created a fork of the problem, changing all dependencies from the original version to the one included with Tensorflow, and run again using the same datasets and the same command line. The result is shown in \autoref{tab:spambase:comparison}. The set of last-generation results have been compared using Wilcoxon test, and in all cases difference is significant. However, as you can see, the result with this new version are worse than the original {\em in median}, although, since the standard deviation is higher, the best values are, in general, better. We should emphasize that the library code is exactly the same, except for a line that imports Keras as part of the Tensorflow library.
+However, another possible way of obtaining better results in one way or another is upgrading the dependencies. As a matter of fact, Keras underwent a change in the last version, being incorporated into the TensorFlow module, instead of being an independent one. That also had as a result eliminating the possibility of using different backends, reducing itself to only one backend: TensorFlow. We need to find out how this will affect the results of the algorithm, so we created a fork of the problem, changing all dependencies from the original version to the one included with TensorFlow, and run again using the same datasets and the same command line. The result is shown in \autoref{tab:spambase:comparison}. The set of last-generation results have been compared using Wilcoxon test, and in all cases difference is significant. However, as you can see, the result with this new version are worse than the original {\em in median}, although, since the standard deviation is higher, the best values are, in general, better. We should emphasize that the library code is exactly the same, except for a line that imports Keras as part of the TensorFlow library.
 
 \begin{figure}
 \centering
@@ -501,7 +501,7 @@ ggplot(comparison.layers,aes(x=experiment,y=Accuracy,group=experiment))+geom_box
 %
 Once it is clear that the latest version of TensorFlow offers the best results, we will use it exclusively to check if one of the changes of EvoMLP, being able to evolve the number of layers, really brings any kind of improvement to the overall performance. On one hand, theoretically better results can be obtained; on the other hand, the search space again blows up, so with the same budget you might be, as it were, fishing in a bigger pond with a smaller fishing rod. So let us run an experiment where the number of layers is stuck at one, comparing it with these results. These are shown in \autoref{fig:comparison:layers}.
 
-Although the difference is significant in all three cases, the problem is that it differs on which one is the best; using a single partition would probably hide that. The single-layer version is better in spambase2, the 3-layer version is better in the other two. Overall, however, there is no significant difference between in these three experiments the way we have done it, which probably means that, since we are using the same budget, as we have indicated above, the constrain added of having a single layer makes search in the space of architectures reach further, so we would need more evaluations to really see a difference. We should also take into account that we are using all the individuals in the last generation, due to the practical impossibility to select the absolute best, since the evaluation for every individual is affected by the uncertainty in training. The best results seem to indicate that, in some cases, using 3 layers is able to reach a level of accuracy that are just not possible with one layer. However, this is left as an hypothesis to be checked in the future. Besides, since training time is mainly dependent on th e number of weights and not the number of layers, the time they take is virtually the same. So, eventually, evolving one or several layers is simply a judgment call that can be done for a number of reasons, including how different representations are done in several hidden layers; performance-wise, however, there is no difference.
+Although the difference is significant in all three cases, the problem is that it differs on which one is the best; using a single partition would probably hide that. The single-layer version is better in spambase2, the 3-layer version is better in the other two. Overall, however, there is no significant difference between in these three experiments the way we have done it, which probably means that, since we are using the same budget, as we have indicated above, the constrain added of having a single layer makes search in the space of architectures reach further, so we would need more evaluations to really see a difference. We should also take into account that we are using all the individuals in the last generation, due to the practical impossibility to select the absolute best, since the evaluation for every individual is affected by the uncertainty in training. The best results seem to indicate that, in some cases, using 3 layers is able to reach a level of accuracy that are just not possible with one layer. However, this is left as an hypothesis to be checked in the future. Besides, since training time is mainly dependent on the number of weights and not the number of layers, the time they take is virtually the same. So, eventually, evolving one or several layers is simply a judgment call that can be done for a number of reasons, including how different representations are done in several hidden layers; performance-wise, however, there is no difference.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and future work}
@@ -524,7 +524,7 @@ Our commitment to open science is complete, and this paper has been developed in
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
 
-This paper has been supported in part by project DeepBio (TIN2017-85727-C4-2-P)
+This paper has been supported in part by project DeepBio (TIN2017-85727-C4-2-P).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{IEEEtran}

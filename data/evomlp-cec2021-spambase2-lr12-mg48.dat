@@ -42826,3 +42826,15 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 21Feb23_193559|-- Generation 23 --
 21Feb23_193559|    -- Crossed 7 individual pairs.
 21Feb23_193559|    -- Mutated 32 individuals.
+21Feb23_193947|    -- Evaluated 64 individuals.
+21Feb23_193947|    Summary of generation 23:
+21Feb23_193947| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_193947|-----------  ------------------  --------------------  ----------
+21Feb23_193947|    Max            42.00                36.00           0.02318
+21Feb23_193947|    Avg            41.79                 5.98           0.00654
+21Feb23_193947|    Min            41.22                 2.00           0.00000
+21Feb23_193947|    Std             0.17                 6.57           0.00523
+21Feb23_193947|   Best            41.22                16.00           0.02318
+21Feb23_193947|-- Generation 24 --
+21Feb23_193947|    -- Crossed 5 individual pairs.
+21Feb23_193947|    -- Mutated 32 individuals.
