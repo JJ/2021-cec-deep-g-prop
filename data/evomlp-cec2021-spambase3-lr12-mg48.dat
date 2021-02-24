@@ -41983,3 +41983,2476 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 21Feb23_194243|-- Generation 8 --
 21Feb23_194243|    -- Crossed 1 individual pairs.
 21Feb23_194243|    -- Mutated 32 individuals.
+21Feb23_194638|    -- Evaluated 64 individuals.
+21Feb23_194638|    Summary of generation 8:
+21Feb23_194638| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_194638|-----------  ------------------  --------------------  ----------
+21Feb23_194638|    Max            39.91                60.00           0.76087
+21Feb23_194638|    Avg            34.20                23.06           0.19647
+21Feb23_194638|    Min            22.43                11.00           0.00000
+21Feb23_194638|    Std             5.70                14.54           0.26033
+21Feb23_194638|   Best            22.43                30.00           0.66327
+21Feb23_194638|-- Generation 9 --
+21Feb23_194638|    -- Crossed 0 individual pairs.
+21Feb23_194638|    -- Mutated 32 individuals.
+21Feb23_195034|    -- Evaluated 64 individuals.
+21Feb23_195034|    Summary of generation 9:
+21Feb23_195034| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_195034|-----------  ------------------  --------------------  ----------
+21Feb23_195034|    Max            38.78                60.00           0.75435
+21Feb23_195034|    Avg            33.48                24.95           0.21632
+21Feb23_195034|    Min            21.30                11.00           0.00000
+21Feb23_195034|    Std             5.96                14.79           0.26137
+21Feb23_195034|   Best            21.30                30.00           0.67918
+21Feb23_195034|-- Generation 10 --
+21Feb23_195034|    -- Crossed 2 individual pairs.
+21Feb23_195034|    -- Mutated 32 individuals.
+21Feb23_195435|    -- Evaluated 64 individuals.
+21Feb23_195435|    Summary of generation 10:
+21Feb23_195435| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_195435|-----------  ------------------  --------------------  ----------
+21Feb23_195435|    Max            38.78                80.00           0.79837
+21Feb23_195435|    Avg            32.06                29.61           0.28288
+21Feb23_195435|    Min            21.74                12.00           0.00000
+21Feb23_195435|    Std             5.93                16.86           0.26271
+21Feb23_195435|   Best            21.74                27.00           0.63093
+21Feb23_195435|-- Generation 11 --
+21Feb23_195435|    -- Crossed 2 individual pairs.
+21Feb23_195435|    -- Mutated 32 individuals.
+21Feb23_195843|    -- Evaluated 64 individuals.
+21Feb23_195843|    Summary of generation 11:
+21Feb23_195843| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_195843|-----------  ------------------  --------------------  ----------
+21Feb23_195843|    Max            38.70                114.00          0.77707
+21Feb23_195843|    Avg            31.22                38.61           0.31806
+21Feb23_195843|    Min            22.61                12.00           0.00000
+21Feb23_195843|    Std             5.95                21.11           0.26628
+21Feb23_195843|   Best            22.61                30.00           0.66435
+21Feb23_195843|-- Generation 12 --
+21Feb23_195843|    -- Crossed 1 individual pairs.
+21Feb23_195843|    -- Mutated 32 individuals.
+21Feb23_200255|    -- Evaluated 64 individuals.
+21Feb23_200255|    Summary of generation 12:
+21Feb23_200255| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_200255|-----------  ------------------  --------------------  ----------
+21Feb23_200255|    Max            38.43                138.00          0.82688
+21Feb23_200255|    Avg            29.24                47.77           0.42702
+21Feb23_200255|    Min            20.87                12.00           0.00000
+21Feb23_200255|    Std             5.70                26.50           0.27719
+21Feb23_200255|   Best            20.87                33.00           0.57900
+21Feb23_200255|-- Generation 13 --
+21Feb23_200255|    -- Crossed 3 individual pairs.
+21Feb23_200255|    -- Mutated 32 individuals.
+21Feb23_200709|    -- Evaluated 64 individuals.
+21Feb23_200709|    Summary of generation 13:
+21Feb23_200709| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_200709|-----------  ------------------  --------------------  ----------
+21Feb23_200709|    Max            38.52                182.00          0.80785
+21Feb23_200709|    Avg            28.80                57.73           0.46732
+21Feb23_200709|    Min            21.57                14.00           0.00000
+21Feb23_200709|    Std             5.54                32.22           0.27941
+21Feb23_200709|   Best            21.57                30.00           0.74330
+21Feb23_200709|-- Generation 14 --
+21Feb23_200709|    -- Crossed 0 individual pairs.
+21Feb23_200709|    -- Mutated 32 individuals.
+21Feb23_201125|    -- Evaluated 64 individuals.
+21Feb23_201125|    Summary of generation 14:
+21Feb23_201125| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_201125|-----------  ------------------  --------------------  ----------
+21Feb23_201125|    Max            38.61                154.00          0.83229
+21Feb23_201125|    Avg            30.17                63.86           0.38615
+21Feb23_201125|    Min            21.57                16.00           0.00000
+21Feb23_201125|    Std             6.57                34.93           0.31122
+21Feb23_201125|   Best            21.57                48.00           0.82411
+21Feb23_201125|-- Generation 15 --
+21Feb23_201125|    -- Crossed 0 individual pairs.
+21Feb23_201125|    -- Mutated 32 individuals.
+21Feb23_201541|    -- Evaluated 64 individuals.
+21Feb23_201541|    Summary of generation 15:
+21Feb23_201541| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_201541|-----------  ------------------  --------------------  ----------
+21Feb23_201541|    Max            38.52                138.00          0.78365
+21Feb23_201541|    Avg            30.39                64.05           0.38274
+21Feb23_201541|    Min            20.43                14.00           0.00000
+21Feb23_201541|    Std             6.74                34.55           0.32224
+21Feb23_201541|   Best            20.43                30.00           0.69245
+21Feb23_201541|-- Generation 16 --
+21Feb23_201541|    -- Crossed 0 individual pairs.
+21Feb23_201541|    -- Mutated 32 individuals.
+21Feb23_201959|    -- Evaluated 64 individuals.
+21Feb23_201959|    Summary of generation 16:
+21Feb23_201959| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_201959|-----------  ------------------  --------------------  ----------
+21Feb23_201959|    Max            38.52                189.00          0.81031
+21Feb23_201959|    Avg            30.31                68.27           0.38913
+21Feb23_201959|    Min            18.96                16.00           0.00000
+21Feb23_201959|    Std             6.55                39.18           0.31496
+21Feb23_201959|   Best            18.96                30.00           0.69119
+21Feb23_201959|-- Generation 17 --
+21Feb23_201959|    -- Crossed 0 individual pairs.
+21Feb23_201959|    -- Mutated 32 individuals.
+21Feb23_202418|    -- Evaluated 64 individuals.
+21Feb23_202418|    Summary of generation 17:
+21Feb23_202418| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_202418|-----------  ------------------  --------------------  ----------
+21Feb23_202418|    Max            38.52                161.00          0.86480
+21Feb23_202418|    Avg            29.74                71.91           0.42573
+21Feb23_202418|    Min            20.61                27.00           0.00000
+21Feb23_202418|    Std             6.09                34.59           0.30487
+21Feb23_202418|   Best            20.61                64.00           0.82368
+21Feb23_202418|-- Generation 18 --
+21Feb23_202418|    -- Crossed 0 individual pairs.
+21Feb23_202418|    -- Mutated 32 individuals.
+21Feb23_202837|    -- Evaluated 64 individuals.
+21Feb23_202837|    Summary of generation 18:
+21Feb23_202837| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_202837|-----------  ------------------  --------------------  ----------
+21Feb23_202837|    Max            38.43                182.00          0.86791
+21Feb23_202837|    Avg            29.94                75.23           0.42586
+21Feb23_202837|    Min            18.78                27.00           0.00000
+21Feb23_202837|    Std             6.62                35.75           0.32115
+21Feb23_202837|   Best            18.78                100.00          0.86791
+21Feb23_202837|-- Generation 19 --
+21Feb23_202837|    -- Crossed 0 individual pairs.
+21Feb23_202837|    -- Mutated 32 individuals.
+21Feb23_203259|    -- Evaluated 64 individuals.
+21Feb23_203259|    Summary of generation 19:
+21Feb23_203259| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_203259|-----------  ------------------  --------------------  ----------
+21Feb23_203259|    Max            39.48                240.00          0.83403
+21Feb23_203259|    Avg            30.92                78.31           0.36282
+21Feb23_203259|    Min            20.52                27.00           0.00000
+21Feb23_203259|    Std             6.85                42.65           0.33177
+21Feb23_203259|   Best            20.52                64.00           0.78427
+21Feb23_203259|-- Generation 20 --
+21Feb23_203259|    -- Crossed 0 individual pairs.
+21Feb23_203259|    -- Mutated 32 individuals.
+21Feb23_203720|    -- Evaluated 64 individuals.
+21Feb23_203720|    Summary of generation 20:
+21Feb23_203720| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_203720|-----------  ------------------  --------------------  ----------
+21Feb23_203720|    Max            38.52                240.00          0.85798
+21Feb23_203720|    Avg            29.40                81.17           0.42361
+21Feb23_203720|    Min            19.39                16.00           0.00000
+21Feb23_203720|    Std             6.60                48.19           0.31017
+21Feb23_203720|   Best            19.39                65.00           0.73415
+21Feb23_203720|-- Generation 21 --
+21Feb23_203720|    -- Crossed 0 individual pairs.
+21Feb23_203720|    -- Mutated 32 individuals.
+21Feb23_204140|    -- Evaluated 64 individuals.
+21Feb23_204140|    Summary of generation 21:
+21Feb23_204140| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_204140|-----------  ------------------  --------------------  ----------
+21Feb23_204140|    Max            38.43                240.00          0.84288
+21Feb23_204140|    Avg            28.97                74.17           0.43505
+21Feb23_204140|    Min            19.65                30.00           0.00000
+21Feb23_204140|    Std             6.68                42.87           0.30897
+21Feb23_204140|   Best            19.65                95.00           0.80123
+21Feb23_204140|-- Generation 22 --
+21Feb23_204140|    -- Crossed 0 individual pairs.
+21Feb23_204140|    -- Mutated 32 individuals.
+21Feb23_204559|    -- Evaluated 64 individuals.
+21Feb23_204559|    Summary of generation 22:
+21Feb23_204559| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_204559|-----------  ------------------  --------------------  ----------
+21Feb23_204559|    Max            38.43                240.00          0.83789
+21Feb23_204559|    Avg            29.11                74.12           0.45114
+21Feb23_204559|    Min            18.87                27.00           0.00000
+21Feb23_204559|    Std             6.54                39.77           0.32632
+21Feb23_204559|   Best            18.87                65.00           0.77095
+21Feb23_204559|-- Generation 23 --
+21Feb23_204559|    -- Crossed 1 individual pairs.
+21Feb23_204559|    -- Mutated 32 individuals.
+21Feb23_205017|    -- Evaluated 64 individuals.
+21Feb23_205017|    Summary of generation 23:
+21Feb23_205017| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_205017|-----------  ------------------  --------------------  ----------
+21Feb23_205017|    Max            38.78                248.00          0.84191
+21Feb23_205017|    Avg            30.25                75.11           0.41883
+21Feb23_205017|    Min            18.87                27.00           0.00000
+21Feb23_205017|    Std             6.97                42.44           0.35346
+21Feb23_205017|   Best            18.87                95.00           0.78632
+21Feb23_205017|-- Generation 24 --
+21Feb23_205017|    -- Crossed 0 individual pairs.
+21Feb23_205018|    -- Mutated 32 individuals.
+21Feb23_205441|    -- Evaluated 64 individuals.
+21Feb23_205441|    Summary of generation 24:
+21Feb23_205441| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_205441|-----------  ------------------  --------------------  ----------
+21Feb23_205441|    Max            40.00                248.00          0.85415
+21Feb23_205441|    Avg            30.54                79.58           0.40884
+21Feb23_205441|    Min            20.87                30.00           0.00000
+21Feb23_205441|    Std             6.85                43.41           0.33975
+21Feb23_205441|   Best            20.87                100.00          0.79039
+21Feb23_205441|-- Generation 25 --
+21Feb23_205441|    -- Crossed 1 individual pairs.
+21Feb23_205441|    -- Mutated 32 individuals.
+21Feb23_205903|    -- Evaluated 64 individuals.
+21Feb23_205903|    Summary of generation 25:
+21Feb23_205903| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_205903|-----------  ------------------  --------------------  ----------
+21Feb23_205903|    Max            38.43                264.00          0.84701
+21Feb23_205903|    Avg            28.76                86.47           0.48816
+21Feb23_205903|    Min            18.87                30.00           0.00000
+21Feb23_205903|    Std             6.75                56.92           0.33063
+21Feb23_205903|   Best            18.87                65.00           0.77559
+21Feb23_205903|-- Generation 26 --
+21Feb23_205903|    -- Crossed 0 individual pairs.
+21Feb23_205903|    -- Mutated 32 individuals.
+21Feb23_210328|    -- Evaluated 64 individuals.
+21Feb23_210328|    Summary of generation 26:
+21Feb23_210328| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_210328|-----------  ------------------  --------------------  ----------
+21Feb23_210328|    Max            38.43                306.00          0.82672
+21Feb23_210328|    Avg            29.49                89.38           0.43920
+21Feb23_210328|    Min            18.61                27.00           0.00000
+21Feb23_210328|    Std             6.94                63.94           0.34117
+21Feb23_210328|   Best            18.61                150.00          0.75000
+21Feb23_210328|-- Generation 27 --
+21Feb23_210328|    -- Crossed 0 individual pairs.
+21Feb23_210328|    -- Mutated 32 individuals.
+21Feb23_210752|    -- Evaluated 64 individuals.
+21Feb23_210752|    Summary of generation 27:
+21Feb23_210752| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_210752|-----------  ------------------  --------------------  ----------
+21Feb23_210752|    Max            38.70                248.00          0.84691
+21Feb23_210752|    Avg            29.75                83.02           0.40547
+21Feb23_210752|    Min            18.09                27.00           0.00000
+21Feb23_210752|    Std             7.20                46.84           0.34307
+21Feb23_210752|   Best            18.09                100.00          0.76627
+21Feb23_210752|-- Generation 28 --
+21Feb23_210752|    -- Crossed 0 individual pairs.
+21Feb23_210752|    -- Mutated 32 individuals.
+21Feb23_211214|    -- Evaluated 64 individuals.
+21Feb23_211214|    Summary of generation 28:
+21Feb23_211214| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_211214|-----------  ------------------  --------------------  ----------
+21Feb23_211214|    Max            38.52                189.00          0.88494
+21Feb23_211214|    Avg            28.79                76.56           0.46560
+21Feb23_211214|    Min            18.61                16.00           0.00000
+21Feb23_211214|    Std             6.97                37.17           0.33347
+21Feb23_211214|   Best            18.61                65.00           0.79041
+21Feb23_211214|-- Generation 29 --
+21Feb23_211214|    -- Crossed 0 individual pairs.
+21Feb23_211214|    -- Mutated 32 individuals.
+21Feb23_211637|    -- Evaluated 64 individuals.
+21Feb23_211637|    Summary of generation 29:
+21Feb23_211637| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_211637|-----------  ------------------  --------------------  ----------
+21Feb23_211637|    Max            39.57                189.00          0.82985
+21Feb23_211637|    Avg            29.85                80.52           0.42367
+21Feb23_211637|    Min            19.91                27.00           0.00000
+21Feb23_211637|    Std             6.97                38.81           0.34466
+21Feb23_211637|   Best            19.91                65.00           0.79121
+21Feb23_211637|-- Generation 30 --
+21Feb23_211637|    -- Crossed 0 individual pairs.
+21Feb23_211637|    -- Mutated 32 individuals.
+21Feb23_212102|    -- Evaluated 64 individuals.
+21Feb23_212102|    Summary of generation 30:
+21Feb23_212102| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_212102|-----------  ------------------  --------------------  ----------
+21Feb23_212102|    Max            38.87                203.00          0.87673
+21Feb23_212102|    Avg            28.88                91.55           0.48340
+21Feb23_212102|    Min            18.96                27.00           0.00000
+21Feb23_212102|    Std             6.66                48.04           0.33024
+21Feb23_212102|   Best            18.96                138.00          0.74864
+21Feb23_212102|-- Generation 31 --
+21Feb23_212102|    -- Crossed 1 individual pairs.
+21Feb23_212102|    -- Mutated 32 individuals.
+21Feb23_212535|    -- Evaluated 64 individuals.
+21Feb23_212535|    Summary of generation 31:
+21Feb23_212535| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_212535|-----------  ------------------  --------------------  ----------
+21Feb23_212535|    Max            44.70                210.00          0.81434
+21Feb23_212535|    Avg            29.47                105.75          0.46728
+21Feb23_212535|    Min            18.96                30.00           0.00000
+21Feb23_212535|    Std             7.08                49.57           0.33503
+21Feb23_212535|   Best            18.96                144.00          0.70632
+21Feb23_212535|-- Generation 32 --
+21Feb23_212535|    -- Crossed 0 individual pairs.
+21Feb23_212535|    -- Mutated 32 individuals.
+21Feb23_213005|    -- Evaluated 64 individuals.
+21Feb23_213005|    Summary of generation 32:
+21Feb23_213005| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_213005|-----------  ------------------  --------------------  ----------
+21Feb23_213005|    Max            39.22                203.00          0.82337
+21Feb23_213005|    Avg            28.19                105.02          0.51282
+21Feb23_213005|    Min            20.70                30.00           0.00000
+21Feb23_213005|    Std             6.85                48.62           0.32947
+21Feb23_213005|   Best            20.70                44.00           0.76377
+21Feb23_213005|-- Generation 33 --
+21Feb23_213005|    -- Crossed 0 individual pairs.
+21Feb23_213005|    -- Mutated 32 individuals.
+21Feb23_213434|    -- Evaluated 64 individuals.
+21Feb23_213434|    Summary of generation 33:
+21Feb23_213434| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_213434|-----------  ------------------  --------------------  ----------
+21Feb23_213434|    Max            39.57                203.00          0.84418
+21Feb23_213434|    Avg            27.53                90.94           0.53100
+21Feb23_213434|    Min            18.00                24.00           0.00000
+21Feb23_213434|    Std             6.97                42.78           0.32904
+21Feb23_213434|   Best            18.00                138.00          0.83442
+21Feb23_213434|-- Generation 34 --
+21Feb23_213434|    -- Crossed 0 individual pairs.
+21Feb23_213434|    -- Mutated 32 individuals.
+21Feb23_213903|    -- Evaluated 64 individuals.
+21Feb23_213903|    Summary of generation 34:
+21Feb23_213903| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_213903|-----------  ------------------  --------------------  ----------
+21Feb23_213903|    Max            38.52                210.00          0.83686
+21Feb23_213903|    Avg            28.91                84.55           0.51007
+21Feb23_213903|    Min            19.83                27.00           0.00000
+21Feb23_213903|    Std             6.82                38.74           0.34845
+21Feb23_213903|   Best            19.83                70.00           0.76097
+21Feb23_213903|-- Generation 35 --
+21Feb23_213903|    -- Crossed 1 individual pairs.
+21Feb23_213903|    -- Mutated 32 individuals.
+21Feb23_214332|    -- Evaluated 64 individuals.
+21Feb23_214332|    Summary of generation 35:
+21Feb23_214332| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_214332|-----------  ------------------  --------------------  ----------
+21Feb23_214332|    Max            39.39                203.00          0.82610
+21Feb23_214332|    Avg            30.24                81.89           0.45057
+21Feb23_214332|    Min            18.52                27.00           0.00000
+21Feb23_214332|    Std             7.18                34.42           0.36389
+21Feb23_214332|   Best            18.52                138.00          0.79530
+21Feb23_214332|-- Generation 36 --
+21Feb23_214332|    -- Crossed 0 individual pairs.
+21Feb23_214332|    -- Mutated 32 individuals.
+21Feb23_214802|    -- Evaluated 64 individuals.
+21Feb23_214802|    Summary of generation 36:
+21Feb23_214802| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_214802|-----------  ------------------  --------------------  ----------
+21Feb23_214802|    Max            40.00                272.00          0.83672
+21Feb23_214802|    Avg            28.01                86.28           0.54385
+21Feb23_214802|    Min            17.30                40.00           0.00000
+21Feb23_214802|    Std             6.64                39.55           0.32524
+21Feb23_214802|   Best            17.30                90.00           0.80931
+21Feb23_214802|-- Generation 37 --
+21Feb23_214802|    -- Crossed 0 individual pairs.
+21Feb23_214802|    -- Mutated 32 individuals.
+21Feb23_215233|    -- Evaluated 64 individuals.
+21Feb23_215233|    Summary of generation 37:
+21Feb23_215233| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_215233|-----------  ------------------  --------------------  ----------
+21Feb23_215233|    Max            38.43                272.00          0.82746
+21Feb23_215233|    Avg            28.12                90.80           0.55558
+21Feb23_215233|    Min            20.61                39.00           0.00000
+21Feb23_215233|    Std             6.44                47.50           0.32002
+21Feb23_215233|   Best            20.61                70.00           0.67832
+21Feb23_215233|-- Generation 38 --
+21Feb23_215233|    -- Crossed 0 individual pairs.
+21Feb23_215233|    -- Mutated 32 individuals.
+21Feb23_215705|    -- Evaluated 64 individuals.
+21Feb23_215705|    Summary of generation 38:
+21Feb23_215705| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_215705|-----------  ------------------  --------------------  ----------
+21Feb23_215705|    Max            38.87                315.00          0.82466
+21Feb23_215705|    Avg            29.09                91.84           0.49687
+21Feb23_215705|    Min            19.74                40.00           0.00000
+21Feb23_215705|    Std             6.91                51.10           0.35423
+21Feb23_215705|   Best            19.74                120.00          0.69838
+21Feb23_215705|-- Generation 39 --
+21Feb23_215705|    -- Crossed 0 individual pairs.
+21Feb23_215705|    -- Mutated 32 individuals.
+21Feb23_220138|    -- Evaluated 64 individuals.
+21Feb23_220138|    Summary of generation 39:
+21Feb23_220138| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_220138|-----------  ------------------  --------------------  ----------
+21Feb23_220138|    Max            39.65                272.00          0.84055
+21Feb23_220138|    Avg            28.72                100.56          0.50669
+21Feb23_220138|    Min            19.57                44.00           0.00000
+21Feb23_220138|    Std             6.81                52.99           0.33888
+21Feb23_220138|   Best            19.57                70.00           0.77437
+21Feb23_220138|-- Generation 40 --
+21Feb23_220138|    -- Crossed 0 individual pairs.
+21Feb23_220138|    -- Mutated 32 individuals.
+21Feb23_220610|    -- Evaluated 64 individuals.
+21Feb23_220610|    Summary of generation 40:
+21Feb23_220610| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_220610|-----------  ------------------  --------------------  ----------
+21Feb23_220610|    Max            39.04                342.00          0.81522
+21Feb23_220610|    Avg            30.24                97.95           0.43428
+21Feb23_220610|    Min            18.78                27.00           0.00000
+21Feb23_220610|    Std             7.12                54.67           0.35352
+21Feb23_220610|   Best            18.78                203.00          0.77594
+21Feb23_220610|-- Generation 41 --
+21Feb23_220610|    -- Crossed 0 individual pairs.
+21Feb23_220610|    -- Mutated 32 individuals.
+21Feb23_221043|    -- Evaluated 64 individuals.
+21Feb23_221043|    Summary of generation 41:
+21Feb23_221043| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_221043|-----------  ------------------  --------------------  ----------
+21Feb23_221043|    Max            38.61                272.00          0.82846
+21Feb23_221043|    Avg            27.62                105.62          0.54138
+21Feb23_221043|    Min            19.13                44.00           0.00000
+21Feb23_221043|    Std             6.53                53.76           0.31958
+21Feb23_221043|   Best            19.13                203.00          0.81370
+21Feb23_221043|-- Generation 42 --
+21Feb23_221043|    -- Crossed 0 individual pairs.
+21Feb23_221043|    -- Mutated 32 individuals.
+21Feb23_221518|    -- Evaluated 64 individuals.
+21Feb23_221518|    Summary of generation 42:
+21Feb23_221518| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_221518|-----------  ------------------  --------------------  ----------
+21Feb23_221518|    Max            39.04                272.00          0.81321
+21Feb23_221518|    Avg            29.57                106.22          0.46971
+21Feb23_221518|    Min            19.57                30.00           0.00000
+21Feb23_221518|    Std             6.94                47.96           0.35551
+21Feb23_221518|   Best            19.57                120.00          0.76199
+21Feb23_221518|-- Generation 43 --
+21Feb23_221518|    -- Crossed 0 individual pairs.
+21Feb23_221518|    -- Mutated 32 individuals.
+21Feb23_221951|    -- Evaluated 64 individuals.
+21Feb23_221951|    Summary of generation 43:
+21Feb23_221951| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_221951|-----------  ------------------  --------------------  ----------
+21Feb23_221951|    Max            51.83                272.00          0.83368
+21Feb23_221951|    Avg            30.43                99.31           0.44474
+21Feb23_221951|    Min            19.74                44.00           0.00000
+21Feb23_221951|    Std             7.60                38.17           0.35979
+21Feb23_221951|   Best            19.74                80.00           0.75819
+21Feb23_221951|-- Generation 44 --
+21Feb23_221951|    -- Crossed 1 individual pairs.
+21Feb23_221951|    -- Mutated 32 individuals.
+21Feb23_222426|    -- Evaluated 64 individuals.
+21Feb23_222426|    Summary of generation 44:
+21Feb23_222426| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_222426|-----------  ------------------  --------------------  ----------
+21Feb23_222426|    Max            40.17                203.00          0.84718
+21Feb23_222426|    Avg            28.11                102.53          0.52279
+21Feb23_222426|    Min            19.39                48.00           0.00000
+21Feb23_222426|    Std             6.88                34.14           0.33439
+21Feb23_222426|   Best            19.39                120.00          0.78878
+21Feb23_222426|-- Generation 45 --
+21Feb23_222426|    -- Crossed 0 individual pairs.
+21Feb23_222426|    -- Mutated 32 individuals.
+21Feb23_222900|    -- Evaluated 64 individuals.
+21Feb23_222900|    Summary of generation 45:
+21Feb23_222900| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_222900|-----------  ------------------  --------------------  ----------
+21Feb23_222900|    Max            38.52                203.00          0.81932
+21Feb23_222900|    Avg            28.76                101.31          0.47477
+21Feb23_222900|    Min            19.65                39.00           0.00000
+21Feb23_222900|    Std             7.22                38.44           0.35008
+21Feb23_222900|   Best            19.65                120.00          0.68522
+21Feb23_222900|-- Generation 46 --
+21Feb23_222900|    -- Crossed 0 individual pairs.
+21Feb23_222900|    -- Mutated 32 individuals.
+21Feb23_223337|    -- Evaluated 64 individuals.
+21Feb23_223337|    Summary of generation 46:
+21Feb23_223337| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_223337|-----------  ------------------  --------------------  ----------
+21Feb23_223337|    Max            41.13                208.00          0.82713
+21Feb23_223337|    Avg            28.19                113.41          0.51201
+21Feb23_223337|    Min            20.09                52.00           0.00000
+21Feb23_223337|    Std             6.87                40.70           0.32886
+21Feb23_223337|   Best            20.09                75.00           0.73948
+21Feb23_223337|-- Generation 47 --
+21Feb23_223337|    -- Crossed 0 individual pairs.
+21Feb23_223337|    -- Mutated 32 individuals.
+21Feb23_223814|    -- Evaluated 64 individuals.
+21Feb23_223814|    Summary of generation 47:
+21Feb23_223814| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_223814|-----------  ------------------  --------------------  ----------
+21Feb23_223814|    Max            38.43                196.00          0.82281
+21Feb23_223814|    Avg            28.24                108.78          0.48673
+21Feb23_223814|    Min            19.83                60.00           0.00000
+21Feb23_223814|    Std             6.94                30.50           0.33019
+21Feb23_223814|   Best            19.83                80.00           0.77945
+21Feb23_223814|-- Generation 48 --
+21Feb23_223814|    -- Crossed 1 individual pairs.
+21Feb23_223814|    -- Mutated 32 individuals.
+21Feb23_224250|    -- Evaluated 64 individuals.
+21Feb23_224250|    Summary of generation 48:
+21Feb23_224250| Statistic    Accuracy error %    Neuron/Layer score    F2 score
+21Feb23_224250|-----------  ------------------  --------------------  ----------
+21Feb23_224250|    Max            38.52                196.00          0.81109
+21Feb23_224250|    Avg            28.33                106.56          0.50578
+21Feb23_224250|    Min            19.91                39.00           0.00000
+21Feb23_224250|    Std             6.79                34.98           0.32166
+21Feb23_224250|   Best            19.91                120.00          0.69606
+21Feb23_224250|Best initial individual weights
+21Feb23_224250|Individual:
+21Feb23_224250|-- Constant hidden layers --
+21Feb23_224250|False
+21Feb23_224250|Layer 0:
+21Feb23_224250|-- Config --
+21Feb23_224250|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 19, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224250|-- Weights --
+21Feb23_224250|[[ 0.71999  0.48896 -0.59228 ... -0.43387  0.74135 -0.18716]
+21Feb23_224250| [ 0.84515 -0.84160 -0.97413 ...  0.90845 -0.88656 -0.47061]
+21Feb23_224250| [-0.14486 -0.98148 -0.61901 ...  0.49057 -0.50844 -0.79938]
+21Feb23_224250| ...
+21Feb23_224250| [ 0.97014  0.42685 -0.60449 ... -0.25706 -0.91501 -0.31388]
+21Feb23_224250| [-0.61259  0.55113  0.52708 ...  0.86941  0.35853 -0.36780]
+21Feb23_224250| [-0.56773  0.91476 -0.90273 ... -0.93189 -0.56010  0.63839]]
+21Feb23_224250|-- Bias --
+21Feb23_224250|[ 0.68600  0.43673 -0.72222 -0.55277  0.86228  0.96608 -0.73146 -0.40150
+21Feb23_224250| -0.51059  0.46762 -0.55380  0.31102  0.95577  0.32639 -0.00103  0.01829
+21Feb23_224250| -0.16387  0.15423  0.26419]
+21Feb23_224250|Layer 1:
+21Feb23_224250|-- Config --
+21Feb23_224250|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 19], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224250|-- Weights --
+21Feb23_224250|[[-0.97761  0.76156]
+21Feb23_224250| [-0.99366  0.99063]
+21Feb23_224250| [-0.65390  0.94303]
+21Feb23_224250| [ 0.77790 -0.92813]
+21Feb23_224250| [-0.63660  0.10879]
+21Feb23_224250| [ 0.60460 -0.25640]
+21Feb23_224250| [-0.58421  0.45055]
+21Feb23_224250| [-0.84636 -0.25223]
+21Feb23_224250| [-0.38002  0.49469]
+21Feb23_224250| [-0.54717 -0.00798]
+21Feb23_224250| [-0.09852 -0.87887]
+21Feb23_224250| [ 0.95900  0.67815]
+21Feb23_224250| [-0.15659 -0.38243]
+21Feb23_224250| [-0.22064 -0.36778]
+21Feb23_224250| [-0.69043 -0.47192]
+21Feb23_224250| [-0.53182  0.99888]
+21Feb23_224250| [ 0.99673 -0.43406]
+21Feb23_224250| [ 0.13151  0.77712]
+21Feb23_224250| [ 0.26224 -0.70792]]
+21Feb23_224250|-- Bias --
+21Feb23_224250|[-0.91303  0.40725]
+21Feb23_224250|Predicting the validation and test data with the Best initial individual.
+21Feb23_224257| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224257|-----------  ------------------  --------------------  ----------
+21Feb23_224257|Validation         38.61                  19            0.00000
+21Feb23_224257|   Test            39.44                  19            0.00275
+21Feb23_224257|-------------------- Test #0 --------------------
+21Feb23_224257|Best final individual weights
+21Feb23_224257|Individual:
+21Feb23_224257|-- Constant hidden layers --
+21Feb23_224257|False
+21Feb23_224257|Layer 0:
+21Feb23_224257|-- Config --
+21Feb23_224257|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224257|-- Weights --
+21Feb23_224257|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224257| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224257| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224257| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224257| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224257| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224257| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224257| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224257| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224257| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224257| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224257| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224257| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224257| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224257| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224257| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224257| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224257| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224257| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224257| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224257| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224257| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224257| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224257| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224257| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224257| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224257| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224257| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224257| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224257| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224257| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224257| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224257| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224257| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224257| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224257| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224257| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224257| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224257| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224257| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224257| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224257| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224257| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224257| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224257| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224257| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224257| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224257| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224257| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224257| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224257| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224257| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224257| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224257| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224257| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224257| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224257| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224257|-- Bias --
+21Feb23_224257|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224257|Layer 1:
+21Feb23_224257|-- Config --
+21Feb23_224257|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224257|-- Weights --
+21Feb23_224257|[[-0.80738  0.60247 -0.50926]
+21Feb23_224257| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224257| [-1.26012 -1.03295  0.57453]
+21Feb23_224257| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224257| [-0.10559 -0.39992  0.13097]]
+21Feb23_224257|-- Bias --
+21Feb23_224257|[-0.26513 -0.52220 -0.22820]
+21Feb23_224257|Layer 2:
+21Feb23_224257|-- Config --
+21Feb23_224257|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224257|-- Weights --
+21Feb23_224257|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224257| [-0.21961  1.68010 -0.42179]
+21Feb23_224257| [-0.64894 -0.10646  0.02871]]
+21Feb23_224257|-- Bias --
+21Feb23_224257|[-0.51885 -0.35464  0.30906]
+21Feb23_224257|Layer 3:
+21Feb23_224257|-- Config --
+21Feb23_224257|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224257|-- Weights --
+21Feb23_224257|[[-1.33799 -0.64348  0.37219]
+21Feb23_224257| [-0.03260 -0.56592 -0.81833]
+21Feb23_224257| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224257|-- Bias --
+21Feb23_224257|[-0.06610  0.54485 -0.01970]
+21Feb23_224257|Layer 4:
+21Feb23_224257|-- Config --
+21Feb23_224257|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224257|-- Weights --
+21Feb23_224257|[[-0.38291  0.47055]
+21Feb23_224257| [ 0.29823  0.39041]
+21Feb23_224257| [-0.90936 -0.30063]]
+21Feb23_224257|-- Bias --
+21Feb23_224257|[0.94590 0.80968]
+21Feb23_224257|Layer 5:
+21Feb23_224257|-- Config --
+21Feb23_224257|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224257|-- Weights --
+21Feb23_224257|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224257| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224257|-- Bias --
+21Feb23_224257|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224257|Layer 6:
+21Feb23_224257|-- Config --
+21Feb23_224257|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224257|-- Weights --
+21Feb23_224257|[[-0.13247  0.44092]
+21Feb23_224257| [-0.05485  0.06919]
+21Feb23_224257| [-0.80889  0.42199]
+21Feb23_224257| [-0.06276  0.89558]]
+21Feb23_224257|-- Bias --
+21Feb23_224257|[-0.77868 -0.75481]
+21Feb23_224257|Predicting the validation and test data with the Best final individual.
+21Feb23_224305| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224305|-----------  ------------------  --------------------  ----------
+21Feb23_224305|Validation         21.04                 120            0.69853
+21Feb23_224305|   Test            22.59                 120            0.70575
+21Feb23_224305|-------------------- Test #1 --------------------
+21Feb23_224305|Best final individual weights
+21Feb23_224305|Individual:
+21Feb23_224305|-- Constant hidden layers --
+21Feb23_224305|False
+21Feb23_224305|Layer 0:
+21Feb23_224305|-- Config --
+21Feb23_224305|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224305|-- Weights --
+21Feb23_224305|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224305| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224305| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224305| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224305| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224305| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224305| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224305| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224305| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224305| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224305| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224305| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224305| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224305| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224305| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224305| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224305| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224305| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224305| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224305| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224305| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224305| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224305| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224305| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224305| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224305| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224305| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224305| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224305| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224305| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224305| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224305| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224305| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224305| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224305| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224305| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224305| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224305| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224305| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224305| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224305| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224305| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224305| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224305| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224305| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224305| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224305| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224305| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224305| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224305| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224305| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224305| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224305| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224305| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224305| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224305| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224305| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224305|-- Bias --
+21Feb23_224305|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224305|Layer 1:
+21Feb23_224305|-- Config --
+21Feb23_224305|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224305|-- Weights --
+21Feb23_224305|[[-0.80738  0.60247 -0.50926]
+21Feb23_224305| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224305| [-1.26012 -1.03295  0.57453]
+21Feb23_224305| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224305| [-0.10559 -0.39992  0.13097]]
+21Feb23_224305|-- Bias --
+21Feb23_224305|[-0.26513 -0.52220 -0.22820]
+21Feb23_224305|Layer 2:
+21Feb23_224305|-- Config --
+21Feb23_224305|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224305|-- Weights --
+21Feb23_224305|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224305| [-0.21961  1.68010 -0.42179]
+21Feb23_224305| [-0.64894 -0.10646  0.02871]]
+21Feb23_224305|-- Bias --
+21Feb23_224305|[-0.51885 -0.35464  0.30906]
+21Feb23_224305|Layer 3:
+21Feb23_224305|-- Config --
+21Feb23_224305|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224305|-- Weights --
+21Feb23_224305|[[-1.33799 -0.64348  0.37219]
+21Feb23_224305| [-0.03260 -0.56592 -0.81833]
+21Feb23_224305| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224305|-- Bias --
+21Feb23_224305|[-0.06610  0.54485 -0.01970]
+21Feb23_224305|Layer 4:
+21Feb23_224305|-- Config --
+21Feb23_224305|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224305|-- Weights --
+21Feb23_224305|[[-0.38291  0.47055]
+21Feb23_224305| [ 0.29823  0.39041]
+21Feb23_224305| [-0.90936 -0.30063]]
+21Feb23_224305|-- Bias --
+21Feb23_224305|[0.94590 0.80968]
+21Feb23_224305|Layer 5:
+21Feb23_224305|-- Config --
+21Feb23_224305|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224305|-- Weights --
+21Feb23_224305|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224305| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224305|-- Bias --
+21Feb23_224305|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224305|Layer 6:
+21Feb23_224305|-- Config --
+21Feb23_224305|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224305|-- Weights --
+21Feb23_224305|[[-0.13247  0.44092]
+21Feb23_224305| [-0.05485  0.06919]
+21Feb23_224305| [-0.80889  0.42199]
+21Feb23_224305| [-0.06276  0.89558]]
+21Feb23_224305|-- Bias --
+21Feb23_224305|[-0.77868 -0.75481]
+21Feb23_224305|Predicting the validation and test data with the Best final individual.
+21Feb23_224314| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224314|-----------  ------------------  --------------------  ----------
+21Feb23_224314|Validation         21.48                 120            0.77598
+21Feb23_224314|   Test            24.24                 120            0.65949
+21Feb23_224314|-------------------- Test #2 --------------------
+21Feb23_224314|Best final individual weights
+21Feb23_224314|Individual:
+21Feb23_224314|-- Constant hidden layers --
+21Feb23_224314|False
+21Feb23_224314|Layer 0:
+21Feb23_224314|-- Config --
+21Feb23_224314|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224314|-- Weights --
+21Feb23_224314|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224314| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224314| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224314| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224314| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224314| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224314| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224314| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224314| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224314| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224314| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224314| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224314| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224314| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224314| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224314| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224314| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224314| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224314| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224314| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224314| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224314| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224314| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224314| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224314| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224314| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224314| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224314| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224314| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224314| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224314| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224314| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224314| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224314| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224314| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224314| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224314| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224314| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224314| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224314| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224314| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224314| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224314| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224314| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224314| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224314| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224314| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224314| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224314| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224314| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224314| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224314| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224314| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224314| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224314| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224314| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224314| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224314|-- Bias --
+21Feb23_224314|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224314|Layer 1:
+21Feb23_224314|-- Config --
+21Feb23_224314|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224314|-- Weights --
+21Feb23_224314|[[-0.80738  0.60247 -0.50926]
+21Feb23_224314| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224314| [-1.26012 -1.03295  0.57453]
+21Feb23_224314| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224314| [-0.10559 -0.39992  0.13097]]
+21Feb23_224314|-- Bias --
+21Feb23_224314|[-0.26513 -0.52220 -0.22820]
+21Feb23_224314|Layer 2:
+21Feb23_224314|-- Config --
+21Feb23_224314|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224314|-- Weights --
+21Feb23_224314|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224314| [-0.21961  1.68010 -0.42179]
+21Feb23_224314| [-0.64894 -0.10646  0.02871]]
+21Feb23_224314|-- Bias --
+21Feb23_224314|[-0.51885 -0.35464  0.30906]
+21Feb23_224314|Layer 3:
+21Feb23_224314|-- Config --
+21Feb23_224314|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224314|-- Weights --
+21Feb23_224314|[[-1.33799 -0.64348  0.37219]
+21Feb23_224314| [-0.03260 -0.56592 -0.81833]
+21Feb23_224314| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224314|-- Bias --
+21Feb23_224314|[-0.06610  0.54485 -0.01970]
+21Feb23_224314|Layer 4:
+21Feb23_224314|-- Config --
+21Feb23_224314|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224314|-- Weights --
+21Feb23_224314|[[-0.38291  0.47055]
+21Feb23_224314| [ 0.29823  0.39041]
+21Feb23_224314| [-0.90936 -0.30063]]
+21Feb23_224314|-- Bias --
+21Feb23_224314|[0.94590 0.80968]
+21Feb23_224314|Layer 5:
+21Feb23_224314|-- Config --
+21Feb23_224314|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224314|-- Weights --
+21Feb23_224314|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224314| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224314|-- Bias --
+21Feb23_224314|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224314|Layer 6:
+21Feb23_224314|-- Config --
+21Feb23_224314|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224314|-- Weights --
+21Feb23_224314|[[-0.13247  0.44092]
+21Feb23_224314| [-0.05485  0.06919]
+21Feb23_224314| [-0.80889  0.42199]
+21Feb23_224314| [-0.06276  0.89558]]
+21Feb23_224314|-- Bias --
+21Feb23_224314|[-0.77868 -0.75481]
+21Feb23_224314|Predicting the validation and test data with the Best final individual.
+21Feb23_224323| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224323|-----------  ------------------  --------------------  ----------
+21Feb23_224323|Validation         19.57                 120            0.77283
+21Feb23_224323|   Test            30.23                 120            0.38785
+21Feb23_224323|-------------------- Test #3 --------------------
+21Feb23_224323|Best final individual weights
+21Feb23_224323|Individual:
+21Feb23_224323|-- Constant hidden layers --
+21Feb23_224323|False
+21Feb23_224323|Layer 0:
+21Feb23_224323|-- Config --
+21Feb23_224323|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224323|-- Weights --
+21Feb23_224323|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224323| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224323| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224323| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224323| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224323| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224323| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224323| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224323| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224323| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224323| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224323| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224323| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224323| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224323| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224323| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224323| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224323| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224323| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224323| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224323| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224323| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224323| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224323| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224323| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224323| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224323| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224323| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224323| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224323| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224323| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224323| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224323| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224323| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224323| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224323| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224323| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224323| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224323| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224323| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224323| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224323| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224323| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224323| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224323| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224323| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224323| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224323| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224323| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224323| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224323| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224323| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224323| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224323| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224323| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224323| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224323| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224323|-- Bias --
+21Feb23_224323|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224323|Layer 1:
+21Feb23_224323|-- Config --
+21Feb23_224323|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224323|-- Weights --
+21Feb23_224323|[[-0.80738  0.60247 -0.50926]
+21Feb23_224323| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224323| [-1.26012 -1.03295  0.57453]
+21Feb23_224323| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224323| [-0.10559 -0.39992  0.13097]]
+21Feb23_224323|-- Bias --
+21Feb23_224323|[-0.26513 -0.52220 -0.22820]
+21Feb23_224323|Layer 2:
+21Feb23_224323|-- Config --
+21Feb23_224323|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224323|-- Weights --
+21Feb23_224323|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224323| [-0.21961  1.68010 -0.42179]
+21Feb23_224323| [-0.64894 -0.10646  0.02871]]
+21Feb23_224323|-- Bias --
+21Feb23_224323|[-0.51885 -0.35464  0.30906]
+21Feb23_224323|Layer 3:
+21Feb23_224323|-- Config --
+21Feb23_224323|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224323|-- Weights --
+21Feb23_224323|[[-1.33799 -0.64348  0.37219]
+21Feb23_224323| [-0.03260 -0.56592 -0.81833]
+21Feb23_224323| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224323|-- Bias --
+21Feb23_224323|[-0.06610  0.54485 -0.01970]
+21Feb23_224323|Layer 4:
+21Feb23_224323|-- Config --
+21Feb23_224323|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224323|-- Weights --
+21Feb23_224323|[[-0.38291  0.47055]
+21Feb23_224323| [ 0.29823  0.39041]
+21Feb23_224323| [-0.90936 -0.30063]]
+21Feb23_224323|-- Bias --
+21Feb23_224323|[0.94590 0.80968]
+21Feb23_224323|Layer 5:
+21Feb23_224323|-- Config --
+21Feb23_224323|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224323|-- Weights --
+21Feb23_224323|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224323| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224323|-- Bias --
+21Feb23_224323|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224323|Layer 6:
+21Feb23_224323|-- Config --
+21Feb23_224323|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224323|-- Weights --
+21Feb23_224323|[[-0.13247  0.44092]
+21Feb23_224323| [-0.05485  0.06919]
+21Feb23_224323| [-0.80889  0.42199]
+21Feb23_224323| [-0.06276  0.89558]]
+21Feb23_224323|-- Bias --
+21Feb23_224323|[-0.77868 -0.75481]
+21Feb23_224323|Predicting the validation and test data with the Best final individual.
+21Feb23_224331| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224331|-----------  ------------------  --------------------  ----------
+21Feb23_224331|Validation         19.57                 120            0.79710
+21Feb23_224331|   Test            22.59                 120            0.70257
+21Feb23_224331|-------------------- Test #4 --------------------
+21Feb23_224331|Best final individual weights
+21Feb23_224331|Individual:
+21Feb23_224331|-- Constant hidden layers --
+21Feb23_224331|False
+21Feb23_224331|Layer 0:
+21Feb23_224331|-- Config --
+21Feb23_224331|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224331|-- Weights --
+21Feb23_224331|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224331| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224331| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224331| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224331| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224331| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224331| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224331| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224331| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224331| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224331| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224331| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224331| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224331| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224331| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224331| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224331| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224331| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224331| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224331| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224331| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224331| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224331| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224331| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224331| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224331| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224331| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224331| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224331| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224331| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224331| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224331| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224331| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224331| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224331| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224331| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224331| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224331| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224331| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224331| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224331| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224331| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224331| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224331| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224331| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224331| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224331| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224331| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224331| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224331| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224331| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224331| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224331| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224331| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224331| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224331| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224331| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224331|-- Bias --
+21Feb23_224331|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224331|Layer 1:
+21Feb23_224331|-- Config --
+21Feb23_224331|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224331|-- Weights --
+21Feb23_224331|[[-0.80738  0.60247 -0.50926]
+21Feb23_224331| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224331| [-1.26012 -1.03295  0.57453]
+21Feb23_224331| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224331| [-0.10559 -0.39992  0.13097]]
+21Feb23_224331|-- Bias --
+21Feb23_224331|[-0.26513 -0.52220 -0.22820]
+21Feb23_224331|Layer 2:
+21Feb23_224331|-- Config --
+21Feb23_224331|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224331|-- Weights --
+21Feb23_224331|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224331| [-0.21961  1.68010 -0.42179]
+21Feb23_224331| [-0.64894 -0.10646  0.02871]]
+21Feb23_224331|-- Bias --
+21Feb23_224331|[-0.51885 -0.35464  0.30906]
+21Feb23_224331|Layer 3:
+21Feb23_224331|-- Config --
+21Feb23_224331|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224331|-- Weights --
+21Feb23_224331|[[-1.33799 -0.64348  0.37219]
+21Feb23_224331| [-0.03260 -0.56592 -0.81833]
+21Feb23_224331| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224331|-- Bias --
+21Feb23_224331|[-0.06610  0.54485 -0.01970]
+21Feb23_224331|Layer 4:
+21Feb23_224331|-- Config --
+21Feb23_224331|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224331|-- Weights --
+21Feb23_224331|[[-0.38291  0.47055]
+21Feb23_224331| [ 0.29823  0.39041]
+21Feb23_224331| [-0.90936 -0.30063]]
+21Feb23_224331|-- Bias --
+21Feb23_224331|[0.94590 0.80968]
+21Feb23_224331|Layer 5:
+21Feb23_224331|-- Config --
+21Feb23_224331|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224331|-- Weights --
+21Feb23_224331|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224331| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224331|-- Bias --
+21Feb23_224331|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224331|Layer 6:
+21Feb23_224331|-- Config --
+21Feb23_224331|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224331|-- Weights --
+21Feb23_224331|[[-0.13247  0.44092]
+21Feb23_224331| [-0.05485  0.06919]
+21Feb23_224331| [-0.80889  0.42199]
+21Feb23_224331| [-0.06276  0.89558]]
+21Feb23_224331|-- Bias --
+21Feb23_224331|[-0.77868 -0.75481]
+21Feb23_224331|Predicting the validation and test data with the Best final individual.
+21Feb23_224340| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224340|-----------  ------------------  --------------------  ----------
+21Feb23_224340|Validation         21.74                 120            0.78696
+21Feb23_224340|   Test            23.98                 120            0.74400
+21Feb23_224340|-------------------- Test #5 --------------------
+21Feb23_224340|Best final individual weights
+21Feb23_224340|Individual:
+21Feb23_224340|-- Constant hidden layers --
+21Feb23_224340|False
+21Feb23_224340|Layer 0:
+21Feb23_224340|-- Config --
+21Feb23_224340|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224340|-- Weights --
+21Feb23_224340|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224340| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224340| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224340| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224340| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224340| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224340| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224340| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224340| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224340| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224340| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224340| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224340| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224340| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224340| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224340| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224340| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224340| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224340| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224340| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224340| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224340| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224340| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224340| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224340| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224340| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224340| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224340| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224340| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224340| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224340| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224340| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224340| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224340| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224340| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224340| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224340| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224340| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224340| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224340| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224340| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224340| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224340| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224340| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224340| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224340| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224340| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224340| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224340| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224340| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224340| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224340| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224340| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224340| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224340| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224340| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224340| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224340|-- Bias --
+21Feb23_224340|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224340|Layer 1:
+21Feb23_224340|-- Config --
+21Feb23_224340|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224340|-- Weights --
+21Feb23_224340|[[-0.80738  0.60247 -0.50926]
+21Feb23_224340| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224340| [-1.26012 -1.03295  0.57453]
+21Feb23_224340| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224340| [-0.10559 -0.39992  0.13097]]
+21Feb23_224340|-- Bias --
+21Feb23_224340|[-0.26513 -0.52220 -0.22820]
+21Feb23_224340|Layer 2:
+21Feb23_224340|-- Config --
+21Feb23_224340|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224340|-- Weights --
+21Feb23_224340|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224340| [-0.21961  1.68010 -0.42179]
+21Feb23_224340| [-0.64894 -0.10646  0.02871]]
+21Feb23_224340|-- Bias --
+21Feb23_224340|[-0.51885 -0.35464  0.30906]
+21Feb23_224340|Layer 3:
+21Feb23_224340|-- Config --
+21Feb23_224340|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224340|-- Weights --
+21Feb23_224340|[[-1.33799 -0.64348  0.37219]
+21Feb23_224340| [-0.03260 -0.56592 -0.81833]
+21Feb23_224340| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224340|-- Bias --
+21Feb23_224340|[-0.06610  0.54485 -0.01970]
+21Feb23_224340|Layer 4:
+21Feb23_224340|-- Config --
+21Feb23_224340|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224340|-- Weights --
+21Feb23_224340|[[-0.38291  0.47055]
+21Feb23_224340| [ 0.29823  0.39041]
+21Feb23_224340| [-0.90936 -0.30063]]
+21Feb23_224340|-- Bias --
+21Feb23_224340|[0.94590 0.80968]
+21Feb23_224340|Layer 5:
+21Feb23_224340|-- Config --
+21Feb23_224340|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224340|-- Weights --
+21Feb23_224340|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224340| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224340|-- Bias --
+21Feb23_224340|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224340|Layer 6:
+21Feb23_224340|-- Config --
+21Feb23_224340|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224340|-- Weights --
+21Feb23_224340|[[-0.13247  0.44092]
+21Feb23_224340| [-0.05485  0.06919]
+21Feb23_224340| [-0.80889  0.42199]
+21Feb23_224340| [-0.06276  0.89558]]
+21Feb23_224340|-- Bias --
+21Feb23_224340|[-0.77868 -0.75481]
+21Feb23_224340|Predicting the validation and test data with the Best final individual.
+21Feb23_224349| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224349|-----------  ------------------  --------------------  ----------
+21Feb23_224349|Validation         19.74                 120            0.78587
+21Feb23_224349|   Test            24.24                 120            0.80545
+21Feb23_224349|-------------------- Test #6 --------------------
+21Feb23_224349|Best final individual weights
+21Feb23_224349|Individual:
+21Feb23_224349|-- Constant hidden layers --
+21Feb23_224349|False
+21Feb23_224349|Layer 0:
+21Feb23_224349|-- Config --
+21Feb23_224349|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224349|-- Weights --
+21Feb23_224349|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224349| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224349| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224349| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224349| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224349| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224349| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224349| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224349| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224349| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224349| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224349| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224349| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224349| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224349| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224349| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224349| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224349| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224349| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224349| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224349| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224349| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224349| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224349| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224349| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224349| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224349| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224349| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224349| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224349| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224349| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224349| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224349| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224349| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224349| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224349| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224349| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224349| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224349| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224349| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224349| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224349| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224349| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224349| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224349| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224349| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224349| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224349| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224349| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224349| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224349| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224349| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224349| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224349| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224349| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224349| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224349| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224349|-- Bias --
+21Feb23_224349|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224349|Layer 1:
+21Feb23_224349|-- Config --
+21Feb23_224349|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224349|-- Weights --
+21Feb23_224349|[[-0.80738  0.60247 -0.50926]
+21Feb23_224349| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224349| [-1.26012 -1.03295  0.57453]
+21Feb23_224349| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224349| [-0.10559 -0.39992  0.13097]]
+21Feb23_224349|-- Bias --
+21Feb23_224349|[-0.26513 -0.52220 -0.22820]
+21Feb23_224349|Layer 2:
+21Feb23_224349|-- Config --
+21Feb23_224349|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224349|-- Weights --
+21Feb23_224349|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224349| [-0.21961  1.68010 -0.42179]
+21Feb23_224349| [-0.64894 -0.10646  0.02871]]
+21Feb23_224349|-- Bias --
+21Feb23_224349|[-0.51885 -0.35464  0.30906]
+21Feb23_224349|Layer 3:
+21Feb23_224349|-- Config --
+21Feb23_224349|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224349|-- Weights --
+21Feb23_224349|[[-1.33799 -0.64348  0.37219]
+21Feb23_224349| [-0.03260 -0.56592 -0.81833]
+21Feb23_224349| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224349|-- Bias --
+21Feb23_224349|[-0.06610  0.54485 -0.01970]
+21Feb23_224349|Layer 4:
+21Feb23_224349|-- Config --
+21Feb23_224349|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224349|-- Weights --
+21Feb23_224349|[[-0.38291  0.47055]
+21Feb23_224349| [ 0.29823  0.39041]
+21Feb23_224349| [-0.90936 -0.30063]]
+21Feb23_224349|-- Bias --
+21Feb23_224349|[0.94590 0.80968]
+21Feb23_224349|Layer 5:
+21Feb23_224349|-- Config --
+21Feb23_224349|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224349|-- Weights --
+21Feb23_224349|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224349| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224349|-- Bias --
+21Feb23_224349|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224349|Layer 6:
+21Feb23_224349|-- Config --
+21Feb23_224349|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224349|-- Weights --
+21Feb23_224349|[[-0.13247  0.44092]
+21Feb23_224349| [-0.05485  0.06919]
+21Feb23_224349| [-0.80889  0.42199]
+21Feb23_224349| [-0.06276  0.89558]]
+21Feb23_224349|-- Bias --
+21Feb23_224349|[-0.77868 -0.75481]
+21Feb23_224349|Predicting the validation and test data with the Best final individual.
+21Feb23_224357| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224357|-----------  ------------------  --------------------  ----------
+21Feb23_224357|Validation         21.57                 120            0.79358
+21Feb23_224357|   Test            24.50                 120            0.77601
+21Feb23_224357|-------------------- Test #7 --------------------
+21Feb23_224357|Best final individual weights
+21Feb23_224357|Individual:
+21Feb23_224357|-- Constant hidden layers --
+21Feb23_224357|False
+21Feb23_224357|Layer 0:
+21Feb23_224357|-- Config --
+21Feb23_224357|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224357|-- Weights --
+21Feb23_224357|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224357| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224357| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224357| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224357| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224357| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224357| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224357| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224357| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224357| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224357| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224357| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224357| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224357| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224357| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224357| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224357| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224357| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224357| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224357| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224357| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224357| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224357| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224357| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224357| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224357| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224357| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224357| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224357| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224357| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224357| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224357| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224357| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224357| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224357| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224357| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224357| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224357| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224357| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224357| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224357| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224357| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224357| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224357| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224357| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224357| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224357| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224357| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224357| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224357| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224357| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224357| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224357| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224357| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224357| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224357| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224357| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224357|-- Bias --
+21Feb23_224357|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224357|Layer 1:
+21Feb23_224357|-- Config --
+21Feb23_224357|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224357|-- Weights --
+21Feb23_224357|[[-0.80738  0.60247 -0.50926]
+21Feb23_224357| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224357| [-1.26012 -1.03295  0.57453]
+21Feb23_224357| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224357| [-0.10559 -0.39992  0.13097]]
+21Feb23_224357|-- Bias --
+21Feb23_224357|[-0.26513 -0.52220 -0.22820]
+21Feb23_224357|Layer 2:
+21Feb23_224357|-- Config --
+21Feb23_224357|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224357|-- Weights --
+21Feb23_224357|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224357| [-0.21961  1.68010 -0.42179]
+21Feb23_224357| [-0.64894 -0.10646  0.02871]]
+21Feb23_224357|-- Bias --
+21Feb23_224357|[-0.51885 -0.35464  0.30906]
+21Feb23_224357|Layer 3:
+21Feb23_224357|-- Config --
+21Feb23_224357|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224357|-- Weights --
+21Feb23_224357|[[-1.33799 -0.64348  0.37219]
+21Feb23_224357| [-0.03260 -0.56592 -0.81833]
+21Feb23_224357| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224357|-- Bias --
+21Feb23_224357|[-0.06610  0.54485 -0.01970]
+21Feb23_224357|Layer 4:
+21Feb23_224357|-- Config --
+21Feb23_224357|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224357|-- Weights --
+21Feb23_224357|[[-0.38291  0.47055]
+21Feb23_224357| [ 0.29823  0.39041]
+21Feb23_224357| [-0.90936 -0.30063]]
+21Feb23_224357|-- Bias --
+21Feb23_224357|[0.94590 0.80968]
+21Feb23_224357|Layer 5:
+21Feb23_224357|-- Config --
+21Feb23_224357|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224357|-- Weights --
+21Feb23_224357|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224357| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224357|-- Bias --
+21Feb23_224357|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224357|Layer 6:
+21Feb23_224357|-- Config --
+21Feb23_224357|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224357|-- Weights --
+21Feb23_224357|[[-0.13247  0.44092]
+21Feb23_224357| [-0.05485  0.06919]
+21Feb23_224357| [-0.80889  0.42199]
+21Feb23_224357| [-0.06276  0.89558]]
+21Feb23_224357|-- Bias --
+21Feb23_224357|[-0.77868 -0.75481]
+21Feb23_224357|Predicting the validation and test data with the Best final individual.
+21Feb23_224406| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224406|-----------  ------------------  --------------------  ----------
+21Feb23_224406|Validation         22.43                 120            0.79604
+21Feb23_224406|   Test            26.24                 120            0.76377
+21Feb23_224406|-------------------- Test #8 --------------------
+21Feb23_224406|Best final individual weights
+21Feb23_224406|Individual:
+21Feb23_224406|-- Constant hidden layers --
+21Feb23_224406|False
+21Feb23_224406|Layer 0:
+21Feb23_224406|-- Config --
+21Feb23_224406|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224406|-- Weights --
+21Feb23_224406|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224406| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224406| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224406| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224406| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224406| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224406| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224406| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224406| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224406| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224406| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224406| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224406| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224406| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224406| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224406| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224406| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224406| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224406| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224406| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224406| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224406| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224406| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224406| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224406| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224406| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224406| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224406| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224406| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224406| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224406| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224406| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224406| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224406| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224406| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224406| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224406| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224406| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224406| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224406| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224406| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224406| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224406| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224406| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224406| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224406| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224406| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224406| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224406| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224406| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224406| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224406| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224406| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224406| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224406| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224406| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224406| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224406|-- Bias --
+21Feb23_224406|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224406|Layer 1:
+21Feb23_224406|-- Config --
+21Feb23_224406|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224406|-- Weights --
+21Feb23_224406|[[-0.80738  0.60247 -0.50926]
+21Feb23_224406| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224406| [-1.26012 -1.03295  0.57453]
+21Feb23_224406| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224406| [-0.10559 -0.39992  0.13097]]
+21Feb23_224406|-- Bias --
+21Feb23_224406|[-0.26513 -0.52220 -0.22820]
+21Feb23_224406|Layer 2:
+21Feb23_224406|-- Config --
+21Feb23_224406|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224406|-- Weights --
+21Feb23_224406|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224406| [-0.21961  1.68010 -0.42179]
+21Feb23_224406| [-0.64894 -0.10646  0.02871]]
+21Feb23_224406|-- Bias --
+21Feb23_224406|[-0.51885 -0.35464  0.30906]
+21Feb23_224406|Layer 3:
+21Feb23_224406|-- Config --
+21Feb23_224406|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224406|-- Weights --
+21Feb23_224406|[[-1.33799 -0.64348  0.37219]
+21Feb23_224406| [-0.03260 -0.56592 -0.81833]
+21Feb23_224406| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224406|-- Bias --
+21Feb23_224406|[-0.06610  0.54485 -0.01970]
+21Feb23_224406|Layer 4:
+21Feb23_224406|-- Config --
+21Feb23_224406|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224406|-- Weights --
+21Feb23_224406|[[-0.38291  0.47055]
+21Feb23_224406| [ 0.29823  0.39041]
+21Feb23_224406| [-0.90936 -0.30063]]
+21Feb23_224406|-- Bias --
+21Feb23_224406|[0.94590 0.80968]
+21Feb23_224406|Layer 5:
+21Feb23_224406|-- Config --
+21Feb23_224406|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224406|-- Weights --
+21Feb23_224406|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224406| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224406|-- Bias --
+21Feb23_224406|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224406|Layer 6:
+21Feb23_224406|-- Config --
+21Feb23_224406|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224406|-- Weights --
+21Feb23_224406|[[-0.13247  0.44092]
+21Feb23_224406| [-0.05485  0.06919]
+21Feb23_224406| [-0.80889  0.42199]
+21Feb23_224406| [-0.06276  0.89558]]
+21Feb23_224406|-- Bias --
+21Feb23_224406|[-0.77868 -0.75481]
+21Feb23_224406|Predicting the validation and test data with the Best final individual.
+21Feb23_224415| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224415|-----------  ------------------  --------------------  ----------
+21Feb23_224415|Validation         22.43                 120            0.79897
+21Feb23_224415|   Test            28.32                 120            0.56599
+21Feb23_224415|-------------------- Test #9 --------------------
+21Feb23_224415|Best final individual weights
+21Feb23_224415|Individual:
+21Feb23_224415|-- Constant hidden layers --
+21Feb23_224415|False
+21Feb23_224415|Layer 0:
+21Feb23_224415|-- Config --
+21Feb23_224415|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224415|-- Weights --
+21Feb23_224415|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224415| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224415| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224415| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224415| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224415| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224415| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224415| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224415| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224415| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224415| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224415| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224415| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224415| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224415| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224415| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224415| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224415| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224415| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224415| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224415| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224415| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224415| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224415| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224415| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224415| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224415| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224415| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224415| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224415| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224415| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224415| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224415| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224415| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224415| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224415| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224415| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224415| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224415| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224415| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224415| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224415| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224415| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224415| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224415| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224415| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224415| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224415| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224415| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224415| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224415| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224415| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224415| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224415| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224415| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224415| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224415| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224415|-- Bias --
+21Feb23_224415|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224415|Layer 1:
+21Feb23_224415|-- Config --
+21Feb23_224415|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224415|-- Weights --
+21Feb23_224415|[[-0.80738  0.60247 -0.50926]
+21Feb23_224415| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224415| [-1.26012 -1.03295  0.57453]
+21Feb23_224415| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224415| [-0.10559 -0.39992  0.13097]]
+21Feb23_224415|-- Bias --
+21Feb23_224415|[-0.26513 -0.52220 -0.22820]
+21Feb23_224415|Layer 2:
+21Feb23_224415|-- Config --
+21Feb23_224415|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224415|-- Weights --
+21Feb23_224415|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224415| [-0.21961  1.68010 -0.42179]
+21Feb23_224415| [-0.64894 -0.10646  0.02871]]
+21Feb23_224415|-- Bias --
+21Feb23_224415|[-0.51885 -0.35464  0.30906]
+21Feb23_224415|Layer 3:
+21Feb23_224415|-- Config --
+21Feb23_224415|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224415|-- Weights --
+21Feb23_224415|[[-1.33799 -0.64348  0.37219]
+21Feb23_224415| [-0.03260 -0.56592 -0.81833]
+21Feb23_224415| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224415|-- Bias --
+21Feb23_224415|[-0.06610  0.54485 -0.01970]
+21Feb23_224415|Layer 4:
+21Feb23_224415|-- Config --
+21Feb23_224415|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224415|-- Weights --
+21Feb23_224415|[[-0.38291  0.47055]
+21Feb23_224415| [ 0.29823  0.39041]
+21Feb23_224415| [-0.90936 -0.30063]]
+21Feb23_224415|-- Bias --
+21Feb23_224415|[0.94590 0.80968]
+21Feb23_224415|Layer 5:
+21Feb23_224415|-- Config --
+21Feb23_224415|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224415|-- Weights --
+21Feb23_224415|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224415| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224415|-- Bias --
+21Feb23_224415|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224415|Layer 6:
+21Feb23_224415|-- Config --
+21Feb23_224415|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224415|-- Weights --
+21Feb23_224415|[[-0.13247  0.44092]
+21Feb23_224415| [-0.05485  0.06919]
+21Feb23_224415| [-0.80889  0.42199]
+21Feb23_224415| [-0.06276  0.89558]]
+21Feb23_224415|-- Bias --
+21Feb23_224415|[-0.77868 -0.75481]
+21Feb23_224415|Predicting the validation and test data with the Best final individual.
+21Feb23_224424| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224424|-----------  ------------------  --------------------  ----------
+21Feb23_224424|Validation         21.13                 120            0.72431
+21Feb23_224424|   Test            24.33                 120            0.76647
+21Feb23_224424|-------------------- Test #10 --------------------
+21Feb23_224424|Best final individual weights
+21Feb23_224424|Individual:
+21Feb23_224424|-- Constant hidden layers --
+21Feb23_224424|False
+21Feb23_224424|Layer 0:
+21Feb23_224424|-- Config --
+21Feb23_224424|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224424|-- Weights --
+21Feb23_224424|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224424| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224424| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224424| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224424| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224424| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224424| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224424| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224424| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224424| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224424| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224424| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224424| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224424| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224424| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224424| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224424| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224424| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224424| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224424| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224424| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224424| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224424| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224424| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224424| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224424| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224424| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224424| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224424| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224424| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224424| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224424| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224424| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224424| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224424| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224424| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224424| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224424| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224424| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224424| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224424| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224424| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224424| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224424| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224424| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224424| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224424| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224424| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224424| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224424| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224424| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224424| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224424| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224424| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224424| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224424| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224424| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224424|-- Bias --
+21Feb23_224424|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224424|Layer 1:
+21Feb23_224424|-- Config --
+21Feb23_224424|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224424|-- Weights --
+21Feb23_224424|[[-0.80738  0.60247 -0.50926]
+21Feb23_224424| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224424| [-1.26012 -1.03295  0.57453]
+21Feb23_224424| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224424| [-0.10559 -0.39992  0.13097]]
+21Feb23_224424|-- Bias --
+21Feb23_224424|[-0.26513 -0.52220 -0.22820]
+21Feb23_224424|Layer 2:
+21Feb23_224424|-- Config --
+21Feb23_224424|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224424|-- Weights --
+21Feb23_224424|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224424| [-0.21961  1.68010 -0.42179]
+21Feb23_224424| [-0.64894 -0.10646  0.02871]]
+21Feb23_224424|-- Bias --
+21Feb23_224424|[-0.51885 -0.35464  0.30906]
+21Feb23_224424|Layer 3:
+21Feb23_224424|-- Config --
+21Feb23_224424|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224424|-- Weights --
+21Feb23_224424|[[-1.33799 -0.64348  0.37219]
+21Feb23_224424| [-0.03260 -0.56592 -0.81833]
+21Feb23_224424| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224424|-- Bias --
+21Feb23_224424|[-0.06610  0.54485 -0.01970]
+21Feb23_224424|Layer 4:
+21Feb23_224424|-- Config --
+21Feb23_224424|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224424|-- Weights --
+21Feb23_224424|[[-0.38291  0.47055]
+21Feb23_224424| [ 0.29823  0.39041]
+21Feb23_224424| [-0.90936 -0.30063]]
+21Feb23_224424|-- Bias --
+21Feb23_224424|[0.94590 0.80968]
+21Feb23_224424|Layer 5:
+21Feb23_224424|-- Config --
+21Feb23_224424|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224424|-- Weights --
+21Feb23_224424|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224424| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224424|-- Bias --
+21Feb23_224424|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224424|Layer 6:
+21Feb23_224424|-- Config --
+21Feb23_224424|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224424|-- Weights --
+21Feb23_224424|[[-0.13247  0.44092]
+21Feb23_224424| [-0.05485  0.06919]
+21Feb23_224424| [-0.80889  0.42199]
+21Feb23_224424| [-0.06276  0.89558]]
+21Feb23_224424|-- Bias --
+21Feb23_224424|[-0.77868 -0.75481]
+21Feb23_224424|Predicting the validation and test data with the Best final individual.
+21Feb23_224432| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224432|-----------  ------------------  --------------------  ----------
+21Feb23_224432|Validation         24.43                 120            0.82255
+21Feb23_224432|   Test            25.63                 120            0.77898
+21Feb23_224432|-------------------- Test #11 --------------------
+21Feb23_224432|Best final individual weights
+21Feb23_224432|Individual:
+21Feb23_224432|-- Constant hidden layers --
+21Feb23_224432|False
+21Feb23_224432|Layer 0:
+21Feb23_224432|-- Config --
+21Feb23_224432|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224432|-- Weights --
+21Feb23_224432|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224432| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224432| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224432| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224432| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224432| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224432| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224432| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224432| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224432| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224432| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224432| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224432| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224432| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224432| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224432| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224432| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224432| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224432| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224432| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224432| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224432| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224432| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224432| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224432| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224432| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224432| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224432| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224432| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224432| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224432| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224432| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224432| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224432| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224432| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224432| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224432| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224432| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224432| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224432| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224432| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224432| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224432| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224432| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224432| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224432| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224432| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224432| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224432| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224432| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224432| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224432| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224432| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224432| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224432| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224432| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224432| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224432|-- Bias --
+21Feb23_224432|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224432|Layer 1:
+21Feb23_224432|-- Config --
+21Feb23_224432|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224432|-- Weights --
+21Feb23_224432|[[-0.80738  0.60247 -0.50926]
+21Feb23_224432| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224432| [-1.26012 -1.03295  0.57453]
+21Feb23_224432| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224432| [-0.10559 -0.39992  0.13097]]
+21Feb23_224432|-- Bias --
+21Feb23_224432|[-0.26513 -0.52220 -0.22820]
+21Feb23_224432|Layer 2:
+21Feb23_224432|-- Config --
+21Feb23_224432|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224432|-- Weights --
+21Feb23_224432|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224432| [-0.21961  1.68010 -0.42179]
+21Feb23_224432| [-0.64894 -0.10646  0.02871]]
+21Feb23_224432|-- Bias --
+21Feb23_224432|[-0.51885 -0.35464  0.30906]
+21Feb23_224432|Layer 3:
+21Feb23_224432|-- Config --
+21Feb23_224432|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224432|-- Weights --
+21Feb23_224432|[[-1.33799 -0.64348  0.37219]
+21Feb23_224432| [-0.03260 -0.56592 -0.81833]
+21Feb23_224432| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224432|-- Bias --
+21Feb23_224432|[-0.06610  0.54485 -0.01970]
+21Feb23_224432|Layer 4:
+21Feb23_224432|-- Config --
+21Feb23_224432|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224432|-- Weights --
+21Feb23_224432|[[-0.38291  0.47055]
+21Feb23_224432| [ 0.29823  0.39041]
+21Feb23_224432| [-0.90936 -0.30063]]
+21Feb23_224432|-- Bias --
+21Feb23_224432|[0.94590 0.80968]
+21Feb23_224432|Layer 5:
+21Feb23_224432|-- Config --
+21Feb23_224432|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224432|-- Weights --
+21Feb23_224432|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224432| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224432|-- Bias --
+21Feb23_224432|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224432|Layer 6:
+21Feb23_224432|-- Config --
+21Feb23_224432|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224432|-- Weights --
+21Feb23_224432|[[-0.13247  0.44092]
+21Feb23_224432| [-0.05485  0.06919]
+21Feb23_224432| [-0.80889  0.42199]
+21Feb23_224432| [-0.06276  0.89558]]
+21Feb23_224432|-- Bias --
+21Feb23_224432|[-0.77868 -0.75481]
+21Feb23_224432|Predicting the validation and test data with the Best final individual.
+21Feb23_224441| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224441|-----------  ------------------  --------------------  ----------
+21Feb23_224441|Validation         24.96                 120            0.77745
+21Feb23_224441|   Test            21.89                 120            0.73026
+21Feb23_224441|-------------------- Test #12 --------------------
+21Feb23_224441|Best final individual weights
+21Feb23_224441|Individual:
+21Feb23_224441|-- Constant hidden layers --
+21Feb23_224441|False
+21Feb23_224441|Layer 0:
+21Feb23_224441|-- Config --
+21Feb23_224441|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224441|-- Weights --
+21Feb23_224441|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224441| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224441| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224441| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224441| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224441| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224441| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224441| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224441| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224441| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224441| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224441| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224441| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224441| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224441| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224441| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224441| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224441| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224441| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224441| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224441| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224441| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224441| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224441| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224441| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224441| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224441| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224441| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224441| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224441| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224441| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224441| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224441| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224441| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224441| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224441| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224441| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224441| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224441| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224441| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224441| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224441| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224441| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224441| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224441| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224441| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224441| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224441| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224441| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224441| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224441| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224441| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224441| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224441| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224441| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224441| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224441| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224441|-- Bias --
+21Feb23_224441|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224441|Layer 1:
+21Feb23_224441|-- Config --
+21Feb23_224441|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224441|-- Weights --
+21Feb23_224441|[[-0.80738  0.60247 -0.50926]
+21Feb23_224441| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224441| [-1.26012 -1.03295  0.57453]
+21Feb23_224441| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224441| [-0.10559 -0.39992  0.13097]]
+21Feb23_224441|-- Bias --
+21Feb23_224441|[-0.26513 -0.52220 -0.22820]
+21Feb23_224441|Layer 2:
+21Feb23_224441|-- Config --
+21Feb23_224441|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224441|-- Weights --
+21Feb23_224441|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224441| [-0.21961  1.68010 -0.42179]
+21Feb23_224441| [-0.64894 -0.10646  0.02871]]
+21Feb23_224441|-- Bias --
+21Feb23_224441|[-0.51885 -0.35464  0.30906]
+21Feb23_224441|Layer 3:
+21Feb23_224441|-- Config --
+21Feb23_224441|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224441|-- Weights --
+21Feb23_224441|[[-1.33799 -0.64348  0.37219]
+21Feb23_224441| [-0.03260 -0.56592 -0.81833]
+21Feb23_224441| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224441|-- Bias --
+21Feb23_224441|[-0.06610  0.54485 -0.01970]
+21Feb23_224441|Layer 4:
+21Feb23_224441|-- Config --
+21Feb23_224441|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224441|-- Weights --
+21Feb23_224441|[[-0.38291  0.47055]
+21Feb23_224441| [ 0.29823  0.39041]
+21Feb23_224441| [-0.90936 -0.30063]]
+21Feb23_224441|-- Bias --
+21Feb23_224441|[0.94590 0.80968]
+21Feb23_224441|Layer 5:
+21Feb23_224441|-- Config --
+21Feb23_224441|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224441|-- Weights --
+21Feb23_224441|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224441| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224441|-- Bias --
+21Feb23_224441|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224441|Layer 6:
+21Feb23_224441|-- Config --
+21Feb23_224441|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224441|-- Weights --
+21Feb23_224441|[[-0.13247  0.44092]
+21Feb23_224441| [-0.05485  0.06919]
+21Feb23_224441| [-0.80889  0.42199]
+21Feb23_224441| [-0.06276  0.89558]]
+21Feb23_224441|-- Bias --
+21Feb23_224441|[-0.77868 -0.75481]
+21Feb23_224441|Predicting the validation and test data with the Best final individual.
+21Feb23_224450| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224450|-----------  ------------------  --------------------  ----------
+21Feb23_224450|Validation         24.09                 120            0.79830
+21Feb23_224450|   Test            29.19                 120            0.79518
+21Feb23_224450|-------------------- Test #13 --------------------
+21Feb23_224450|Best final individual weights
+21Feb23_224450|Individual:
+21Feb23_224450|-- Constant hidden layers --
+21Feb23_224450|False
+21Feb23_224450|Layer 0:
+21Feb23_224450|-- Config --
+21Feb23_224450|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224450|-- Weights --
+21Feb23_224450|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224450| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224450| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224450| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224450| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224450| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224450| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224450| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224450| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224450| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224450| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224450| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224450| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224450| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224450| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224450| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224450| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224450| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224450| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224450| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224450| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224450| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224450| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224450| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224450| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224450| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224450| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224450| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224450| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224450| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224450| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224450| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224450| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224450| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224450| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224450| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224450| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224450| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224450| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224450| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224450| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224450| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224450| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224450| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224450| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224450| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224450| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224450| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224450| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224450| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224450| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224450| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224450| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224450| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224450| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224450| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224450| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224450|-- Bias --
+21Feb23_224450|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224450|Layer 1:
+21Feb23_224450|-- Config --
+21Feb23_224450|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224450|-- Weights --
+21Feb23_224450|[[-0.80738  0.60247 -0.50926]
+21Feb23_224450| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224450| [-1.26012 -1.03295  0.57453]
+21Feb23_224450| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224450| [-0.10559 -0.39992  0.13097]]
+21Feb23_224450|-- Bias --
+21Feb23_224450|[-0.26513 -0.52220 -0.22820]
+21Feb23_224450|Layer 2:
+21Feb23_224450|-- Config --
+21Feb23_224450|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224450|-- Weights --
+21Feb23_224450|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224450| [-0.21961  1.68010 -0.42179]
+21Feb23_224450| [-0.64894 -0.10646  0.02871]]
+21Feb23_224450|-- Bias --
+21Feb23_224450|[-0.51885 -0.35464  0.30906]
+21Feb23_224450|Layer 3:
+21Feb23_224450|-- Config --
+21Feb23_224450|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224450|-- Weights --
+21Feb23_224450|[[-1.33799 -0.64348  0.37219]
+21Feb23_224450| [-0.03260 -0.56592 -0.81833]
+21Feb23_224450| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224450|-- Bias --
+21Feb23_224450|[-0.06610  0.54485 -0.01970]
+21Feb23_224450|Layer 4:
+21Feb23_224450|-- Config --
+21Feb23_224450|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224450|-- Weights --
+21Feb23_224450|[[-0.38291  0.47055]
+21Feb23_224450| [ 0.29823  0.39041]
+21Feb23_224450| [-0.90936 -0.30063]]
+21Feb23_224450|-- Bias --
+21Feb23_224450|[0.94590 0.80968]
+21Feb23_224450|Layer 5:
+21Feb23_224450|-- Config --
+21Feb23_224450|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224450|-- Weights --
+21Feb23_224450|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224450| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224450|-- Bias --
+21Feb23_224450|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224450|Layer 6:
+21Feb23_224450|-- Config --
+21Feb23_224450|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224450|-- Weights --
+21Feb23_224450|[[-0.13247  0.44092]
+21Feb23_224450| [-0.05485  0.06919]
+21Feb23_224450| [-0.80889  0.42199]
+21Feb23_224450| [-0.06276  0.89558]]
+21Feb23_224450|-- Bias --
+21Feb23_224450|[-0.77868 -0.75481]
+21Feb23_224450|Predicting the validation and test data with the Best final individual.
+21Feb23_224458| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224458|-----------  ------------------  --------------------  ----------
+21Feb23_224458|Validation         22.96                 120            0.79837
+21Feb23_224458|   Test            24.15                 120            0.78595
+21Feb23_224458|-------------------- Test #14 --------------------
+21Feb23_224458|Best final individual weights
+21Feb23_224458|Individual:
+21Feb23_224458|-- Constant hidden layers --
+21Feb23_224458|False
+21Feb23_224458|Layer 0:
+21Feb23_224458|-- Config --
+21Feb23_224458|{'name': 'Hidden0', 'trainable': True, 'batch_input_shape': [None, 57], 'dtype': 'float32', 'units': 5, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224458|-- Weights --
+21Feb23_224458|[[ 1.75273 -0.94494  0.72234  0.45682 -0.90292]
+21Feb23_224458| [ 0.97399 -1.57145  0.78977  1.23649  1.62032]
+21Feb23_224458| [ 1.11490 -0.31709 -0.36908 -1.13024  2.33501]
+21Feb23_224458| [ 0.27044  2.84678 -0.19458 -0.14960  0.81677]
+21Feb23_224458| [-1.15718  1.18561 -0.09559 -0.77665 -0.27979]
+21Feb23_224458| [-1.95027 -0.33226 -1.22595  0.28700  2.31194]
+21Feb23_224458| [-1.19740  0.12197 -1.52176 -0.62347  2.13575]
+21Feb23_224458| [ 1.02068 -0.60427 -1.39503  0.64375  0.53617]
+21Feb23_224458| [-0.02793 -0.94185 -0.74242  1.16196 -0.84942]
+21Feb23_224458| [-0.83039 -1.69212  1.33573 -1.38494 -0.39014]
+21Feb23_224458| [-0.13396  0.86713 -0.67402  0.67320 -1.77889]
+21Feb23_224458| [ 0.03856 -1.00343 -0.22132 -2.00983 -1.11628]
+21Feb23_224458| [ 1.88996 -1.89481  1.25585 -0.47018 -0.13385]
+21Feb23_224458| [-0.97392  1.40834 -1.61475  0.58788 -0.51682]
+21Feb23_224458| [ 0.98167 -0.48655  1.47713 -0.64348  2.10183]
+21Feb23_224458| [ 0.70000 -1.59347  1.40430 -0.99685 -0.87498]
+21Feb23_224458| [ 0.15119  1.33891  2.65038  1.45745  0.57088]
+21Feb23_224458| [-0.61779  1.45939  0.96501 -1.34295  1.43884]
+21Feb23_224458| [-1.14033  2.21813 -1.26266  0.56411 -2.50281]
+21Feb23_224458| [ 1.08671  1.86586  0.39525  0.65882 -0.54007]
+21Feb23_224458| [ 0.76179 -0.84887 -0.39658 -0.44099  0.79922]
+21Feb23_224458| [-0.84923 -0.10521  1.80110  2.32385 -0.53709]
+21Feb23_224458| [-2.42251  0.71024  1.03057  1.15336 -0.59401]
+21Feb23_224458| [ 1.06143  0.50085 -0.43276  0.26703  0.20016]
+21Feb23_224458| [-0.61112 -1.05921 -0.32070 -0.18783 -1.87808]
+21Feb23_224458| [ 1.07181 -0.75633 -1.06321  0.79886  0.11023]
+21Feb23_224458| [ 1.76122 -1.00162  1.05112 -1.10019  1.26307]
+21Feb23_224458| [-0.93315 -0.15289  0.17023 -0.57973 -1.75471]
+21Feb23_224458| [ 0.16175  0.36467  0.03689  2.15218 -0.13720]
+21Feb23_224458| [-0.25940  0.91338 -0.19700  1.32862 -0.71252]
+21Feb23_224458| [-0.07752  2.18700 -1.16771 -0.23567 -0.42467]
+21Feb23_224458| [ 1.33040  0.44652  0.20852  0.58263 -1.05076]
+21Feb23_224458| [-0.10365  0.08896 -2.58280  1.09878 -0.33879]
+21Feb23_224458| [-1.80913  0.05347 -0.89607 -0.14490 -0.96362]
+21Feb23_224458| [-0.66718 -0.23148 -0.07674 -1.30097 -2.31075]
+21Feb23_224458| [ 0.41584  0.05507 -0.64219  0.87864 -1.60016]
+21Feb23_224458| [ 1.56278 -0.52668  0.60997 -0.56875  0.69349]
+21Feb23_224458| [-0.92707  1.52479 -0.61226  0.69749  0.80931]
+21Feb23_224458| [ 0.85547 -1.09933 -0.86262  0.49470 -2.74742]
+21Feb23_224458| [-0.30571 -0.03850  1.69676 -0.50954 -0.27437]
+21Feb23_224458| [-0.99622 -1.30939  2.03230  0.06896  0.72065]
+21Feb23_224458| [ 0.38775  1.35602 -0.97801  0.32324  1.22057]
+21Feb23_224458| [-1.66743 -0.59557 -2.18798  0.99733 -0.52288]
+21Feb23_224458| [ 1.01112  0.38015  0.29625  2.05831  0.96507]
+21Feb23_224458| [-1.96610 -0.61575  1.04326  2.22642  0.91421]
+21Feb23_224458| [-1.00512 -0.91180 -1.02762 -0.07512  0.16544]
+21Feb23_224458| [-0.53819  0.45998 -0.17781  2.02378  1.28867]
+21Feb23_224458| [ 1.29149  0.42469 -0.85227  0.32304  1.13453]
+21Feb23_224458| [ 1.31571 -0.61445  1.02879 -0.02897  0.09171]
+21Feb23_224458| [-1.53318 -2.19901 -1.86380  0.19782  0.12760]
+21Feb23_224458| [ 0.45517  1.08604 -0.24668 -1.19598  0.87982]
+21Feb23_224458| [ 0.60168  0.07181 -1.09714 -1.42809 -1.08997]
+21Feb23_224458| [-0.89155  2.82938  0.51787  0.16554  0.64466]
+21Feb23_224458| [ 0.13998  0.44084  0.23935  0.18137  2.01502]
+21Feb23_224458| [-2.18768 -0.29548 -0.49859 -0.48095 -0.22465]
+21Feb23_224458| [ 0.20823  0.85680  1.43469 -0.42145  0.76560]
+21Feb23_224458| [-0.86357  0.55473  0.10129 -1.53560 -0.72427]]
+21Feb23_224458|-- Bias --
+21Feb23_224458|[ 0.26459  0.85816  0.73569  1.31090 -0.55837]
+21Feb23_224458|Layer 1:
+21Feb23_224458|-- Config --
+21Feb23_224458|{'name': 'Hidden2', 'trainable': True, 'batch_input_shape': [None, 5], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224458|-- Weights --
+21Feb23_224458|[[-0.80738  0.60247 -0.50926]
+21Feb23_224458| [ 0.90146 -2.21004 -0.18590]
+21Feb23_224458| [-1.26012 -1.03295  0.57453]
+21Feb23_224458| [ 1.70837 -0.52257 -0.34782]
+21Feb23_224458| [-0.10559 -0.39992  0.13097]]
+21Feb23_224458|-- Bias --
+21Feb23_224458|[-0.26513 -0.52220 -0.22820]
+21Feb23_224458|Layer 2:
+21Feb23_224458|-- Config --
+21Feb23_224458|{'name': 'Hidden3', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224458|-- Weights --
+21Feb23_224458|[[ 1.04993  0.10114 -0.11126]
+21Feb23_224458| [-0.21961  1.68010 -0.42179]
+21Feb23_224458| [-0.64894 -0.10646  0.02871]]
+21Feb23_224458|-- Bias --
+21Feb23_224458|[-0.51885 -0.35464  0.30906]
+21Feb23_224458|Layer 3:
+21Feb23_224458|-- Config --
+21Feb23_224458|{'name': 'Hidden4', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 3, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224458|-- Weights --
+21Feb23_224458|[[-1.33799 -0.64348  0.37219]
+21Feb23_224458| [-0.03260 -0.56592 -0.81833]
+21Feb23_224458| [ 0.47960  0.22013 -0.29539]]
+21Feb23_224458|-- Bias --
+21Feb23_224458|[-0.06610  0.54485 -0.01970]
+21Feb23_224458|Layer 4:
+21Feb23_224458|-- Config --
+21Feb23_224458|{'name': 'Hidden5', 'trainable': True, 'batch_input_shape': [None, 3], 'dtype': 'float32', 'units': 2, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224458|-- Weights --
+21Feb23_224458|[[-0.38291  0.47055]
+21Feb23_224458| [ 0.29823  0.39041]
+21Feb23_224458| [-0.90936 -0.30063]]
+21Feb23_224458|-- Bias --
+21Feb23_224458|[0.94590 0.80968]
+21Feb23_224458|Layer 5:
+21Feb23_224458|-- Config --
+21Feb23_224458|{'name': 'Hidden6', 'trainable': True, 'batch_input_shape': [None, 2], 'dtype': 'float32', 'units': 4, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224458|-- Weights --
+21Feb23_224458|[[ 0.16208 -0.20520 -0.93972  0.09261]
+21Feb23_224458| [ 0.28725  0.80104 -0.11150 -0.74336]]
+21Feb23_224458|-- Bias --
+21Feb23_224458|[0.25483 0.48071 0.15787 0.54212]
+21Feb23_224458|Layer 6:
+21Feb23_224458|-- Config --
+21Feb23_224458|{'name': 'OutputLayer', 'trainable': True, 'batch_input_shape': [None, 4], 'dtype': 'float32', 'units': 2, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'class_name': 'Zeros', 'config': {}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+21Feb23_224458|-- Weights --
+21Feb23_224458|[[-0.13247  0.44092]
+21Feb23_224458| [-0.05485  0.06919]
+21Feb23_224458| [-0.80889  0.42199]
+21Feb23_224458| [-0.06276  0.89558]]
+21Feb23_224458|-- Bias --
+21Feb23_224458|[-0.77868 -0.75481]
+21Feb23_224458|Predicting the validation and test data with the Best final individual.
+21Feb23_224507| Partition    Accuracy error %    Neuron/layer score    F2 score
+21Feb23_224507|-----------  ------------------  --------------------  ----------
+21Feb23_224507|Validation         23.30                 120            0.79409
+21Feb23_224507|   Test            23.63                 120            0.77053
