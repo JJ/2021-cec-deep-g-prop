@@ -311,7 +311,7 @@ Since we have implemented {\sf EvoMLP} using the Python programming language. Te
 
 We would need to find out first if this method really works. Taking into account the uncertainty in the fitness, will it really make the (according to some criteria) best individuals stay until the last generation? For a typical run (baseline run with the {\sf spambase1} partition), we will see how, on average, accuracy and F2 progress every generation.
 %
-\begin{figure}
+\begin{figure}[h!tb]
 <<generations.fs.table,echo=FALSE, results="asis">>=
 library(ggplot2)
 library(ggthemes)
@@ -323,7 +323,7 @@ ggplot(generations,aes(x=Generation,y=Average.F2,group=Generation,color="Average
 \label{fig:gen:f2}
 \end{figure}
 %
-\begin{figure}
+\begin{figure}[h!tb]
 <<generations.acc.table,echo=FALSE, results="asis">>=
 ggplot(generations,aes(x=Generation,y=Average.Acc,group=Generation,color="Average Accuracy"))+geom_boxplot()+geom_boxplot(aes(x=Generation,y=Min.Acc,group=Generation, color="Min Accuracy", fill="Max Accuracy"))+theme_tufte()
 @
@@ -339,7 +339,7 @@ Initial results comparing EvoMLP with G-Prop under different circumstances were 
 
 In this paper we will first try to show the performance of the algorithm for this kind of problem, as well as create a baseline for comparison as we evolve the framework and the underlying algorithm. For that purpose, we have chosen {\sf spambase} as the dataset for all experiments. Taken from the UCI \cite{uci} database, it is a highly unbalanced dataset, with a good amount of features, and has been used extensively for benchmarking frameworks and algorithms. In papers such as the one by Duriqi et al. \cite{duriqi2016comparative}, which tests the algorithms implemented in WEKA, the accuracy reported is around 90\%, although it's not clear how the data set was split and if it is measured with a part of the dataset unseen before in any way. In order to measure generalization, in our experiments we have followed the PROBEN1 convention \cite{Prechelt94c} which is equivalent to a three-fold cross validation, splitting the dataset in three parts and sequentially using two of them for training and validation, finally testing them with the third part. By testing the models with an unseen part of the dataset, we guarantee that we are measuring its generalization capability, and not overfitting the model to the specific data it has been trained with.
 %
-\begin{table*}
+\begin{table*}[h!tb]
 \centering
 <<spambase.table,echo=FALSE, results="asis">>=
 spambase1.base <- read.csv("data/spambase1-p64.csv")
@@ -394,7 +394,7 @@ knitr::kable(spambase, col.names=c("Partition","Validation,best","Validation, me
 
 We are going to use the arguments shown in Table \autoref{tab:params}. Just the parameters indicated with {\tt *} differ from the default values.
 %
-\begin{table}
+\begin{table}[h!tb]
 \centering
 \begin{tabular}{|l|r|}
 \hline
@@ -420,7 +420,7 @@ In general, these values have been found by exploration; a further sensitivity s
 
 The time needed to reach these results is around 2 hours for every run. This shows the relative lack of performance of Python, but at the same time, 2 hours is acceptable if we do not need a real time flow of results. The spambase problem is mid-size, with many inputs and a sizable dataset, so this might be, in fact, in the limit of the kind of problems that can be approached with this algorithm, unless some improvements in performance (and accuracy) are made. Taking into account that all we have used is 2048 evaluations, it is not such a bad result, leading us to think that increasing the budget would probably obtain better results.
 %
-\begin{table*}
+\begin{table*}[h!tb]
 \centering
 <<comparison.table,echo=FALSE, results="asis">>=
 spambase1.tf <- read.csv("data/cec-2021-spambase-1.csv")
@@ -476,7 +476,7 @@ knitr::kable(comparison, col.names=c("Partition","Validation,best","Validation, 
 
 However, another possible way of obtaining better results in one way or another is upgrading the dependencies. As a matter of fact, Keras underwent a change in the last version, being incorporated into the TensorFlow module, instead of being an independent one. That also had as a result eliminating the possibility of using different backends, reducing itself to only one backend: TensorFlow. We need to find out how this will affect the results of the algorithm, so we created a fork of the problem, changing all dependencies from the original version to the one included with TensorFlow, and run again using the same datasets and the same command line. The result is shown in \autoref{tab:spambase:comparison}. The set of last-generation results have been compared using Wilcoxon test, and in all cases difference is significant. However, as you can see, the result with this new version are worse than the original {\em in median}, although, since the standard deviation is higher, the best values are, in general, better. We should emphasize that the library code is exactly the same, except for a line that imports Keras as part of the TensorFlow library.
 
-\begin{figure}
+\begin{figure}[h!tb]
 \centering
 <<comparison.layers,echo=FALSE,message=FALSE>>=
 spambase1.lr11 <- read.csv("data/cec-2021-spambase1-lr11.csv")
