@@ -238,8 +238,8 @@ We need to make a series of decisions on the data structures and functions used 
     and biases are muted for all the individuals each generation.
 
     From this configuration, when the moment of evaluation comes, we create a
-    \emph{Sequential} \cite{keras-sequential}  Keras  model and
-    append each \emph{Layer} as a \emph{Dense} \cite{keras-dense} Keras layer.
+    \emph{Sequential} Keras  model and
+    append each \emph{Layer} as a \emph{Dense} Keras layer.
 
 There are three stop conditions that will finish the execution of the
     genetic algorithm: if we reach the maximum number of generations, if after
@@ -291,7 +291,7 @@ where $f_{s}$, is the hidden-layer, or size, score, $nhl$ is the number of hidde
 Finally, the F2 score metric (explained in \autoref{sec:res}) is also considered. At the end, the fitness value is a compound of
 three elements: accuracy, hidden-score and F2 score. As the DEAP framework
 \cite{deap-ga} was used as a base to create the genetic algorithm, we also
-took advantage of its fitness class \cite{deap-fitness} to rank the individuals
+took advantage of its fitness class to rank the individuals
 of a population. It performs a lexicographical comparison of the three values,
 so we chose the order previously mentioned to approach as much as possible to
 the fitness function used by G-Prop.
@@ -371,7 +371,7 @@ knitr::kable(spambase, col.names=c("Partition","Validation,best","Validation, me
 
 We will use default parameters, except for the population (64) and the maximum number of generations (32), which have been found by exploration; we try to use a reasonable amount of exploitation with exploration that is more intense for weights, and less intense for the other possibilities of change. This version will use Python 3.8.6, as well as Theano 2.3.1 with a Theano backend; Theano is a good choice, and it was proved to be slightly faster than other backends, like TensorFlow. Results are shown in \autoref{tab:spambase:base}. That table represents the average over {\em all} individuals in the last generation. We should take into account the uncertainty in the evaluation of the fitness via training and testing, so the concept of {\em best} individual in the last generation includes the same amount of uncertainty; this is why in the table we include the median and the average; in these uncertain environments, median might be a better measure of success reached. This should be essentially considered a baseline value, and we do not want to present it as the state of the art. Looking at published results, these are comparable with those obtained with the Naive Bayes algorithm and shown, for instance, in \cite{duriqi2016comparative}, although the way of measuring them is totally different and we cannot really draw a comparison.
 
-The time needed to reach these results is around 2 hours for every run. This shows the relative lack of performance of Python, but at the same time, 2 hours is acceptable if we do not need a real time flow of results. The spambase problem is mid-size, with many inputs and a sizable dataset, so this might be, in fact, in the limit of the kind of problems that can be approached with this algorithm, unless some improvements in performance (and accuracy) are made. Taking into account that all we have used is 2048 evaluations, it is not such a bad result, leading us to think that increasing the budget would probably obtain better results.
+The time needed to reach these results is around 2 hours for every run, which is acceptable for us. The spambase problem is mid-size, with many inputs and a sizable dataset, so this might be, in fact, in the limit of the kind of problems that can be approached with this algorithm, unless some improvements in performance (and accuracy) are made. Taking into account that all we have used is 2048 evaluations, it is not such a bad result, leading us to think that increasing the budget would probably obtain better results.
 %
 \begin{table*}[h!tb]
 \centering
@@ -458,11 +458,9 @@ Although the difference is significant in all three cases, the problem is that i
 \section{Conclusions and future work}
 \label{sec:conclus}
 
-We have introduced EvoMLP, a library released to the Python ecosystem as {\sf DeepGProp}, a new Python library that uses state-of-the-art libraries for evolutionary algorithms and neural nets, and combines them in a way that can easily design a multilayer perceptron that solves problems up to mid size, such as {\sf spambase}.
+We have introduced EvoMLP, released to the Python ecosystem as {\sf DeepGProp}, that uses state-of-the-art libraries for evolutionary algorithms and neural nets combining them in a way that can easily design a multilayer perceptron that solves problems up to mid size, such as {\sf spambase}. We have performed careful tests on the impact of the changes in the upstream libraries; upgrading to Keras 2.4.0 has yielded higher uncertainty in the results obtained by our algorithm, although this has resulted in better exploration and eventually a better {\em best} results.
 
-Depending on other libraries is always an issue in stochastic algorithms, but this implies that careful tests must be performed to see how that change affects our specific library. In this case, upgrading to Keras 2.4.0 has yielded higher uncertainty in the results obtained by our algorithm, although this has resulted in better exploration and eventually a better {\em best} result. Every change needs to be tested, though, because although new versions might bring performance improvements, these might result in changes in the algorithmic results.
-
-In this paper we have proved also that this new library allows us to explore easily the possible space of search configurations, with one or several layers, and produces output that can be easily processed to obtain statistical results. This eventually has led to the conclusion that, overall, it is probably enough with evolving MLPs with a single layer as G-Prop did. However, this is again dependent on the fact that we need a better way to evaluate the results than simply using a single evaluation of all individuals in the last generation. To do a proper evaluation, we would need to perform several trainings on the stored initial weights, at least 15, and use all 15 validation results as the fitness, and then compare them statistically as proposed in \cite{wilcoxon:ga}. This is beyond the simple, proof-of-concept approach that we have had in this paper.
+In this paper we have proved also that this new library allows us to explore easily the possible space of neural net configurations, with one or several layers, and produces output that can be easily processed to obtain statistical results. This eventually has led to the conclusion that, overall, it is probably enough with evolving MLPs with a single layer as G-Prop did. However, this is again dependent on the fact that we need a better way to evaluate the results than simply using a single evaluation of all individuals in the last generation. To do a proper evaluation, we would need to perform several trainings on the stored initial weights, at least 15, and use all 15 validation results as the fitness, and then compare them statistically as proposed in \cite{wilcoxon:ga}. This is beyond the simple, proof-of-concept approach in this paper.
 
 Taking into account the double handicap of a low budget and also the uncertainty in fitness, it might be the case that the neural net training algorithm we use is actually responsible for most of the improvement in fitness. Although the generational plot shows that average and best results improve with time, we might need many more generations to get an improvement, and that one might probably be only marginal; since we don't really know what is the optimal value for this dataset, we might have reached that limit, which would explain the small differences obtained with set of varying number of layers.
 
@@ -470,12 +468,12 @@ This is why as a future line of work, we will try to obtain the best results pos
 
 Finding different ways to take uncertainty into account will also be considered, from the simplest one, which is simply re-evaluating the individuals in the last generation and choose only the one that is significantly better than the rest, to introducing it further in the selection process by resampling or, as was shown in \cite{wilcoxon:ga}, take into account all fitness measures taken through all generations to select individuals.
 
-Our commitment to open science is complete, and this paper has been developed in an open repository, which includes this paper, data obtained in the experiments, code (although it's an initial version, and it was eventually spun off to its own repository), and processed data. Check it out at \url{https://github.com/JJ/2021-cec-deep-g-prop/blob/main/README.md}.
+This paper has been developed in an open repository \url{https://github.com/JJ/2021-cec-deep-g-prop/blob/main/README.md}, including this paper, data obtained in the experiments, code, and processed data.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
 
-This paper has been supported in part by project DeepBio (TIN2017-85727-C4-2-P).
+Supported in part by project DeepBio (TIN2017-85727-C4-2-P).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{IEEEtran}
