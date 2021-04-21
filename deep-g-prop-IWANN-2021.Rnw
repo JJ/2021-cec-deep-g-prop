@@ -1,5 +1,4 @@
-\documentclass[conference]{IEEEtran}
-\IEEEoverridecommandlockouts
+\documentclass[runningheads]{llncs}
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
@@ -20,19 +19,18 @@ require(ggthemes)
 %
 \title{EvoMLP: a framework for evolving multilayer perceptrons}
 %
-\author{\IEEEauthorblockN{Luis Liñán-Villafranca}
-  \IEEEauthorblockA{\textit{RTI} \\
-    {\tt luis@rti.com}}
+\author{Luis Liñán-Villafranca \inst{1}
   \and
-  \IEEEauthorblockN{Mario Garc\'ia-Valdez}
-  \IEEEauthorblockA{\textit{Instituto Tecnol\'ogico de Tijuana} \\
-    {\tt mario@tectijuana.edu.mx}}
+  Mario Garc\'ia-Valdez \inst{2}
   \and
-  \IEEEauthorblockA{J.J. Merelo, Pedro Castillo-Valdivieso}
-  \IEEEauthorblockN{Computer Architecture and Technology\\
-    University of Granada, Spain\\
-    {\tt {jmerelo|pacv}@ugr.es}}
+  J.J. Merelo, Pedro Castillo-Valdivieso \inst{3}
 }
+
+\institute{RTI \email{luis@rti.com}
+\and
+Instituto Tecnol\'ogico de Tijuana \email{mario@tectijuana.edu.mx}
+\and
+Universidad de Granada \email{ {jmerelo|pacv}@ugr.es}}
 %
 \maketitle              % typeset the header of the contribution
 
@@ -59,10 +57,10 @@ compared with other state of the art frameworks.
 
 \end{abstract}
 
-\begin{IEEEkeywords}
+\begin{keywords}
   Neuroevolution, Python, Backpropagation, multilayer perceptrons,
   software frameworks, MLPs.
-\end{IEEEkeywords}
+\end{keywords}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
