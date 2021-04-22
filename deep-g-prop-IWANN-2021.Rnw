@@ -36,10 +36,11 @@ Universidad de Granada \email{ {jmerelo|pacv}@ugr.es}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
+
 Designing neural networks for classification or regression can be
 considered a search problem, and, as such, can be approached using
-different optimization procedures. There are also several design
-challenges. The first and more important is to constrain the search
+different optimization procedures, all of them with several design
+challenges: The first and more important is to constrain the search
 space in such a way that proper solutions can be found in a reasonable
 amount of time; the second is to take into account that, depending on
 how the optimization procedure is formulated, the fitness score used
@@ -133,8 +134,8 @@ procedures to add/eliminate hidden-layers and/or neurons from them.
 % I propose to only say: to add/eliminate layers and the number of neurons in them 
 % In more advanced networks there are other types like  recurrent, convolution etc. 
 % but making the distinction is a bit confusing - M 
-% Can you please ellaborate on this? Or simply rewrite it, no problem - JJ
-% I think this is what Mario was refering - L
+% Can you please elaborate on this? Or simply rewrite it, no problem - JJ
+% I think this is what Mario was referring - L
 This way was, for a certain amount of time, the preferred technique
 for optimizing the architecture of the neural net along with its weights, according to classical reviews such % architecture of the nn ? - M
 % don't get it, sorry - JJ
