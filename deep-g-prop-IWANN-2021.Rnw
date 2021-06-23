@@ -118,7 +118,7 @@ suited for the purpose and show the design decisions that were taken in order to
 The remainder of this paper is structured as follows:
 section \ref{soa} makes a short overview of the methods to design ANN.
 In section \ref{method} it is fully described the proposed model.
-Section \ref{sec:res} describe and Section \ref{sec:conclus} draws conclusions.
+Section \ref{sec:res} describes the results and Section \ref{sec:conclus} draws conclusions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the Art}
@@ -359,10 +359,10 @@ spambase <- rbind( spambase,
                        sd.test = sd(spambase1.base$Test) ) )
 
 options(knitr.table.format = "latex")
-knitr::kable(spambase, col.names=c("Partition","Validation,best","Validation, median","Validation,mean", "Test, best", "Test, median", "Test, average", "Test, SD"))
+knitr::kable(spambase, col.names=c("Partition","V. best","V. median","V. mean", "Test, best", "Test, median", "Test, average", "Test, SD"))
 @
 \vspace*{1mm}
-\caption{Baseline error percentage results for {\sf spambase} per partition, with validation (used by the algorithm) and test (unseen data, used for generalization) results.}
+\caption{Baseline error percentage results for {\sf spambase} per partition, with validation (V., used by the algorithm) and test (unseen data, used for generalization) results.}
 \label{tab:spambase:base}
 \end{table*}
 
@@ -417,7 +417,7 @@ comparison <- rbind( comparison,
                        median.test = median(spambase3.tf$Test),
                        sd.test = sd(spambase1.tf$Test) ) )
 options(knitr.table.format = "latex")
-knitr::kable(comparison, col.names=c("Partition","Validation,best","Validation, median", "Test, best", "Test, median", "Test, SD"))
+knitr::kable(comparison, col.names=c("Partition","Val. best","Val. median", "Test, best", "Test, median", "Test, SD"))
 @
 \vspace*{1mm}
 \caption{Comparison of baseline (Theano-based) and the last version, based on TensorFlow, error percentage results for {\sf spambase} per partition, with validation (used by the algorithm) and test (unseen data, used for generalization) results.}
@@ -470,7 +470,7 @@ This paper has been developed in an open repository \url{https://github.com/JJ/2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
 
-Supported in part by project DeepBio (TIN2017-85727-C4-2-P).
+Supported in part by project DeepBio (TIN2017-85727-C4-2-P) and PID2020-115570GB-C22.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{IEEEtran}
